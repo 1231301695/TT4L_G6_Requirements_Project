@@ -335,7 +335,7 @@ Release Date: 25th May 2025
 
 ## **1.1  Purpose** {#1.1-purpose}
 
-    The purpose of the software to be developed, known as University Communication and Services Portal (UCSP) is mainly to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CLiC) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the portal will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The UCSP will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
+	The purpose of the software to be developed, known as University Communication and Services Portal (UCSP) is mainly to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CLiC) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the portal will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The UCSP will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
 
 ## **1.2  Scope** {#1.2-scope}
 
@@ -3599,7 +3599,7 @@ Description: The systems update submission status to the database and notify lec
 6. Containerization: Packaging software and dependencies into isolated units  
 7. Cryptographic: Related to cryptography, techniques for secure communication.
 
-    
+   	
 
    
 
