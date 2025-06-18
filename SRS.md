@@ -469,7 +469,7 @@ Interface Description: UI component linked with SMS/Email Gateway APIs for toggl
 
 ####
 
-#### **1.3.1.6 Memory constraints** {#1.3.1.6-memory-constraints}
+#### **1.3.1.2 Memory constraints** {#1.3.1.2-memory-constraints}
 
 1\. **Primary Memory (RAM)**
 
@@ -503,7 +503,7 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
 
 Requirement: The system shall support up to 2,000 active sessions simultaneously with a configurable session timeout of 15 minutes of inactivity.
 
-#### **1.3.1.7 Operations** {#1.3.1.7-operations}
+#### **1.3.1.3 Operations** {#1.3.1.3-operations}
 
 1. **Modes of Operations:**  
 
@@ -547,7 +547,7 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
 
 ####
 
-#### **1.3.1.8 Site adaptation requirements** {#1.3.1.8-site-adaptation-requirements}
+#### **1.3.1.4 Site adaptation requirements** {#1.3.1.4-site-adaptation-requirements}
 
 ####
 
@@ -591,7 +591,7 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
 
 ####
 
-#### **1.3.1.9 Interfaces with services** {#1.3.1.9-interfaces-with-services}
+#### **1.3.1.5 Interfaces with services** {#1.3.1.5-interfaces-with-services}
 
 1. **Cloud Hosting Provider**  
    The EduAxis will be hosted on a cloud infrastructure such as Amazon Web Services (AWS) or Google Cloud Platform (GCP). These services provide scalable and reliable environments for hosting backend services, databases, and application logic. The platform will interface with cloud services to manage virtual servers, allocate resources, configure networking, and ensure system availability through autoscaling, load balancing, and backup services. APIs from the hosting provider will be used for deployment automation, storage management, and health monitoring.
@@ -614,9 +614,9 @@ Figure 1.3.2.1 below shows the generic use case diagram for the EduAxis with Cam
 ![][image4]  
 _Figure 1.3.2.1: Generic Use Case Diagram_
 
-Table 1.1 below contains the list of functions to be implemented into the system which are organized by actors defined for this system.
+Table 1.3.2.1 below contains the list of functions to be implemented into the system which are organized by actors defined for this system.
 
-_Table 1.1: EduAxis Functions_
+_Table 1.3.2.1: EduAxis Functions_
 
 |  Actor   | Functions                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -627,53 +627,53 @@ _Table 1.1: EduAxis Functions_
 
 
 <!-- Changes from 3.1 to 1.3.2.1 -->
-## **3.1 Apportioning of Requirements** {#3.1-apportioning-of-requirements}
+## **1.3.2.2 Apportioning of Requirements** {#1.3.2.2-apportioning-of-requirements}
 
 This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
 
-### **3.1.1 Student Module** {#3.1.1-student-module}
-
+### **1.3.2.2.1 Student Module** {#1.3.2.2.1-student-module}
+Table 1.3.2.2.1 (Student Module table)
 | Requirement ID | Description                                  | Related Functions                                             |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------- |
-| S-1            | User authentication and authorization        | Login                                                         |
-| S-2            | View academic performance and grades         | View Academic Grades, Monitor Student Academic Performance    |
-| S-3            | Manage course registration                   | Register/Drop Courses                                         |
-| S-4            | View and pay tuition and fees                | Pay Tuition & Other Fees, View Payment History & Dues Summary |
-| S-5            | Access and view class schedules              | Access/View Course Schedule                                   |
-| S-6            | Submit feedback and support tickets          | Submit Feedback/Support Tickets                               |
-| S-7            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
-| S-8            | Customize notification preferences           | Customize Notification Preferences                            |
+| REQ-01            | User authentication and authorization        | Login                                                         |
+| REQ-02            | View academic performance and grades         | View Academic Grades, Monitor Student Academic Performance    |
+| REQ-03            | Manage course registration                   | Register/Drop Courses                                         |
+| REQ-04            | View and pay tuition and fees                | Pay Tuition & Other Fees, View Payment History & Dues Summary |
+| REQ-05            | Access and view class schedules              | Access/View Course Schedule                                   |
+| REQ-06            | Submit feedback and support tickets          | Submit Feedback/Support Tickets                               |
+| REQ-07            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
+| REQ-08            | Customize notification preferences           | Customize Notification Preferences                            |
 
-### **3.1.2 Parent Module** {#3.1.2-parent-module}
-
+### **1.3.2.2.2 Parent Module** {#1.3.2.2.2-parent-module}
+Table 1.3.2.2.2 (Parent Module table)
 | Requirement ID | Description                                     | Related Functions                                            |
 | -------------- | ----------------------------------------------- | ------------------------------------------------------------ |
-| P-1            | Monitor child's academic and attendance summary | View Child's Grade & Attendance, Access Child’s Schedule     |
-| P-2            | View payment and dues summary                   | View Payment History & Dues Summary                          |
-| P-3            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
+| REQ-01            | Monitor child's academic and attendance summary | View Child's Grade & Attendance, Access Child’s Schedule     |
+| REQ-02            | View payment and dues summary                   | View Payment History & Dues Summary                          |
+| REQ-03            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
 
-### **3.1.3 Lecturer Module** {#3.1.3-lecturer-module}
-
+### **1.3.2.2.3 Lecturer Module** {#1.3.2.2.3-lecturer-module}
+Table 1.3.2.2.3 (Lecturer Module table)
 | Requirement ID | Description                                     | Related Functions                                    |
 | -------------- | ----------------------------------------------- | ---------------------------------------------------- |
-| L-1            | Post class announcements                        | Post Class Announcements                             |
-| L-2            | Upload grades and manage coursework submissions | Upload Student Grades, Manage Coursework Submissions |
-| L-3            | View academic calendar and manage attendance    | View Academic Calendar, Manage Attendance            |
-| L-4            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
-| L-5            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
+| REQ-01            | Post class announcements                        | Post Class Announcements                             |
+| REQ-02            | Upload grades and manage coursework submissions | Upload Student Grades, Manage Coursework Submissions |
+| REQ-03            | View academic calendar and manage attendance    | View Academic Calendar, Manage Attendance            |
+| REQ-04            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
+| REQ-05            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
 
-### **3.1.4 Admin Module** {#3.1.4-admin-module}
-
+### **1.3.2.2.4 Admin Module** {#1.3.2.2.4-admin-module}
+Table 1.3.2.2.4 (Admin Module table)
 | Requirement ID | Description                                   | Related Functions                                  |
 | -------------- | --------------------------------------------- | -------------------------------------------------- |
-| A-1            | User authentication and authorization         | Login                                              |
-| A-2            | Manage user accounts and permissions          | Manage User Accounts, Maintain Access Permissions  |
-| A-3            | Respond to system issues and helpdesk tickets | Respond to Helpdesk Tickets/System Issues          |
-| A-4            | Manage data privacy                           | Maintain Data Privacy                              |
-| A-5            | Post and manage global announcements          | Post Global Announcements                          |
-| A-6            | Configure and manage SMS/email services       | Configure & Manage SMS/Email Notification Services |
-| A-7            | Automate system workflows                     | Automate Workflows                                 |
-| A-8            | Integrate with CMS and LMS                    | Integrate & Sync with CMS, LMS                     |
+| REQ-01            | User authentication and authorization         | Login                                              |
+| REQ-02            | Manage user accounts and permissions          | Manage User Accounts, Maintain Access Permissions  |
+| REQ-03            | Respond to system issues and helpdesk tickets | Respond to Helpdesk Tickets/System Issues          |
+| REQ-04            | Manage data privacy                           | Maintain Data Privacy                              |
+| REQ-05            | Post and manage global announcements          | Post Global Announcements                          |
+| REQ-06            | Configure and manage SMS/email services       | Configure & Manage SMS/Email Notification Services |
+| REQ-07            | Automate system workflows                     | Automate Workflows                                 |
+| REQ-08            | Integrate with CMS and LMS                    | Integrate & Sync with CMS, LMS                     |
 
 ##
 
@@ -758,18 +758,18 @@ This document is prepared in reference to the following documents:
 1. ISO/IEC/IEEE 29148:2018(E) \- International Standard
 2. Software Requirement Engineering Lecture Slide
 
-   #
 
-   # **3\. Requirements** {#3.-requirements}
+
+# **3\. Requirements** {#3.-requirements}
 ## **3.1 Function  ** {#3.1-functions}##
 
 <!-- From 3.4 change to 3.1 -->
-## **3.4 Functional Requirements** {#3.4-functional-requirements}
+## **3.1 Functional Requirements** {#3.1-functional-requirements}
 
-### **3.4.1 Dissatisfier Requirements** {#3.4.1-dissatisfier-requirements}
+### **3.1.1.1 Dissatisfier Requirements** {#3.1.1.1-dissatisfier-requirements}
 
-#### **3.4.1.1 Requirement 1** {#3.4.1.1-requirement-1}
-
+#### **3.1.1.1.1 Requirement 1** {#3.1.1.1.1-requirement-1}
+Table 3.1.1.1.1 - User Authentication and Authorization (Requirement 1)
 | Requirements:               | User Authentication and Authorization                                                                                                                                                         |
 | :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Description:**            | The system shall provide a secure login mechanism for students, lecturers, parents, and admins                                                                                                |
@@ -778,8 +778,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 1 ([Interview 1](#4.1.1-interview-1)), Question1 ([Interview 2](#4.1.2-interview-2)), Question 9 ([Parents survey](#4.2.2-parents)), Question 13 ([Student survey](#4.2.1-students)) |
 | **Related Function:**       | Login                                                                                                                                                                                         |
 
-#### **3.4.1.2 Requirement 2** {#3.4.1.2-requirement-2}
-
+#### **3.1.1.1.2 Requirement 2** {#3.1.1.1.2-requirement-2}
+Table 3.1.1.1.2 - View Academic Grades (Requirement 2)
 | Requirements:               | View Academic Grades                                                                                                                     |
 | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
 | **Description:**            | The system shall allow users (students,lecturers, parents) to view academic grades securely                                              |
@@ -788,8 +788,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 2 and 10 ([Interview 1](#4.1.1-interview-1)), ([Interview 2](#4.1.2-interview-2)), Question 1 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | View academic grades                                                                                                                     |
 
-#### **3.4.1.3 Requirement 3** {#3.4.1.3-requirement-3}
-
+#### **3.1.1.1.3 Requirement 3** {#3.1.1.1.3-requirement-3}
+Table 3.1.1.1.3 - Access Attendance Records (Requirement 3)
 | Requirements:               | Access Attendance Records                                                                                                            |
 | :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | **Description:**            | The system shall allow students, parents, and lecturers to access and monitor attendance records.                                    |
@@ -798,8 +798,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question 2&3 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | Check class attendance records                                                                                                       |
 
-#### **3.4.1.4 Requirement 4** {#3.4.1.4-requirement-4}
-
+#### **3.1.1.1.4 Requirement 4** {#3.1.1.1.4-requirement-4}
+Table 3.1.1.1.4 - Access Academic Timetable (Requirement 4)
 | Requirements:               | Access Academic Timetable                                                                                                       |
 | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
 | **Description:**            | The system shall display each user’s course schedule or timetable.                                                              |
@@ -808,8 +808,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 8 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question7 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | Access and view course schedule/timetable                                                                                       |
 
-#### **3.4.1.5 Requirement 5** {#3.4.1.5-requirement-5}
-
+#### **3.1.1.1.5 Requirement 5** {#3.1.1.1.5-requirement-5}
+Table 3.1.1.1.5 - Manage User Accounts and Roles (Requirement 5)
 | Requirements:               | Manage User Accounts and Roles                                                     |
 | :-------------------------- | :--------------------------------------------------------------------------------- |
 | **Description:**            | The system shall enable admin to assign roles and manage user account permissions. |
@@ -818,8 +818,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 1&8 ([interview 3](#4.1.3-interview-3))                                   |
 | **Related Function:**       | Manage user accounts and system configurations                                     |
 
-#### **3.4.1.6 Requirement 6** {#3.4.1.6-requirement-6}
-
+#### **3.1.1.1.6 Requirement 6** {#3.1.1.1.6-requirement-6}
+Table 3.1.1.1.6 - Integration with Campus Systems (Requirement 6)
 | Requirements:               | Integration with Campus Systems                                              |
 | :-------------------------- | :--------------------------------------------------------------------------- |
 | **Description:**            | The system shall integrate with CMS, LMS, and calendar systems to sync data. |
@@ -828,8 +828,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 2 ([interview 3](#4.1.3-interview-3))                               |
 | **Related Function:**       | Integrate and Sync with CMS, LMS, and calendar systems                       |
 
-#### **3.4.1.7 Requirement 7** {#3.4.1.7-requirement-7}
-
+#### **3.1.1.1.7 Requirement 7** {#3.1.1.1.7-requirement-7}
+Table 3.1.1.1.7 - Maintain Data Privacy and Access Permissions (Requirement 7)
 | Requirements:               | Maintain Data Privacy and Access Permissions                         |
 | :-------------------------- | :------------------------------------------------------------------- |
 | **Description:**            | The system must enforce data security and appropriate access levels. |
@@ -838,8 +838,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 8 ([interview 3](#4.1.3-interview-3))                       |
 | **Related Function:**       | Maintain data privacy and access permissions                         |
 
-#### **3.4.1.8 Requirement 8** {#3.4.1.8-requirement-8}
-
+#### **3.1.1.1.8 Requirement 8** {#3.1.1.1.8-requirement-8}
+Table 3.1.1.1.8 - Pay Tuition and Other Fees (Requirement 8)
 | Requirements:               | Pay Tuition and Other Fees                      |
 | :-------------------------- | :---------------------------------------------- |
 | **Description:**            | Ability to make fee payments through the system |
@@ -848,8 +848,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3))  |
 | **Related Function:**       | Pay tuition and other fees                      |
 
-#### **3.4.1.9 Requirement 9** {#3.4.1.9-requirement-9}
-
+#### **3.1.1.1.9 Requirement 9** {#3.1.1.1.9-requirement-9}
+Table 3.1.1.1.9 - View Payment History and Invoices (Requirement 9)
 | Requirements:               | View Payment History and Invoices              |
 | :-------------------------- | :--------------------------------------------- |
 | **Description:**            | View historical tuition and fee records        |
@@ -860,12 +860,10 @@ This document is prepared in reference to the following documents:
 
 ###
 
-###
+### **3.1.1.2 Satisfier Requirements** {#3.1.1.2-satisfier-requirements}
 
-### **3.4.2 Satisfier Requirements** {#3.4.2-satisfier-requirements}
-
-#### **3.4.2.1 Requirement 10** {#3.4.2.1-requirement-10}
-
+#### **3.1.1.2.1 Requirement 10** {#3.1.1.2.1-requirement-10}
+Table 3.1.1.2.1 - Upload and Manage Grades (Requirement 10)
 | Requirements:               | Upload and Manage Grades                                                            |
 | :-------------------------- | :---------------------------------------------------------------------------------- |
 | **Description:**            | Lecturers shall be able to upload, confirm, and manage student grades.              |
@@ -874,8 +872,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 2&3([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Upload student grades                                                               |
 
-#### **3.4.2.2 Requirement 11** {#3.4.2.2-requirement-11}
-
+#### **3.1.1.2.2 Requirement 11** {#3.1.1.2.2-requirement-11}
+Table 3.1.1.2.2 - Digital Attendance Tracking (Requirement 11)
 | Requirements:               | Digital Attendance Tracking                                                          |
 | :-------------------------- | :----------------------------------------------------------------------------------- |
 | **Description:**            | The system shall support digital attendance marking and tracking over time.          |
@@ -884,8 +882,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Mark and manage attendance records                                                   |
 
-#### **3.4.2.3 Requirement 12** {#3.4.2.3-requirement-12}
-
+#### **3.1.1.2.3 Requirement 12** {#3.1.1.2.3-requirement-12}
+Table 3.1.1.2.3 - Post Announcements and Updates (Requirement 12)
 | Requirements:               | Post Announcements and Updates                                                       |
 | :-------------------------- | :----------------------------------------------------------------------------------- |
 | **Description:**            | Lecturers and admins shall post class and global announcements                       |
@@ -894,10 +892,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 6&7 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Post class announcements and updates                                                 |
 
-####
-
-#### **3.4.2.4 Requirement 13** {#3.4.2.4-requirement-13}
-
+#### **3.1.1.2.4 Requirement 13** {#3.1.1.2.4-requirement-13}
+Table 3.1.1.2.4 - Dashboard with Performance Overview (Requirement 13)
 | Requirements:               | Dashboard with Performance Overview                                                |
 | :-------------------------- | :--------------------------------------------------------------------------------- |
 | **Description:**            | The system shall provide academic dashboard with grade and attendance insights.    |
@@ -906,8 +902,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 10([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Monitor student academic performance                                               |
 
-#### **3.4.2.5 Requirement 14** {#3.4.2.5-requirement-14}
-
+#### **3.1.1.2.5 Requirement 14** {#3.1.1.2.5-requirement-14}
+Table 3.1.1.2.5 - Submit Feedback and Support Requests (Requirement 14)
 | Requirements:               | Submit Feedback and Support Requests                                                            |
 | :-------------------------- | :---------------------------------------------------------------------------------------------- |
 | **Description:**            | The system shall allow users to submit feedback and helpdesk tickets.                           |
@@ -916,8 +912,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 6 ([interview 3](#4.1.3-interview-3)), Question 18 ([Student survey](#4.2.1-students)) |
 | **Related Function:**       | Submit Feedback/Support Tickets, Submit Helpdesk Tickets                                        |
 
-#### **3.4.2.6 Requirement 15** {#3.4.2.6-requirement-15}
-
+#### **3.1.1.2.6 Requirement 15** {#3.1.1.2.6-requirement-15}
+Table 3.1.1.2.6 - Alert and Reminder System (Requirement 15)
 | Requirements:               | Alert and Reminder System                                                                                    |
 | :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
 | **Description:**            | The system shall send deadline reminders and important alerts to users.                                      |
@@ -928,10 +924,10 @@ This document is prepared in reference to the following documents:
 
 ###
 
-### **3.4.3 Delighter Requirements** {#3.4.3-delighter-requirements}
+### **3.1.1.3 Delighter Requirements** {#3.1.1.3-delighter-requirements}
 
-#### **3.4.3.1 Requirement 16** {#3.4.3.1-requirement-16}
-
+#### **3.1.1.3.1 Requirement 16** {#3.1.1.3.1-requirement-16}
+Table 3.1.1.3.1 - Notification Read Tracking (Requirement 16)
 | Requirements:               | Notification Read Tracking                                                                |
 | :-------------------------- | :---------------------------------------------------------------------------------------- |
 | **Description:**            | The system may notify lecturers or admins when users view or interact with announcements. |
@@ -940,8 +936,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 7([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2))         |
 | **Related Function:**       | View announcements and academic notifications                                             |
 
-#### **3.4.3.2 Requirement 17** {#3.4.3.2-requirement-17}
-
+#### **3.1.1.3.2 Requirement 17** {#3.1.1.3.2-requirement-17}
+Table 3.1.1.3.2 - Custom Notification Preferences (Requirement 17)
 | Requirements:               | Custom Notification Preferences                                           |
 | :-------------------------- | :------------------------------------------------------------------------ |
 | **Description:**            | Parents may configure notification delivery method (SMS, email, or both). |
@@ -950,8 +946,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 14 ([Parent Survey](#4.2.2-parents))                             |
 | **Related Function:**       | Receive SMS/Email alerts                                                  |
 
-#### **3.4.3.3 Requirement 18** {#3.4.3.3-requirement-18}
-
+#### **3.1.1.3.3 Requirement 18** {#3.1.1.3.3-requirement-18}
+Table 3.1.1.3.3 - Visual Performance Analytics (Requirement 18)
 | Requirements:               | Visual Performance Analytics                                                        |
 | :-------------------------- | :---------------------------------------------------------------------------------- |
 | **Description:**            | The system may display graphs and visual trends of student performance over time.   |
@@ -960,8 +956,8 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 10 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Monitor student academic performance                                                |
 
-#### **3.4.3.4 Requirement 19** {#3.4.3.4-requirement-19}
-
+#### **3.1.1.3.4 Requirement 19** {#3.1.1.3.4-requirement-19}
+Table 3.1.1.3.4 - Mobile-Friendly Responsive Interface (Requirement 19)
 | Requirements:               | Mobile-Friendly Responsive Interface                                                             |
 | :-------------------------- | :----------------------------------------------------------------------------------------------- |
 | **Description:**            | The system may be optimized for mobile devices across Android and iPhone.                        |
@@ -970,12 +966,14 @@ This document is prepared in reference to the following documents:
 | **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)), Question 7&12([Student survey](#4.2.1-students)) |
 | **Related Function:**       | All access-related functions (Login, View Grades, etc.)                                          |
 
-<!-- From 1.3 chnage to 3.1 -->
-#### **1.3.2.1 Student function** {#1.3.2.1-student-function}
+### 
 
-##### 1.3.2.1.1. Login
+<!-- From 1.3 chnage to 3.1.1 -->
+#### **3.1.2.1 Student function** {#3.1.2.1-student-function}
 
-_Table 1.3.2.1.1. Use case Specification \- Login_
+##### 3.1.2.1.1. Login
+
+_Table 3.1.2.1.1. Use case Specification \- Login_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                 |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -992,11 +990,11 @@ _Table 1.3.2.1.1. Use case Specification \- Login_
 |                         | 4.8 | Exception Scenario    | 1\. The user enter incorrect credentials The system displays an error message indicating invalid credentials The user is prompted to re-enter their username and password.                                                                                                                              |
 
 ![][image5]  
-_Figure 1.3.2.1.1. Activity Diagram \- Login_
+_Figure 3.1.2.1.1. Activity Diagram \- Login_
 
-##### 1.3.2.1.2. View Academic Grades
+##### 3.1.2.1.2. View Academic Grades
 
-_Table 1.3.2.1.2. Use case Specification \- View Academic Grades_
+_Table 3.1.2.1.2. Use case Specification \- View Academic Grades_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                        |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1013,11 +1011,11 @@ _Table 1.3.2.1.2. Use case Specification \- View Academic Grades_
 |                         | 4.8 | Exception Scenario    | 1\. System error during grade retrieval An error message is shown: “Unable to load grades. Please try again later.”                                                                            |
 
 ![][image6]  
-_Figure 1.3.2.1.2. Activity Diagram \- View Academic Grades_
+_Figure 3.1.2.1.2. Activity Diagram \- View Academic Grades_
 
-##### 1.3.2.1.3. Check Class Attendance Records
+##### 3.1.2.1.3. Check Class Attendance Records
 
-_Table 1.3.2.1.3. Use case Specification \- Check Class Attendance Records_
+_Table 3.1.2.1.3. Use case Specification \- Check Class Attendance Records_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                              |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1034,13 +1032,13 @@ _Table 1.3.2.1.3. Use case Specification \- Check Class Attendance Records_
 |                         | 4.8 | Exception Scenario    | 1\. System fails to retrieve data The system displays an error message: “Unable to load attendance. Please try again later.”                                                                                         |
 
 **![][image7]**  
-_Figure 1.3.2.1.3. Activity Diagram \- Check Class Attendance Records_
+_Figure 3.1.2.1.3. Activity Diagram \- Check Class Attendance Records_
 
 #####
 
-##### 1.3.2.1.4. Access and View Course Schedule/Timetable
+##### 3.1.2.1.4. Access and View Course Schedule/Timetable
 
-_Table 1.3.2.1.4. Use case Specification \- Access and View Course Schedule/Timetable_
+_Table 3.1.2.1.4. Use case Specification \- Access and View Course Schedule/Timetable_
 
 | No.                     |     | Section               | Content                                                                                                                     |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
@@ -1057,11 +1055,11 @@ _Table 1.3.2.1.4. Use case Specification \- Access and View Course Schedule/Time
 |                         | 4.8 | Exception Scenario    | 1\. System fails to retrieve data The system displays an error message: “Unable to load timetable. Please try again later.” |
 
 ![][image8]  
-_Figure 1.3.2.1.4. Activity Diagram \- Access and View Course Schedule/Timetable_
+_Figure 3.1.2.1.4. Activity Diagram \- Access and View Course Schedule/Timetable_
 
-##### 1.3.2.1.5 Register or Drop Courses
+##### 3.1.2.1.5 Register or Drop Courses
 
-_Table 1.3.2.1.5. Use case Specification \- Register or Drop Courses_
+_Table 3.1.2.1.5. Use case Specification \- Register or Drop Courses_
 
 | No.                     |     | Section               | Content                                                                                                                                                                     |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1079,11 +1077,11 @@ _Table 1.3.2.1.5. Use case Specification \- Register or Drop Courses_
 
 ![][image9]
 
-_Figure 1.3.2.1.5. Activity Diagram \- Register or Drop Courses_
+_Figure 3.1.2.1.5. Activity Diagram \- Register or Drop Courses_
 
-##### 1.3.2.1.6 Submit Coursework and View Feedback
+##### 3.1.2.1.6 Submit Coursework and View Feedback
 
-_Table 1.3.2.1.6. Use case Specification \- Submit Coursework and View Feedback_
+_Table 3.1.2.1.6. Use case Specification \- Submit Coursework and View Feedback_
 
 | No.                     |     | Section               | Content                                                                                                                                                                      |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1100,11 +1098,11 @@ _Table 1.3.2.1.6. Use case Specification \- Submit Coursework and View Feedback_
 |                         | 4.8 | Exception Scenario    | 1\. File upload fail \- system shows: “Upload unsuccessful. Try again.”                                                                                                      |
 
 ![][image10]  
-_Figure 1.3.2.1.6. Activity Diagram \- Submit Coursework and View Feedback_
+_Figure 3.1.2.1.6. Activity Diagram \- Submit Coursework and View Feedback_
 
-##### 1.3.2.1.7. Pay Tuition and Other Fees
+##### 3.1.2.1.7. Pay Tuition and Other Fees
 
-_Table 1.3.2.1.7. Use case Specification \- Pay Tuition and Other Fees_
+_Table 3.1.2.1.7. Use case Specification \- Pay Tuition and Other Fees_
 
 | No.                     |     | Section               | Content                                                                                                                                                                            |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1121,11 +1119,11 @@ _Table 1.3.2.1.7. Use case Specification \- Pay Tuition and Other Fees_
 |                         | 4.8 | Exception Scenario    | 1\. Payment fails System shows: “Transaction declined.”                                                                                                                            |
 
 ![][image11]  
-_Figure 1.3.2.1.7. Activity Diagram \- Pay Tuition and Other Fees_
+_Figure 3.1.2.1.7. Activity Diagram \- Pay Tuition and Other Fees_
 
-##### 1.3.2.1.8. View Payment History and Invoices
+##### 3.1.2.1.8. View Payment History and Invoices
 
-_Table 1.3.2.1.8. Use case Specification \- View Payment History and Invoices_
+_Table 3.1.2.1.8. Use case Specification \- View Payment History and Invoices_
 
 | No.                     |     | Section               | Content                                                                            |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------- |
@@ -1142,11 +1140,11 @@ _Table 1.3.2.1.8. Use case Specification \- View Payment History and Invoices_
 |                         | 4.8 | Exception Scenario    | 1\. No records The system shows: “No payment history found.”                       |
 
 ![][image12]  
-_Figure 1.3.2.1.8. Activity Diagram \- View Payment History and Invoices_
+_Figure 3.1.2.1.8. Activity Diagram \- View Payment History and Invoices_
 
-##### 1.3.2.1.9. Receive SMS/Email Alerts
+##### 3.1.2.1.9. Receive SMS/Email Alerts
 
-_Table 1.3.2.1.9. Use case Specification \- Receive SMS/Email Alerts_
+_Table 3.1.2.1.9. Use case Specification \- Receive SMS/Email Alerts_
 
 | No.                     |     | Section               | Content                                                                                      |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------- |
@@ -1163,11 +1161,11 @@ _Table 1.3.2.1.9. Use case Specification \- Receive SMS/Email Alerts_
 |                         | 4.8 | Exception Scenario    | 1\. Delivery fails System logs error and retries                                             |
 
 ![][image13]  
-_Figure 1.3.2.1.10. Activity Diagram \- Receive SMS/Email Alerts_
+_Figure 3.1.2.1.9. Activity Diagram \- Receive SMS/Email Alerts_
 
-##### 1.3.2.1.10 View Announcements and Academic Notifications
+##### 3.1.2.1.10 View Announcements and Academic Notifications
 
-_Table 1.3.2.1.10. Use case Specification \- View Announcements and Academic Notifications_
+_Table 3.1.2.1.10. Use case Specification \- View Announcements and Academic Notifications_
 
 | No.                     |     | Section               | Content                                                                           |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------- |
@@ -1184,11 +1182,11 @@ _Table 1.3.2.1.10. Use case Specification \- View Announcements and Academic Not
 |                         | 4.8 | Exception Scenario    | 1\. System fails to load System shows: “Unable to retrieve announcements.”        |
 
 ![][image14]  
-_Figure 1.3.2.1.10. Activity DIagram \- View Announcements and Academic Notifications_
+_Figure 3.1.2.1.10. Activity DIagram \- View Announcements and Academic Notifications_
 
-##### 1.3.2.1.11 Update Personal Profile Information
+##### 3.1.2.1.11 Update Personal Profile Information
 
-_Table 1.3.2.1.11. Use case Specification \- Update Personal Profile Information_
+_Table 3.1.2.1.11. Use case Specification \- Update Personal Profile Information_
 
 | No.                     |     | Section               | Content                                                                       |
 | :---------------------- | :-- | :-------------------- | :---------------------------------------------------------------------------- |
@@ -1205,11 +1203,11 @@ _Table 1.3.2.1.11. Use case Specification \- Update Personal Profile Information
 |                         | 4.8 | Exception Scenario    | Save fails \- system shows: “Update unsuccessful.”                            |
 
 ![][image15]  
-_Figure 1.3.2.1.11. Activity Diagram \- Update Personal Profile Information_
+_Figure 3.1.2.1.11. Activity Diagram \- Update Personal Profile Information_
 
-##### 1.3.2.1.12 Submit Feedback/ Support Tickets
+##### 3.1.2.1.12 Submit Feedback/ Support Tickets
 
-_Table 1.3.2.1.12. Use case Specification \- Submit Feedback/ Support Tickets_
+_Table 3.1.2.1.12. Use case Specification \- Submit Feedback/ Support Tickets_
 
 | No.                     |     | Section               | Content                                                                                                                                       |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1226,11 +1224,11 @@ _Table 1.3.2.1.12. Use case Specification \- Submit Feedback/ Support Tickets_
 |                         | 4.8 | Exception Scenario    | 1\. Submission fails System shows: “Unable to submit ticket.”                                                                                 |
 
 ![][image16]  
-_Figure 1.3.2.1.12. Activity Diagram \- Submit Feedback/ Support Tickets_
+_Figure 3.1.2.1.12. Activity Diagram \- Submit Feedback/ Support Tickets_
 
-##### 1.3.2.1.13 Monitor Student Academic Performance
+##### 3.1.2.1.13 Monitor Student Academic Performance
 
-_Table 1.3.2.1.13. Use case Specification \- Monitor Student Academic Performance_
+_Table 3.1.2.1.13. Use case Specification \- Monitor Student Academic Performance_
 
 | No.                     |     | Section               | Content                                                                                                     |
 | :---------------------- | :-- | :-------------------- | :---------------------------------------------------------------------------------------------------------- |
@@ -1246,17 +1244,15 @@ _Table 1.3.2.1.13. Use case Specification \- Monitor Student Academic Performanc
 |                         | 4.7 | Alternative Scenario  | 1\. Filters performance by semester or subject.                                                             |
 |                         | 4.8 | Exception Scenario    | 1\. Dashboard fails to load. System shows: “Unable to display academic performance.”                        |
 
-####
-
 #### **![][image17]**
 
-_Figure 1.3.2.1.13. Activity Diagram \- Monitor Student Academic Performance_
+_Figure 3.1.2.1.13. Activity Diagram \- Monitor Student Academic Performance_
 
 #####
 
-##### 1.3.2.1.14 Customize Notification Preferences
+##### 3.1.2.1.14 Customize Notification Preferences
 
-_Table 1.3.2.1.14 Use case Specification \- Customize Notification Preferences_
+_Table 3.1.2.1.14 Use case Specification \- Customize Notification Preferences_
 
 | No.                     |     | Section               | Content                                                                                                                      |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
@@ -1276,12 +1272,12 @@ _Table 1.3.2.1.14 Use case Specification \- Customize Notification Preferences_
 
 #### **![][image18]**
 
-_Figure 1.3.2.1.14. Activity Diagram \- Customize Notification Preferences_
+_Figure 3.1.2.1.14. Activity Diagram \- Customize Notification Preferences_
 
-#### **1.3.2.2 Parent function** {#1.3.2.2-parent-function}
+#### **3.1.2.2 Parent function** {#3.1.2.2-parent-function}
 
-1.3.2.2.1 Login  
-_Table 1.3.2.2.1. Use case Specification \- Login_
+3.1.2.2.1 Login  
+_Table 3.1.2.2.1. Use case Specification \- Login_
 
 | No.                     |     | Section               | Content                                                                                                                                 |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1298,10 +1294,10 @@ _Table 1.3.2.2.1. Use case Specification \- Login_
 |                         | 4.8 | Exception Scenario    | 1\. Invalid credentials – system shows: “Login failed. Please try again.”                                                               |
 
 ![][image19]  
-_Figure_ _1.3.2.2.1. Activity Diagram \- Login_  
-1.3.2.2.2 View Child's Grades and Attendance
+_Figure_ _3.1.2.2.1. Activity Diagram \- Login_  
+3.1.2.2.2 View Child's Grades and Attendance
 
-_Table 1.3.2.2.2. Use case Specification \- View Child’s Grades and Attendance_
+_Table 3.1.2.2.2. Use case Specification \- View Child’s Grades and Attendance_
 
 | No.                     |     | Section               | Content                                                                                                                                            |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1321,11 +1317,11 @@ _Table 1.3.2.2.2. Use case Specification \- View Child’s Grades and Attendance
 
 #### **![][image20]**
 
-_Figure 1.3.2.2.2. Activity Diagram \- View Child’s Grades and Attendance_
+_Figure 3.1.2.2.2. Activity Diagram \- View Child’s Grades and Attendance_
 
-1.3.2.2.3 Receive SMS/Email alerts (e.g. Low Attendance, Financial Dues)
+3.1.2.2.3 Receive SMS/Email alerts (e.g. Low Attendance, Financial Dues)
 
-_Table 1.3.2.2.3. Use case Specification \- Receive SMS/Email alerts_
+_Table 3.1.2.2.3. Use case Specification \- Receive SMS/Email alerts_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1342,10 +1338,10 @@ _Table 1.3.2.2.3. Use case Specification \- Receive SMS/Email alerts_
 |                         | 4.8 | Exception Scenario    | 1\. System fails to send the alert – system logs error and retries or prompts admin.                                                                                                   |
 
 ![][image21]  
-_Figure 1.3.2.2.3. Activity Diagram \- Receive SMS/Email alerts_  
-1.3.2.2.4 Access Child's Schedule and Academic Summary
+_Figure 3.1.2.2.3. Activity Diagram \- Receive SMS/Email alerts_  
+3.1.2.2.4 Access Child's Schedule and Academic Summary
 
-_Table 1.3.2.2.4. Use case Specification \- Access Child's Schedule and Academic Summary_
+_Table 3.1.2.2.4. Use case Specification \- Access Child's Schedule and Academic Summary_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                 |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1362,11 +1358,11 @@ _Table 1.3.2.2.4. Use case Specification \- Access Child's Schedule and Academic
 |                         | 4.8 | Exception Scenario    | 1\. Data retrieval error — system displays “Unable to load schedule/summary. Please try again.”                                                                                         |
 
 ![][image22]  
-_Figure 1.3.2.2.4. Activity Diagram \- Access Child's Schedule and Academic Summary_
+_Figure 3.1.2.2.4. Activity Diagram \- Access Child's Schedule and Academic Summary_
 
-1.3.2.2.5 Customize Notification Preferences (SMS/email)
+3.1.2.2.5 Customize Notification Preferences (SMS/email)
 
-_Table 1.3.2.2.5. Use case Specification \- Customize Notification Preferences (SMS/email)_
+_Table 3.1.2.2.5. Use case Specification \- Customize Notification Preferences (SMS/email)_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                            |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1383,11 +1379,11 @@ _Table 1.3.2.2.5. Use case Specification \- Customize Notification Preferences (
 |                         | 4.8 | Exception Scenario    | 1\. Save operation fails — system displays: “Failed to update preferences. Please try again.”                                                                                                      |
 
 ![][image23]  
-_Figure 1.3.2.2.5. Activity Diagram \- Customize Notification Preferences (SMS/email)_
+_Figure 3.1.2.2.5. Activity Diagram \- Customize Notification Preferences (SMS/email)_
 
-1.3.2.2.6 View Payment History and Dues Summary
+3.1.2.2.6 View Payment History and Dues Summary
 
-_Table 1.3.2.2.6. Use case Specification \- View Payment History and Dues Summary_
+_Table 3.1.2.2.6. Use case Specification \- View Payment History and Dues Summary_
 
 | No.                     |     | Section               | Content                                                                                                                                                                     |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1406,11 +1402,11 @@ _Table 1.3.2.2.6. Use case Specification \- View Payment History and Dues Summar
 ![][image24]  
 _Figure Activity Diagram \- View Payment History and Dues Summary_
 
-#### **1.3.2.3 Lecturer function** {#1.3.2.3-lecturer-function}
+#### **3.1.2.3 Lecturer function** {#3.1.2.3-lecturer-function}
 
-1.3.2.3.1 Login
+3.1.2.3.1 Login
 
-_Table 1.3.2.3.1 Use case Specification \- Login_
+_Table 3.1.2.3.1 Use case Specification \- Login_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                 |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1429,11 +1425,11 @@ _Table 1.3.2.3.1 Use case Specification \- Login_
 ####
 
 ![][image25]  
-_Figure 1.3.2.3.1 Activity Diagram \- Login_
+_Figure 3.1.2.3.1 Activity Diagram \- Login_
 
-1.3.2.3.2 Upload student grades
+3.1.2.3.2 Upload student grades
 
-_Table 1.3.2.3.2. Use case Specification \- Upload student grades_
+_Table 3.1.2.3.2. Use case Specification \- Upload student grades_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                              |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1451,11 +1447,11 @@ _Table 1.3.2.3.2. Use case Specification \- Upload student grades_
 
 ![][image26]
 
-_Figure 1.3.2.3.2 Activity Diagram \- Upload students grade_
+_Figure 3.1.2.3.2 Activity Diagram \- Upload students grade_
 
-1.3.2.3.3 Mark and manage attendance records
+3.1.2.3.3 Mark and manage attendance records
 
-_Table 1.3.2.1.3 Use case Specification \- Mark and manage attendance records_
+_Table 3.1.2.3.3 Use case Specification \- Mark and manage attendance records_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                                                           |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1475,11 +1471,11 @@ _Table 1.3.2.1.3 Use case Specification \- Mark and manage attendance records_
 
 ![][image27]
 
-_Figure 1.3.2.3.3 Activity Diagram \- Mark and update student attendance_
+_Figure 3.1.2.3.3 Activity Diagram \- Mark and update student attendance_
 
-1.3.2.3.4 Post class announcements and updates
+3.1.2.3.4 Post class announcements and updates
 
-_Table 1.3.2.1.4 Use case Specification \- Post class announcements and updates_
+_Table 3.1.2.3.4 Use case Specification \- Post class announcements and updates_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                                                                                         |
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1495,11 +1491,11 @@ _Table 1.3.2.1.4 Use case Specification \- Post class announcements and updates_
 |                         | 4.8 | Exception Scenario    | 1\. The lecturer attached unsupported files or with bigger size than the limit. 2\. The system displays an error message.                                                                                                                                                                                                                                                       |
 
 ![][image28]  
-_Figure 1.3.2.3.4 Activity Diagram \- Post class announcements and updates_
+_Figure 3.1.2.3.4 Activity Diagram \- Post class announcements and updates_
 
-1.3.2.3.5 View academic calendar and class schedules
+3.1.2.3.5 View academic calendar and class schedules
 
-_Table 1.3.2.1.5 Use case Specification \- View academic calendar and class schedules_
+_Table 3.1.2.3.5 Use case Specification \- View academic calendar and class schedules_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                   |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1518,11 +1514,11 @@ _Table 1.3.2.1.5 Use case Specification \- View academic calendar and class sche
 
 ![][image29]
 
-_Figure 1.3.2.3.5 Activity Diagram \-View academic calendar and class schedules_
+_Figure 3.1.2.3.5.1 Activity Diagram \-View academic calendar and class schedules_
 
-1.3.2.3.6 Monitor student academic performance
+3.1.2.3.6 Monitor student academic performance
 
-_Table 1.3.2.1.6 Use case Specification \- Monitor student academic performance_
+_Table 3.1.2.3.6 Use case Specification \- Monitor student academic performance_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                   |
 | :---------------------- | :-- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1539,11 +1535,11 @@ _Table 1.3.2.1.6 Use case Specification \- Monitor student academic performance_
 
 ![][image30]
 
-_Figure 1.3.2.3.6 Activity Diagram \-Monitor student academic performance_
+_Figure 3.1.2.3.6 Activity Diagram \-Monitor student academic performance_
 
-1.3.2.3.7 Export Grades and Attendance Reports
+3.1.2.3.7 Export Grades and Attendance Reports
 
-_Table 1.3.2.1.7 Use case Specification \- Export Grades and Attendance Reports_
+_Table 3.1.2.3.7 Use case Specification \- Export Grades and Attendance Reports_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                                                        |
 | :---------------------- | :-- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1560,11 +1556,11 @@ _Table 1.3.2.1.7 Use case Specification \- Export Grades and Attendance Reports_
 
 #### **![][image31]**
 
-_Figure 1.3.2.3.7 Activity Diagram \-Export grades and attendance reports_
+_Figure 3.1.2.3.7 Activity Diagram \-Export grades and attendance reports_
 
-1.3.2.3.8 Manage Coursework Submissions
+3.1.2.3.8 Manage Coursework Submissions
 
-_Table 1.3.2.1.8 Use case Specification \- Manage Coursework submission_
+_Table 3.1.2.3.8 Use case Specification \- Manage Coursework submission_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                                                                                         |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1583,10 +1579,10 @@ _Table 1.3.2.1.8 Use case Specification \- Manage Coursework submission_
 ####
 
 ![][image32]  
-_Figure 1.3.2.3.8 Activity Diagram \-Manage Coursework Submission_
+_Figure 3.1.2.3.8 Activity Diagram \-Manage Coursework Submission_
 
-1.3.2.3.9 Submit Helpdesk tickets  
-_Table 1.3.2.4.9. Use case Specification \- Submit helpdesk tickets_
+3.1.2.3.9 Submit Helpdesk tickets  
+_Table 3.1.2.4.9. Use case Specification \- Submit helpdesk tickets_
 
 | No.                     |     | Section               | Content                                                                                                                                                                        |
 | :---------------------- | :-: | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1602,15 +1598,15 @@ _Table 1.3.2.4.9. Use case Specification \- Submit helpdesk tickets_
 |                         | 4.8 | Exception Scenario    | The system flags for user follow-up if the ticket is invalid or incomplete.                                                                                                    |
 
 ![][image33]  
-_Figure 1.3.2.3.9 Activity Diagram \- Submit helpdesk tickets_
+_Figure 3.1.2.3.9 Activity Diagram \- Submit helpdesk tickets_
 
 ####
 
-#### **1.3.2.4 Administrator function** {#1.3.2.4-administrator-function}
+#### **3.1.2.4 Administrator function** {#3.1.2.4-administrator-function}
 
-1.3.2.4.1 Login
+3.1.2.4.1 Login
 
-_Table 1.3.2.4.1. Use case Specification \- Login_
+_Table 3.1.2.4.1. Use case Specification \- Login_
 
 | No.                     |     | Section               | Content                                                                                                                                                                                                                                                                                        |
 | :---------------------- | :-: | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1628,11 +1624,11 @@ _Table 1.3.2.4.1. Use case Specification \- Login_
 
 ![][image34]
 
-_Figure 1.3.2.4.1. Activity Diagram \- Login_
+_Figure 3.1.2.4.1. Activity Diagram \- Login_
 
-1.3.2.4.2 Manage User Accounts
+3.1.2.4.2 Manage User Accounts
 
-_Table 1.3.2.4.2. Use case Specification \- Manage User Accounts_
+_Table 3.1.2.4.2. Use case Specification \- Manage User Accounts_
 
 | No.                     |     | Section               | Content                                                                                                                                                                  |
 | :---------------------- | :-: | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1650,11 +1646,11 @@ _Table 1.3.2.4.2. Use case Specification \- Manage User Accounts_
 
 ![][image35]
 
-_Figure 1.3.2.4.2. Activity Diagram \- Manage User Accounts_
+_Figure 3.1.2.4.2. Activity Diagram \- Manage User Accounts_
 
-1.3.2.4.3 Configure & Manage SMS/Email Notification Services
+3.1.2.4.3 Configure & Manage SMS/Email Notification Services
 
-_Table 1.3.2.4.3. Use case Specification \- Configure & Manage SMS/Email Notification Services_
+_Table 3.1.2.4.3. Use case Specification \- Configure & Manage SMS/Email Notification Services_
 
 | No.                     |     | Section               | Content                                                                                                                                       |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1672,11 +1668,11 @@ _Table 1.3.2.4.3. Use case Specification \- Configure & Manage SMS/Email Notific
 
 ![][image36]
 
-_Figure 1.3.2.4.3. Activity Diagram \- Configure & Manage SMS/Email Notification Services_
+_Figure 3.1.2.4.3. Activity Diagram \- Configure & Manage SMS/Email Notification Services_
 
-1.3.2.4.4 Integrate & Sync with CMS, LMS
+3.1.2.4.4 Integrate & Sync with CMS, LMS
 
-_Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CMS, LMS_
+_Table 3.1.2.4.4. Use case Specification \- Integrate & Sync with CMS, LMS_
 
 | No.                     |     | Section               | Content                                                                                                                     |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
@@ -1694,11 +1690,11 @@ _Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CMS, LMS_
 
 ![][image37]
 
-_Figure 1.3.2.4.4. Activity Diagram \- Integrate & Sync with CMS, LMS_
+_Figure 3.1.2.4.4. Activity Diagram \- Integrate & Sync with CMS, LMS_
 
-1.3.2.4.5 Automate Workflows
+3.1.2.4.5 Automate Workflows
 
-_Table 1.3.2.4.5. Use case Specification \- Automate Workflows_
+_Table 3.1.2.4.5. Use case Specification \- Automate Workflows_
 
 | No.                     |     | Section               | Content                                                                                                                                                   |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1716,11 +1712,11 @@ _Table 1.3.2.4.5. Use case Specification \- Automate Workflows_
 
 ![][image38]
 
-_Figure 1.3.2.4.5. Activity Diagram \- Automate Workflows_
+_Figure 3.1.2.4.5. Activity Diagram \- Automate Workflows_
 
-1.3.2.4.6 Post Global Announcements
+3.1.2.4.6 Post Global Announcements
 
-_Table 1.3.2.4.6. Use case Specification \- Post Global Announcements_
+_Table 3.1.2.4.6. Use case Specification \- Post Global Announcements_
 
 | No.                     |     | Section               | Content                                                                                                   |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------- |
@@ -1738,11 +1734,11 @@ _Table 1.3.2.4.6. Use case Specification \- Post Global Announcements_
 
 ![][image39]
 
-_Figure 1.3.2.4.6. Activity Diagram \- Post Global Announcements_
+_Figure 3.1.2.4.6. Activity Diagram \- Post Global Announcements_
 
-1.3.2.4.7 Maintain Data Privacy & Access Permissions
+3.1.2.4.7 Maintain Data Privacy & Access Permissions
 
-_Table 1.3.2.4.7. Use case Specification \- Maintain Data Privacy & Access Permissions_
+_Table 3.1.2.4.7. Use case Specification \- Maintain Data Privacy & Access Permissions_
 
 | No.                     |     | Section               | Content                                                                                              |
 | :---------------------- | :-: | :-------------------- | :--------------------------------------------------------------------------------------------------- |
@@ -1760,11 +1756,11 @@ _Table 1.3.2.4.7. Use case Specification \- Maintain Data Privacy & Access Permi
 
 ![][image40]
 
-_Figure 1.3.2.4.7. Activity Diagram \- Maintain Data Privacy & Access Permissions_
+_Figure 3.1.2.4.7. Activity Diagram \- Maintain Data Privacy & Access Permissions_
 
-1.3.2.4.8 Respond to Helpdesk Tickets or System Issues
+3.1.2.4.8 Respond to Helpdesk Tickets or System Issues
 
-_Table 1.3.2.4.8. Use case Specification \- Respond to Helpdesk Tickets or System Issues_
+_Table 3.1.2.4.8. Use case Specification \- Respond to Helpdesk Tickets or System Issues_
 
 | No.                     |     | Section               | Content                                                                                                                                |
 | :---------------------- | :-: | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1782,15 +1778,15 @@ _Table 1.3.2.4.8. Use case Specification \- Respond to Helpdesk Tickets or Syste
 
 ![][image41]
 
-_Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Issues_
+_Figure 3.1.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Issues_
 
 <!-- From 3.5 change to 3.2  -->
 
-## **3.2 Performance requirements** {#3.5-performance-requirements}
+## **3.2 Performance requirements** {#3.2-performance-requirements}
 
 The performance requirements for the EduAxis are specified below. These requirements include both static and dynamic numerical requirements, ensuring the system meets necessary performance standards for usability and efficiency.
 
-### **3.5.1 Static Numerical Requirements** {#3.5.1-static-numerical-requirements}
+### **3.2.1 Static Numerical Requirements** {#3.2.1-static-numerical-requirements}
 
 1. **Storage Scalability**
 
@@ -1808,7 +1804,7 @@ The performance requirements for the EduAxis are specified below. These requirem
 
 ###
 
-### **3.5.2 Dynamic Numerical Requirements** {#3.5.2-dynamic-numerical-requirements}
+### **3.2.2 Dynamic Numerical Requirements** {#3.2.2-dynamic-numerical-requirements}
 
 1. **Task handling**  
 
@@ -1845,11 +1841,11 @@ These performance requirements ensure that the system will be responsive and eff
 
 <!-- From 3.6 change to 3.3 -->
 
-## **3.6 Usability Requirements** {#3.6-usability-requirements}
+## **3.3 Usability Requirements** {#3.3-usability-requirements}
 
 The usability and quality in user requirements for the EduAxis aims to ensure that the software is efficient, satisfying and productive for the intended users. These requirements encompass measurable criteria for effectiveness, efficiency and satisfaction and the prevention of future issues that could arise from its user specific contexts.
 
-### **3.6.1 User Interface** {#3.6.1-user-interface}
+### **3.3.1 User Interface** {#3.3.1-user-interface}
 
 1. Consistent Layout and Design
 
@@ -1859,7 +1855,7 @@ The usability and quality in user requirements for the EduAxis aims to ensure th
 
 - The system shall support responsive web design, ensuring usability across desktop, tablet and mobile devices without requiring separate systems.
 
-### **3.6.2 User Experience** {#3.6.2-user-experience}
+### **3.3.2 User Experience** {#3.3.2-user-experience}
 
 1. Efficient Navigation
 
@@ -1870,7 +1866,7 @@ The usability and quality in user requirements for the EduAxis aims to ensure th
 
 - The system shall adhere to Web Content Accessibility Guidelines (WCAG 2.1 Level AA) to ensure usability for users with impaired disabilities, including screen reader compatibility, keyboard navigation and appropriate colour contrast.
 
-### **3.6.3 Communication** {#3.6.3-communication}
+### **3.3.3 Communication** {#3.3.3-communication}
 
 1. Feedback Mechanism
 
@@ -1884,7 +1880,7 @@ The usability and quality in user requirements for the EduAxis aims to ensure th
 
 - The system shall allow users to customize notification preferences, including SMS alerts and email notifications, to improve communications effectiveness and user satisfaction.
 
-### **3.6.4 Data protection** {#3.6.4-data-protection}
+### **3.3.4 Data protection** {#3.3.4-data-protection}
 
 1. Data Encryption
 
@@ -2325,17 +2321,17 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 
 
 <!-- From 3.7 change to 3.5 -->
-## **3.7 Logical Database Requirements** {#3.7-logical-database-requirements}
+## **3.5 Logical Database Requirements** {#3.5-logical-database-requirements}
 
 The logical requirements section defines the essential components and operations of an integrated platform designed to support academic communication and services for students, parents, lecturers, and administrators. It outlines the types of academic and administrative data accessed by each user group, the frequency of operations such as grade uploads, attendance monitoring, and course registration, and access privileges based on user roles. It also includes integrity constraints to maintain consistent academic records, security protocols such as authentication and role-based access control, and data retention requirements to preserve historical academic and financial data in compliance with institutional policies.
 
-### **3.7.1 Class Diagram** {#3.7.1-class-diagram}
+### **3.5.1 Class Diagram** {#3.5.1-class-diagram}
 
 The following figure shows the class diagram of EduAxis.  
 ![][image42]  
 _Figure 3.8.1 Class Diagram_
 
-### **3.7.2 Data Entities**
+### **3.5.2 Data Entities**
 
 The following table describes the key data entities and their functionalities in the EduAxis.
 
@@ -2357,7 +2353,7 @@ _Table 3.8.2.1 Data Entities and Descriptions_
 | Announcement   | A class for official notifications from lecturers or admins. Includes announcementID, title, content, createdBy, targetGroup, and timestamp.      |
 | FeedbackTicket | A class representing user-submitted feedback or issues. Attributes include ticketID, userID, description, status, and createdDate.                |
 
-### **3.7.3 Relationship** {#3.7.3-relationship}
+### **3.5.3 Relationship** {#3.5.3-relationship}
 
 The following table describes the relationships between each class in the EduAxis system.
 
@@ -2379,7 +2375,7 @@ _Table 3.8.3.1 Relationships between Classes_
 | Announcement   | Announcements are created by lecturers or admins and targeted to specific user groups such as students or parents. Each user can view multiple announcements.        |
 | FeedbackTicket | Feedback or complaints are submitted by users. Each ticket is linked to one user and may be addressed by admin.                                                      |
 
-### **3.7.4 Types of Information Used by Various Functions** {#3.7.4-types-of-information-used-by-various-functions}
+### **3.5.4 Types of Information Used by Various Functions** {#3.5.4-types-of-information-used-by-various-functions}
 
 _Table 3.8.4.1 Types of Information, Classes Involved, and Functions_
 
@@ -2394,7 +2390,7 @@ _Table 3.8.4.1 Types of Information, Classes Involved, and Functions_
 | Notification Preferences        | Notification, NotificationPreferences  | Configuring and triggering SMS/Email alerts                                    |
 | Integration Information         | ExternalSystem                         | Syncing with CMS, LMS, Auth service, SMS gateway, and payment APIs             |
 
-### **3.7.5 Frequency of Use** {#3.7.5-frequency-of-use}
+### **3.5.5 Frequency of Use** {#3.5.5-frequency-of-use}
 
 _Table 3.8.5 Frequency of Operation Usage and Description_
 
@@ -2411,7 +2407,7 @@ _Table 3.8.5 Frequency of Operation Usage and Description_
 
 ###
 
-### **3.7.6 Accessing Capabilities** {#3.7.6-accessing-capabilities}
+### **3.5.6 Accessing Capabilities** {#3.5.6-accessing-capabilities}
 
 _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
@@ -2424,7 +2420,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
 ###
 
-### **3.7.7 Integrity Constraints** {#3.7.7-integrity-constraints}
+### **3.5.7 Integrity Constraints** {#3.5.7-integrity-constraints}
 
 1. **User Role Validation:**  
    Each user must have one of the following roles: Student, Lecturer, Parents, Admin. This role must be validated upon user registration and updated if necessary.  
@@ -2435,7 +2431,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 3. **Foreign Keys:**  
    Foreign key constraints must be enforced to maintain relationships between entities.
 
-### **3.7.8 Security** {#3.7.8-security}
+### **3.5.8 Security** {#3.5.8-security}
 
 1. **Authentication and Authorization:**  
    All users must log in using secure credentials. Access to system features will be managed using Role-Based Access Control (RBAC) to ensure users can only perform actions permitted by their role.
@@ -2448,7 +2444,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
 ###
 
-### **3.7.9 Data Retention Requirements** {#3.7.9-data-retention-requirements}
+### **3.5.9 Data Retention Requirements** {#3.5.9-data-retention-requirements}
 
 1. **User Data**  
    Retained for the duration of system use and up to 2 years after account deactivation, or longer if legally required.
@@ -2465,81 +2461,81 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 ##
 
 <!-- From 3.9 change to 3.6 -->
-## **3.9 Design Constraints** {#3.9-design-constraints}
+## **3.6 Design Constraints** {#3.6-design-constraints}
 
-### **3.9.1 Compliance with Data Privacy Regulations** {#3.9.1-compliance-with-data-privacy-regulations}
+### **3.6.1 Compliance with Data Privacy Regulations** {#3.6.1-compliance-with-data-privacy-regulations}
 
 | Constraint Description | The system must comply with relevant Malaysian data protection laws such as the Personal Data Protection Act (PDPA), ensuring the security and confidentiality of all student, parent, and staff data.          |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External regulatory requirements.                                                                                                                                                                               |
 | **Impact**             | All data collection, storage, and processing activities must enforce consent policies, encrypted data transmission, anonymization practices (where applicable), and role-based access to sensitive information. |
 
-### **3.9.2 Integration with Existing University Systems** {#3.9.2-integration-with-existing-university-systems}
+### **3.6.2 Integration with Existing University Systems** {#3.6.2-integration-with-existing-university-systems}
 
 | Constraint Description | The platform must seamlessly integrate with the university’s existing systems, including the Campus Management System (CMS), Learning Management System (LMS), authentication systems, and SMS/email gateways, using REST APIs over HTTPS and exchanging data in JSON format. |
 | :--------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                                                                               |
 | **Impact**             | The system must support RESTful APIs and conform to the schemas and endpoints defined by current university IT systems, ensuring backward compatibility and minimal disruption.                                    |
 
-### **3.9.3 Security Standards** {#3.9.3-security-standards}
+### **3.6.3 Security Standards** {#3.6.3-security-standards}
 
 | Constraint Description | The system must follow best-practice security protocols and adhere to OWASP guidelines by implementing password encryption, secure login mechanisms, activity logging, secure data transmission, robust access control, and comprehensive input validation.                              |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External standards.                                                                                                                                                                             |
 | **Impact**             | All modules must include secure authentication, password hashing, input sanitization, session timeout, and audit logging. Penetration testing and security reviews must be conducted regularly. |
 
-### **3.9.4 Accessibility Requirements** {#3.9.4-accessibility-requirements}
+### **3.6.4 Accessibility Requirements** {#3.6.4-accessibility-requirements}
 
 | Constraint Description | The platform must comply with WCAG 2.1 Level AA(Web Content Accessibility Guidelines) to ensure equal access to all user groups, including users with disabilities.                     |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External accessibility standards.                                                                                                                                                       |
 | **Impact**             | Support for screen readers, keyboard-only navigation, and high contrast themes must be integrated. Form fields and interactive content must be labeled clearly for accessibility tools. |
 
-### **3.9.5 API Usage Limitations** {#3.9.5-api-usage-limitations}
+### **3.6.5 API Usage Limitations** {#3.6.5-api-usage-limitations}
 
 | Constraint Description | The system must respect usage limitations for third-party APIs (e.g., Twilio SMS Gateway, LMS/CMS APIs), adhering to defined rate limits and authentication policies. To manage throttling effectively, the system shall implement exponential backoff strategies (e.g., 1s, 2s, 4s, 8s delays), queue non-critical requests for deferred processing, and return HTTP 429 responses with appropriate Retry-After headers. User notifications must be provided in cases of degraded service availability. Additionally, critical operations—such as attendance marking and emergency alerts—shall be handled via dedicated priority queues to ensure timely execution even during rate-limited conditions. |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External API standards.                                                                                                                                     |
 | **Impact**             | The system must implement throttling, retry mechanisms, and error handling routines to avoid service disruptions when API limits are exceeded.              |
 
-### **3.9.6 Performance and Scalability** {#3.9.6-performance-and-scalability}
+### **3.6.6 Performance and Scalability** {#3.6.6-performance-and-scalability}
 
 | Constraint Description | The system must scale to support large user loads, particularly during critical periods such as registration, grade release, or announcement events. |
 | :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                 |
 | **Impact**             | Use of load balancing, caching strategies, database indexing, and asynchronous operations is required to maintain system responsiveness.             |
 
-### **3.9.7 User Experience Consistency** {#3.9.7-user-experience-consistency}
+### **3.6.7 User Experience Consistency** {#3.6.7-user-experience-consistency}
 
 | Constraint Description | The system must provide a consistent and intuitive experience across mobile and desktop devices.                                                                            |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                                        |
 | **Impact**             | Interfaces must be responsive and user-friendly, minimizing clicks and displaying contextually relevant information based on user roles (student, parent, lecturer, admin). |
 
-### **3.9.8 Data Interoperability** {#3.9.8-data-interoperability}
+### **3.6.8 Data Interoperability** {#3.6.8-data-interoperability}
 
 | Constraint Description | The system must support data exchange between different systems via standard formats such as JSON.                                        |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External standards.                                                                                                                       |
 | **Impact**             | All integrations must use RESTful APIs with defined input/output schemas to ensure smooth data flow with minimal transformation overhead. |
 
-### **3.9.9 Legal and Ethical Considerations** {#3.9.9-legal-and-ethical-considerations}
+### **3.6.9 Legal and Ethical Considerations** {#3.6.9-legal-and-ethical-considerations}
 
 | Constraint Description | The system must protect user rights concerning the use, access, and visibility of their data, especially in educational and financial contexts.             |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External legal requirements and ethical principles.                                                                                                         |
 | **Impact**             | Consent mechanisms must be enforced. Users should be able to view what data is stored about them and request updates or removals in accordance with policy. |
 
-### **3.9.10 Project Budget and Timeline** {#3.9.10-project-budget-and-timeline}
+### **3.6.10 Project Budget and Timeline** {#3.6.10-project-budget-and-timeline}
 
 | Constraint Description | The project must remain within the allocated budget and development timeline set by the university or academic committee.                         |
 | :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Source**             | Project limitations.                                                                                                                              |
 | **Impact**             | Design decisions must consider trade-offs between feature richness and cost-efficiency. MVP-level features must be prioritized to meet deadlines. |
 
-### **3.9.11 Standards Compliance** {#3.9.11-standards-compliance}
+### **3.6.11 Standards Compliance** {#3.6.11-standards-compliance}
 
-#### **3.9.11.1 Report Format** {#3.9.11.1-report-format}
+#### **3.6.11.1 Report Format** {#3.6.11.1-report-format}
 
 Requirements:
 
@@ -2549,7 +2545,7 @@ Requirements:
 
 - Exported documents must maintain secure formatting, showing access dates, editors, and audit trails.
 
-#### **3.9.11.2 Data Naming** {#3.9.11.2-data-naming}
+#### **3.6.11.2 Data Naming** {#3.6.11.2-data-naming}
 
 Requirements:
 
@@ -2559,7 +2555,7 @@ Requirements:
 
 - API endpoints must be REST-compliant and named semantically (e.g., /api/v1/students/:id/courses, /api/v1/payments/:id).
 
-#### **3.9.11.3 Accounting Procedures** {#3.9.11.3-accounting-procedures}
+#### **3.6.11.3 Accounting Procedures** {#3.6.11.3-accounting-procedures}
 
 Requirements:
 
@@ -2571,7 +2567,7 @@ Requirements:
 
 - Financial records and invoice statuses must be traceable to user ID and timestamp.
 
-#### **3.9.11.4 Audit Tracing** {#3.9.11.4-audit-tracing}
+#### **3.6.11.4 Audit Tracing** {#3.6.11.4-audit-tracing}
 
 Requirements:
 
@@ -2585,91 +2581,92 @@ Requirements:
 
 **All standards and practices referenced are aligned with: PDPA (Malaysia), OWASP, WCAG 2.1 Level AA, RESTful API (RFC 7231), and internal academic IT policies.**
 
+##
 
 <!-- From 3.10 change to 3.7 -->
-## **3.10. Software system attributes** {#3.10.-software-system-attributes}
+## **3.7. Software system attributes** {#3.7.-software-system-attributes}
 
-### **3.10.1 Reliability** {#3.10.1-reliability}
+### **3.7.1 Reliability** {#3.7.1-reliability}
 
-**3.10.1.1. System Uptime**
+**3.7.1.1. System Uptime**
 
 The EduAxis shall maintain an uptime of 99.9%, ensuring continuous availability for students, lecturers, parents, and administrators.
 
-**3.10.1.2. Data Integrity**
+**3.7.1.2. Data Integrity**
 
 The system shall maintain data integrity by enforcing **transactional controls** and validation checks. All data updates shall follow **ACID** principles to prevent data corruption.
 
-**3.10.1.3. Backup and Recovery**
+**3.7.1.3. Backup and Recovery**
 
 The system shall perform automated daily backups of essential data, including user profiles, academic records, and payment transactions. Backup data shall be stored securely, with automated recovery procedures in place for system failures.
 
-### **3.10.2 Availability** {#3.10.2-availability}
+### **3.7.2 Availability** {#3.7.2-availability}
 
-**3.10.2.1 Redundancy**
+**3.7.2.1 Redundancy**
 
 The system shall utilize redundant servers and failover mechanisms to maintain service availability during hardware failures or maintenance periods.
 
-**3.10.2.2. Maintenance Windows**
+**3.7.2.2. Maintenance Windows**
 
 Scheduled maintenance windows shall be communicated to users at least 48 hours in advance, and maintenance activities shall be planned during off-peak hours to minimize disruption.
 
-**3.10.2.3. Real Time monitoring**
+**3.7.2.3. Real Time monitoring**
 
 The system shall implement real-time monitoring tools to track system performance and availability, allowing for immediate detection and response to any issues that arise.
 
 ###
 
-### **3.10.3 Security** {#3.10.3-security}
+### **3.7.3 Security** {#3.7.3-security}
 
-**3.10.3.1. Cryptographic Techniques**
+**3.7.3.1. Cryptographic Techniques**
 
 The system shall utilize industry-standard cryptographic techniques to protect sensitive data. All user passwords shall be hashed using a strong hashing algorithm, and all sensitive data transmissions shall be encrypted using TLS (Transport Layer Security).
 
-**3.10.3.2. Logging and Monitoring**
+**3.7.3.2. Logging and Monitoring**
 
 The system shall maintain detailed logs of all user activities and system events. These logs shall be stored securely and monitored regularly to detect and respond to suspicious activities.
 
-**3.10.3.3. Module Separation**
+**3.7.3.3. Module Separation**
 
 Authentication, academic processing, and financial modules shall be **logically separated** to reduce the risk of unauthorized access or data leakage.
 
-**3.10.3.4. Communication Restrictions**
+**3.7.3.4. Communication Restrictions**
 
 Access between modules shall be restricted based on the principle of least privilege, ensuring only authorized components interact with sensitive services.
 
-**3.10.3.5. Data Integrity Checks**
+**3.7.3.5. Data Integrity Checks**
 
 Automated integrity checks shall verify the consistency of critical records (e.g., grade reports, fee balances), with alerts for unauthorized or inconsistent changes.
 
-**3.10.3.6. Data Privacy Assurance**
+**3.7.3.6. Data Privacy Assurance**
 
 The system shall implement privacy controls, allowing users to manage their data and preferences, and ensuring compliance with data protection regulations.
 
 ###
 
-### **3.10.4. Maintainability** {#3.10.4.-maintainability}
+### **3.7.4. Maintainability** {#3.7.4.-maintainability}
 
-**3.10.4.1. Modular Design**
+**3.7.4.1. Modular Design**
 
 The platform shall be developed using a modular architecture, allowing components (e.g., grade module, attendance module) to be independently updated or maintained.
 
-**3.10.4.2. Documentation**
+**3.7.4.2. Documentation**
 
 Comprehensive system documentation shall include code-level comments, API references, user manuals, and deployment guides to support future development and maintenance.
 
-**3.10.4.3. Bug Tracking and Resolution**
+**3.7.4.3. Bug Tracking and Resolution**
 
 A comprehensive bug tracking system shall be implemented to log, prioritize, and resolve issues efficiently. Bugs will be classified by severity with the following response time commitments: Critical (system down – response within 2 hours), High (major feature broken – response within 8 hours), Medium (minor feature issue – response within 48 hours), and Low (cosmetic issues – response within 1 week). A priority matrix combining user impact and business criticality will guide prioritization. Clear escalation procedures will be established for unresolved issues beyond response time thresholds, including automated alerts to higher-level support or management. Regular communication with stakeholders is required throughout the resolution process, including initial acknowledgment, status updates, and resolution confirmation.
 
-### **3.10.5. Portability** {#3.10.5.-portability}
+### **3.7.5. Portability** {#3.7.5.-portability}
 
-**3.10.5.1. Platform Independence**  
+**3.7.5.1. Platform Independence**  
 The system shall be designed to be platform-independent, supporting deployment on Windows, Linux, or macOS environments without major rework.
 
-**3.10.5.2. Containerization**  
+**3.7.5.2. Containerization**  
 The system shall support Docker-based containerization, ensuring consistent deployment across development, staging, and production environments.
 
-**3.10.5.3. External Libraries and Dependencies**  
+**3.7.5.3. External Libraries and Dependencies**  
 Dependencies on platform-specific tools shall be minimized. Cross-platform libraries shall be prioritized to improve portability and long-term support.
 
 ##
@@ -2959,11 +2956,11 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 #
 
-# **5\. Verification** {#5.-verification}
+# **4\. Verification** {#4.-verification}
 
-## **5.1. Verification of External Interfaces ([3.2](#3.2-external-interfaces))** {#5.1.-verification-of-external-interfaces-(3.2)}
+## **4.1. Verification of External Interfaces ([3.2](#3.2-external-interfaces))** {#4.1.-verification-of-external-interfaces-(3.2)}
 
-### **5.1.1 University Database Interface ([3.2.1](#3.2.1-university-database-interface))** {#5.1.1-university-database-interface-(3.2.1)}
+### **4.1.1 University Database Interface ([3.2.1](#3.2.1-university-database-interface))** {#4.1.1-university-database-interface-(3.2.1)}
 
 | Methods               | Execute API calls to the PostgreSQL university database and compare the response with expected student, academic, and fee records. Scripts will be used to test CRUD operations and role-based data retrieval (such as student vs admin access). |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2971,7 +2968,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During integration testing and prior to each deployment cycle.                                                                                                                                                                                   |
 | **Environment**       | Development, staging, and production environments.                                                                                                                                                                                               |
 
-### **5.1.2 Campus Management System (CMS) Interface ([3.2.2](<#3.2.2-campus-management-system-(CMS)-interface>))** {#5.1.2-campus-management-system-(CMS)-interface-(3.2.2)}
+### **4.1.2 Campus Management System (CMS) Interface ([3.2.2](<#3.2.2-campus-management-system-(CMS)-interface>))** {#4.1.2-campus-management-system-(CMS)-interface-(3.2.2)}
 
 | Methods               | Perform API testing to verify grade, course registration, and attendance data pulled from CMS matches internal student profiles. Use real enrollment data and validate mapped fields. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2979,7 +2976,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During initial integration setup and after every schema change or API update.                                                                                                          |
 | **Environment**       | Staging and production with controlled test users.                                                                                                                                     |
 
-### **5.1.3 Learning Management System (LMS) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#5.1.3-learning-management-system-(LMS)-interface-(3.2.3)}
+### **4.1.3 Learning Management System (LMS) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#4.1.3-learning-management-system-(LMS)-interface-(3.2.3)}
 
 | Methods               | Verify grade upload and assignment sync via LMS API. Compare LMS-side student submissions and scores against system display. Test API failures and timeouts. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2989,7 +2986,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ###
 
-### **5.1.4 SMS/Email Notification Gateway ([3.2.4](#3.2.4-sms-&-email-gateway-interface))** {#5.1.4-sms/email-notification-gateway-(3.2.4)}
+### **4.1.4 SMS/Email Notification Gateway ([3.2.4](#3.2.4-sms-&-email-gateway-interface))** {#4.1.4-sms/email-notification-gateway-(3.2.4)}
 
 | Methods               | Trigger real alerts (test accounts) for various actions (such as low attendance, fee due). Confirm delivery status, content accuracy, and user preference configurations. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2997,7 +2994,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During functional testing of alert workflows and any template update.                                                                                                     |
 | **Environment**       | Staging and production with sandbox API keys.                                                                                                                             |
 
-### **5.1.5 Authentication Service (SSO/OAuth) Interface ([3.2.5](#3.2.5-authentication-service-interface))** {#5.1.5-authentication-service-(sso/oauth)-interface-(3.2.5)}
+### **4.1.5 Authentication Service (SSO/OAuth) Interface ([3.2.5](#3.2.5-authentication-service-interface))** {#4.1.5-authentication-service-(sso/oauth)-interface-(3.2.5)}
 
 | Methods               | Test login with valid and invalid credentials through the SSO gateway. Validate token generation, session handling, and role-based dashboard redirection. |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3005,7 +3002,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | At user provisioning rollout and before new semester sessions.                                                                                            |
 | **Environment**       | Staging and production SSO sandbox environments.                                                                                                          |
 
-### **5.1.6 Payment Gateway Interface ([3.2.6](#3.2.6-payment-gateway-interface))** {#5.1.6-payment-gateway-interface-(3.2.6)}
+### **4.1.6 Payment Gateway Interface ([3.2.6](#3.2.6-payment-gateway-interface))** {#4.1.6-payment-gateway-interface-(3.2.6)}
 
 | Methods               | Simulate payment flow using test invoice and validate payment status updates. Test payment failure handling, timeout recovery, and transaction logging. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -3019,9 +3016,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **5.2 Verification of Functional Requirements** {#5.2-verification-of-functional-requirements}
+## **4.2 Verification of Functional Requirements** {#4.2-verification-of-functional-requirements}
 
-**5.2.1 User Authentication and Authorization([3.4.1.1](#3.4.1.1-requirement-1))**
+**4.2.1 User Authentication and Authorization([3.4.1.1](#3.4.1.1-requirement-1))**
 
 | Methods:           | Functional testing, penetration testing, MFA validation, and code review for secure login. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
@@ -3031,7 +3028,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.2.2 View Academic Grades([3.4.1.2](#3.4.1.2-requirement-2))**
+**4.2.2 View Academic Grades([3.4.1.2](#3.4.1.2-requirement-2))**
 
 | Methods:           | Functional testing, data validation checks, and role-based access testing. |
 | :----------------- | :------------------------------------------------------------------------- |
@@ -3041,7 +3038,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.2.3 Access Attendance Records([3.4.1.3](#3.4.1.3-requirement-3))**
+**4.2.3 Access Attendance Records([3.4.1.3](#3.4.1.3-requirement-3))**
 
 | Methods:           | Functional testing of attendance logs, filters, and export options. |
 | :----------------- | :------------------------------------------------------------------ |
@@ -3051,7 +3048,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.2.4 Access Academic Timetable ([3.4.1.4](#3.4.1.4-requirement-4))**
+**4.2.4 Access Academic Timetable ([3.4.1.4](#3.4.1.4-requirement-4))**
 
 | Methods:           | Usability and functional testing with real-time calendar integration validation. |
 | :----------------- | :------------------------------------------------------------------------------- |
@@ -3059,7 +3056,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During feature roll-out testing.                                                 |
 | Environment:       | Development environment and UAT (User Acceptance Testing) stage.                 |
 
-**5.2.5 Manage User Accounts and Roles([3.4.1.5](#3.4.1.5-requirement-5))**
+**4.2.5 Manage User Accounts and Roles([3.4.1.5](#3.4.1.5-requirement-5))**
 
 | Methods:           | Functional testing for role creation, permissions handling, and user lifecycle management. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
@@ -3067,7 +3064,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During user management module implementation.                                              |
 | Environment:       | Development and admin-controlled test environments.                                        |
 
-**5.2.6 Integration with Campus Systems([3.4.1.6](#3.4.1.6-requirement-6))**
+**4.2.6 Integration with Campus Systems([3.4.1.6](#3.4.1.6-requirement-6))**
 
 | Methods:           | API integration testing, mock service simulation, and data sync validation. |
 | :----------------- | :-------------------------------------------------------------------------- |
@@ -3075,7 +3072,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During system interfacing and staging rollout.                              |
 | Environment:       | Development with mock CMS, LMS, and CMS endpoints.                         |
 
-**5.2.7 Maintain Data Privacy and Permissions([3.4.1.7](#3.4.1.7-requirement-7))**
+**4.2.7 Maintain Data Privacy and Permissions([3.4.1.7](#3.4.1.7-requirement-7))**
 
 | Methods:           | Role-based access control (RBAC) testing, audit logs, and compliance checks (PDPA, GDPR). |
 | :----------------- | :---------------------------------------------------------------------------------------- |
@@ -3083,7 +3080,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Before deployment and during periodic audits.                                             |
 | Environment:       | Controlled test environment.                                                              |
 
-**5.2.8 Pay Tuition and Other Fees([3.4.1.8](#3.4.1.8-requirement-8))**
+**4.2.8 Pay Tuition and Other Fees([3.4.1.8](#3.4.1.8-requirement-8))**
 
 | Methods:           | Integration testing with payment gateway and transaction validation. |
 | :----------------- | :------------------------------------------------------------------- |
@@ -3091,7 +3088,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | After payment module is integrated.                                  |
 | Environment:       | Staging environment with sandbox payment credentials.                |
 
-**5.2.9 View Payment History and Invoices ([3.4.1.9](#3.4.1.9-requirement-9))**
+**4.2.9 View Payment History and Invoices ([3.4.1.9](#3.4.1.9-requirement-9))**
 
 | Methods:           | Functional testing, data accuracy checks, and user accessibility validation. |
 | :----------------- | :--------------------------------------------------------------------------- |
@@ -3099,7 +3096,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During post-transaction validation testing.                                  |
 | Environment:       | Staging environment.                                                         |
 
-**5.2.10 Upload and Manage Grades([3.4.2.1](#3.4.2.1-requirement-10))**
+**4.2.10 Upload and Manage Grades([3.4.2.1](#3.4.2.1-requirement-10))**
 
 | Methods:           | Functional testing, input validation, bulk upload checks. |
 | :----------------- | :-------------------------------------------------------- |
@@ -3107,7 +3104,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During internal testing phase.                            |
 | Environment:       | Staging environment with mock class data.                 |
 
-**5.2.11 Digital Attendance Tracking ([3.4.2.2](#3.4.2.2-requirement-11))**
+**4.2.11 Digital Attendance Tracking ([3.4.2.2](#3.4.2.2-requirement-11))**
 
 | Methods:           | QR code scanning simulation, manual input testing, record validation. |
 | :----------------- | :-------------------------------------------------------------------- |
@@ -3115,7 +3112,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Pre-deployment phase.                                                 |
 | Environment:       | Mobile emulator and browser staging environment.                      |
 
-**5.2.12 Post Announcement and Updates([3.4.2.3](#3.4.2.3-requirement-12))**
+**4.2.12 Post Announcement and Updates([3.4.2.3](#3.4.2.3-requirement-12))**
 
 | Methods:           | Functional testing for announcement creation, user delivery tracking, and UI feedback. |
 | :----------------- | :------------------------------------------------------------------------------------- |
@@ -3123,7 +3120,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | After CMS integration.                                                                 |
 | Environment:       | Development and staging server.                                                        |
 
-**5.2.13 Dashboard with Performance Overview([3.4.2.4](#3.4.2.4-requirement-13))**
+**4.2.13 Dashboard with Performance Overview([3.4.2.4](#3.4.2.4-requirement-13))**
 
 | Methods:           | Visualization rendering test, data aggregation validation, UI responsiveness testing. |
 | :----------------- | :------------------------------------------------------------------------------------ |
@@ -3131,7 +3128,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Post-integration testing phase.                                                       |
 | Environment:       | UAT and staging.                                                                      |
 
-**5.2.14 Submit Feedback and Support Requests([3.4.2.5](#3.4.2.5-requirement-14))**
+**4.2.14 Submit Feedback and Support Requests([3.4.2.5](#3.4.2.5-requirement-14))**
 
 | Methods:           | Form validation, ticket creation flow, and routing logic testing. |
 | :----------------- | :---------------------------------------------------------------- |
@@ -3139,7 +3136,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Upon internal beta testing.                                       |
 | Environment:       | Test helpdesk environment.                                        |
 
-**5.2.15 Alert and Reminder System([3.4.2.6](#3.4.2.6-requirement-15))**
+**4.2.15 Alert and Reminder System([3.4.2.6](#3.4.2.6-requirement-15))**
 
 | Methods:           | Notification trigger simulation, queue monitoring, delivery validation. |
 | :----------------- | :---------------------------------------------------------------------- |
@@ -3147,7 +3144,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Before release and during reliability audits.                           |
 | Environment:       | Text messaging environment using Twilio/SMS sandbox                     |
 
-**5.2.16 Notification Read Tracking([3.4.3.1](#3.4.3.1-requirement-16))**
+**4.2.16 Notification Read Tracking([3.4.3.1](#3.4.3.1-requirement-16))**
 
 | Methods:           | User interaction logging test, status flag tracking, read/unread state toggling. |
 | :----------------- | :------------------------------------------------------------------------------- |
@@ -3155,7 +3152,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During real-user simulation testing.                                             |
 | Environment:       | Staging with event tracking tools.                                               |
 
-**5.2.17 Custom Notification Preferences([3.4.3.2](#3.4.3.2-requirement-17))**
+**4.2.17 Custom Notification Preferences([3.4.3.2](#3.4.3.2-requirement-17))**
 
 | Methods:           | Preference update test, delivery filter checks, setting persistence validation. |
 | :----------------- | :------------------------------------------------------------------------------ |
@@ -3163,7 +3160,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Pre-launch personalization feature test.                                        |
 | Environment:       | Settings sandbox environment.                                                   |
 
-**5.2.18 Visual Performance Analytics([3.4.3.3](#3.4.3.3-requirement-18))**
+**4.2.18 Visual Performance Analytics([3.4.3.3](#3.4.3.3-requirement-18))**
 
 | Methods:           | Graph rendering checks, accuracy tests with mock data, and responsiveness testing. |
 | :----------------- | :--------------------------------------------------------------------------------- |
@@ -3171,7 +3168,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | After analytics engine integration.                                                |
 | Environment:       | Development and analytics testing stage.                                           |
 
-**5.2.19 Mobile-Friendly Responsive Interface([3.4.3.4](#3.4.3.4-requirement-19))**
+**4.2.19 Mobile-Friendly Responsive Interface([3.4.3.4](#3.4.3.4-requirement-19))**
 
 | Methods:           | Cross-device UI tests, responsive CSS checks, and accessibility validation (WCAG). |
 | :----------------- | :--------------------------------------------------------------------------------- |
@@ -3181,11 +3178,11 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **5.3. Verification of Usability Requirements ([3.6](#3.6-usability-requirements))** {#5.3.-verification-of-usability-requirements-(3.6)}
+## **4.3. Verification of Usability Requirements ([3.6](#3.6-usability-requirements))** {#4.3.-verification-of-usability-requirements-(3.6)}
 
-### **5.3.1 User Interface ([3.6.1](#3.6.1-user-interface))** {#5.3.1-user-interface-(3.6.1)}
+### **4.3.1 User Interface ([3.6.1](#3.6.1-user-interface))** {#4.3.1-user-interface-(3.6.1)}
 
-**5.3.1.1 Consistent Layout and Design**
+**4.3.1.1 Consistent Layout and Design**
 
 | Methods:           | Conduct evaluation and consistency checks across modules to ensure uniform layout. |
 | :----------------- | :--------------------------------------------------------------------------------- |
@@ -3195,7 +3192,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.3.1.2 Responsive Design**
+**4.3.1.2 Responsive Design**
 
 | Methods:           | Test system on desktop, tablet and mobile for layout sync and functionality |
 | :----------------- | :-------------------------------------------------------------------------- |
@@ -3205,9 +3202,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.3.2 User Experience ([3.6.2](#3.6.2-user-experience))** {#5.3.2-user-experience-(3.6.2)}
+### **4.3.2 User Experience ([3.6.2](#3.6.2-user-experience))** {#4.3.2-user-experience-(3.6.2)}
 
-**5.3.2.1 Efficient Navigation**
+**4.3.2.1 Efficient Navigation**
 
 | Methods:           | Test the quickness of the user to reach key features like grades and registration. Measure number of clicks and task time |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------ |
@@ -3217,7 +3214,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.3.2.2 Accessibility and Personalized Experience**
+**4.3.2.2 Accessibility and Personalized Experience**
 
 | Methods:           | Use screen readers and accessibility tools to test WCAG 2.1 Level AA compliance. Check course suggestions and contrast. |
 | :----------------- | :---------------------------------------------------------------------------------------------------------------------- |
@@ -3227,9 +3224,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.3.3 Communication ([3.6.3](#3.6.3-communication))** {#5.3.3-communication-(3.6.3)}
+### **4.3.3 Communication ([3.6.3](#3.6.3-communication))** {#4.3.3-communication-(3.6.3)}
 
-**5.3.3.1 Feedback Mechanism**
+**4.3.3.1 Feedback Mechanism**
 
 | Methods:           | Check if confirmation or error messages appear after actions like form submission or uploads. |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
@@ -3239,7 +3236,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.3.3.2 Language Standards**
+**4.3.3.2 Language Standards**
 
 | Methods:           | Review system text for clear, non-technical language in instructions and alerts. |
 | :----------------- | :------------------------------------------------------------------------------- |
@@ -3249,7 +3246,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.3.3.2 Notification Management**
+**4.3.3.2 Notification Management**
 
 | Methods:           | Test SMS/email settings to ensure users can change notification preferences. |
 | :----------------- | :--------------------------------------------------------------------------- |
@@ -3257,9 +3254,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During integration and UAT.                                                  |
 | Environment:       | Staging environment with test user roles                                     |
 
-### **5.3.3 Data Protection ([3.6.4](#3.6.4-data-protection))** {#5.3.3-data-protection-(3.6.4)}
+### **4.3.3 Data Protection ([3.6.4](#3.6.4-data-protection))** {#4.3.3-data-protection-(3.6.4)}
 
-**5.3.4.1 Data Encryption**
+**4.3.4.1 Data Encryption**
 
 | Methods:           | Leave session idle and verify if the user is logged out automatically after the timeout period. |
 | :----------------- | :---------------------------------------------------------------------------------------------- |
@@ -3269,7 +3266,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.3.4.2 Server Controls**
+**4.3.4.2 Server Controls**
 
 | Methods:           | Verify HTTPS is enforced across all pages using browser dev tools and security scanners. |
 | :----------------- | :--------------------------------------------------------------------------------------- |
@@ -3279,11 +3276,11 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **5.4. Verification of Performance Requirements ([3.5](#3.5-performance-requirements))** {#5.4.-verification-of-performance-requirements-(3.5)}
+## **4.4. Verification of Performance Requirements** {#4.4.-verification-of-performance-requirements-(3.5)}
 
-### **5.4.1 Static Numerical Requirements ([3.5.1](#3.5.1-static-numerical-requirements))** {#5.4.1-static-numerical-requirements-(3.5.1)}
+### **4.4.1 Static Numerical Requirements** {#4.4.1-static-numerical-requirements-(3.5.1)}
 
-**5.4.1.1 Storage Scalability**
+**4.4.1.1 Storage Scalability**
 
 | Methods:           | Test storage handling with mock academic and media data to reach 2TB. Check backup interval and recovery time. |
 | :----------------- | :------------------------------------------------------------------------------------------------------------- |
@@ -3293,7 +3290,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.2 Database Backups**
+**4.4.1.2 Database Backups**
 
 | Methods:           | Check data backup storage allocation every 12 hours for data tracking and retrieval |
 | :----------------- | :---------------------------------------------------------------------------------- |
@@ -3303,7 +3300,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.3 Data Retrieval Speed**
+**4.4.1.3 Data Retrieval Speed**
 
 | Methods:           | Send multiple queries for student records, schedules, and attendance, and measure response time. |
 | :----------------- | :----------------------------------------------------------------------------------------------- |
@@ -3313,9 +3310,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.4 Simultaneous User Capacity**
+**4.4.1.4 Simultaneous User Capacity**
 
-| Methods:           | Simulate 5,000 users performing key actions. Monitor system load, latency, and crash reports. |
+| Methods:           | Simulate 4,000 users performing key actions. Monitor system load, latency, and crash reports. |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
 | Responsibility:    | Performance and QA teams.                                                                     |
 | Verification Time: | During stress testing and scalability evaluation.                                             |
@@ -3323,7 +3320,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.4 Session Timeout**
+**4.4.1.4 Session Timeout**
 
 | Methods:           | Leave sessions inactive for 15 minutes and verify auto logout and session data clearance. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
@@ -3333,9 +3330,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.4.1 Dynamic Numerical Requirements ([3.5.2](#3.5.2-dynamic-numerical-requirements))** {#5.4.1-dynamic-numerical-requirements-(3.5.2)}
+### **4.4.1 Dynamic Numerical Requirements** {#4.4.1-dynamic-numerical-requirements-(3.5.2)}
 
-**5.4.1.1 Task Handling**
+**4.4.1.1 Task Handling**
 
 | Methods:           | Task completion analysis on automated log sand error rate reports     |
 | :----------------- | :-------------------------------------------------------------------- |
@@ -3343,7 +3340,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During performance and integration testing                            |
 | Environment:       | Staging environment with simulated data loads and automation triggers |
 
-**5.4.1.2 System Uptime**
+**4.4.1.2 System Uptime**
 
 | Methods:           | Deploy system monitoring using uptime tracking tools. Simulate failure and recovery scenarios. |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
@@ -3351,7 +3348,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | Post-deployment monitoring                                                                     |
 | Environment:       | Pre-production staging with simulated failover                                                 |
 
-**5.4.1.3 Feature Responsiveness**
+**4.4.1.3 Feature Responsiveness**
 
 | Methods:           | Perform response time tests on core modules with simulated user actions. |
 | :----------------- | :----------------------------------------------------------------------- |
@@ -3361,7 +3358,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.4 Background Data Synchronization**
+**4.4.1.4 Background Data Synchronization**
 
 | Methods:           | mock synchronization events between systems using simulated updates. |
 | :----------------- | :------------------------------------------------------------------- |
@@ -3371,7 +3368,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.5 Grade Upload Processing**
+**4.4.1.5 Grade Upload Processing**
 
 | Methods:           | test grade files with varied data types and formats. Monitor system logs and error handling reports to confirm error-free processing |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
@@ -3381,7 +3378,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.5 Report Generation**
+**4.4.1.5 Report Generation**
 
 | Methods:           | Generate reports with test data under standard usage. Log and analyze response time per report |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
@@ -3391,7 +3388,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.6 Peak load Response Time**
+**4.4.1.6 Peak load Response Time**
 
 | Methods:           | load testing tools to simulate concurrent users executing various tasks. Measure response times and confirm less than 10% of total requests are delayed or failed. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3401,7 +3398,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-**5.4.1.7 Transaction Processing**
+**4.4.1.7 Transaction Processing**
 
 | Methods:           | Simulate transactions for login, course enrollment, and grade input. Track completion times and validate |
 | :----------------- | :------------------------------------------------------------------------------------------------------- |
@@ -3411,9 +3408,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **5.5. Verification of Logical Database Requirements ([3.8](#3.7-logical-database-requirements))** {#5.5.-verification-of-logical-database-requirements-(3.8)}
+## **4.5. Verification of Logical Database Requirements ([3.8](#3.7-logical-database-requirements))** {#5.5.-verification-of-logical-database-requirements-(3.8)}
 
-### **5.5.1 Data Integrity Enforcement** {#5.5.1-data-integrity-enforcement}
+### **4.5.1 Data Integrity Enforcement** {#4.5.1-data-integrity-enforcement}
 
 | Methods:           | Test insertion, update, and deletion of records to confirm enforcement of constraints (e.g., NOT NULL, UNIQUE, CHECK). Validate business rules through automated test cases. |
 | :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3423,7 +3420,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.5.2 Referential Integrity Checks** {#5.5.2-referential-integrity-checks}
+### **4.5.2 Referential Integrity Checks** {#4.5.2-referential-integrity-checks}
 
 | Methods:           | Execute queries that involve foreign key relationships to ensure cascading updates/deletes behave correctly. Attempt violations to test constraint enforcement. |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3433,7 +3430,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.5.3 Normalization Compliance** {#5.5.3-normalization-compliance}
+### **4.5.3 Normalization Compliance** {#4.5.3-normalization-compliance}
 
 | Methods:           | Review schema design for adherence to at least 3NF. Conduct manual and automated checks for redundancy and anomalies in table structures. |
 | :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3443,7 +3440,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.5.4 Query Accuracy and Performance** {#5.5.4-query-accuracy-and-performance}
+### **4.5.4 Query Accuracy and Performance** {#4.5.4-query-accuracy-and-performance}
 
 | Methods:           | Execute frequently used queries (e.g., fetch student records, schedules, attendance) to validate data correctness and acceptable execution time (\< 2 seconds for most queries). |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3453,7 +3450,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-### **5.5.5 Data Redundancy Detection** {#5.5.5-data-redundancy-detection}
+### **4.5.5 Data Redundancy Detection** {#4.5.5-data-redundancy-detection}
 
 | Methods:           | Use SQL scripts to identify duplicate entries in key tables (e.g., student profiles, course lists). Monitor ETL processes to avoid redundant data insertion. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3461,7 +3458,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During integration and data migration testing.                                                                                                               |
 | Environment:       | Staging environment with migration datasets.                                                                                                                 |
 
-### **5.5.6 Transactional Consistency (ACID Properties)** {#5.5.6-transactional-consistency-(acid-properties)}
+### **4.5.6 Transactional Consistency (ACID Properties)** {#4.5.6-transactional-consistency-(acid-properties)}
 
 | Methods:           | Simulate multi-step transactions (e.g., student enrollment and payment) to ensure atomicity, consistency, isolation, and durability. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
@@ -3469,7 +3466,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification Time: | During database transaction testing and security testing.                                                                            |
 | Environment:       | Staging environment with transactional logs enabled.                                                                                 |
 
-### **5.5.7 Backup and Recovery Validation** {#5.5.7-backup-and-recovery-validation}
+### **4.5.7 Backup and Recovery Validation** {#4.5.7-backup-and-recovery-validation}
 
 | Methods:           | Trigger backup creation and simulate failure scenarios to ensure database restoration maintains logical integrity (e.g., no orphaned records or corruption). |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3479,9 +3476,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **5.6. Verification of Design Constraints ([3.9](#3.9-design-constraints))** {#5.6.-verification-of-design-constraints-(3.9)}
+## **4.6. Verification of Design Constraints ([3.9](#3.9-design-constraints))** {#4.6.-verification-of-design-constraints-(3.9)}
 
-### **5.6.1 Compliance with Data Privacy Regulations ([3.9.1](#3.9.1-compliance-with-data-privacy-regulations))** {#5.6.1-compliance-with-data-privacy-regulations-(3.9.1)}
+### **4.6.1 Compliance with Data Privacy Regulations ([3.9.1](#3.9.1-compliance-with-data-privacy-regulations))** {#4.6.1-compliance-with-data-privacy-regulations-(3.9.1)}
 
 | Methods               | Conduct documentation review and technical tests to ensure compliance with PDPA. Simulate scenarios for personal data access and validate encryption and consent enforcement. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3489,7 +3486,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During the requirements definition, testing, and before production rollout.                                                                                                   |
 | **Environment**       | Development, staging, and remote documentation environments.                                                                                                                  |
 
-### **5.6.2 Integration with Existing University Systems ([3.9.2](#3.9.2-integration-with-existing-university-systems))** {#5.6.2-integration-with-existing-university-systems-(3.9.2)}
+### **4.6.2 Integration with Existing University Systems ** {#4.6.2-integration-with-existing-university-systems-(3.9.2)}
 
 | Methods               | Perform API contract testing with CMS and LMS. Conduct data mapping verification and simulate student data sync flows to ensure field compatibility. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3497,7 +3494,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During API integration phase and post-deployment patches.                                                                                             |
 | **Environment**       | Staging and production sandbox environments.                                                                                                          |
 
-### **5.6.3 Security Standards ([3.9.3](#3.9.3-security-standards))** {#5.6.3-security-standards-(3.9.3)}
+### **4.6.3 Security Standards ([3.9.3](#3.9.3-security-standards))** {#4.6.3-security-standards-(3.9.3)}
 
 | Methods               | Run OWASP-based security scans, static code analysis, and penetration tests. Validate token expiry, password encryption, and XSS/SQL injection protection. |
 | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3505,7 +3502,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | Before each deployment cycle and during security audits.                                                                                                   |
 | **Environment**       | Staging and vulnerability assessment environments.                                                                                                         |
 
-### **5.6.4 Accessibility Requirements ([3.9.4](#3.9.4-accessibility-requirements))** {#5.6.4-accessibility-requirements-(3.9.4)}
+### **4.6.4 Accessibility Requirements ([3.9.4](#3.9.4-accessibility-requirements))** {#4.6.4-accessibility-requirements-(3.9.4)}
 
 | Methods               | Use tools such as WAVE, aXe, and manual tab testing to validate keyboard navigation, alt text, ARIA labels, and color contrast as per WCAG 2.1 Level AA standards. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3513,7 +3510,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During front-end development and UI freeze.                                                                                                                        |
 | **Environment**       | Cross-browser test environments and accessibility tools.                                                                                                           |
 
-### **5.6.5 API Usage Limitations ([3.9.5](#3.9.5-api-usage-limitations))** {#5.6.5-api-usage-limitations-(3.9.5)}
+### **4.6.5 API Usage Limitations ([3.9.5](#3.9.5-api-usage-limitations))** {#4.6.5-api-usage-limitations-(3.9.5)}
 
 | Methods               | Simulate multiple API calls using Postman and Locust to verify API rate limits and retry mechanisms. Confirm request throttling for SMS gateway and payment APIs. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3521,7 +3518,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During API testing and before system stress tests.                                                                                                                |
 | **Environment**       | Staging and pre-production integration environments.                                                                                                              |
 
-### **5.6.6 Performance and Scalability ([3.9.6](#3.9.6-performance-and-scalability))** {#5.6.6-performance-and-scalability-(3.9.6)}
+### **4.6.6 Performance and Scalability ([3.9.6](#3.9.6-performance-and-scalability))** {#4.6.6-performance-and-scalability-(3.9.6)}
 
 | Methods               | Use JMeter and k6 to simulate 500+ concurrent logins, grade queries, and SMS triggers. Measure response time and memory consumption under stress. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -3529,7 +3526,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | Before semester starts or exam periods.                                                                                                           |
 | **Environment**       | Performance test server environment.                                                                                                              |
 
-### **5.6.7 User Experience Consistency ([3.9.7](#3.9.7-user-experience-consistency))** {#5.6.7-user-experience-consistency-(3.9.7)}
+### **4.6.7 User Experience Consistency ** {#4.6.7-user-experience-consistency-(3.9.7)}
 
 | Methods               | Conduct usability testing with real users on phones, tablets, and desktops. Use BrowserStack to test consistency across Chrome, Firefox, Safari. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3537,7 +3534,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During front-end iterations and usability evaluation.                                                                                            |
 | **Environment**       | Responsive browser/device test lab.                                                                                                              |
 
-### **5.6.8 Data Interoperability ([3.9.8](#3.9.8-data-interoperability))** {#5.6.8-data-interoperability-(3.9.8)}
+### **4.6.8 Data Interoperability ** {#4.6.8-data-interoperability-(3.9.8)}
 
 | Methods               | Check that all integrated systems send/receive JSON objects according to API documentation. Validate encoding, timestamp formats, and key consistency. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3545,7 +3542,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During data flow tests and third-party integrations.                                                                                                   |
 | **Environment**       | Staging systems and integration endpoints.                                                                                                             |
 
-### **5.6.9 Legal and Ethical Considerations ([3.9.9](#3.9.9-legal-and-ethical-considerations))** {#5.6.9-legal-and-ethical-considerations-(3.9.9)}
+### **4.6.9 Legal and Ethical Considerations** {#5.6.9-legal-and-ethical-considerations-(3.9.9)}
 
 | Methods               | Verify audit trail coverage, data consent logs, and compliance features for student rights to data access and deletion. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------- |
@@ -3553,7 +3550,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During requirements finalization and before go-live.                                                                    |
 | **Environment**       | Documentation review and simulated compliance environment.                                                              |
 
-### **5.6.10 Project Budget and Timeline ([3.9.10](#3.9.10-project-budget-and-timeline))** {#5.6.10-project-budget-and-timeline-(3.9.10)}
+### **4.6.10 Project Budget and Timeline** {#4.6.10-project-budget-and-timeline-(3.9.10)}
 
 | Methods               | Use Gantt charts and financial logs to track project milestones and budget variance. Perform monthly reviews with the PMO. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------- |
@@ -3561,9 +3558,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | Continuously across all project phases.                                                                                    |
 | **Environment**       | Project management dashboard and cost tracking system.                                                                     |
 
-## **5.7 Verification of Software System Attributes ([3.10](#3.10.-software-system-attributes))** {#5.7-verification-of-software-system-attributes-(3.10)}
+## **4.7 Verification of Software System Attributes ([3.10](#3.10.-software-system-attributes))** {#4.7-verification-of-software-system-attributes-(3.10)}
 
-**5.7.1 Reliability ([3.10.1](#3.10.1-reliability))**
+**4.7.1 Reliability ([3.10.1](#3.10.1-reliability))**
 
 | Methods:           | Stress testing, reliability testing, data integrity validation, backup and recovery drills |
 | :----------------- | :----------------------------------------------------------------------------------------- |
@@ -3571,7 +3568,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification time: | Post implementation, pre-deployment                                                        |
 | Environment:       | Staging environment                                                                        |
 
-**5.7.2 Availability ([3.10.2](#3.10.2-availability))**
+**4.7.2 Availability ([3.10.2](#3.10.2-availability))**
 
 | Methods:           | Load testing, redundancy testing, monitoring validation |
 | :----------------- | :------------------------------------------------------ |
@@ -3579,7 +3576,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification time: | Post implementation, pre-deployment                     |
 | Environment:       | Staging environment                                     |
 
-**5.7.3 Security ([3.10.3](#3.10.3-security))**
+**4.7.3 Security ([3.10.3](#3.10.3-security))**
 
 | Methods:           | Penetration testing, code review, cryptographic validation, logging audits |
 | :----------------- | :------------------------------------------------------------------------- |
@@ -3587,7 +3584,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification time: | Pre-deployment and periodic reviews                                        |
 | Environment:       | Staging and production environments                                        |
 
-**5.7.4 Maintainability ([3.10.4](#3.10.4.-maintainability))**
+**4.7.4 Maintainability ([3.10.4](#3.10.4.-maintainability))**
 
 | Methods:           | Code review, modularity analysis, bug tracking audit |
 | :----------------- | :--------------------------------------------------- |
@@ -3595,7 +3592,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | Verification time: | Throughout deployment and pre-deployment             |
 | Environment:       | Development environment                              |
 
-**5.7.4 Portability ([3.10.5](#3.10.5.-portability))**
+**4.7.4 Portability ([3.10.5](#3.10.5.-portability))**
 
 | Methods:           | Cross-platform testing, Docker/containerization testing |
 | :----------------- | :------------------------------------------------------ |
@@ -3605,9 +3602,9 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 #
 
-# **6\. Appendices** {#6.-appendices}
+# **5\. Appendices** {#5.-appendices}
 
-## **6.1 Assumptions and dependencies** {#6.1-assumptions-and-dependencies}
+## **5.1 Assumptions and dependencies** {#5.1-assumptions-and-dependencies}
 
 #### **Assumptions:**
 
@@ -3635,7 +3632,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 5. The system shall rely on authentication mechanisms (e.g., JWT or OAuth2) to validate users and maintain session security.
 
-## **6.2 Acronyms and abbreviations** {#6.2-acronyms-and-abbreviations}
+## **5.2 Acronyms and abbreviations** {#5.2-acronyms-and-abbreviations}
 
 1. CliC: Campus Life and Information Centre
 2. SMS: Short Message Service
@@ -3679,7 +3676,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ##
 
-## **6.3 Glossary** {#6.3-glossary}
+## **5.3 Glossary** {#5.3-glossary}
 
 1. Authentication: Process of verifying identity of a user/system.
 2. Auth Service: Service that handles user authentication
