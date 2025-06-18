@@ -385,91 +385,13 @@ Figure 1.3.1.1 illustrates the system’s context diagram, highlighting the key 
 
 _Figure 1.3.1.1: Context Diagram of the EduAxis platform_
 
-#### **1.3.1.1 System interfaces** {#1.3.1.1-system-interfaces}
 
-**1\. Authentication Service Interface**
-
-Functionality: Enables secure user login and role-based access control.
-
-Interface Description: OAuth2-compliant API for verifying credentials and managing user sessions.
-
-Constraints/Standards: Must support multi-factor authentication (MFA) and integrate with institutional single sign-on (SSO) services.
-
-Data Flow: Bidirectional – users send credentials; server returns access tokens or denial.
-
-**2\. Campus Management System Interface**
-
-Functionality: Provides academic records, enrollment data, and tuition details.
-
-Interface Description: RESTful API to retrieve and update course registrations, grades, schedules, and financial records.
-
-Constraints: Requires secure HTTPS communication, JSON data format, and role-based access.
-
-Dependency: Real-time updates from this system are essential for accurate student dashboards and administrative tools.
-
-**3\. University Database Interface**
-
-Functionality: Acts as the central data store for user profiles, academic histories, payment records, and access logs.
-
-Interface Description: Structured API endpoints for CRUD (Create, Read, Update, Delete) operations on academic and personal data.
-
-Constraints: Must comply with university data privacy regulations (e.g., GDPR, PDPA).
-
-Data Flow: Bidirectional – supports user-initiated updates and system-initiated queries.
-
-**4\. Learning Management System (LMS) Interface**
-
-Functionality: Syncs coursework, submissions, grades, and lecturer feedback.
-
-Interface Description: RESTful API to access course materials, manage assessments, and update student performance data.
-
-Constraints: Requires LMS-compatible data structure and secure token-based access.
-
-**5\. SMS/Email Gateway Interface**
-
-Functionality: Facilitates communication via SMS and email alerts.
-
-Interface Description: External messaging service (e.g., Twilio, SendGrid) integration for sending real-time alerts and notifications.
-
-Constraints: Must support high availability and comply with opt-in/opt-out notification policies.
-
-**6\. CMS Integration Interface (Content Management System)**
-
-Functionality: Allows admin to post global announcements and update web content.
-
-Interface Description: Headless CMS API integration (e.g., Strapi or Contentful) for publishing dynamic content to the system.
-
-Constraints: Requires real-time syncing and admin authentication tokens.
-
-**7\. Helpdesk & Support Ticketing Interface**
-
-Functionality: Manages support requests from students, lecturers, and administrators.
-
-Interface Description: Internal ticketing system or integration with services like Freshdesk/Zendesk via APIs.
-
-Constraints: Should support status tracking, prioritization, and role-based ticket visibility.
-
-**8\. User Interface (Human-System Interface)**
-
-Functionality: Provides a responsive, role-sensitive web/mobile UI for all users.
-
-Interface Description: Web-based interface designed with accessibility and usability in mind; supports keyboard navigation, screen readers, and WCAG 2.1 Level AA compliance.
-
-Constraints: Optimized for mobile and desktop access; must adapt to the roles (Student, Parent, Lecturer, Admin) with corresponding permissions and menus.
-
-**9\. Notification Preference Management Interface**
-
-Functionality: Allows users to customize communication preferences.
-
-Interface Description: UI component linked with SMS/Email Gateway APIs for toggling notification channels (email/SMS/app).
-
-####
 
 
 
 ####
 
-#### **1.3.1.2 Memory constraints** {#1.3.1.2-memory-constraints}
+#### **1.3.1.1 Memory constraints**
 
 1\. **Primary Memory (RAM)**
 
@@ -503,7 +425,7 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
 
 Requirement: The system shall support up to 2,000 active sessions simultaneously with a configurable session timeout of 15 minutes of inactivity.
 
-#### **1.3.1.3 Operations** {#1.3.1.3-operations}
+#### **1.3.1.2 Operations** {#1.3.1.2-operations}
 
 1. **Modes of Operations:**  
 
@@ -547,7 +469,7 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
 
 ####
 
-#### **1.3.1.4 Site adaptation requirements** {#1.3.1.4-site-adaptation-requirements}
+#### **1.3.1.3 Site adaptation requirements** {#1.3.1.3-site-adaptation-requirements}
 
 ####
 
@@ -591,7 +513,7 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
 
 ####
 
-#### **1.3.1.5 Interfaces with services** {#1.3.1.5-interfaces-with-services}
+#### **1.3.1.4 Interfaces with services** {#1.3.1.4-interfaces-with-services}
 
 1. **Cloud Hosting Provider**  
    The EduAxis will be hosted on a cloud infrastructure such as Amazon Web Services (AWS) or Google Cloud Platform (GCP). These services provide scalable and reliable environments for hosting backend services, databases, and application logic. The platform will interface with cloud services to manage virtual servers, allocate resources, configure networking, and ensure system availability through autoscaling, load balancing, and backup services. APIs from the hosting provider will be used for deployment automation, storage management, and health monitoring.
@@ -608,11 +530,6 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
 ###
 
 ### **1.3.2 Product functions** {#1.3.2-product-functions}
-
-Figure 1.3.2.1 below shows the generic use case diagram for the EduAxis with Campus Management System and SMS Gateway Integration.
-
-![][image4]  
-_Figure 1.3.2.1: Generic Use Case Diagram_
 
 Table 1.3.2.1 below contains the list of functions to be implemented into the system which are organized by actors defined for this system.
 
@@ -967,6 +884,11 @@ Table 3.1.1.3.4 - Mobile-Friendly Responsive Interface (Requirement 19)
 | **Related Function:**       | All access-related functions (Login, View Grades, etc.)                                          |
 
 ### 
+
+Figure 3.1.2.1 below shows the generic use case diagram for the EduAxis with Campus Management System and SMS Gateway Integration.
+
+![][image4]  
+_Figure 3.2.1: Generic Use Case Diagram_
 
 <!-- From 1.3 chnage to 3.1.1 -->
 #### **3.1.2.1 Student function** {#3.1.2.1-student-function}
@@ -1815,7 +1737,7 @@ The performance requirements for the EduAxis are specified below. These requirem
 
 - The system shall maintain a 95% responsiveness rate across all core features in the system such as in dashboard, notifications, and user profile update. User interaction logs will confirm the stable performance.  
 
-- During concurrent usage of more than 4,000 users, the system shall maintain a task success rate of above 95% across all modules.  
+- During concurrent usage of more than 5,000 users, the system shall maintain a task success rate of above 95% across all modules.  
 
 
 2. **Data Processing**  
@@ -1896,7 +1818,87 @@ The usability and quality in user requirements for the EduAxis aims to ensure th
 
 <!-- From 1.3.1.2 change to 3.4 Interface Requirements -->
 ## 3.4 Interface Requirements
-#### **1.3.1.2 User interfaces** {#1.3.1.2-user-interfaces}
+### **3.4.1 System interfaces**
+
+**1\. Authentication Service Interface**
+
+Functionality: Enables secure user login and role-based access control.
+
+Interface Description: OAuth2-compliant API for verifying credentials and managing user sessions.
+
+Constraints/Standards: Must support multi-factor authentication (MFA) and integrate with institutional single sign-on (SSO) services.
+
+Data Flow: Bidirectional – users send credentials; server returns access tokens or denial.
+
+**2\. Campus Management System Interface**
+
+Functionality: Provides academic records, enrollment data, and tuition details.
+
+Interface Description: RESTful API to retrieve and update course registrations, grades, schedules, and financial records.
+
+Constraints: Requires secure HTTPS communication, JSON data format, and role-based access.
+
+Dependency: Real-time updates from this system are essential for accurate student dashboards and administrative tools.
+
+**3\. University Database Interface**
+
+Functionality: Acts as the central data store for user profiles, academic histories, payment records, and access logs.
+
+Interface Description: Structured API endpoints for CRUD (Create, Read, Update, Delete) operations on academic and personal data.
+
+Constraints: Must comply with university data privacy regulations (e.g., GDPR, PDPA).
+
+Data Flow: Bidirectional – supports user-initiated updates and system-initiated queries.
+
+**4\. Learning Management System (LMS) Interface**
+
+Functionality: Syncs coursework, submissions, grades, and lecturer feedback.
+
+Interface Description: RESTful API to access course materials, manage assessments, and update student performance data.
+
+Constraints: Requires LMS-compatible data structure and secure token-based access.
+
+**5\. SMS/Email Gateway Interface**
+
+Functionality: Facilitates communication via SMS and email alerts.
+
+Interface Description: External messaging service (e.g., Twilio, SendGrid) integration for sending real-time alerts and notifications.
+
+Constraints: Must support high availability and comply with opt-in/opt-out notification policies.
+
+**6\. CMS Integration Interface (Content Management System)**
+
+Functionality: Allows admin to post global announcements and update web content.
+
+Interface Description: Headless CMS API integration (e.g., Strapi or Contentful) for publishing dynamic content to the system.
+
+Constraints: Requires real-time syncing and admin authentication tokens.
+
+**7\. Helpdesk & Support Ticketing Interface**
+
+Functionality: Manages support requests from students, lecturers, and administrators.
+
+Interface Description: Internal ticketing system or integration with services like Freshdesk/Zendesk via APIs.
+
+Constraints: Should support status tracking, prioritization, and role-based ticket visibility.
+
+**8\. User Interface (Human-System Interface)**
+
+Functionality: Provides a responsive, role-sensitive web/mobile UI for all users.
+
+Interface Description: Web-based interface designed with accessibility and usability in mind; supports keyboard navigation, screen readers, and WCAG 2.1 Level AA compliance.
+
+Constraints: Optimized for mobile and desktop access; must adapt to the roles (Student, Parent, Lecturer, Admin) with corresponding permissions and menus.
+
+**9\. Notification Preference Management Interface**
+
+Functionality: Allows users to customize communication preferences.
+
+Interface Description: UI component linked with SMS/Email Gateway APIs for toggling notification channels (email/SMS/app).
+
+####
+
+#### **3.4.2 User interfaces**
 
 ####
 
@@ -1986,7 +1988,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - The interface includes status tracking, ticket history, and response logs
 
-#### **1.3.1.3 Hardware interfaces** {#1.3.1.3-hardware-interfaces}
+#### **3.4.3 Hardware interfaces**
 
 1. **Device Compatibility**  
    The EduAxis is designed to be accessible across multiple device types of hardware requirements. Those devices include desktop and laptop computers running Windows, macOS or Linux operating systems with standard web browser such as Chrome, Microsoft, and Google. 
@@ -2017,7 +2019,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 ####
 
-#### **1.3.1.4 Software interfaces** {#1.3.1.4-software-interfaces}
+#### **3.4.4 Software interfaces** {#1.3.1.4-software-interfaces}
 
 ####
 
@@ -2142,7 +2144,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Interface Purpose: This gateway handles secure payment processing for tuition and fees. This is integrated with the system for checkout, receipt generation, and payment history syncing.
 
-#### **1.3.1.5 Communication Interfaces** {#1.3.1.5-communication-interfaces}
+#### **3.4.5 Communication Interfaces** {#1.3.1.5-communication-interfaces}
 
 The EduAxis relies on multiple communication protocols to enable secure, efficient, and real-time data exchange between clients, servers, and integrated third-party systems.
 
@@ -2220,10 +2222,10 @@ To support real-time alerts, live data synchronization, and a smooth user experi
 
 Headers include Authorization (bearer tokens), Content-Type: application/json, and optional pagination/filtering parameters.
 
-## **3.2 External interfaces** {#3.2-external-interfaces}
+#### **3.4.6 External interfaces**
 
-### **3.2.1 University Database Interface** {#3.2.1-university-database-interface}
-
+##### **3.4.6.1 University Database Interface** {#3.4.6.1-university-database-interface}
+Table 3.4.6.1 - University Database Interface
 | Name of Item                                | University Database Interface                                                                                                                                |
 | :------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To store and retrieve student, lecturer, parent, and admin data, including profiles, access permissions, academic history, preferences, and support tickets. |
@@ -2237,8 +2239,8 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Data Items Included**                     | User profiles, grades, attendance, preferences, ticket logs                                                                                                  |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                                                                                    |
 
-### **3.2.2 Campus Management System (CMS) Interface** {#3.2.2-campus-management-system-(CMS)-interface}
-
+### **3.4.6.2 Campus Management System (CMS) Interface**
+Table 3.4.6.2 - Campus Management System (CMS) Interface
 | Name of Item                                | CMS (Campus Management System) Integration                                                                  |
 | :------------------------------------------ | :---------------------------------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To fetch verified academic records including grades, billing, attendance from the campus ERP (CMS) system. |
@@ -2252,8 +2254,8 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Data Items Included**                     | Grades, attendance, course registration info, fee status                                                    |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                                   |
 
-### **3.2.3 Learning Management System (LMS) Interface** {#3.2.3-learning-management-system-(lms)-interface}
-
+### **3.4.6.3 Learning Management System (LMS) Interface**
+Table 3.4.6.3 - Learning Management System (LMS) Interface
 | Name of Item                                | LMS (Moodle/eBwise) Interface                                                                              |
 | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To synchronize assignment submissions, course materials, and grade uploads between the system and the LMS. |
@@ -2267,8 +2269,8 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Data Items Included**                     | Assignment files, feedback, grades, course links                                                           |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                                  |
 
-### **3.2.4 SMS & Email Gateway Interface** {#3.2.4-sms-&-email-gateway-interface}
-
+### **3.4.6.4 SMS & Email Gateway Interface**
+Table 3.4.6.5 - SMS & Email Gateway Interface
 | Name of Item                                | Notification Gateway Integration                                                                                     |
 | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To send automated SMS and email alerts related to grades, attendance, fee dues, announcements, and helpdesk updates. |
@@ -2282,8 +2284,8 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Data Items Included**                     | Recipient info, message content, timestamp, delivery status                                                          |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                                            |
 
-### **3.2.5 Authentication Service Interface** {#3.2.5-authentication-service-interface}
-
+### **3.4.6.5 Authentication Service Interface**
+Table 3.4.6.5 - Authentication Service Interface
 | Name of Item                                | Central Authentication Service                                                             |
 | :------------------------------------------ | :----------------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To authenticate system users using centralized university login credentials (such as SSO). |
@@ -2297,8 +2299,8 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Data Items Included**                     | User ID, access token, session info                                                        |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                  |
 
-### **3.2.6 Payment Gateway Interface** {#3.2.6-payment-gateway-interface}
-
+### **3.4.6.6 Payment Gateway Interface**
+Table 3.4.6.6 - Payment Gateway Interface
 | Name of Item                                | Online Payment Gateway                                                           |
 | :------------------------------------------ | :------------------------------------------------------------------------------- |
 | **Description of Purpose**                  | To process tuition and other fee payments securely from students and/or parents. |
@@ -2311,10 +2313,6 @@ Headers include Authorization (bearer tokens), Content-Type: application/json, a
 | **Command Formats**                         | RESTful API (POST, GET)                                                          |
 | **Data Items Included**                     | Payment ID, invoice ID, status, timestamp, amount                                |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                        |
-
-
-
-
 
 
 ####
@@ -2357,7 +2355,7 @@ _Table 3.8.2.1 Data Entities and Descriptions_
 
 The following table describes the relationships between each class in the EduAxis system.
 
-_Table 3.8.3.1 Relationships between Classes_
+_Table 3.5.3.1 Relationships between Classes_
 
 | Entity         | Description                                                                                                                                                          |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2377,7 +2375,7 @@ _Table 3.8.3.1 Relationships between Classes_
 
 ### **3.5.4 Types of Information Used by Various Functions** {#3.5.4-types-of-information-used-by-various-functions}
 
-_Table 3.8.4.1 Types of Information, Classes Involved, and Functions_
+_Table 3.5.4.1 Types of Information, Classes Involved, and Functions_
 
 | Type                            | Classes Involved                       | Functions                                                                      |
 | :------------------------------ | :------------------------------------- | :----------------------------------------------------------------------------- |
@@ -2392,7 +2390,7 @@ _Table 3.8.4.1 Types of Information, Classes Involved, and Functions_
 
 ### **3.5.5 Frequency of Use** {#3.5.5-frequency-of-use}
 
-_Table 3.8.5 Frequency of Operation Usage and Description_
+_Table 3.5.5 Frequency of Operation Usage and Description_
 
 | Operation                       | Frequency | Description                                                                                                                       |
 | :------------------------------ | :-------- | :-------------------------------------------------------------------------------------------------------------------------------- |
@@ -2409,7 +2407,7 @@ _Table 3.8.5 Frequency of Operation Usage and Description_
 
 ### **3.5.6 Accessing Capabilities** {#3.5.6-accessing-capabilities}
 
-_Table 3.8.6 Users Roles and Accessing Capabilities in the System_
+_Table 3.5.6 Users Roles and Accessing Capabilities in the System_
 
 | Role           | Capabilities                                                                                                                                       |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2671,11 +2669,11 @@ Dependencies on platform-specific tools shall be minimized. Cross-platform libra
 
 ##
 
-4. # **Supporting information** {#supporting-information}
+## **3.8 Supporting information** {#supporting-information}
 
 <!-- From 3.3 change to 3.8.1 -->
 <!-- 3.8.1 Elicitation Techniques and Results -->
-## **3.3 Elicitation Techniques Based on Kano Model** {#3.3-elicitation-techniques-based-on-kano-model}
+## **3.8.1 Elicitation Techniques Based on Kano Model** {#3.3-elicitation-techniques-based-on-kano-model}
 
 The requirements for the EduAxis were gathered and prioritized using the Kano Model, which helps in understanding and categorizing customer needs. The Kano Model categorizes requirements into five categories:
 
@@ -2683,7 +2681,7 @@ The requirements for the EduAxis were gathered and prioritized using the Kano Mo
 2. **Satisfier (One-Dimensional Requirements):** Features that result in satisfaction when fulfilled and dissatisfaction when not fulfilled.
 3. **Delighter (Attractive Requirements):** Features that delight users when fulfilled but do not cause dissatisfaction when not fulfilled.
 
-_Table 3.3.1 Prioritization Categories of Functional Requirements_
+_Table 3.8.1.1.1 Prioritization Categories of Functional Requirements_
 
 | Prioritization Categories | Requirements                                                                                                                                                                                                                                                                                              |
 | :-----------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2691,7 +2689,7 @@ _Table 3.3.1 Prioritization Categories of Functional Requirements_
 |         Satisfier         | Upload and Manage Grades Digital Attendance Tracking Post Announcement and Updates Dashboard with Performance Overview Submit Feedback and Support Requests Alert and Reminder System                                                                                                                     |
 |         Delighter         | Notification Read Tracking Custom Notification Preferences Visual Performance Analytics Mobile-Friendly Responsive Interface                                                                                                                                                                              |
 
-_Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platform_
+_Table 3.8.1.1.2 Timeline for Software Requirements Specification of EduAxis platform_
 
 |    Weeks    |       |                      |       |       |                       |       |       |                |        |        |        |
 | :---------: | :---: | :------------------: | :---: | :---: | :-------------------: | :---: | :---: | :------------: | :----: | :----: | :----: |
@@ -2703,13 +2701,13 @@ _Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platfor
 
 
 <!-- From 4.8 change to 3.8.1 -->
-## **4.1 Interview** {#4.1-interview}
+## **3.8.1.2.1 Interview** {#4.1-interview}
 
 The purpose of these interview sessions is to elicit requirements and insights for the EduAxis from students, parents, lecturers and administrators of the system itself. The focus of this interview is to obtain opinion on the system’s functions, features and design for improvements and developments.
 
-### **4.1.1 Interview 1** {#4.1.1-interview-1}
+### **3.8.1.2.1.1 Interview 1**
 
-#### **4.1.1.1 Interview Preparation** {#4.1.1.1-interview-preparation}
+#### **3.8.1.2.1.1.1 Interview Preparation**
 
 | Stakeholder Details: | Mr. Deepak Kumar Lecturers of Multimedia University |
 | :------------------- | :-------------------------------------------------- |
@@ -2717,7 +2715,7 @@ The purpose of these interview sessions is to elicit requirements and insights f
 | **Interviewers:**    | Suzannah Pancer                                     |
 |                      | Iman Nadhirah Binti Modh Hafiz                      |
 
-#### **4.1.1.2 Interview Agenda** {#4.1.1.2-interview-agenda}
+#### **3.8.1.2.1.1.2 Interview Agenda** {#3.8.1.2.1.2-interview-agenda}
 
 | No.  | Question                                                                                                                     | Response                                                                                                                                                                                                                                                                    |
 | :--- | :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2732,16 +2730,16 @@ The purpose of these interview sessions is to elicit requirements and insights f
 | 9\.  | Would you find it valuable if the system alerted you about upcoming deadlines, like grade submissions or exam dates?         | Yes, alerts for upcoming deadlines would be very helpful in managing time-sensitive academic tasks and avoiding last-minute pressure.                                                                                                                                       |
 | 10\. | How helpful would it be if the system could show an overview of each student’s performance, including grades and attendance? | This feature would definitely be helpful. While I rely heavily on personal observation and judgment in class, having a centralized performance overview would support better tracking and offer additional insight into student progress.                                   |
 
-#### **4.1.1.3 Proof** {#4.1.1.3-proof}
+#### **3.8.1.2.1.3 Proof** {#3.8.1.2.3-proof}
 
 ![][image43]  
-Figure 4.1.1.3.1- Interview with Mr Deepak Kumar, FCI Lecturer Of Multimedia University Cyberjaya
+Figure 3.8.1.2.1.3- Interview with Mr Deepak Kumar, FCI Lecturer Of Multimedia University Cyberjaya
 
 The Lecturer provides valuable feedback throughout the interview on functions and features of the system usability and preferences. Lecturer inputs have been incorporated into the functional requirements to ensure practical and academic relevance.
 
-### **4.1.2 Interview 2** {#4.1.2-interview-2}
+### **3.8.1.2.2 Interview 2**
 
-#### **4.1.2.1 Interview Preparation** {#4.1.2.1-interview-preparation}
+#### **3.8.1.2.2.1 Interview Preparation**
 
 | Stakeholder Details: | Dr. Kairulanuar Bin Ab kadir Lecturers of Multimedia University |
 | :------------------- | :-------------------------------------------------------------- |
@@ -2749,7 +2747,7 @@ The Lecturer provides valuable feedback throughout the interview on functions an
 | **Interviewers:**    | Suzannah Pancer                                                 |
 |                      | Iman Nadhirah Binti Modh Hafiz                                  |
 
-#### **4.1.1.2 Interview Agenda** {#4.1.1.2-interview-agenda-1}
+#### **3.8.1.2.2.2 Interview Agenda** 
 
 | No.  | Question                                                                                                                     | Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :--- | :--------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2764,7 +2762,7 @@ The Lecturer provides valuable feedback throughout the interview on functions an
 | 9\.  | Would you find it valuable if the system alerted you about upcoming deadlines, like grade submissions or exam dates?         | Absolutely. A I have mentioned the tight timeframes for marking exams, especially when exam schedules fall near the end of the semester. System alerts would help ensure that deadlines are met without last-minute stress.                                                                                                                                                                                                                                                                                                                                       |
 | 10\. | How helpful would it be if the system could show an overview of each student’s performance, including grades and attendance? | Very helpful. I strongly support this idea, suggesting features like visual progress tracking (e.g., graphs over semesters), predictive analytics, and data-driven feedback. They also proposed using such data for early intervention or even AI-based predictions of future performance. This level of detail would allow lecturers to analyze trends and offer more tailored academic support.                                                                                                                                                                 |
 
-#### **4.1.2.3 Proof** {#4.1.2.3-proof}
+#### **3.8.1.2.2.3 Proof** {#3.8.1.2.3-proof}
 
 ![][image44]  
 Figure 4.1..3.1- Interview with Dr Kairulanuar , FCI Lecturer Of Multimedia University Cyberjaya
@@ -2773,16 +2771,16 @@ The Lecturer provides valuable feedback throughout the interview on the importan
 
 ###
 
-### **4.1.3 Interview 3** {#4.1.3-interview-3}
+### **3.8.1.2.3 Interview 3**
 
-#### **4.1.3.1 Interview Preparation** {#4.1.3.1-interview-preparation}
+#### **3.8.1.2.3.1 Interview Preparation** 
 
 | Stakeholder Details: | Mr. Zaki Syahmi Bin Zulkifli, Officer of Multimedia University Student Lifestyle and Experience Department |
 | :------------------- | :--------------------------------------------------------------------------------------------------------- |
 | **Date and Time:**   | 15/5/2025                                                                                                  |
 | **Interviewers:**    | Phartiban , Natasha Adilyn                                                                                 |
 
-#### **4.1.3.2 Interview Agenda** {#4.1.3.2-interview-agenda}
+#### **3.8.1.2.3.2 Interview Agenda**
 
 | No. | Question                                                                                                                                                      | Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2795,16 +2793,16 @@ The Lecturer provides valuable feedback throughout the interview on the importan
 | 7\. | What specific information or tasks should each user type (student, lecturer, parent, admin) be able to access or perform?                                     | In terms of specific information or tasks each user should be able to access or perform, it might be that first of all, let’s go for the students' side. Students should be able to view grades, attendance, announcements, pay fees, submit coursework and feedback. On the other side, parents should be given access to view a child's grades and fee status, get alerts, and optionally view timetables. Moving on to lecturers, they should be able to upload grades, mark attendance, post class updates, manage assignments. Finally, admins should have the access to manage accounts, handle integrations, send announcements, control permissions, and respond to helpdesk tickets. |
 | 8\. | What level of user management and permissions control is required?                                                                                            | It should be role-based at a minimum, with the ability to assign custom permissions for sub-roles such as department-level admins. Certain functions like announcements or user deletion should only be allowed by system admins.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-#### **4.1.3.3 Proof** {#4.1.3.3-proof}
+#### **3.8.1.2.3.3 Proof**
 
 ![][image45]  
-Figure 4.1.3.3.1- Interview with Mr. Zaki Syahmi Bin Zulkifli, Officer of Multimedia University Student Lifestyle and Experience Department
+Figure 3.8.1.2.3.3.1- Interview with Mr. Zaki Syahmi Bin Zulkifli, Officer of Multimedia University Student Lifestyle and Experience Department
 
 The system Administrator provided critical insights into the technical backbone and operational expectations of the system. Their input will shape the infrastructure design, security measures and integration strategies to ensure system reliability and compliance.
 
-## **4.2. Survey** {#4.2.-survey}
+## **3.8.1.3 Survey**
 
-### **4.2.1 Students** {#4.2.1-students}
+### **3.8.1.3.1 Students**
 
 Question 1: How do you currently access the following information?  
 \-Grades and Academic Performance  
@@ -2814,73 +2812,104 @@ Question 1: How do you currently access the following information?
 \-Notifications or Announcements from Lecturers
 
 ![][image46]
-
+Figure 3.8.1.3.1.1 - How Students Currently Access Grades and Academic Performance Information
 Question 2: Are you satisfied with the current process for accessing that information?  
-![][image47]  
+![][image47]
+Figure 3.8.1.3.1.2 - Student Satisfaction with Current Information Access Process  
 Question 3:Which platform do you find most convenient for accessing university services and information?  
 ![][image48]  
+Figure 3.8.1.3.1.3 - Most Convenient Platform for Accessing University Services and Information
 Question 4: Which of the following features would you like to have in the system?
 
 ![][image49]  
+Figure 3.8.1.3.1.4 - Desired System Features by Students
 Question 5: How important is it for the system to have a User-Friendly interface?  
 ![][image50]  
+Figure 3.8.1.3.1.5 - Importance of User-Friendly Interface
 Question 6: How important is it for the system to have Data Accuracy  
 ![][image51]  
+Figure 3.8.1.3.1.6 - Importance of Data Accuracy
 Question 7:How important is it for the system to be Mobile Friendly  
 ![][image52]  
+Figure 3.8.1.3.1.7 - Importance of Mobile Friendly System
 Question 8: How important is it for the system to have Fast Loading Speed  
 ![][image53]  
+Figure 3.8.1.3.1.8 - Importance of Fast Loading Speed
 Question 9: How important is it for the system to be integrated with the Campus Management System  
 ![][image54]  
+Figure 3.8.1.3.1.9 - Importance of Campus Management System Integration
 Question 10: Would you prefer the system to be available as:  
 ![][image55]  
+Figure 3.8.1.3.1.10 - Preferred System Availability Format
 Question 11: How often do you experience difficulties in accessing university- related information?  
 ![][image56]  
+Figure 3.8.1.3.1.11 - Frequency of Difficulties in Accessing University Information
 Question 12: What device do you primarily use to access university services?  
 ![][image57]  
+Figure 3.8.1.3.1.12 - Primary Device Used to Access University Services
 Question 13: Which method of authentication would you prefer for secure access?  
 ![][image58]  
+Figure 3.8.1.3.1.13 - Preferred Authentication Method for Secure Access
 Question 14: How would you like to receive important university notifications?  
 ![][image59]  
+Figure 3.8.1.3.1.14 - Preferred Method for Receiving University Notifications
 Question 15: What kind of alerts would you prefer to receive?  
 ![][image60]  
+Figure 3.8.1.3.1.15 - Preferred Types of Alerts
 Question 16: How frequently do you prefer to receive communication updates?  
 ![][image61]  
+Figure 3.8.1.3.1.16 - Preferred Frequency of Communication Updates
 Question 17: In your experience, what gaps exist in the way university information is shared with students?  
 ![][image62]  
+Figure 3.8.1.3.1.17 - Identified Gaps in University Information Sharing
 Question 18:If you could add one feature to the EduAxis, what would it be and why?  
 ![][image63]
+Figure 3.8.1.3.1.18 - Suggested Additional Features for EduAxis System
 
-### **4.2.2 Parents** {#4.2.2-parents}
+### **3.8.1.3.2 Parents** {#3.8.1.3.2-parents}
 
 Question 1: How important is it for you to be able to view your child’s academic grades through the system?  
 ![][image64]  
+Figure 3.8.1.3.2.1 - Importance of Viewing Child's Academic Grades Through System
 Question 2: How important is it for you to be able to see your child’s attendance records?  
 ![][image65]  
+Figure 3.8.1.3.2.2 - Importance of Viewing Child's Attendance Records
 Question 3: How important is it for you to receive SMS alerts if your child has low attendance?  
 ![][image66]  
+Figure 3.8.1.3.2.3 - Importance of SMS Alerts for Low Attendance
 Question 4: How important is it to receive SMS reminders when tuition fees are due or unpaid?  
 ![][image67]  
+Figure 3.8.1.3.2.4 - Importance of SMS Reminders for Tuition Fee Payments
 Question 5: How important is it to have a dashboard that shows your child’s academic performance clearly in one place?  
 ![][image68]  
+Figure 3.8.1.3.2.5 - Importance of Academic Performance Dashboard
 Question 6: How important is it for you to receive notifications when your child’s grades are uploaded or updated?  
 ![][image69]  
+Figure 3.8.1.3.2.6 - Importance of Grade Update Notifications
 Question 7: How important is it for you to view your child’s class schedule or timetable through the system?  
 ![][image70]  
+Figure 3.8.1.3.2.7 - Importance of Viewing Child's Class Schedule
 Question 8: How important is it for the system to also send updates and alerts via email in addition to SMS?  
 ![][image71]  
+Figure 3.8.1.3.2.8 - Importance of Email Updates in Addition to SMS
 Question 9: How important is it for the system to have a secure and private login for accessing your child’s information?  
 ![][image72]  
+Figure 3.8.1.3.2.9 - Importance of Secure and Private Login System
 Question 10: How important is it for the system to work well on mobile phones or tablets?  
 ![][image73]  
+Figure 3.8.1.3.2.10 - Importance of Mobile Device Compatibility
 Question 11: How important is it for you to have access to payment status and history for tuition and other fees?  
 ![][image74]  
+Figure 3.8.1.3.2.11 - Importance of Payment Status and History Access
 Question 12: How important is it to receive reminders about key academic deadlines (e.g., registration, exam dates)?  
 ![][image75]  
+Figure 3.8.1.3.2.12 - Importance of Academic Deadline Reminders
 Question 13: How important is it to receive alerts when your child registers for or drops a course?  
 ![][image76]  
+Figure 3.8.1.3.2.13 - Importance of Course Registration/Drop Alerts
 Question 14: How important is it to have the option to choose how you receive alerts (SMS only, email only, or both)?  
 ![][image77]
+Figure 3.8.1.3.2.14 - Importance of Alert Delivery Method Options
 
 ##
 
@@ -2888,71 +2917,82 @@ Question 14: How important is it to have the option to choose how you receive al
 
 ##
 
-## **4.3 Observation** {#4.3-observation}
+## **3.8.1.4 Observation**
 
-### **4.3.1 CliC** {#4.3.1-clic}
+### **3.8.1.4.1 CliC** {#3.8.1.4.1-clic}
 
 url : [https://clic.mmu.edu.my](https://www.bing.com/ck/a?!&&p=45b5142ff21b033e05071b3c0d5e5d23cf5eaf51389396237561f86e436223e1JmltdHM9MTc0Nzk1ODQwMA&ptn=3&ver=2&hsh=4&fclid=043ec061-633f-6af9-08df-d2b8673f6cb3&psq=clic&u=a1aHR0cHM6Ly9jbGljLm1tdS5lZHUubXkvcHNwL2NzcHJkLz9jbWQ9bG9naW4&ntb=1)  
 Description: CLiC is a University Management Service system that serves functions for users like students, lecturers and administrators or Multimedia University (MMU) to manage and perform actions and get records on academic and personal resources.
 
-**4.3.1.1 Log In**  
+**3.8.1.4.1.1 Log In**  
 Description: allow users to log in with credentials given.  
 ![][image78]  
-_Figure 4.3.1.1 screenshot of CLiC login interface_
+_Figure 3.8.1.4.1.1 screenshot of CLiC login interface_
 
-**4.3.1.2 Dashboard Features**  
+**3.8.1.4.1.2 Dashboard Features**  
 Description: All functions and features related to the user being logged in will be provided in the dashboard. Students will be provided with relevant functions such as personal information, campus finances, attendance and academic records that are fully functional.  
 ![][image79]  
-_Figure 4.3.1.2 screenshot of CLiC Student Dashboard interface_
+_Figure 3.8.1.4.1.2 screenshot of CLiC Student Dashboard interface_
 
-**4.3.1.3 Attendance records**  
+**3.8.1.4.1.3 Attendance records**  
 description : The attendance management allows students to keep track of their class attendance progress throughout the trimester. This feature also triggers students and parents' email when a certain class percentage drops below 80% that serves as an alert to the barring process.  
 ![][image80]  
-_Figure 4.3.1.3 screenshot of CLiC Student Attendance interface_
+_Figure 3.8.1.4.1.3 screenshot of CLiC Student Attendance interface_
 
-**4.3.1.4 Campus Finances**  
+**3.8.1.4.1.4 Campus Finances**  
 description : The Campus Finances homepage provides a summary view of a student’s financial status at the university. It clearly displays the total amount due, differentiating between "Due Now" and "Future Due" payments. This centralized financial dashboard helps students manage their tuition and other financial matters efficiently.  
 ![][image81]  
-_Figure 4.3.1.4 screenshot of CLiC Student Campus finances interface_
+_Figure 3.8.1.4.1.4 screenshot of CLiC Student Campus finances interface_
 
-**4.3.1.5 Class Schedule**  
+**3.8.1.4.1.5 Class Schedule**  
 Description: The Class Schedule page interface provides students with a clear, organized view of their academic timetable for the selected trimester. This interface is designed to visually assist students in tracking and managing their weekly class schedule with intuitive date and time-based navigation.  
 ![][image82]  
-_Figure 4.3.1.5 screenshot of CLiC Student Class Schedule interface_
+_Figure 3.8.1.4.1.5 screenshot of CLiC Student Class Schedule interface_
 
-**4.3.1.6 Academic Records**  
+**3.8.1.4.1.6 Academic Records**  
 Description : The Academic Records Management interface provides students with a centralized dashboard to access and manage essential academic information throughout their studies. The other features include a summary of academic progress, academic achievement and other that is relevant to the student.
 
 ![][image83]  
-_Figure 4.3.1.6 screenshot of CLiC Student Academic Records interface_
+_Figure 3.8.1.4.1.6 screenshot of CLiC Student Academic Records interface_
 
-### **4.3.2 eBwise** {#4.3.2-ebwise}
+### **3.8.1.4.2 eBwise** {#3.8.1.4.2-ebwise}
 
 Url: https://ebwise.mmu.edu.my  
-**4.3.2.1 Login Page**  
+**3.8.1.4.2.1 Login Page**  
 Description: Allows user to log in using SSO authentication.  
 ![][image84]  
-_Figure 4.3.2.1 screenshot of eBwise Student login interface_
+_Figure 3.8.1.4.2.1 screenshot of eBwise Student login interface_
 
-**4.3.2.2 Academic Managements Dashboard**  
+**3.8.1.4.2.2 Academic Managements Dashboard**  
 Description: The eBwise serves as a Communication system for both student and lecturers to make and get updates on academic matters such as announcements, assignments, and comments on class.
 
 ![][image85]  
-_Figure 4.3.2.2 screenshot of eBwise Student homepage interface_
+_Figure 3.8.1.4.2.2 screenshot of eBwise Student homepage interface_
 
-**4.3.2.3 Announcement Page**  
+**3.8.1.4.2.3 Announcement Page**  
 Description: The lecturer will be able to communicate and post announcements to all or selected sections to notify students on important updates.  
 ![][image86]  
-_Figure 4.3.2.3 screenshot of eBwise Student announcements page interface_
+_Figure 3.8.1.4.2.3 screenshot of eBwise Student announcements page interface_
 
-**4.3.2.4 Assignment Submission Managements**  
+**3.8.1.4.2.4 Assignment Submission Managements**  
 Description: The lecturer assigns assignments with due date being set and add submission button for file uploading purposes.  
 ![][image87]  
-_Figure 4.3.2.4 screenshot of eBwise Student Assignment submission page interface_
+_Figure 3.8.1.4.2.4 screenshot of eBwise Student Assignment submission page interface_
 
 Description: The systems update submission status to the database and notify lecturer on marking process.  
 ![][image88]  
-_Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page interface_
+_Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up page interface_
+
+
+## **3.8.2.4**Sample Input/Output Formats**
+ 3.8.2.4.1 API Request/Response Examples
+        - Login API: POST /api/auth/login
+          Request: {"username": "student123", "password": "****"}
+          Response: {"token": "jwt...", "role": "student"}
+    3.8.2.4.2 SMS Notification Templates
+        - Low Attendance: "Alert: Your attendance for [Course] is [X]%. Minimum 80% required."
+    3.8.2.4.3 Report Export Formats
+        - Grade Report CSV: "StudentID,Name,Course,Grade,Semester"
 
 #
 
@@ -3292,7 +3332,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 **4.4.1.2 Database Backups**
 
-| Methods:           | Check data backup storage allocation every 12 hours for data tracking and retrieval |
+| Methods:           | Check data backup storage allocation every 24 hours for data tracking and retrieval |
 | :----------------- | :---------------------------------------------------------------------------------- |
 | Responsibility:    | DevOps and security teams                                                           |
 | Verification Time: | During performance testing.                                                         |
@@ -3480,7 +3520,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ### **4.6.1 Compliance with Data Privacy Regulations ([3.9.1](#3.9.1-compliance-with-data-privacy-regulations))** {#4.6.1-compliance-with-data-privacy-regulations-(3.9.1)}
 
-| Methods               | Conduct documentation review and technical tests to ensure compliance with PDPA. Simulate scenarios for personal data access and validate encryption and consent enforcement. |
+| Methods               | Conduct documentation reviews and technical tests to ensure compliance with data retention policies: retain user data for 2 years after account closure, keep academic records indefinitely, and store payment records for 7 years. Simulate scenarios for personal data access and validate encryption and consent enforcement mechanisms. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | Compliance officer and product team.                                                                                                                                          |
 | **Verification time** | During the requirements definition, testing, and before production rollout.                                                                                                   |
