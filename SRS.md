@@ -338,29 +338,36 @@ Release Date: 25th May 2025
 
 ## **1.1 Purpose** {#1.1-purpose}
 
-    The purpose of the software to be developed, known as University Communication and Services Portal (UCSP) is mainly to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CLiC) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the portal will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The UCSP will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
+    The purpose of the software to be developed, known as EduAxis is mainly to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CMS) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the system will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The EduAxis will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
 
 ## **1.2 Scope** {#1.2-scope}
 
-The software product to be developed is the **University Communication and Services Portal**, a centralized platform that integrates with existing university systems such as the Learning Management System (LMS), academic calendar, and Campus Management System (CMS). This portal aims to streamline communication and academic service delivery for students, parents, lecturers, and administrative staff.
+The software product to be developed is the EduAxis, a centralized platform that integrates with existing university systems such as the Learning Management System (LMS), academic calendar, and Campus Management System (CLiC). This system aims to streamline communication and academic service delivery for students, parents, lecturers, and administrative staff.
 
-The portal will allow students to check grades, attendance, schedules, register for courses, and pay tuition fees. Parents will be able to monitor their child’s academic performance, receive fee reminders, and get SMS alerts on important issues. Lecturers can upload grades, mark attendance, and post course updates, while administrators will manage user access and system configurations.
+The system will allow students to check grades, attendance, schedules, register for courses, and pay tuition fees. Parents will be able to monitor their child’s academic performance, receive fee reminders, and get SMS alerts on important issues. Lecturers can upload grades, mark attendance, and post course updates, while administrators will manage user access and system configurations.
 
-Key features include real-time SMS alerts for low attendance and unpaid fees, automation of routine tasks, and centralized access to academic notifications and services. The portal is designed to reduce manual workload, support timely communication, and enhance user engagement across all roles.
+Key features include real-time SMS alerts for low attendance and unpaid fees, automation of routine tasks, and centralized access to academic notifications and services. The system is designed to reduce manual workload, support timely communication, and enhance user engagement across all roles.
 
-This software aligns with the overall goal of improving communication flow, increasing operational efficiency, and encouraging student accountability. By consolidating key academic functions into a single platform, the portal will deliver greater transparency, faster information sharing, and improved access to university services for all stakeholders.
+The system shall address the real needs of four primary user groups:
+
+- Students: Must be able to access grades, attendance, fee details, timetables, and submit feedback. They will primarily use mobile devices and require real-time notifications.
+- Parents: Can view academic results, fee status, timetables, and receive SMS/email alerts about tuition, attendance, or course registration changes.
+- Lecturers: Will manage course grading, attendance, and announcements through dedicated dashboards, with system alerts and visual performance tracking.
+- Administrators: Will oversee system integrations (e.g., CLiC, LMS), control permissions, manage backups, and resolve common support issues reported by users.
+
+This software aligns with the overall goal of improving communication flow, increasing operational efficiency, and encouraging student accountability. By consolidating key academic functions into a single platform, the system will deliver greater transparency, faster information sharing, and improved access to university services for all stakeholders.
 
 ## **1.3 Product overview** {#1.3-product-overview}
 
 ### **1.3.1 Product perspective** {#1.3.1-product-perspective}
 
-The University Communication and Services Portal, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the portal ensures seamless delivery of notifications, reminders, and academic information across all user groups.
+The UEduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CLiC), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
 
-The portal operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CMS, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
+The system operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CLiC, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
 
-The portal interfaces with the larger system landscape through several key connections:
+The system interfaces with the larger system landscape through several key connections:
 
-1. System Interfaces: Integration with CMS, LMS, SMS Gateway, and authentication services for real-time data synchronization.
+1. System Interfaces: Integration with CLiC, LMS, SMS Gateway, and authentication services for real-time data synchronization.
 
 2. User Interfaces: Intuitive web and mobile interfaces for students, parents, lecturers, and administrators.
 
@@ -430,7 +437,7 @@ Constraints: Must support high availability and comply with opt-in/opt-out notif
 
 Functionality: Allows admin to post global announcements and update web content.
 
-Interface Description: Headless CMS API integration (e.g., Strapi or Contentful) for publishing dynamic content to the portal.
+Interface Description: Headless CMS API integration (e.g., Strapi or Contentful) for publishing dynamic content to the system.
 
 Constraints: Requires real-time syncing and admin authentication tokens.
 
@@ -464,7 +471,7 @@ Interface Description: UI component linked with SMS/Email Gateway APIs for toggl
 
 1. **Student Dashboard**
 
-The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CMS for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
+The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CLiC for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
 
 - Class schedule, registered courses, and academic calendar
 
@@ -482,7 +489,7 @@ The student dashboard serves as the centralized interface to manage academic and
 
 2. **Parent Dashboard**
 
-This dashboard is optimised for concise overviews and direct alerts to ensure parents stay informed without overwhelming detail. Parents and guardians can log in via a secure portal to monitor their child’s academic progress. The key features are listed below.
+This dashboard is optimised for concise overviews and direct alerts to ensure parents stay informed without overwhelming detail. Parents and guardians can log in via a secure system to monitor their child’s academic progress. The key features are listed below.
 
 - Viewing the child’s grades and attendance status
 
@@ -508,11 +515,11 @@ Lecturers have access to a role-based dashboard to support teaching and communic
 
 4. **Administrative Control Panel**
 
-Administrators use a centralized control panel to manage the portal’s operations and configurations. Key interface features for this control panel are listed below.
+Administrators use a centralized control panel to manage the system’s operations and configurations. Key interface features for this control panel are listed below.
 
 - User account management for students, lecturers and parents
 
-- System integration tools for syncing with CMS, LMS and notification systems
+- System integration tools for syncing with CLiC, LMS and notification systems
 
 - Workflow automation configuration for fee reminders, grade processing, etc.
 
@@ -551,13 +558,31 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 #### **1.3.1.3 Hardware interfaces** {#1.3.1.3-hardware-interfaces}
 
 1. **Device Compatibility**  
-   The University Communication and Services Portal is designed to be accessible across multiple device types of hardware requirements. Those devices include desktop and laptop computers running Windows, macOS or Linux operating systems with standard web browser such as Chrome, Microsoft, and Google.The portal also supports mobile devices, with fully responsive design optimized for Android and iOS smartphones and tablets, that enables student, parents and lecturers to access information conveniently at any circumstances.. Having multi-device compatibility ensures users can engage with the platform efficiently, enhancing user experience itself.  
+   The EduAxis is designed to be accessible across multiple device types of hardware requirements. Those devices include desktop and laptop computers running Windows, macOS or Linux operating systems with standard web browser such as Chrome, Microsoft, and Google. 
+
+   It also supports mobile devices, with fully responsive design optimized for Android and iOS smartphones and tablets, that enables student, parents and lecturers to access information conveniently at any circumstances.. Having multi-device compatibility ensures users can engage with the platform efficiently, enhancing user experience itself. 
+
+   Minimum server specifications for deployment are as follows:
+   - CPU: Quad-core (4-core) processor
+   - RAM: 8 GB
+   - Storage: 256 GB SSD 
 
 2. **Internet Connectivity**  
-   Reliable internet connectivity is pivotal for components in the University Communication and Service Portal, it facilitates real-time updates on communication and data synchronization with the university’s backend systems. To secure a seamless experience, the portal will require a minimum bandwidth of 1 Mbps for basic access and 5 Mbps or higher for maximum performance during heavy traffic. The system supports both ethernet and Wi-Fi networks, with integration into university-managed wifi to provide stable access for users within campus. Additionally, the system also supports cloud based access to enable off-campus usage with real-time data availability and synchronization in all locations. This potent structure will ensure fast, engaging communication between the portal and users.  
+   Reliable internet connectivity is pivotal for components in the EduAxis, it facilitates real-time updates on communication and data synchronization with the university’s backend systems. 
+   
+   To secure a seamless experience:
+   - Basic access: at least 1 Mbps bandwidth 
+   - Peak performance (heavy traffic): 5 Mbps or more
+    
+    The system supports both ethernet and Wi-Fi networks, with integration into university-managed wifi to provide stable access for users within campus. Additionally, the system also supports cloud based access to enable off-campus usage with real-time data availability and synchronization in all locations. This potent structure will ensure fast, engaging communication between the system and users.  
 
 3. **Data Storage**  
-   To accommodate large numbers of academic and administrative data, the University Communication and Services Portal relies on robust storage solutions that include both cloud storage and the university’s local storage framework. The cloud-based storage serves as the primary repository for students' records, attendance, grades and course materials, and offers scalable and secured data management. Concurrently, critical data is mirrored on local servers within the university’s data center, to ensure quick recovery and backup during connectivity issues or system failures. The dual-layered approach of cloud and local storage ensures that the system remains secured, and capable of handling high data loads while maintaining real time synchronization with all users.
+   To accommodate large numbers of academic and administrative data, the EduAxis relies on robust storage solutions that include both cloud storage and the university’s local storage framework:
+
+   - **Primary cloud storage:**  scalable and secure, used for student records, grades, attendance, and course materials.
+   - **Local backup servers at the university data center:** mirror critical data to provide quick recovery if the cloud is unavailable.
+   
+   The dual-layered approach of cloud and local storage ensures that the system remains secured, and capable of handling high data loads while maintaining real time synchronization with all users.
 
 ####
 
@@ -591,7 +616,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: F5 NGINX (Open Source)
 
-- Interface Purpose: The web server hosts the university portal web application. It serves the frontend content and routes HTTP(S) requests to the backend application. It also acts as a reverse proxy API handling and SSL termination.
+- Interface Purpose: The web server hosts the university web application. It serves the frontend content and routes HTTP(S) requests to the backend application. It also acts as a reverse proxy API handling and SSL termination.
 
 3. **Backend Framework**
 
@@ -605,7 +630,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: Django Software Foundation (Open Source)
 
-- Interface Purpose: The backend framework implements core business logic of the portal, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CMS and SMS gateway.
+- Interface Purpose: The backend framework implements core business logic of the system, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CLiC and SMS gateway.
 
 4. **Messaging Protocol**
 
@@ -614,7 +639,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 - Specification Number: RFC 7231
 - Version Number: N/A
 - Source: Internet Engineering Task Force (IETF)
-- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the portal and the external systems like the CMS, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
+- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the system and the external systems like the CLiC, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
 
 5. **External Authentication Service**
 
@@ -628,7 +653,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: University IT Dept / External Identity Provider
 
-- Interface Purpose: The service is used during login to verify user identity via centralized authentication, typically integrated with campus-wide Single Sign-On systems. Ensures secure and role-based access to the portal.
+- Interface Purpose: The service is used during login to verify user identity via centralized authentication, typically integrated with campus-wide Single Sign-On systems. Ensures secure and role-based access to the system.
 
 6. **SMS/Email Notification Gateway**
 
@@ -670,7 +695,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: University Academic System
 
-- Interface Purpose: This integration supplies academic data such as grades, attendance records, and billing info. This allows the portal to fetch verified academic records for display to students, parents, and lecturers.
+- Interface Purpose: This integration supplies academic data such as grades, attendance records, and billing info. This allows the system to fetch verified academic records for display to students, parents, and lecturers.
 
 9. **Payment Gateway**
 
@@ -684,13 +709,21 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: Third-party payment processor
 
-- Interface Purpose: This gateway handles secure payment processing for tuition and fees. This is integrated with the portal for checkout, receipt generation, and payment history syncing.
+- Interface Purpose: This gateway handles secure payment processing for tuition and fees. This is integrated with the system for checkout, receipt generation, and payment history syncing.
 
 #### **1.3.1.5 Communication Interfaces** {#1.3.1.5-communication-interfaces}
 
+The EduAxis relies on multiple communication protocols to enable secure, efficient, and real-time data exchange between clients, servers, and integrated third-party systems.
+
+To support real-time alerts, live data synchronization, and a smooth user experience, the following network performance requirements must be met:
+
+- Client-side bandwidth: Minimum 5 Mbps internet connection
+- Server-side bandwidth: Minimum 100 Mbps uplink capacity
+- Latency: Maximum 100 milliseconds round-trip time for time-sensitive operations such as attendance alerts and notification updates
+
 **1\. HTTP/HTTPS Protocol**
 
-**Purpose**: HTTP/HTTPS is used as the foundational communication protocol between clients (students, parents, lecturers, admins) and the university portal’s web server. It enables secure transmission of data during login, course registration, fee payment, and other user-initiated activities.
+**Purpose**: HTTP/HTTPS is used as the foundational communication protocol between clients (students, parents, lecturers, admins) and the university system’s web server. It enables secure transmission of data during login, course registration, fee payment, and other user-initiated activities.
 
 **Message Content and Format**:
 
@@ -699,7 +732,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 **2\. WebSocket Protocol**
 
-**Purpose**: WebSocket enables real-time, two-way communication between the portal server and clients for features such as:
+**Purpose**: WebSocket enables real-time, two-way communication between the system server and clients for features such as:
 
 - Instant SMS/email alert updates.
 
@@ -766,17 +799,23 @@ Role: By handling temporary data in the system for quick read and write during o
 
 Limitations: The system's real-time notification alerts updates require memory for queueing messages and updating user status. Having high concurrency during peak periods like course registration and deadlines, the system will require more RAM for better efficiency in processing high volume data calls.
 
+Requirement: The system must support at least 1,000 concurrent users with a maximum RAM consumption of 4 GB.
+
 2\. **Secondary Memory (Disk Storage)**
 
-Role: Secondary memory in the University Communication and Services Portal serves as long-term storage for persistent data, including student records, academic performance logs, attendance data, and financial transactions. Unlike volatile primary memory (RAM), it retains data even after system shutdown, ensuring the availability of historical information and backups.
+Role: Secondary memory in the EduAxis serves as long-term storage for persistent data, including student records, academic performance logs, attendance data, and financial transactions. Unlike volatile primary memory (RAM), it retains data even after system shutdown, ensuring the availability of historical information and backups.
 
-Limitations: The limitations of secondary memory in the UCSP include slower read and write speeds compared to primary memory, which can lead to delays in report generation and registration processes, especially during peak usage. Its fixed physical capacity can restrict the amount of historical data that can be stored, making it challenging to maintain long-term academic records and system logs without regular cleanup or archiving.
+Limitations: The limitations of secondary memory in the EduAnix include slower read and write speeds compared to primary memory, which can lead to delays in report generation and registration processes, especially during peak usage. Its fixed physical capacity can restrict the amount of historical data that can be stored, making it challenging to maintain long-term academic records and system logs without regular cleanup or archiving.
+
+Requirement: The system should be deployable on a server with at least 256 GB SSD storage, supporting data retention for a minimum of 7 years.
 
 3\. **Caching Mechanism**
 
-Role: The caching mechanism plays a crucial role in improving system performance and reducing database load by temporarily storing frequently accessed data. This includes student profiles, academic schedules, attendance records, and course announcements. By keeping this data in fast-access memory, the portal can serve requests more quickly without repeatedly querying the database, leading to faster page loads and smoother navigation for users.
+Role: The caching mechanism plays a crucial role in improving system performance and reducing database load by temporarily storing frequently accessed data. This includes student profiles, academic schedules, attendance records, and course announcements. By keeping this data in fast-access memory, the system can serve requests more quickly without repeatedly querying the database, leading to faster page loads and smoother navigation for users.
 
 Limitations: Caching stores data in RAM, which is limited and expensive. If the cache size grows too large, it can consume critical memory needed for real-time processes. Furthermore, If the cache is not properly invalidated or refreshed, users may see outdated information, such as old grades or attendance records, leading to inconsistencies.
+
+Requirement: The system should be deployable on a server with at least 256 GB SSD storage, supporting data retention for a minimum of 7 years.
 
 4\. **Session Management**
 
@@ -784,24 +823,26 @@ Role: session management is responsible for maintaining user authentication and 
 
 Limitations: Scalability challenges in managing large numbers of simultaneous users can consume huge server memory and processing power. Short session timeouts can also disrupt user experience, while long timeouts can increase memory consumption and security risk if not actively managed by any users.
 
+Requirement: The system shall support up to 2,000 active sessions simultaneously with a configurable session timeout of 15 minutes of inactivity.
+
 #### **1.3.1.7 Operations** {#1.3.1.7-operations}
 
 1. **Modes of Operations:**  
 
 
 - **User initiated Operations:**
-  - Users including students, parents, lecturers, and administrators can initiate actions such as viewing academic records, uploading grades, registering for courses, submitting support tickets, updating profiles, and receiving alerts through the portal's web-based interface.
+  - Users including students, parents, lecturers, and administrators can initiate actions such as viewing academic records, uploading grades, registering for courses, submitting support tickets, updating profiles, and receiving alerts through the system's web-based interface.
   - _Students_: View grades, attendance, schedule, make payments, and submit coursework.
   - _Lecturers_: Upload grades, post announcements, and mark attendance.
-  - _Admins_: Manage users, configure system settings, and monitor portal activity.
+  - _Admins_: Manage users, configure system settings, and monitor system activity.
 
 2. **Periods of Operations:**
 
 - **Interactive Operations:**  
-  Users typically interact with the portal during standard academic hours (e.g., 8:00 AM – 10:00 PM). During these hours, all functionalities including academic viewing, course registration, announcements, and grade management are fully accessible.
+  Users typically interact with the system during standard academic hours (e.g., 8:00 AM – 10:00 PM). During these hours, all functionalities including academic viewing, course registration, announcements, and grade management are fully accessible.
 
 - **Unattended Operations:**  
-  System-level automated processes such as sending scheduled SMS/email alerts, updating records from CMS, and executing system health checks are conducted during off-peak hours (e.g., overnight) to avoid performance disruption.
+  System-level automated processes such as sending scheduled SMS/email alerts, updating records from CLiC, and executing system health checks are conducted during off-peak hours (e.g., overnight) to avoid performance disruption.
 
 3. **Data processing Support Functions**  
 
@@ -844,7 +885,7 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
    Initialization sequences must allow customization of tuition structures, billing cycles, discount schemes, and payment gateways according to the university’s financial operations.
 
    **Authentication and Access Control:**  
-   Adaptation is required for integration with the university's identity management system, such as Single Sign-On (SSO), LDAP directories, or institutional login portals, to ensure seamless and secure user authentication.
+   Adaptation is required for integration with the university's identity management system, such as Single Sign-On (SSO), LDAP directories, or institutional login systems, to ensure seamless and secure user authentication.
 
    **Notification Triggers and Rules:**  
    The system should allow configuration of SMS/email alert rules (e.g., when attendance drops below X%) based on the institution’s academic and administrative guidelines.
@@ -852,10 +893,10 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
 2. **Site or Mission-Related Features**
 
    **Custom Branding and UI Customization:**  
-   The platform must support university-specific branding, including logos, colors, header styles, and portal names, to reflect the institution’s visual identity.
+   The platform must support university-specific branding, including logos, colors, header styles, and system names, to reflect the institution’s visual identity.
 
    **Localization and Language Support:**  
-   The portal should support localization, including the ability to present content in different languages and adapt date/time formats based on the region or user preference.
+   The system should support localization, including the ability to present content in different languages and adapt date/time formats based on the region or user preference.
 
    **Campus-Specific Event Configuration:**  
    Site-specific setup is required for configuring academic events, holidays, registration dates, and system reminders that align with each university’s operational calendar.
@@ -875,7 +916,7 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
 #### **1.3.1.9 Interfaces with services** {#1.3.1.9-interfaces-with-services}
 
 1. **Cloud Hosting Provider**  
-   The University Communication and Services Portal will be hosted on a cloud infrastructure such as Amazon Web Services (AWS) or Google Cloud Platform (GCP). These services provide scalable and reliable environments for hosting backend services, databases, and application logic. The platform will interface with cloud services to manage virtual servers, allocate resources, configure networking, and ensure system availability through autoscaling, load balancing, and backup services. APIs from the hosting provider will be used for deployment automation, storage management, and health monitoring.
+   The EduAxis will be hosted on a cloud infrastructure such as Amazon Web Services (AWS) or Google Cloud Platform (GCP). These services provide scalable and reliable environments for hosting backend services, databases, and application logic. The platform will interface with cloud services to manage virtual servers, allocate resources, configure networking, and ensure system availability through autoscaling, load balancing, and backup services. APIs from the hosting provider will be used for deployment automation, storage management, and health monitoring.
 
 2. **SMS Gateway Service**  
    To support real-time notifications and alerts (e.g., low attendance, unpaid fees), the platform will integrate with a third-party SMS gateway service such as Twilio or MessageBird. The system will interact with the SMS service via RESTful APIs to send automated text messages to students and parents. This integration will allow queuing of SMS alerts, tracking delivery status, and managing sender identification based on regional requirements. The gateway service ensures timely and reliable communication with stakeholders.
@@ -890,7 +931,7 @@ Limitations: Scalability challenges in managing large numbers of simultaneous us
 
 ### **1.3.2 Product functions** {#1.3.2-product-functions}
 
-Figure 1.3.2.1 below shows the generic use case diagram for the University Communication and Services Portal with Campus Management System and SMS Gateway Integration.
+Figure 1.3.2.1 below shows the generic use case diagram for the EduAxis with Campus Management System and SMS Gateway Integration.
 
 ![][image4]  
 _Figure 1.3.2.1: Generic Use Case Diagram_
@@ -904,7 +945,7 @@ _Table 1.1: EduAxis Functions_
 | Student  | Login View Academic Grades Check Class Attendance Records Access/View Course Schedule Register/Drop Courses Submit Coursework & View Feedback Pay Tuition & Other Fees View Payment History & Invoices Receive SMS/Email Alerts View Announcements & Notifications Update Personal Profile Information Submit Feedback/Support Tickets Monitor Student Academic Performance Customize Notification Preferences |
 |  Parent  | Login View Child’s Grade & Attendance View Child’s Payment History & Dues Summary Access Child’s Schedule & Academic Summary View Announcements & Notifications Receive SMS/Email Alerts Customize Notification Preferences                                                                                                                                                                                    |
 | Lecturer | Login Upload Student Grades Manage Coursework Submissions Export Grades & Attendance Reports Manage Attendance View Academic Calendar & Class Schedules Post Class Announcements Submit Helpdesk Tickets                                                                                                                                                                                                       |
-|  Admin   | Login Manage User Accounts Configure & Manage SMS/Email Notification Services Integrate & Sync with CMS, LMS Automate Workflows Post Global Announcements Maintain Data Privacy & Access Permissions Respond to Helpdesk Tickets or System Issues                                                                                                                                                              |
+|  Admin   | Login Manage User Accounts Configure & Manage SMS/Email Notification Services Integrate & Sync with CLiC, LMS Automate Workflows Post Global Announcements Maintain Data Privacy & Access Permissions Respond to Helpdesk Tickets or System Issues                                                                                                                                                              |
 
 #### **1.3.2.1 Student function** {#1.3.2.1-student-function}
 
@@ -923,7 +964,7 @@ _Table 1.3.2.1.1. Use case Specification \- Login_
 |                         | 4.4 | Pre-Condition         | The user is registered and Authenticated in the system                                                                                                                                                                                                                                                  |
 |                         | 4.5 | Post-Condition        | The user gains access to personalized features within the system                                                                                                                                                                                                                                        |
 |                         | 4.6 | Main Success Scenario | 1\. The user navigates to the login page. 2\. The user enter their username and password 3\. The user clicks the “Login” button. 4\. The system validates the credentials The system displays the student’s dashboard                                                                                   |
-|                         | 4.7 | Alternative Scenario  | 1\. The user wants to log in using a social media account such as LinkdIn The system redirects the user to the social media credentials and authorize access The user enters their social media credentials and authorize access The system validates the social media credentials and logs the user in |
+|                         | 4.7 | Alternative Scenario  | 1\. The user wants to log in using a social media account such as LinkedIn The system redirects the user to the social media credentials and authorize access The user enters their social media credentials and authorize access The system validates the social media credentials and logs the user in |
 |                         | 4.8 | Exception Scenario    | 1\. The user enter incorrect credentials The system displays an error message indicating invalid credentials The user is prompted to re-enter their username and password.                                                                                                                              |
 
 ![][image5]  
@@ -962,7 +1003,7 @@ _Table 1.3.2.1.3. Use case Specification \- Check Class Attendance Records_
 | **Use Case Definition** | 4.1 | Short Description     | The student views their attendance records percentage for all enrolled courses                                                                                                                                       |
 |                         | 4.2 | Goal                  | To allow students to track their class attendance and stay informed                                                                                                                                                  |
 |                         | 4.3 | Actor                 | Student                                                                                                                                                                                                              |
-|                         | 4.4 | Pre-Condition         | The student is successfully logged into the portal.                                                                                                                                                                  |
+|                         | 4.4 | Pre-Condition         | The student is successfully logged into the system.                                                                                                                                                                  |
 |                         | 4.5 | Post-Condition        | The system displays the student’s attendance summary for each course.                                                                                                                                                |
 |                         | 4.6 | Main Success Scenario | 1\. The student logs into the system. 2\. The student navigates to the “Attendance” section. 3\. The system retrieves attendance data for the student. 4\. The student views their attendance percentage and record. |
 |                         | 4.7 | Alternative Scenario  | 1\. The student has not attended any classes yet The system displays “No attendance record available.”                                                                                                               |
@@ -1292,7 +1333,7 @@ _Table 1.3.2.2.4. Use case Specification \- Access Child's Schedule and Academic
 |                         | 4.3 | Actor                 | Parent                                                                                                                                                                                  |
 |                         | 4.4 | Pre-Condition         | Parent is logged in and associated with the child’s student profile.                                                                                                                    |
 |                         | 4.5 | Post-Condition        | Parent successfully views the child’s schedule and academic summary on the system.                                                                                                      |
-|                         | 4.6 | Main Success Scenario | Parent logs into the portal. Navigates to “Child Schedule” or “Academic Summary” section. System retrieves and displays the child's class schedule and summary of academic performance. |
+|                         | 4.6 | Main Success Scenario | Parent logs into the system. Navigates to “Child Schedule” or “Academic Summary” section. System retrieves and displays the child's class schedule and summary of academic performance. |
 |                         | 4.7 | Alternative Scenario  | 1\. No schedule or summary is available for the current academic term — system shows a message.                                                                                         |
 |                         | 4.8 | Exception Scenario    | 1\. Data retrieval error — system displays “Unable to load schedule/summary. Please try again.”                                                                                         |
 
@@ -1313,7 +1354,7 @@ _Table 1.3.2.2.5. Use case Specification \- Customize Notification Preferences (
 |                         | 4.3 | Actor                 | Parent                                                                                                                                                                                             |
 |                         | 4.4 | Pre-Condition         | Parent is logged in. Notification settings are available in the system.                                                                                                                            |
 |                         | 4.5 | Post-Condition        | Notification preferences are successfully updated and saved in the system.                                                                                                                         |
-|                         | 4.6 | Main Success Scenario | 1\. Parent logs into the portal. 2\. Navigates to the Notification Settings section. 3\. Selects preferred method(s) (SMS, email). 4\. Clicks "Save Preferences". 5\. System confirms the changes. |
+|                         | 4.6 | Main Success Scenario | 1\. Parent logs into the system. 2\. Navigates to the Notification Settings section. 3\. Selects preferred method(s) (SMS, email). 4\. Clicks "Save Preferences". 5\. System confirms the changes. |
 |                         | 4.7 | Alternative Scenario  | 1\. Parent selects no method — system prompts that at least one method must be selected.                                                                                                           |
 |                         | 4.8 | Exception Scenario    | 1\. Save operation fails — system displays: “Failed to update preferences. Please try again.”                                                                                                      |
 
@@ -1334,7 +1375,7 @@ _Table 1.3.2.2.6. Use case Specification \- View Payment History and Dues Summar
 |                         | 4.3 | Actor                 | Parent                                                                                                                                                                      |
 |                         | 4.4 | Pre-Condition         | Parent is logged in and linked to at least one student.                                                                                                                     |
 |                         | 4.5 | Post-Condition        | System displays up-to-date payment history and current dues summary.                                                                                                        |
-|                         | 4.6 | Main Success Scenario | 1\. Parent logs into the portal. 2\. Navigates to the “Payments” section. 3\. Selects “View History & Dues”. 4\. System displays payment transactions and outstanding dues. |
+|                         | 4.6 | Main Success Scenario | 1\. Parent logs into the system. 2\. Navigates to the “Payments” section. 3\. Selects “View History & Dues”. 4\. System displays payment transactions and outstanding dues. |
 |                         | 4.7 | Alternative Scenario  | 1\. No payments made yet — system shows “No transactions found.”                                                                                                            |
 |                         | 4.8 | Exception Scenario    | 1\. Payment data retrieval fails — system displays: “Unable to fetch payment records.”                                                                                      |
 
@@ -1358,7 +1399,7 @@ _Table 1.3.2.3.1 Use case Specification \- Login_
 |                         | 4.4 | Pre-Condition         | The user is registered and Authenticated in the system                                                                                                                                                                                                                                                  |
 |                         | 4.5 | Post-Condition        | The user gains access to personalized features within the system                                                                                                                                                                                                                                        |
 |                         | 4.6 | Main Success Scenario | 1\. The user navigates to the login page. 2\. The user enter their username and password 3\. The user clicks the “Login” button. 4\. The system validates the credentials The system displays the student’s dashboard                                                                                   |
-|                         | 4.7 | Alternative Scenario  | 1\. The user wants to log in using a social media account such as LinkdIn The system redirects the user to the social media credentials and authorize access The user enters their social media credentials and authorize access The system validates the social media credentials and logs the user in |
+|                         | 4.7 | Alternative Scenario  | 1\. The user wants to log in using a social media account such as LinkedIn The system redirects the user to the social media credentials and authorize access The user enters their social media credentials and authorize access The system validates the social media credentials and logs the user in |
 |                         | 4.8 | Exception Scenario    | 1\. The user enter incorrect credentials The system displays an error message indicating invalid credentials The user is prompted to re-enter their username and password.                                                                                                                              |
 
 ####
@@ -1426,7 +1467,7 @@ _Table 1.3.2.1.4 Use case Specification \- Post class announcements and updates_
 |                         | 4.3 | Actor                 | Lecturer                                                                                                                                                                                                                                                                                                                                                                        |
 |                         | 4.4 | Pre-Condition         | The user gains access to make updates in system                                                                                                                                                                                                                                                                                                                                 |
 |                         | 4.5 | Post-Condition        | Announcements is passed to all or selected section of students class                                                                                                                                                                                                                                                                                                            |
-|                         | 4.6 | Main Success Scenario | 1\. The user navigates to the main page for specific subject or section 2\. Lecturer navigate to announcements section 3\. Include context or announcements to be delivered. 4\. The lecturers selected the recipient and posted an announcement. 5\. The system delivers the announcement via in-portal notification and optionally triggers email of the selected recipients. |
+|                         | 4.6 | Main Success Scenario | 1\. The user navigates to the main page for specific subject or section 2\. Lecturer navigate to announcements section 3\. Include context or announcements to be delivered. 4\. The lecturers selected the recipient and posted an announcement. 5\. The system delivers the announcement via in-system notification and optionally triggers email of the selected recipients. |
 |                         | 4.8 | Exception Scenario    | 1\. The lecturer attached unsupported files or with bigger size than the limit. 2\. The system displays an error message.                                                                                                                                                                                                                                                       |
 
 ![][image28]  
@@ -1551,14 +1592,14 @@ _Table 1.3.2.4.1. Use case Specification \- Login_
 | :---------------------- | :-: | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ID**                  | 1.1 | Name                  | Login                                                                                                                                                                                                                                                                                          |
 | **Management**          | 2.1 | Author                | Pharthiban A/L Kumarhesan                                                                                                                                                                                                                                                                      |
-| **Context**             | 3.1 | Source                | EduAxis Portal (Auth integrated with centralized Authentication Service)                                                                                                                                                                                                                       |
-| **Use Case Definition** | 4.1 | Short Description     | The user logs in to access personalized features in the EduAxis portal.                                                                                                                                                                                                                        |
+| **Context**             | 3.1 | Source                | EduAxis (Auth integrated with centralized Authentication Service)                                                                                                                                                                                                                       |
+| **Use Case Definition** | 4.1 | Short Description     | The user logs in to access personalized features in the EduAxis.                                                                                                                                                                                                                        |
 |                         | 4.2 | Goal                  | Authenticate user identity to access the platform’s features.                                                                                                                                                                                                                                  |
 |                         | 4.3 | Actor                 | Admin                                                                                                                                                                                                                                                                                          |
 |                         | 4.4 | Pre-Condition         | The user must be registered and their account must exist in the system.                                                                                                                                                                                                                        |
 |                         | 4.5 | Post-Condition        | The user is granted access to their dashboard and personalized features.                                                                                                                                                                                                                       |
 |                         | 4.6 | Main Success Scenario | The user navigates to the login page. The user enters their username and password. The user clicks the “Login” button. The system authenticates the credentials via the Authentication Service. The system redirects the user to their role-specific dashboard.                                |
-|                         | 4.7 | Alternative Scenario  | The user logs in via centralized university SSO (Single Sign-On). The system redirects to the university SSO login page. The user enters SSO credentials and grants access. The system validates the credentials via Authentication Service. The user is redirected to their portal dashboard. |
+|                         | 4.7 | Alternative Scenario  | The user logs in via centralized university SSO (Single Sign-On). The system redirects to the university SSO login page. The user enters SSO credentials and grants access. The system validates the credentials via Authentication Service. The user is redirected to their system dashboard. |
 |                         | 4.8 | Exception Scenario    | The user enters incorrect credentials. The system shows an error message: “Invalid username or password.” The user is prompted to re-enter credentials or reset password.                                                                                                                      |
 
 ![][image34]
@@ -1573,7 +1614,7 @@ _Table 1.3.2.4.2. Use case Specification \- Manage User Accounts_
 | :---------------------- | :-: | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ID**                  | 1.1 | Name                  | Manage User Accounts                                                                                                                                                     |
 | **Management**          | 2.1 | Author                | Pharthiban A/L Kumarhesan                                                                                                                                                |
-| **Context**             | 3.1 | Source                | EduAxis Portal – Admin Module                                                                                                                                            |
+| **Context**             | 3.1 | Source                | EduAxis – Admin Module                                                                                                                                            |
 | **Use Case Definition** | 4.1 | Short Description     | The Admin manages user creation, updates, and deactivation.                                                                                                              |
 |                         | 4.2 | Goal                  | Maintain user account lifecycle securely and efficiently.                                                                                                                |
 |                         | 4.3 | Actor                 | Admin                                                                                                                                                                    |
@@ -1609,27 +1650,27 @@ _Table 1.3.2.4.3. Use case Specification \- Configure & Manage SMS/Email Notific
 
 _Figure 1.3.2.4.3. Activity Diagram \- Configure & Manage SMS/Email Notification Services_
 
-1.3.2.4.4 Integrate & Sync with CMS, LMS
+1.3.2.4.4 Integrate & Sync with CLiC, LMS
 
-_Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CMS, LMS_
+_Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CLiC, LMS_
 
 | No.                     |     | Section               | Content                                                                                                                     |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| **ID**                  | 1.1 | Name                  | Integrate & Sync with CMS, LMS                                                                                              |
+| **ID**                  | 1.1 | Name                  | Integrate & Sync with CLiC, LMS                                                                                              |
 | **Management**          | 2.1 | Author                | Pharthiban A/L Kumarhesan                                                                                                   |
 | **Context**             | 3.1 | Source                | Integration Settings – External Systems                                                                                     |
 | **Use Case Definition** | 4.1 | Short Description     | Admin configures integration with academic & learning systems.                                                              |
 |                         | 4.2 | Goal                  | Synchronize data from external systems like grades, attendance, and coursework.                                             |
 |                         | 4.3 | Actor                 | Admin                                                                                                                       |
 |                         | 4.4 | Pre-Condition         | External system credentials and API endpoints must be configured.                                                           |
-|                         | 4.5 | Post-Condition        | The system is successfully synced with external CMS or LMS.                                                                 |
-|                         | 4.6 | Main Success Scenario | Admin opens the Integration Panel. Enters LMS/CMS API settings. Initiates sync. The system pulls data and confirms success. |
+|                         | 4.5 | Post-Condition        | The system is successfully synced with external CLiC or LMS.                                                                 |
+|                         | 4.6 | Main Success Scenario | Admin opens the Integration Panel. Enters LMS/CLiC API settings. Initiates sync. The system pulls data and confirms success. |
 |                         | 4.7 | Alternative Scenario  | Admin sets auto-sync intervals such as daily at midnight.                                                                   |
 |                         | 4.8 | Exception Scenario    | System logs and notifies admin when sync is failed due to invalid credentials or timeout.                                   |
 
 ![][image37]
 
-_Figure 1.3.2.4.4. Activity Diagram \- Integrate & Sync with CMS, LMS_
+_Figure 1.3.2.4.4. Activity Diagram \- Integrate & Sync with CLiC, LMS_
 
 1.3.2.4.5 Automate Workflows
 
@@ -1725,7 +1766,7 @@ _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Iss
 
 **Educational Level**: Undergraduate or postgraduate students enrolled at the university.
 
-**Experience**: Varies; may include first-year students unfamiliar with university systems to final-year students with moderate experience using institutional portals.
+**Experience**: Varies; may include first-year students unfamiliar with university systems to final-year students with moderate experience using institutional systems.
 
 **Technical Expertise**: Basic to moderate. Familiar with smartphones, web platforms, and learning tools but may require intuitive interfaces for administrative tasks.
 
@@ -1737,13 +1778,13 @@ _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Iss
 
 **Educational Level**: Varies significantly; may include non-university-educated users.
 
-**Experience**: Limited or no experience with academic portals; typically unfamiliar with institutional systems or digital academic tools.
+**Experience**: Limited or no experience with academic systems; typically unfamiliar with institutional systems or digital academic tools.
 
-**Technical Expertise**: Low to moderate. May only access the portal occasionally via mobile devices.
+**Technical Expertise**: Low to moderate. May only access the system occasionally via mobile devices.
 
 **Disabilities**: May include older users with visual impairments or limited digital literacy.
 
-**Usability Influence**: Requires a simple, mobile-friendly interface with clear language, SMS alerts, and minimal navigation layers. SMS notification design is critical due to likely preference for mobile communication over in-portal browsing.
+**Usability Influence**: Requires a simple, mobile-friendly interface with clear language, SMS alerts, and minimal navigation layers. SMS notification design is critical due to likely preference for mobile communication over in-system browsing.
 
 #### **1.3.3.3 Lecturer** {#1.3.3.3-lecturer}
 
@@ -1755,7 +1796,7 @@ _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Iss
 
 **Disabilities**: May include individuals with visual fatigue or repetitive stress injuries.
 
-**Usability Influence**: Portal features (e.g., attendance marking, grade uploads, announcements) must be efficient, logically structured, and integrate seamlessly with existing tools like the LMS. Time-saving automation and bulk-processing features are essential.
+**Usability Influence**: system features (e.g., attendance marking, grade uploads, announcements) must be efficient, logically structured, and integrate seamlessly with existing tools like the LMS. Time-saving automation and bulk-processing features are essential.
 
 #### **1.3.3.4 Administrator** {#1.3.3.4-administrator}
 
@@ -1774,16 +1815,16 @@ _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Iss
 ### **1.3.4 Limitations** {#1.3.4-limitations}
 
 1. **Digital Literacy Gaps**  
-   Parents or guardians with limited access to technical expertise may struggle to navigate the portal, especially if its not fully optimized for mobile devices like smartphones, with simple and user-friendly design. This can lead to difficulties in accessing important academic information, receiving notifications and engaging with students' records actively.  
+   Parents or guardians with limited access to technical expertise may struggle to navigate the system, especially if its not fully optimized for mobile devices like smartphones, with simple and user-friendly design. This can lead to difficulties in accessing important academic information, receiving notifications and engaging with students' records actively.  
 
 2. **High Concurrent User Loads**  
    During peak usage periods such as subject registration or exam results announcements, the platform might experience slowdowns or even crashes if it is not properly optimized for scalability. High traffic volumes can overload servers, causing delays in data retrieval and frustrating users who rely on real-time updates.  
 
 3. **Data Synchronization issues**  
-   The portal relies on real-time integration with the Campus Managements System (CMS) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
+   The system relies on real-time integration with the Campus Managements System (CLiC) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
 
 4. **Security and Privacy Risk**  
-   Given the sensitive nature of the data managed by the portal, such as student grades, attendance records, and financial information, robust security measures are crucial. Insufficient protection can lead to unauthorized access, data breaches, and privacy violations, compromising student confidentiality and institutional trust.  
+   Given the sensitive nature of the data managed by the system, such as student grades, attendance records, and financial information, robust security measures are crucial. Insufficient protection can lead to unauthorized access, data breaches, and privacy violations, compromising student confidentiality and institutional trust.  
 
 5. **Manual Data Entry**  
    The process of lecturers manually entering grades or marking attendance in the database can introduce human errors, such as typos or incorrect records. These inaccuracies can affect student academic records, leading to disputes and requiring time-consuming corrections to maintain data integrity.
@@ -1805,7 +1846,7 @@ This document is prepared in reference to the following documents:
 
 ## **3.1 Apportioning of Requirements** {#3.1-apportioning-of-requirements}
 
-This section outlines the allocation of system requirements to specific modules within the University Portal System. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
+This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
 
 ### **3.1.1 Student Module** {#3.1.1-student-module}
 
@@ -1889,7 +1930,7 @@ This section outlines the allocation of system requirements to specific modules 
 
 | Name of Item                                | LMS (Moodle/eBwise) Interface                                                                              |
 | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------- |
-| **Description of Purpose**                  | To synchronize assignment submissions, course materials, and grade uploads between the portal and the LMS. |
+| **Description of Purpose**                  | To synchronize assignment submissions, course materials, and grade uploads between the system and the LMS. |
 | **Source of Input/Destination of Output**   | University LMS                                                                                             |
 | **Valid Range, Accuracy, and/or Tolerance** | High accuracy; syncs with instructor-uploaded data                                                         |
 | **Units of Measure**                        | Submission timestamps, file count, grade values                                                            |
@@ -1919,12 +1960,12 @@ This section outlines the allocation of system requirements to specific modules 
 
 | Name of Item                                | Central Authentication Service                                                             |
 | :------------------------------------------ | :----------------------------------------------------------------------------------------- |
-| **Description of Purpose**                  | To authenticate portal users using centralized university login credentials (such as SSO). |
+| **Description of Purpose**                  | To authenticate system users using centralized university login credentials (such as SSO). |
 | **Source of Input/Destination of Output**   | University SSO system or OAuth 2.0 provider                                                |
 | **Valid Range, Accuracy, and/or Tolerance** | Auth tokens must be valid and unexpired                                                    |
 | **Units of Measure**                        | Token expiry (minutes), login attempts                                                     |
 | **Timing**                                  | On every login session                                                                     |
-| **Relationships to Other Inputs/Outputs**   | Connects to portal login form and session manager                                          |
+| **Relationships to Other Inputs/Outputs**   | Connects to system login form and session manager                                          |
 | **Data Formats**                            | JSON                                                                                       |
 | **Command Formats**                         | OAuth 2.0 (POST, Token Exchange), SAML, or JWT                                             |
 | **Data Items Included**                     | User ID, access token, session info                                                        |
@@ -1947,7 +1988,7 @@ This section outlines the allocation of system requirements to specific modules 
 
 ## **3.3 Elicitation Techniques Based on Kano Model** {#3.3-elicitation-techniques-based-on-kano-model}
 
-The requirements for the University Communication and Services Portal were gathered and prioritized using the Kano Model, which helps in understanding and categorizing customer needs. The Kano Model categorizes requirements into five categories:
+The requirements for the EduAxis were gathered and prioritized using the Kano Model, which helps in understanding and categorizing customer needs. The Kano Model categorizes requirements into five categories:
 
 1. **Dissatisfier (Must-Be Requirements)**: Basic features that users expect. If these are not fulfilled, users will be dissatisfied.
 2. **Satisfier (One-Dimensional Requirements):** Features that result in satisfaction when fulfilled and dissatisfaction when not fulfilled.
@@ -2049,7 +2090,7 @@ _Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platfor
 
 | Requirements:               | Pay Tuition and Other Fees                      |
 | :-------------------------- | :---------------------------------------------- |
-| **Description:**            | Ability to make fee payments through the portal |
+| **Description:**            | Ability to make fee payments through the system |
 | **Elicitation Activities:** | Observation                                     |
 | **Responsible Member:**     | Phartiban A/L Kumarhesan                        |
 | **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3))  |
@@ -2171,7 +2212,7 @@ _Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platfor
 
 | Requirements:               | Mobile-Friendly Responsive Interface                                                             |
 | :-------------------------- | :----------------------------------------------------------------------------------------------- |
-| **Description:**            | The portal may be optimized for mobile devices across Android and iPhone.                        |
+| **Description:**            | The system may be optimized for mobile devices across Android and iPhone.                        |
 | **Elicitation Activities:** | Interview with admin and survey towards students                                                 |
 | **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                   |
 | **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)), Question 7&12([Student survey](#4.2.1-students)) |
@@ -2179,7 +2220,7 @@ _Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platfor
 
 ## **3.5 Performance requirements** {#3.5-performance-requirements}
 
-The performance requirements for the University Communication Service Portal are specified below. These requirements include both static and dynamic numerical requirements, ensuring the system meets necessary performance standards for usability and efficiency.
+The performance requirements for the EduAxis are specified below. These requirements include both static and dynamic numerical requirements, ensuring the system meets necessary performance standards for usability and efficiency.
 
 ### **3.5.1 Static Numerical Requirements** {#3.5.1-static-numerical-requirements}
 
@@ -2187,7 +2228,7 @@ The performance requirements for the University Communication Service Portal are
 
 - The system shall support a minimum of 2 TB of storage 10TB maximum capacity for academic records, attendance logs, user data and media uploads. However data storage usage does not exceed the maximum during peak periods for load controls.
 
-- The portal shall perform database backups every 12 hours to prevent data lost in the system. Back ups are stored securely and restorable within 30 mins of request.
+- The system shall perform database backups every 12 hours to prevent data lost in the system. Back ups are stored securely and restorable within 30 mins of request.
 
 - The system shall retrieve students records, attendance and schedules within ≤ 2 seconds of request submission
 
@@ -2208,7 +2249,7 @@ The performance requirements for the University Communication Service Portal are
 
 - The system shall maintain an uptime of 99.9% on a monthly basis, accounting for maintenance windows which is a critical criteria for every system  
 
-- The system shall maintain a 95% responsiveness rate across all core features in the portal such as in dashboard, notifications, and user profile update. User interaction logs will confirm the stable performance.  
+- The system shall maintain a 95% responsiveness rate across all core features in the system such as in dashboard, notifications, and user profile update. User interaction logs will confirm the stable performance.  
 
 - During concurrent usage of more than 4,000 users, the system shall maintain a task success rate of above 95% across all modules.  
 
@@ -2236,7 +2277,7 @@ These performance requirements ensure that the system will be responsive and eff
 
 ## **3.6 Usability Requirements** {#3.6-usability-requirements}
 
-The usability and quality in user requirements for the University Communication Service Portal system aims to ensure that the software is efficient, satisfying and productive for the intended users. These requirements encompass measurable criteria for effectiveness, efficiency and satisfaction and the prevention of future issues that could arise from its user specific contexts.
+The usability and quality in user requirements for the EduAxis aims to ensure that the software is efficient, satisfying and productive for the intended users. These requirements encompass measurable criteria for effectiveness, efficiency and satisfaction and the prevention of future issues that could arise from its user specific contexts.
 
 ### **3.6.1 User Interface** {#3.6.1-user-interface}
 
@@ -2246,13 +2287,13 @@ The usability and quality in user requirements for the University Communication 
 
 2. Responsive Design
 
-- The system shall support responsive web design, ensuring usability across desktop, tablet and mobile devices without requiring separate portals.
+- The system shall support responsive web design, ensuring usability across desktop, tablet and mobile devices without requiring separate systems.
 
 ### **3.6.2 User Experience** {#3.6.2-user-experience}
 
 1. Efficient Navigation
 
-- The system shall provide intuitive navigation pathways through the portal, to enable quick and smooth allocation of information and functionalities navigation.
+- The system shall provide intuitive navigation pathways through the system, to enable quick and smooth allocation of information and functionalities navigation.
 - The system shall minimize the number of steps required to reach an intended function like viewing grades, checking attendance and registering courses.
 
 2. Personalized Recommendations
@@ -2299,7 +2340,7 @@ _Figure 3.8.1 Class Diagram_
 
 ### **3.7.2 Data Entities**
 
-The following table describes the key data entities and their functionalities in the University Portal System.
+The following table describes the key data entities and their functionalities in the EduAxis.
 
 _Table 3.8.2.1 Data Entities and Descriptions_
 
@@ -2362,14 +2403,14 @@ _Table 3.8.5 Frequency of Operation Usage and Description_
 
 | Operation                       | Frequency | Description                                                                                                                       |
 | :------------------------------ | :-------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| User Authentication             | High      | Includes user login and logout for students, parents, lecturers and administrators. Access personalized portal features securely. |
+| User Authentication             | High      | Includes user login and logout for students, parents, lecturers and administrators. Access personalized system features securely. |
 | Academic Data Management        | Medium    | Includes entering, updating and retrieving grades, reports and academic progress by lecturers and students.                       |
 | Attendance Processing           | High      | QR code generation, student check-in, attendance validation and database updates.                                                 |
 | Course Management               | Low       | Encompasses course registration, schedule view and updates, course swap or drop by students and lecturers                         |
 | Financial Records Handling      | Medium    | Involves fee billing, payments confirmation, balance checking by students and parents.                                            |
-| Communication and Notifications | High      | Includes SMS alerts, email notifications, and portal announcements related to attendance, grades and fees.                        |
+| Communication and Notifications | High      | Includes SMS alerts, email notifications, and system announcements related to attendance, grades and fees.                        |
 | Data Report and Export          | Medium    | Includes generation and download of grade lists, attendance summaries and performance reports in PDF/CSV format.                  |
-| Resource Access                 | Medium    | Includes accessing integrated systems such as LMS, library resources and academic support services from the portal.               |
+| Resource Access                 | Medium    | Includes accessing integrated systems such as LMS, library resources and academic support services from the system.               |
 
 ###
 
@@ -2382,7 +2423,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 | Students       | Access and manage academic records, course registration, fee payment, attendance and receive timely notifications.                                 |
 | Parents        | Monitor a child's academic performance, financial status, and receive alerts via SMS for better engagements.                                       |
 | Lecturers      | Manage course related activities including uploading academic grades, recording attendance, sharing announcements and generating academic reports. |
-| Administrators | Full control over user management, system configuration, academic scheduling, communication settings and data reporting across the portal          |
+| Administrators | Full control over user management, system configuration, academic scheduling, communication settings and data reporting across the system          |
 
 ###
 
@@ -2458,14 +2499,14 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
 ### **3.9.5 API Usage Limitations** {#3.9.5-api-usage-limitations}
 
-| Constraint Description | The portal must respect usage limitations for third-party APIs (e.g., Twilio SMS Gateway, LMS/CMS APIs), adhering to defined rate limits and authentication policies. To manage throttling effectively, the system shall implement exponential backoff strategies (e.g., 1s, 2s, 4s, 8s delays), queue non-critical requests for deferred processing, and return HTTP 429 responses with appropriate Retry-After headers. User notifications must be provided in cases of degraded service availability. Additionally, critical operations—such as attendance marking and emergency alerts—shall be handled via dedicated priority queues to ensure timely execution even during rate-limited conditions. |
+| Constraint Description | The system must respect usage limitations for third-party APIs (e.g., Twilio SMS Gateway, LMS/CMS APIs), adhering to defined rate limits and authentication policies. To manage throttling effectively, the system shall implement exponential backoff strategies (e.g., 1s, 2s, 4s, 8s delays), queue non-critical requests for deferred processing, and return HTTP 429 responses with appropriate Retry-After headers. User notifications must be provided in cases of degraded service availability. Additionally, critical operations—such as attendance marking and emergency alerts—shall be handled via dedicated priority queues to ensure timely execution even during rate-limited conditions. |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External API standards.                                                                                                                                     |
 | **Impact**             | The system must implement throttling, retry mechanisms, and error handling routines to avoid service disruptions when API limits are exceeded.              |
 
 ### **3.9.6 Performance and Scalability** {#3.9.6-performance-and-scalability}
 
-| Constraint Description | The portal must scale to support large user loads, particularly during critical periods such as registration, grade release, or announcement events. |
+| Constraint Description | The system must scale to support large user loads, particularly during critical periods such as registration, grade release, or announcement events. |
 | :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                 |
 | **Impact**             | Use of load balancing, caching strategies, database indexing, and asynchronous operations is required to maintain system responsiveness.             |
@@ -2552,7 +2593,7 @@ Requirements:
 
 **3.10.1.1. System Uptime**
 
-The University Communication and Services Portal shall maintain an uptime of 99.9%, ensuring continuous availability for students, lecturers, parents, and administrators.
+The EduAxis shall maintain an uptime of 99.9%, ensuring continuous availability for students, lecturers, parents, and administrators.
 
 **3.10.1.2. Data Integrity**
 
@@ -2637,7 +2678,7 @@ Dependencies on platform-specific tools shall be minimized. Cross-platform libra
 
 ## **4.1 Interview** {#4.1-interview}
 
-The purpose of these interview sessions is to elicit requirements and insights for the University Communication and Service Portal from students, parents, lecturers and administrators of the system itself. The focus of this interview is to obtain opinion on the portal’s functions, features and design for improvements and developments.
+The purpose of these interview sessions is to elicit requirements and insights for the EduAxis from students, parents, lecturers and administrators of the system itself. The focus of this interview is to obtain opinion on the system’s functions, features and design for improvements and developments.
 
 ### **4.1.1 Interview 1** {#4.1.1-interview-1}
 
@@ -2653,7 +2694,7 @@ The purpose of these interview sessions is to elicit requirements and insights f
 
 | No.  | Question                                                                                                                     | Response                                                                                                                                                                                                                                                                    |
 | :--- | :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\.  | How important is it for you to log in quickly and securely to access the academic portal?                                    | Quick and secure login is important to ensure smooth access to teaching tools and student data, which supports efficiency in handling daily academic tasks.                                                                                                                 |
+| 1\.  | How important is it for you to log in quickly and securely to access the academic system?                                    | Quick and secure login is important to ensure smooth access to teaching tools and student data, which supports efficiency in handling daily academic tasks.                                                                                                                 |
 | 2\.  | What challenges do you currently face when uploading student grades, and how would a grade upload feature help you?          | Although I prefer manual methods, an efficient grade upload feature would reduce manual effort, improve consistency, and simplify the grading process, especially when handling large numbers of students.                                                                  |
 | 3\.  | How would you feel about a system that confirms and saves each grade you upload automatically?                               | A system that automatically confirms and saves grades would be helpful in minimizing errors and ensuring that no data is lost during entry, which adds reliability to the grading process.                                                                                  |
 | 4\.  | How do you currently mark attendance, and would a digital attendance tracker improve your efficiency?                        | Attendance is currently taken manually during class, with flexibility for absences based on valid student explanations. I acknowledge that a digital attendance tracker would improve efficiency, even though they still prefer manual observation for personal engagement. |
@@ -2669,7 +2710,7 @@ The purpose of these interview sessions is to elicit requirements and insights f
 ![][image43]  
 Figure 4.1.1.3.1- Interview with Mr Deepak Kumar, FCI Lecturer Of Multimedia University Cyberjaya
 
-The Lecturer provides valuable feedback throughout the interview on functions and features of the portal usability and preferences. Lecturer inputs have been incorporated into the functional requirements to ensure practical and academic relevance.
+The Lecturer provides valuable feedback throughout the interview on functions and features of the system usability and preferences. Lecturer inputs have been incorporated into the functional requirements to ensure practical and academic relevance.
 
 ### **4.1.2 Interview 2** {#4.1.2-interview-2}
 
@@ -2685,12 +2726,12 @@ The Lecturer provides valuable feedback throughout the interview on functions an
 
 | No.  | Question                                                                                                                     | Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :--- | :--------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\.  | How important is it for you to log in quickly and securely to access the academic portal?                                    | Quick and secure login is important for accessing the system efficiently, especially when managing large numbers of students and time-sensitive tasks like grade submissions and attendance tracking.                                                                                                                                                                                                                                                                                                                                                             |
+| 1\.  | How important is it for you to log in quickly and securely to access the academic system?                                    | Quick and secure login is important for accessing the system efficiently, especially when managing large numbers of students and time-sensitive tasks like grade submissions and attendance tracking.                                                                                                                                                                                                                                                                                                                                                             |
 | 2\.  | What challenges do you currently face when uploading student grades, and how would a grade upload feature help you?          | I face significant challenges due to the large volume of students (sometimes 800–1000) and numerous assessments such as quizzes, tests, and projects. It becomes time-consuming and tedious to upload multiple components manually. There’s also difficulty in ensuring consistency across different lecturers, with no automated alerts if discrepancies arise in grading. A well-designed grade upload feature could streamline the process, offer validation or alerts for inconsistencies, and reduce errors before final submission to the examination unit. |
 | 3\.  | How would you feel about a system that confirms and saves each grade you upload automatically?                               | This would be highly beneficial. Having a confirmation system that flags potential issues before submission—especially when working with other lecturers—would reduce human errors and prevent issues during the review by the examination unit.                                                                                                                                                                                                                                                                                                                  |
 | 4\.  | How do you currently mark attendance, and would a digital attendance tracker improve your efficiency?                        | Previously, attendance was taken manually (calling names), and later using QR codes. The lecturer agrees that a digital tracker would improve efficiency, especially since MMU is already working with system developers to enhance the credit-based system. Digital tracking would also make the process faster and more organized.                                                                                                                                                                                                                              |
 | 5\.  | Would it be helpful if the system allowed you to view, edit, and monitor attendance records over time?                       | Yes, having a history of attendance records would be helpful to evaluate patterns or identify students with poor attendance. It would also support more data-driven interventions if integrated properly.                                                                                                                                                                                                                                                                                                                                                         |
-| 6\.  | How useful would it be to post announcements or class updates in one place where all students can see them?                  | Centralized announcement posting is implied to be useful as I discussed integrating multiple student engagement and communication functions within the portal.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 6\.  | How useful would it be to post announcements or class updates in one place where all students can see them?                  | Centralized announcement posting is implied to be useful as I discussed integrating multiple student engagement and communication functions within the system.                                                                                                                                                                                                                                                                                                                                                                                                    |
 | 7\.  | Do you think receiving a notification when students view or respond to announcements would be beneficial?                    | Usually I monitor student engagement through the system. Therefore, having such a feature would be considered useful for tracking responsiveness and encouraging accountability among students.                                                                                                                                                                                                                                                                                                                                                                   |
 | 8\.  | How often do you refer to the academic calendar, and how important is it for you to have it integrated into your dashboard?  | Time pressure was mentioned as a key challenge—especially during grading periods—so having academic deadlines and the calendar integrated into the dashboard would help in better planning and time management.                                                                                                                                                                                                                                                                                                                                                   |
 | 9\.  | Would you find it valuable if the system alerted you about upcoming deadlines, like grade submissions or exam dates?         | Absolutely. A I have mentioned the tight timeframes for marking exams, especially when exam schedules fall near the end of the semester. System alerts would help ensure that deadlines are met without last-minute stress.                                                                                                                                                                                                                                                                                                                                       |
@@ -2701,7 +2742,7 @@ The Lecturer provides valuable feedback throughout the interview on functions an
 ![][image44]  
 Figure 4.1..3.1- Interview with Dr Kairulanuar , FCI Lecturer Of Multimedia University Cyberjaya
 
-The Lecturer provides valuable feedback throughout the interview on the importance of data visibility, automation, and customization in supporting lecturers' teaching workflows. Their feedback will guide the enhancement of the academic modules and ensure the University Communication and Service Portal aligns with teaching needs across faculties.
+The Lecturer provides valuable feedback throughout the interview on the importance of data visibility, automation, and customization in supporting lecturers' teaching workflows. Their feedback will guide the enhancement of the academic modules and ensure the EduAxis aligns with teaching needs across faculties.
 
 ###
 
@@ -2719,11 +2760,11 @@ The Lecturer provides valuable feedback throughout the interview on the importan
 | No. | Question                                                                                                                                                      | Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. | How should user roles (student, lecturer, admin, parent) be managed and provisioned in the system?                                                            | User roles should be provided based on verified student and staff records in the CMS. Role creation should be automated through syncing with CMS where students, lecturers, and parents are auto-assigned their roles upon registration. On the other part, admin roles should be manually assigned with strict approval workflows.                                                                                                                                                                                                                                                                                                                                                           |
-| 2\. | How should the University Communication and Service Portal integrate with existing systems such as the Campus Management System (CLiC), LMS, and SMS gateway? | Integrating with CLiC is really crucial for syncing data such as grades, attendance, and fee records. For the LMS or eBwise in our case, it should pull the assignment statuses and push grades. Also, SMS gateway should be connected to the portal to trigger alerts for low attendance, overdue payments and other announcements.                                                                                                                                                                                                                                                                                                                                                          |
+| 2\. | How should the EduAxis integrate with existing systems such as the Campus Management System (CLiC), LMS, and SMS gateway? | Integrating with CLiC is really crucial for syncing data such as grades, attendance, and fee records. For the LMS or eBwise in our case, it should pull the assignment statuses and push grades. Also, SMS gateway should be connected to the system to trigger alerts for low attendance, overdue payments and other announcements.                                                                                                                                                                                                                                                                                                                                                          |
 | 3\. | How often should backups be performed, and where should they be stored?                                                                                       | Backups should be performed daily for critical databases like user data and academic records. We are looking forward to both on-site and cloud-based backups where a copy of backup is stored on MMU’s internal backup server and is also pushed to secure cloud location something like AWS S3 with encryption.                                                                                                                                                                                                                                                                                                                                                                              |
 | 4\. | What are the most common support requests or issues reported by users recently?                                                                               | The most common issues reported by users are mostly on attendance records and notification delivery problems. Occasionally, we get parent inquiries about login issues or problems in fee info.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 5\. | Should the portal be optimized for mobile use? If yes, what devices are most commonly used?                                                                   | It would be better if the portal is optimized for mobile use as the majority of students and lecturers use mobile phones to access systems. Android smartphone devices are the most commonly used based on our findings, followed by iPhones. The UI should be responsive especially for functions like viewing announcements, checking schedules, submitting feedbacks and so on.                                                                                                                                                                                                                                                                                                            |
-| 6\. | Should students be able to submit complaints or feedback through the portal?                                                                                  | Yes, sure. This feature is useful for both students and admin side, which is us so that the raised feedback or complaints can be routed to the relevant department or admin. This is important as we can improvise the system in future which also involves the benefit of transparency and faster issue resolution.                                                                                                                                                                                                                                                                                                                                                                          |
+| 5\. | Should the system be optimized for mobile use? If yes, what devices are most commonly used?                                                                   | It would be better if the system is optimized for mobile use as the majority of students and lecturers use mobile phones to access systems. Android smartphone devices are the most commonly used based on our findings, followed by iPhones. The UI should be responsive especially for functions like viewing announcements, checking schedules, submitting feedbacks and so on.                                                                                                                                                                                                                                                                                                            |
+| 6\. | Should students be able to submit complaints or feedback through the system?                                                                                  | Yes, sure. This feature is useful for both students and admin side, which is us so that the raised feedback or complaints can be routed to the relevant department or admin. This is important as we can improvise the system in future which also involves the benefit of transparency and faster issue resolution.                                                                                                                                                                                                                                                                                                                                                                          |
 | 7\. | What specific information or tasks should each user type (student, lecturer, parent, admin) be able to access or perform?                                     | In terms of specific information or tasks each user should be able to access or perform, it might be that first of all, let’s go for the students' side. Students should be able to view grades, attendance, announcements, pay fees, submit coursework and feedback. On the other side, parents should be given access to view a child's grades and fee status, get alerts, and optionally view timetables. Moving on to lecturers, they should be able to upload grades, mark attendance, post class updates, manage assignments. Finally, admins should have the access to manage accounts, handle integrations, send announcements, control permissions, and respond to helpdesk tickets. |
 | 8\. | What level of user management and permissions control is required?                                                                                            | It should be role-based at a minimum, with the ability to assign custom permissions for sub-roles such as department-level admins. Certain functions like announcements or user deletion should only be allowed by system admins.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
@@ -2732,7 +2773,7 @@ The Lecturer provides valuable feedback throughout the interview on the importan
 ![][image45]  
 Figure 4.1.3.3.1- Interview with Mr. Zaki Syahmi Bin Zulkifli, Officer of Multimedia University Student Lifestyle and Experience Department
 
-The system Administrator provided critical insights into the technical backbone and operational expectations of the portal. Their input will shape the infrastructure design, security measures and integration strategies to ensure system reliability and compliance.
+The system Administrator provided critical insights into the technical backbone and operational expectations of the system. Their input will shape the infrastructure design, security measures and integration strategies to ensure system reliability and compliance.
 
 ## **4.2. Survey** {#4.2.-survey}
 
@@ -2751,20 +2792,20 @@ Question 2: Are you satisfied with the current process for accessing that inform
 ![][image47]  
 Question 3:Which platform do you find most convenient for accessing university services and information?  
 ![][image48]  
-Question 4: Which of the following features would you like to have in the portal?
+Question 4: Which of the following features would you like to have in the system?
 
 ![][image49]  
-Question 5: How important is it for the portal to have a User-Friendly interface?  
+Question 5: How important is it for the system to have a User-Friendly interface?  
 ![][image50]  
-Question 6: How important is it for the portal to have Data Accuracy  
+Question 6: How important is it for the system to have Data Accuracy  
 ![][image51]  
-Question 7:How important is it for the portal to be Mobile Friendly  
+Question 7:How important is it for the system to be Mobile Friendly  
 ![][image52]  
-Question 8: How important is it for the portal to have Fast Loading Speed  
+Question 8: How important is it for the system to have Fast Loading Speed  
 ![][image53]  
-Question 9: How important is it for the portal to be integrated with the Campus Management System  
+Question 9: How important is it for the system to be integrated with the Campus Management System  
 ![][image54]  
-Question 10: Would you prefer the portal to be available as:  
+Question 10: Would you prefer the system to be available as:  
 ![][image55]  
 Question 11: How often do you experience difficulties in accessing university- related information?  
 ![][image56]  
@@ -2780,12 +2821,12 @@ Question 16: How frequently do you prefer to receive communication updates?
 ![][image61]  
 Question 17: In your experience, what gaps exist in the way university information is shared with students?  
 ![][image62]  
-Question 18:If you could add one feature to the University Communication and Services Portal, what would it be and why?  
+Question 18:If you could add one feature to the EduAxis, what would it be and why?  
 ![][image63]
 
 ### **4.2.2 Parents** {#4.2.2-parents}
 
-Question 1: How important is it for you to be able to view your child’s academic grades through the portal?  
+Question 1: How important is it for you to be able to view your child’s academic grades through the system?  
 ![][image64]  
 Question 2: How important is it for you to be able to see your child’s attendance records?  
 ![][image65]  
@@ -2797,13 +2838,13 @@ Question 5: How important is it to have a dashboard that shows your child’s ac
 ![][image68]  
 Question 6: How important is it for you to receive notifications when your child’s grades are uploaded or updated?  
 ![][image69]  
-Question 7: How important is it for you to view your child’s class schedule or timetable through the portal?  
+Question 7: How important is it for you to view your child’s class schedule or timetable through the system?  
 ![][image70]  
-Question 8: How important is it for the portal to also send updates and alerts via email in addition to SMS?  
+Question 8: How important is it for the system to also send updates and alerts via email in addition to SMS?  
 ![][image71]  
-Question 9: How important is it for the portal to have a secure and private login for accessing your child’s information?  
+Question 9: How important is it for the system to have a secure and private login for accessing your child’s information?  
 ![][image72]  
-Question 10: How important is it for the portal to work well on mobile phones or tablets?  
+Question 10: How important is it for the system to work well on mobile phones or tablets?  
 ![][image73]  
 Question 11: How important is it for you to have access to payment status and history for tuition and other fees?  
 ![][image74]  
@@ -2825,7 +2866,7 @@ Question 14: How important is it to have the option to choose how you receive al
 ### **4.3.1 CliC** {#4.3.1-clic}
 
 url : [https://clic.mmu.edu.my](https://www.bing.com/ck/a?!&&p=45b5142ff21b033e05071b3c0d5e5d23cf5eaf51389396237561f86e436223e1JmltdHM9MTc0Nzk1ODQwMA&ptn=3&ver=2&hsh=4&fclid=043ec061-633f-6af9-08df-d2b8673f6cb3&psq=clic&u=a1aHR0cHM6Ly9jbGljLm1tdS5lZHUubXkvcHNwL2NzcHJkLz9jbWQ9bG9naW4&ntb=1)  
-Description: CLiC is a University Management Service Portal that serves functions for users like students, lecturers and administrators or Multimedia University (MMU) to manage and perform actions and get records on academic and personal resources.
+Description: CLiC is a University Management Service system that serves functions for users like students, lecturers and administrators or Multimedia University (MMU) to manage and perform actions and get records on academic and personal resources.
 
 **4.3.1.1 Log In**  
 Description: allow users to log in with credentials given.  
@@ -2867,7 +2908,7 @@ Description: Allows user to log in using SSO authentication.
 _Figure 4.3.2.1 screenshot of eBwise Student login interface_
 
 **4.3.2.2 Academic Managements Dashboard**  
-Description: The eBwise serves as a Communication Portal for both student and lecturers to make and get updates on academic matters such as announcements, assignments, and comments on class.
+Description: The eBwise serves as a Communication system for both student and lecturers to make and get updates on academic matters such as announcements, assignments, and comments on class.
 
 ![][image85]  
 _Figure 4.3.2.2 screenshot of eBwise Student homepage interface_
@@ -2910,7 +2951,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ### **5.1.3 Learning Management System (eBwise) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#5.1.3-learning-management-system-(ebwise)-interface-(3.2.3)}
 
-| Methods               | Verify grade upload and assignment sync via LMS API. Compare LMS-side student submissions and scores against portal display. Test API failures and timeouts. |
+| Methods               | Verify grade upload and assignment sync via LMS API. Compare LMS-side student submissions and scores against system display. Test API failures and timeouts. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | QA team and LMS admin.                                                                                                                                       |
 | **Verification time** | During LMS sync cycles and before academic term launch.                                                                                                      |
@@ -3126,7 +3167,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 **5.3.1.2 Responsive Design**
 
-| Methods:           | Test portal on desktop, tablet and mobile for layout sync and functionality |
+| Methods:           | Test system on desktop, tablet and mobile for layout sync and functionality |
 | :----------------- | :-------------------------------------------------------------------------- |
 | Responsibility:    | Front-end and QA team                                                       |
 | Verification Time: | During front end testing                                                    |
@@ -3569,7 +3610,6 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 1. CliC: Campus Life and Information Centre
 2. SMS: Short Message Service
 3. JSON: JavaScript Object Notation
-4. UCSP: University Communication and Service Portal
 5. IT: Information Technology
 6. LMS: Learning Management System
 7. CMS: Campus Management System
