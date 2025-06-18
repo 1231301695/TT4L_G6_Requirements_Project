@@ -110,7 +110,7 @@ Release Date: 25th May 2025
 
 [3.2.1 University Database Interface 97](#3.2.1-university-database-interface)
 
-[3.2.2 Campus Management System (CLiC) Interface 97](<#3.2.2-campus-management-system-(clic)-interface>)
+[3.2.2 Campus Management System (CMS) Interface 97](<#3.2.2-campus-management-system-(CMS)-interface>)
 
 [3.2.3 Learning Management System (LMS) Interface 98](<#3.2.3-learning-management-system-(lms)-interface>)
 
@@ -256,9 +256,9 @@ Release Date: 25th May 2025
 
 [5.1.1 University Database Interface (3.2.1) 149](<#5.1.1-university-database-interface-(3.2.1)>)
 
-[5.1.2 Campus Management System (CLiC) Interface (3.2.2) 149](<#5.1.2-campus-management-system-(clic)-interface-(3.2.2)>)
+[5.1.2 Campus Management System (CMS) Interface (3.2.2) 149](<#5.1.2-campus-management-system-(CMS)-interface-(3.2.2)>)
 
-[5.1.3 Learning Management System (eBwise) Interface (3.2.3) 149](<#5.1.3-learning-management-system-(ebwise)-interface-(3.2.3)>)
+[5.1.3 Learning Management System (LMS) Interface (3.2.3) 149](<#5.1.3-learning-management-system-(LMS)-interface-(3.2.3)>)
 
 [5.1.4 SMS/Email Notification Gateway (3.2.4) 150](<#5.1.4-sms/email-notification-gateway-(3.2.4)>)
 
@@ -342,7 +342,7 @@ Release Date: 25th May 2025
 
 ## **1.2 Scope** {#1.2-scope}
 
-The software product to be developed is the EduAxis, a centralized platform that integrates with existing university systems such as the Learning Management System (LMS), academic calendar, and Campus Management System (CLiC). This system aims to streamline communication and academic service delivery for students, parents, lecturers, and administrative staff.
+The software product to be developed is the EduAxis, a centralized platform that integrates with existing university systems such as the Learning Management System (LMS), academic calendar, and Campus Management System (CMS). This system aims to streamline communication and academic service delivery for students, parents, lecturers, and administrative staff.
 
 The system will allow students to check grades, attendance, schedules, register for courses, and pay tuition fees. Parents will be able to monitor their child’s academic performance, receive fee reminders, and get SMS alerts on important issues. Lecturers can upload grades, mark attendance, and post course updates, while administrators will manage user access and system configurations.
 
@@ -353,7 +353,7 @@ The system shall address the real needs of four primary user groups:
 - Students: Must be able to access grades, attendance, fee details, timetables, and submit feedback. They will primarily use mobile devices and require real-time notifications.
 - Parents: Can view academic results, fee status, timetables, and receive SMS/email alerts about tuition, attendance, or course registration changes.
 - Lecturers: Will manage course grading, attendance, and announcements through dedicated dashboards, with system alerts and visual performance tracking.
-- Administrators: Will oversee system integrations (e.g., CLiC, LMS), control permissions, manage backups, and resolve common support issues reported by users.
+- Administrators: Will oversee system integrations (e.g., CMS, LMS), control permissions, manage backups, and resolve common support issues reported by users.
 
 This software aligns with the overall goal of improving communication flow, increasing operational efficiency, and encouraging student accountability. By consolidating key academic functions into a single platform, the system will deliver greater transparency, faster information sharing, and improved access to university services for all stakeholders.
 
@@ -361,13 +361,13 @@ This software aligns with the overall goal of improving communication flow, incr
 
 ### **1.3.1 Product perspective** {#1.3.1-product-perspective}
 
-The UEduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CLiC), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
+The UEduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
 
-The system operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CLiC, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
+The system operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CMS, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
 
 The system interfaces with the larger system landscape through several key connections:
 
-1. System Interfaces: Integration with CLiC, LMS, SMS Gateway, and authentication services for real-time data synchronization.
+1. System Interfaces: Integration with CMS, LMS, SMS Gateway, and authentication services for real-time data synchronization.
 
 2. User Interfaces: Intuitive web and mobile interfaces for students, parents, lecturers, and administrators.
 
@@ -471,7 +471,7 @@ Interface Description: UI component linked with SMS/Email Gateway APIs for toggl
 
 1. **Student Dashboard**
 
-The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CLiC for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
+The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CMS for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
 
 - Class schedule, registered courses, and academic calendar
 
@@ -519,7 +519,7 @@ Administrators use a centralized control panel to manage the system’s operatio
 
 - User account management for students, lecturers and parents
 
-- System integration tools for syncing with CLiC, LMS and notification systems
+- System integration tools for syncing with CMS, LMS and notification systems
 
 - Workflow automation configuration for fee reminders, grade processing, etc.
 
@@ -630,7 +630,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 
 - Source: Django Software Foundation (Open Source)
 
-- Interface Purpose: The backend framework implements core business logic of the system, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CLiC and SMS gateway.
+- Interface Purpose: The backend framework implements core business logic of the system, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CMS and SMS gateway.
 
 4. **Messaging Protocol**
 
@@ -639,7 +639,7 @@ Both users and admin will have access to helpdesk interfaces where they can perf
 - Specification Number: RFC 7231
 - Version Number: N/A
 - Source: Internet Engineering Task Force (IETF)
-- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the system and the external systems like the CLiC, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
+- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the system and the external systems like the CMS, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
 
 5. **External Authentication Service**
 
@@ -720,6 +720,8 @@ To support real-time alerts, live data synchronization, and a smooth user experi
 - Client-side bandwidth: Minimum 5 Mbps internet connection
 - Server-side bandwidth: Minimum 100 Mbps uplink capacity
 - Latency: Maximum 100 milliseconds round-trip time for time-sensitive operations such as attendance alerts and notification updates
+- The messaging system must handle the 160-character limit for SMS
+- It shall support international phone number formats (e.g., +60, +1) and implement delivery confirmation tracking to ensure message reliability
 
 **1\. HTTP/HTTPS Protocol**
 
@@ -842,7 +844,7 @@ Requirement: The system shall support up to 2,000 active sessions simultaneously
   Users typically interact with the system during standard academic hours (e.g., 8:00 AM – 10:00 PM). During these hours, all functionalities including academic viewing, course registration, announcements, and grade management are fully accessible.
 
 - **Unattended Operations:**  
-  System-level automated processes such as sending scheduled SMS/email alerts, updating records from CLiC, and executing system health checks are conducted during off-peak hours (e.g., overnight) to avoid performance disruption.
+  System-level automated processes such as sending scheduled SMS/email alerts, updating records from CMS, and executing system health checks are conducted during off-peak hours (e.g., overnight) to avoid performance disruption.
 
 3. **Data processing Support Functions**  
 
@@ -945,7 +947,7 @@ _Table 1.1: EduAxis Functions_
 | Student  | Login View Academic Grades Check Class Attendance Records Access/View Course Schedule Register/Drop Courses Submit Coursework & View Feedback Pay Tuition & Other Fees View Payment History & Invoices Receive SMS/Email Alerts View Announcements & Notifications Update Personal Profile Information Submit Feedback/Support Tickets Monitor Student Academic Performance Customize Notification Preferences |
 |  Parent  | Login View Child’s Grade & Attendance View Child’s Payment History & Dues Summary Access Child’s Schedule & Academic Summary View Announcements & Notifications Receive SMS/Email Alerts Customize Notification Preferences                                                                                                                                                                                    |
 | Lecturer | Login Upload Student Grades Manage Coursework Submissions Export Grades & Attendance Reports Manage Attendance View Academic Calendar & Class Schedules Post Class Announcements Submit Helpdesk Tickets                                                                                                                                                                                                       |
-|  Admin   | Login Manage User Accounts Configure & Manage SMS/Email Notification Services Integrate & Sync with CLiC, LMS Automate Workflows Post Global Announcements Maintain Data Privacy & Access Permissions Respond to Helpdesk Tickets or System Issues                                                                                                                                                              |
+|  Admin   | Login Manage User Accounts Configure & Manage SMS/Email Notification Services Integrate & Sync with CMS, LMS Automate Workflows Post Global Announcements Maintain Data Privacy & Access Permissions Respond to Helpdesk Tickets or System Issues                                                                                                                                                              |
 
 #### **1.3.2.1 Student function** {#1.3.2.1-student-function}
 
@@ -1650,27 +1652,27 @@ _Table 1.3.2.4.3. Use case Specification \- Configure & Manage SMS/Email Notific
 
 _Figure 1.3.2.4.3. Activity Diagram \- Configure & Manage SMS/Email Notification Services_
 
-1.3.2.4.4 Integrate & Sync with CLiC, LMS
+1.3.2.4.4 Integrate & Sync with CMS, LMS
 
-_Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CLiC, LMS_
+_Table 1.3.2.4.4. Use case Specification \- Integrate & Sync with CMS, LMS_
 
 | No.                     |     | Section               | Content                                                                                                                     |
 | :---------------------- | :-: | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| **ID**                  | 1.1 | Name                  | Integrate & Sync with CLiC, LMS                                                                                              |
+| **ID**                  | 1.1 | Name                  | Integrate & Sync with CMS, LMS                                                                                              |
 | **Management**          | 2.1 | Author                | Pharthiban A/L Kumarhesan                                                                                                   |
 | **Context**             | 3.1 | Source                | Integration Settings – External Systems                                                                                     |
 | **Use Case Definition** | 4.1 | Short Description     | Admin configures integration with academic & learning systems.                                                              |
 |                         | 4.2 | Goal                  | Synchronize data from external systems like grades, attendance, and coursework.                                             |
 |                         | 4.3 | Actor                 | Admin                                                                                                                       |
 |                         | 4.4 | Pre-Condition         | External system credentials and API endpoints must be configured.                                                           |
-|                         | 4.5 | Post-Condition        | The system is successfully synced with external CLiC or LMS.                                                                 |
-|                         | 4.6 | Main Success Scenario | Admin opens the Integration Panel. Enters LMS/CLiC API settings. Initiates sync. The system pulls data and confirms success. |
+|                         | 4.5 | Post-Condition        | The system is successfully synced with external CMS or LMS.                                                                 |
+|                         | 4.6 | Main Success Scenario | Admin opens the Integration Panel. Enters LMS/CMS API settings. Initiates sync. The system pulls data and confirms success. |
 |                         | 4.7 | Alternative Scenario  | Admin sets auto-sync intervals such as daily at midnight.                                                                   |
 |                         | 4.8 | Exception Scenario    | System logs and notifies admin when sync is failed due to invalid credentials or timeout.                                   |
 
 ![][image37]
 
-_Figure 1.3.2.4.4. Activity Diagram \- Integrate & Sync with CLiC, LMS_
+_Figure 1.3.2.4.4. Activity Diagram \- Integrate & Sync with CMS, LMS_
 
 1.3.2.4.5 Automate Workflows
 
@@ -1821,7 +1823,7 @@ _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Iss
    During peak usage periods such as subject registration or exam results announcements, the platform might experience slowdowns or even crashes if it is not properly optimized for scalability. High traffic volumes can overload servers, causing delays in data retrieval and frustrating users who rely on real-time updates.  
 
 3. **Data Synchronization issues**  
-   The system relies on real-time integration with the Campus Managements System (CLiC) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
+   The system relies on real-time integration with the Campus Managements System (CMS) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
 
 4. **Security and Privacy Risk**  
    Given the sensitive nature of the data managed by the system, such as student grades, attendance records, and financial information, robust security measures are crucial. Insufficient protection can lead to unauthorized access, data breaches, and privacy violations, compromising student confidentiality and institutional trust.  
@@ -1911,12 +1913,12 @@ This section outlines the allocation of system requirements to specific modules 
 | **Data Items Included**                     | User profiles, grades, attendance, preferences, ticket logs                                                                                                  |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                                                                                    |
 
-### **3.2.2 Campus Management System (CLiC) Interface** {#3.2.2-campus-management-system-(clic)-interface}
+### **3.2.2 Campus Management System (CMS) Interface** {#3.2.2-campus-management-system-(CMS)-interface}
 
 | Name of Item                                | CMS (Campus Management System) Integration                                                                  |
 | :------------------------------------------ | :---------------------------------------------------------------------------------------------------------- |
-| **Description of Purpose**                  | To fetch verified academic records including grades, billing, attendance from the campus ERP (CLiC) system. |
-| **Source of Input/Destination of Output**   | CLiC (Campus ERP) System                                                                                    |
+| **Description of Purpose**                  | To fetch verified academic records including grades, billing, attendance from the campus ERP (CMS) system. |
+| **Source of Input/Destination of Output**   | CMS (Campus ERP) System                                                                                    |
 | **Valid Range, Accuracy, and/or Tolerance** | Verified academic data; matches registrar-approved records                                                  |
 | **Units of Measure**                        | Grades (GPA/Percentage), Attendance (%)                                                                     |
 | **Timing**                                  | Scheduled sync (nightly), or on-demand trigger                                                              |
@@ -2478,7 +2480,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
 ### **3.9.2 Integration with Existing University Systems** {#3.9.2-integration-with-existing-university-systems}
 
-| Constraint Description | The platform must seamlessly integrate with the university’s existing systems, including the Campus Management System (CLiC), Learning Management System (eBwise), authentication systems, and SMS/email gateways, using REST APIs over HTTPS and exchanging data in JSON format. |
+| Constraint Description | The platform must seamlessly integrate with the university’s existing systems, including the Campus Management System (CMS), Learning Management System (LMS), authentication systems, and SMS/email gateways, using REST APIs over HTTPS and exchanging data in JSON format. |
 | :--------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                                                                               |
 | **Impact**             | The system must support RESTful APIs and conform to the schemas and endpoints defined by current university IT systems, ensuring backward compatibility and minimal disruption.                                    |
@@ -2760,7 +2762,7 @@ The Lecturer provides valuable feedback throughout the interview on the importan
 | No. | Question                                                                                                                                                      | Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. | How should user roles (student, lecturer, admin, parent) be managed and provisioned in the system?                                                            | User roles should be provided based on verified student and staff records in the CMS. Role creation should be automated through syncing with CMS where students, lecturers, and parents are auto-assigned their roles upon registration. On the other part, admin roles should be manually assigned with strict approval workflows.                                                                                                                                                                                                                                                                                                                                                           |
-| 2\. | How should the EduAxis integrate with existing systems such as the Campus Management System (CLiC), LMS, and SMS gateway? | Integrating with CLiC is really crucial for syncing data such as grades, attendance, and fee records. For the LMS or eBwise in our case, it should pull the assignment statuses and push grades. Also, SMS gateway should be connected to the system to trigger alerts for low attendance, overdue payments and other announcements.                                                                                                                                                                                                                                                                                                                                                          |
+| 2\. | How should the EduAxis integrate with existing systems such as the Campus Management System (CMS), LMS, and SMS gateway? | Integrating with CMS is really crucial for syncing data such as grades, attendance, and fee records. For the LMS in our case, it should pull the assignment statuses and push grades. Also, SMS gateway should be connected to the system to trigger alerts for low attendance, overdue payments and other announcements.                                                                                                                                                                                                                                                                                                                                                          |
 | 3\. | How often should backups be performed, and where should they be stored?                                                                                       | Backups should be performed daily for critical databases like user data and academic records. We are looking forward to both on-site and cloud-based backups where a copy of backup is stored on MMU’s internal backup server and is also pushed to secure cloud location something like AWS S3 with encryption.                                                                                                                                                                                                                                                                                                                                                                              |
 | 4\. | What are the most common support requests or issues reported by users recently?                                                                               | The most common issues reported by users are mostly on attendance records and notification delivery problems. Occasionally, we get parent inquiries about login issues or problems in fee info.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 5\. | Should the system be optimized for mobile use? If yes, what devices are most commonly used?                                                                   | It would be better if the system is optimized for mobile use as the majority of students and lecturers use mobile phones to access systems. Android smartphone devices are the most commonly used based on our findings, followed by iPhones. The UI should be responsive especially for functions like viewing announcements, checking schedules, submitting feedbacks and so on.                                                                                                                                                                                                                                                                                                            |
@@ -2941,15 +2943,15 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | **Verification time** | During integration testing and prior to each deployment cycle.                                                                                                                                                                                   |
 | **Environment**       | Development, staging, and production environments.                                                                                                                                                                                               |
 
-### **5.1.2 Campus Management System (CLiC) Interface ([3.2.2](<#3.2.2-campus-management-system-(clic)-interface>))** {#5.1.2-campus-management-system-(clic)-interface-(3.2.2)}
+### **5.1.2 Campus Management System (CMS) Interface ([3.2.2](<#3.2.2-campus-management-system-(CMS)-interface>))** {#5.1.2-campus-management-system-(CMS)-interface-(3.2.2)}
 
-| Methods               | Perform API testing to verify grade, course registration, and attendance data pulled from CLiC matches internal student profiles. Use real enrollment data and validate mapped fields. |
+| Methods               | Perform API testing to verify grade, course registration, and attendance data pulled from CMS matches internal student profiles. Use real enrollment data and validate mapped fields. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | QA team and project integration lead.                                                                                                                                                  |
 | **Verification time** | During initial integration setup and after every schema change or API update.                                                                                                          |
 | **Environment**       | Staging and production with controlled test users.                                                                                                                                     |
 
-### **5.1.3 Learning Management System (eBwise) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#5.1.3-learning-management-system-(ebwise)-interface-(3.2.3)}
+### **5.1.3 Learning Management System (LMS) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#5.1.3-learning-management-system-(LMS)-interface-(3.2.3)}
 
 | Methods               | Verify grade upload and assignment sync via LMS API. Compare LMS-side student submissions and scores against system display. Test API failures and timeouts. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3043,7 +3045,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 | :----------------- | :-------------------------------------------------------------------------- |
 | Responsibility:    | Integration team.                                                           |
 | Verification Time: | During system interfacing and staging rollout.                              |
-| Environment:       | Development with mock CLiC, LMS, and CMS endpoints.                         |
+| Environment:       | Development with mock CMS, LMS, and CMS endpoints.                         |
 
 **5.2.7 Maintain Data Privacy and Permissions([3.4.1.7](#3.4.1.7-requirement-7))**
 
@@ -3461,7 +3463,7 @@ _Figure 4.3.2.5 screenshot of eBwise Student Submitted Assignment follow up page
 
 ### **5.6.2 Integration with Existing University Systems ([3.9.2](#3.9.2-integration-with-existing-university-systems))** {#5.6.2-integration-with-existing-university-systems-(3.9.2)}
 
-| Methods               | Perform API contract testing with CLiC and LMS. Conduct data mapping verification and simulate student data sync flows to ensure field compatibility. |
+| Methods               | Perform API contract testing with CMS and LMS. Conduct data mapping verification and simulate student data sync flows to ensure field compatibility. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | Integration lead and product team.                                                                                                                    |
 | **Verification time** | During API integration phase and post-deployment patches.                                                                                             |
