@@ -2421,13 +2421,31 @@ _Table 3.5.6 Users Roles and Accessing Capabilities in the System_
 ### **3.5.7 Integrity Constraints** {#3.5.7-integrity-constraints}
 
 1. **User Role Validation:**  
-   Each user must have one of the following roles: Student, Lecturer, Parents, Admin. This role must be validated upon user registration and updated if necessary.  
+   Each user must have exactly one role from the following set: Student, Lecturer, Parent, Admin. Role values must be validated upon registration and during profile updates using predefined enumerations.
 
 2. **Unique Identifiers:**  
-   All primary entities in the system including users, courses, grades, attendance records, and transactions must have unique identifiers (ID) to ensure accurate tracking and data retrieval
+   All primary entities such as Users, Courses, Grades, Attendance, Transactions must have globally unique identifiers (UUIDs or auto-incremented IDs) to ensure integrity and traceability during data operations.
 
-3. **Foreign Keys:**  
-   Foreign key constraints must be enforced to maintain relationships between entities.
+3. **Foreign Keys & Referential Actions:**  
+   - **Grades ↔ Courses:** `ON DELETE CASCADE` – Deleting a course will automatically delete all related grade records.  
+   - **Grades ↔ Students:** `ON DELETE RESTRICT` – Students cannot be deleted if they have associated grade records.  
+   - **Courses ↔ Lecturers:** `ON UPDATE SET NULL` – If a lecturer record is modified or removed, the course's lecturer_id field is set to `NULL` and flagged for reassignment.  
+   - **Parents ↔ Students:** Referential links must be enforced between parent accounts and their associated children using validated parent-student mappings.  
+   - All foreign keys must be validated upon insertion and update to ensure referential integrity is upheld across the schema.
+
+4. **Check Constraints:**  
+   - **Grades (Numeric):** Must fall within the valid range of 0 to 100.  
+   - **Grades (Letter):** If using a letter grading scale, must be one of: A, B, C, D, E, F.  
+   - **Attendance Percentage:** Must be between 0% and 100%.  
+   - **Transaction Amounts:** Must be ≥ 0.
+
+5. **Composite Unique Constraints:**  
+   To prevent duplicate academic entries, a unique constraint must be applied on the combination of `student_id + course_id + semester_id` in the Grade table.
+
+6. **Data Normalization & Consistency:**  
+   All relational tables must adhere to at least Third Normal Form (3NF) to avoid data redundancy and maintain data integrity during updates, deletions, and inserts.
+
+###
 
 ### **3.5.8 Security** {#3.5.8-security}
 
@@ -3060,7 +3078,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.1 User Authentication and Authorization([3.4.1.1](#3.4.1.1-requirement-1))**
 
-| Methods:           | Functional testing, penetration testing, MFA validation, and code review for secure login. |
+| Methods:           | Functional testing, penetration testing, MFA validation, and code review for secure login. Test cases will include successful login, failed login (wrong credentials), expired session handling, brute-force protection, and failed MFA attempts. Token expiration, login retry logic, and lockout thresholds will also be validated. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
 | Responsibility:    | Development team and external security consultant.                                         |
 | Verification Time: | During development and before production release; periodic audits post-deployment.         |
@@ -3070,7 +3088,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.2 View Academic Grades([3.4.1.2](#3.4.1.2-requirement-2))**
 
-| Methods:           | Functional testing, data validation checks, and role-based access testing. |
+| Methods:           | Functional testing, data validation checks, and role-based access testing. Validate large-scale grade retrieval (e.g., for students enrolled in 30+ subjects). Test pagination, sorting, and filtering of grade records to handle edge cases. |
 | :----------------- | :------------------------------------------------------------------------- |
 | Responsibility:    | QA team.                                                                   |
 | Verification Time: | During system integration testing.                                         |
@@ -3098,7 +3116,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.5 Manage User Accounts and Roles([3.4.1.5](#3.4.1.5-requirement-5))**
 
-| Methods:           | Functional testing for role creation, permissions handling, and user lifecycle management. |
+| Methods:           | Functional testing for role creation, permissions handling, and user lifecycle management. Include audit log verification to track role changes, permission modifications, and user deactivation/reactivation actions. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
 | Responsibility:    | Admin module team.                                                                         |
 | Verification Time: | During user management module implementation.                                              |
@@ -3122,7 +3140,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.8 Pay Tuition and Other Fees([3.4.1.8](#3.4.1.8-requirement-8))**
 
-| Methods:           | Integration testing with payment gateway and transaction validation. |
+| Methods:           | Integration testing with payment gateway and transaction validation. Simulate both successful and failed payment scenarios, including payment timeouts, invalid inputs, transaction reattempts, and system unavailability. Validate rollback behavior, error messages, and log entries for failed transactions. |
 | :----------------- | :------------------------------------------------------------------- |
 | Responsibility:    | Backend development and finance integration teams.                   |
 | Verification Time: | After payment module is integrated.                                  |
@@ -3178,7 +3196,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.15 Alert and Reminder System([3.4.2.6](#3.4.2.6-requirement-15))**
 
-| Methods:           | Notification trigger simulation, queue monitoring, delivery validation. |
+| Methods:           | Notification trigger simulation, queue monitoring, delivery validation. Test user preference handling such as opt-in/opt-out and confirm mandatory alerts such as payment deadlines override suppression preferences as per policy. |
 | :----------------- | :---------------------------------------------------------------------- |
 | Responsibility:    | Backend notification service team.                                      |
 | Verification Time: | Before release and during reliability audits.                           |
@@ -3210,7 +3228,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.2.19 Mobile-Friendly Responsive Interface([3.4.3.4](#3.4.3.4-requirement-19))**
 
-| Methods:           | Cross-device UI tests, responsive CSS checks, and accessibility validation (WCAG). |
+| Methods:           | Cross-device UI tests, responsive CSS checks, and accessibility validation (WCAG). Test across Chrome, Firefox, Safari, and mobile resolutions (320px, 768px, 1280px) using tools like BrowserStack. |
 | :----------------- | :--------------------------------------------------------------------------------- |
 | Responsibility:    | UI/UX team.                                                                        |
 | Verification Time: | During frontend QA.                                                                |
@@ -3286,7 +3304,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.3.3.2 Notification Management**
+**4.3.3.3 Notification Management**
 
 | Methods:           | Test SMS/email settings to ensure users can change notification preferences. |
 | :----------------- | :--------------------------------------------------------------------------- |
@@ -3294,7 +3312,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 | Verification Time: | During integration and UAT.                                                  |
 | Environment:       | Staging environment with test user roles                                     |
 
-### **4.3.3 Data Protection ([3.6.4](#3.6.4-data-protection))** {#4.3.3-data-protection-(3.6.4)}
+### **4.3.4 Data Protection ([3.6.4](#3.6.4-data-protection))** {#4.3.3-data-protection-(3.6.4)}
 
 **4.3.4.1 Data Encryption**
 
@@ -3308,7 +3326,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.3.4.2 Server Controls**
 
-| Methods:           | Verify HTTPS is enforced across all pages using browser dev tools and security scanners. |
+| Methods:           | Use browser Developer Tools (Chrome/Firefox) to confirm HTTPS is enforced on all pages by checking certificate validity, protocol (TLS 1.2/1.3), and absence of mixed content warnings. Run SSL scanning tools such as Qualys SSL Labs to validate proper redirection from HTTP to HTTPS and confirm absence of SSL vulnerabilities. |
 | :----------------- | :--------------------------------------------------------------------------------------- |
 | Responsibility:    | DevOps and security teams.                                                               |
 | Verification Time: | During deployment and penetration testing.                                               |
@@ -3360,7 +3378,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.4 Session Timeout**
+**4.4.1.5 Session Timeout**
 
 | Methods:           | Leave sessions inactive for 15 minutes and verify auto logout and session data clearance. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
@@ -3370,17 +3388,17 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-### **4.4.1 Dynamic Numerical Requirements** {#4.4.1-dynamic-numerical-requirements-(3.5.2)}
+### **4.4.2 Dynamic Numerical Requirements** {#4.4.1-dynamic-numerical-requirements-(3.5.2)}
 
-**4.4.1.1 Task Handling**
+**4.4.2.1 Task Handling**
 
-| Methods:           | Task completion analysis on automated log sand error rate reports     |
+| Methods:           | Task completion analysis on automated logs and error rate reports     |
 | :----------------- | :-------------------------------------------------------------------- |
 | Responsibility:    | Performance and QA teams                                              |
 | Verification Time: | During performance and integration testing                            |
 | Environment:       | Staging environment with simulated data loads and automation triggers |
 
-**4.4.1.2 System Uptime**
+**4.4.2.2 System Uptime**
 
 | Methods:           | Deploy system monitoring using uptime tracking tools. Simulate failure and recovery scenarios. |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
@@ -3388,7 +3406,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 | Verification Time: | Post-deployment monitoring                                                                     |
 | Environment:       | Pre-production staging with simulated failover                                                 |
 
-**4.4.1.3 Feature Responsiveness**
+**4.4.2.3 Feature Responsiveness**
 
 | Methods:           | Perform response time tests on core modules with simulated user actions. |
 | :----------------- | :----------------------------------------------------------------------- |
@@ -3398,9 +3416,9 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.4 Background Data Synchronization**
+**4.4.2.4 Background Data Synchronization**
 
-| Methods:           | mock synchronization events between systems using simulated updates. |
+| Methods:           | Mock synchronization events between systems using simulated updates. |
 | :----------------- | :------------------------------------------------------------------- |
 | Responsibility:    | Integration QA Team                                                  |
 | Verification Time: | During data testing                                                  |
@@ -3408,9 +3426,9 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.5 Grade Upload Processing**
+**4.4.2.5 Grade Upload Processing**
 
-| Methods:           | test grade files with varied data types and formats. Monitor system logs and error handling reports to confirm error-free processing |
+| Methods:           | Test grade files with varied data types and formats. Monitor system logs and error handling reports to confirm error-free processing |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA Team                                                                                                                              |
 | Verification Time: | Data Handling Test Phase                                                                                                             |
@@ -3418,7 +3436,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.5 Report Generation**
+**4.4.2.6 Report Generation**
 
 | Methods:           | Generate reports with test data under standard usage. Log and analyze response time per report |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
@@ -3428,9 +3446,9 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.6 Peak load Response Time**
+**4.4.2.7 Peak load Response Time**
 
-| Methods:           | load testing tools to simulate concurrent users executing various tasks. Measure response times and confirm less than 10% of total requests are delayed or failed. |
+| Methods:           | Load testing tools to simulate concurrent users executing various tasks. Measure response times and confirm less than 10% of total requests are delayed or failed. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Performance Team                                                                                                                                                   |
 | Verification Time: | Stress and Load Testing Phase                                                                                                                                      |
@@ -3438,7 +3456,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 ##
 
-**4.4.1.7 Transaction Processing**
+**4.4.2.8 Transaction Processing**
 
 | Methods:           | Simulate transactions for login, course enrollment, and grade input. Track completion times and validate |
 | :----------------- | :------------------------------------------------------------------------------------------------------- |
@@ -3632,7 +3650,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 | Verification time: | Throughout deployment and pre-deployment             |
 | Environment:       | Development environment                              |
 
-**4.7.4 Portability ([3.10.5](#3.10.5.-portability))**
+**4.7.5 Portability ([3.10.5](#3.10.5.-portability))**
 
 | Methods:           | Cross-platform testing, Docker/containerization testing |
 | :----------------- | :------------------------------------------------------ |
