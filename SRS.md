@@ -465,331 +465,7 @@ Interface Description: UI component linked with SMS/Email Gateway APIs for toggl
 
 ####
 
-#### **1.3.1.2 User interfaces** {#1.3.1.2-user-interfaces}
 
-####
-
-1. **Student Dashboard**
-
-The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CMS for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
-
-- Class schedule, registered courses, and academic calendar
-
-- Academic performance such as grades and attendance records
-
-- Tuition payment status and history
-
-- Notification and alerts including for low attendance and unpaid fees
-
-- Coursework submission status and feedback from lecturers
-
-- Announcement and academic updates
-
-- Profile settings to update student’s personal details and notification preferences
-
-2. **Parent Dashboard**
-
-This dashboard is optimised for concise overviews and direct alerts to ensure parents stay informed without overwhelming detail. Parents and guardians can log in via a secure system to monitor their child’s academic progress. The key features are listed below.
-
-- Viewing the child’s grades and attendance status
-
-- Access to course schedule and academic summary
-
-- Notifications for critical issues such as low attendance and outstanding fees
-
-- Customizable SMS/email alert preferences
-
-3. **Lecturer Dashboard**
-
-Lecturers have access to a role-based dashboard to support teaching and communication tasks. This dashboard integrates with LMS to handle assignments and grade synchronization seamlessly. This dashboard allows lecturers to perform the tasks or actions as listed below.
-
-- Uploading and updating student grades
-
-- Marking and tracking student attendance
-
-- Posting class announcement and updates
-
-- Viewing academic calendar and teaching schedules
-
-- Monitoring overall student performance and participation
-
-4. **Administrative Control Panel**
-
-Administrators use a centralized control panel to manage the system’s operations and configurations. Key interface features for this control panel are listed below.
-
-- User account management for students, lecturers and parents
-
-- System integration tools for syncing with CMS, LMS and notification systems
-
-- Workflow automation configuration for fee reminders, grade processing, etc.
-
-- Moderation of global announcements and academic communications
-
-- Help Desk ticket management and issue response tracking
-
-- Notification services setup for SMS/email gateway settings
-
-- Access control and data privacy configurations
-
-- Display logs and dashboards for tracking system usage and engagement
-
-5. **Notification and Alerts Console (Admin-side and System-triggered)**
-
-This module manages and monitors all automated notifications sent by the system. In this console Admins can perform the following actions.
-
-- Configure and test SMS/email templates
-
-- View history of alerts triggered by attendance drops, unpaid fees, or grade releases
-
-- Set thresholds and conditions for alert generation
-
-- Monitor system queue via the notification scheduler module
-
-6. **Helpdesk Support Interface**
-
-Both users and admin will have access to helpdesk interfaces where they can perform the following tasks as listed below.
-
-- Students, parents, and lecturers can submit support tickets
-
-- Admins can respond, update, and close tickets via the dashboard
-
-- The interface includes status tracking, ticket history, and response logs
-
-#### **1.3.1.3 Hardware interfaces** {#1.3.1.3-hardware-interfaces}
-
-1. **Device Compatibility**  
-   The EduAxis is designed to be accessible across multiple device types of hardware requirements. Those devices include desktop and laptop computers running Windows, macOS or Linux operating systems with standard web browser such as Chrome, Microsoft, and Google. 
-
-   It also supports mobile devices, with fully responsive design optimized for Android and iOS smartphones and tablets, that enables student, parents and lecturers to access information conveniently at any circumstances.. Having multi-device compatibility ensures users can engage with the platform efficiently, enhancing user experience itself. 
-
-   Minimum server specifications for deployment are as follows:
-   - CPU: Quad-core (4-core) processor
-   - RAM: 8 GB
-   - Storage: 256 GB SSD 
-
-2. **Internet Connectivity**  
-   Reliable internet connectivity is pivotal for components in the EduAxis, it facilitates real-time updates on communication and data synchronization with the university’s backend systems. 
-   
-   To secure a seamless experience:
-   - Basic access: at least 1 Mbps bandwidth 
-   - Peak performance (heavy traffic): 5 Mbps or more
-    
-    The system supports both ethernet and Wi-Fi networks, with integration into university-managed wifi to provide stable access for users within campus. Additionally, the system also supports cloud based access to enable off-campus usage with real-time data availability and synchronization in all locations. This potent structure will ensure fast, engaging communication between the system and users.  
-
-3. **Data Storage**  
-   To accommodate large numbers of academic and administrative data, the EduAxis relies on robust storage solutions that include both cloud storage and the university’s local storage framework:
-
-   - **Primary cloud storage:**  scalable and secure, used for student records, grades, attendance, and course materials.
-   - **Local backup servers at the university data center:** mirror critical data to provide quick recovery if the cloud is unavailable.
-   
-   The dual-layered approach of cloud and local storage ensures that the system remains secured, and capable of handling high data loads while maintaining real time synchronization with all users.
-
-####
-
-#### **1.3.1.4 Software interfaces** {#1.3.1.4-software-interfaces}
-
-####
-
-1. **Database Management System (DBMS)**
-
-- Name: PostgreSQL
-
-- Mnemonic: DBMS
-
-- Specification Number: N/A
-
-- Version Number: Latest stable release (PostgreSQL 15+)
-
-- Source: PostgreSQL Global Development Group (Open Source)
-
-- Interface Purpose: The DBMS stores all user data, including student profiles, grades, attendance, notification preferences, payment records, helpdesk tickets, and system logs. It supports relational queries for internal modules and secure transactions during academic workflows.
-
-2. **Web Server**
-
-- Name: NGINX
-
-- Mnemonic: Web Server
-
-- Specification Number: N/A
-
-- Version Number: Latest stable version
-
-- Source: F5 NGINX (Open Source)
-
-- Interface Purpose: The web server hosts the university web application. It serves the frontend content and routes HTTP(S) requests to the backend application. It also acts as a reverse proxy API handling and SSL termination.
-
-3. **Backend Framework**
-
-- Name: Django
-
-- Mnemonic: Backend
-
-- Specification Number: N/A
-
-- Version Number: Django 4.x (Latest LTS)
-
-- Source: Django Software Foundation (Open Source)
-
-- Interface Purpose: The backend framework implements core business logic of the system, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CMS and SMS gateway.
-
-4. **Messaging Protocol**
-
-- Name: RESTful API (Representational State Transfer)
-- Mnemonic: REST API
-- Specification Number: RFC 7231
-- Version Number: N/A
-- Source: Internet Engineering Task Force (IETF)
-- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the system and the external systems like the CMS, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
-
-5. **External Authentication Service**
-
-- Name: OAuth 2.0 / SSO via Central Auth
-
-- Mnemonic: Auth Service
-
-- Specification Number: RFC 6749
-
-- Version Number: Depends on university infrastructure
-
-- Source: University IT Dept / External Identity Provider
-
-- Interface Purpose: The service is used during login to verify user identity via centralized authentication, typically integrated with campus-wide Single Sign-On systems. Ensures secure and role-based access to the system.
-
-6. **SMS/Email Notification Gateway**
-
-- Name: Twilio / SMTP
-
-- Mnemonic: Notification Service
-
-- Specification Number: N/A
-
-- Version Number: Latest supported API
-
-- Source: Twilio Cloud API / Mail Server
-
-- Interface Purpose: This gateway sends real-time alerts and reminders via SMS and email to students, parents, and lecturers. Triggered by internal events such as low attendance, fee due which is configured through the admin dashboard.
-
-7. **Learning Management System (LMS) Integration**
-
-- Name: eBwise (Moodle LMS)
-
-- Mnemonic: LMS
-
-- Specification Number: N/A
-
-- Version Number: As per campus deployment
-
-- Source: University e-learning platform
-
-- Interface Purpose: This integration allows seamless interaction with learning materials and assignment submissions. Students and lecturers can access coursework links, grade sync, and feedback exchange via API-based integration.
-
-8. **Campus Management System (CMS) Integration**
-
-- Name: Campus Lifecycle Management System (CLiC)
-
-- Mnemonic: CMS
-
-- Specification Number: Internal
-
-- Version Number: Depends on campus deployment
-
-- Source: University Academic System
-
-- Interface Purpose: This integration supplies academic data such as grades, attendance records, and billing info. This allows the system to fetch verified academic records for display to students, parents, and lecturers.
-
-9. **Payment Gateway**
-
-- Name: iPay88 / Stripe / FPX Gateway
-
-- Mnemonic: Payment API
-
-- Specification Number: Depends on payment provider
-
-- Version Number: Latest available API
-
-- Source: Third-party payment processor
-
-- Interface Purpose: This gateway handles secure payment processing for tuition and fees. This is integrated with the system for checkout, receipt generation, and payment history syncing.
-
-#### **1.3.1.5 Communication Interfaces** {#1.3.1.5-communication-interfaces}
-
-The EduAxis relies on multiple communication protocols to enable secure, efficient, and real-time data exchange between clients, servers, and integrated third-party systems.
-
-To support real-time alerts, live data synchronization, and a smooth user experience, the following network performance requirements must be met:
-
-- Client-side bandwidth: Minimum 5 Mbps internet connection
-- Server-side bandwidth: Minimum 100 Mbps uplink capacity
-- Latency: Maximum 100 milliseconds round-trip time for time-sensitive operations such as attendance alerts and notification updates
-- The messaging system must handle the 160-character limit for SMS
-- It shall support international phone number formats (e.g., +60, +1) and implement delivery confirmation tracking to ensure message reliability
-
-**1\. HTTP/HTTPS Protocol**
-
-**Purpose**: HTTP/HTTPS is used as the foundational communication protocol between clients (students, parents, lecturers, admins) and the university system’s web server. It enables secure transmission of data during login, course registration, fee payment, and other user-initiated activities.
-
-**Message Content and Format**:
-
-**Request:** HTTP headers include request methods such as GET, POST, PUT, and DELETE, along with URLs and optionally a JSON-formatted body for POST/PUT operations (e.g., submitting feedback or updating profile).  
-**Response:** Includes status codes (e.g., 200 OK, 403 Forbidden), Content-Type headers (e.g., application/json, text/html), and payloads (HTML for page rendering, JSON for data APIs).
-
-**2\. WebSocket Protocol**
-
-**Purpose**: WebSocket enables real-time, two-way communication between the system server and clients for features such as:
-
-- Instant SMS/email alert updates.
-
-- Live helpdesk chat (if implemented).
-
-- Real-time coursework submission statuses or attendance updates.
-
-- 160-character limit with message splitting for longer content.
-
-- Support international phone formats (+60, +1, etc.).
-
-**Message Content and Format:** Messages use lightweight JSON structures for real-time updates (e.g., { "type": "notification", "message": "Your payment is due." }). Binary format may be used for file or attachment transmissions in coursework or helpdesk uploads.
-
-**3\. SMTP Protocol**
-
-**Purpose**: SMTP is used to send automated email messages to users for:
-
-- Account registration and password recovery.
-
-- Course registration confirmations.
-
-- Tuition invoice alerts.
-
-- Announcements and deadlines.
-
-**Message Content and Format**: SMTP messages conform to \[RFC 5321\] standards and include fields such as:
-
-- From, To, Subject, and Body.
-
-- MIME headers for HTML formatting or file attachments (e.g., application/pdf for fee receipts).
-
-**4\. API Integration Protocols**
-
-**Purpose**: REST APIs are employed to interface with external systems:
-
-- Authentication Service for login and session management.
-
-- Campus Management System for accessing grades, fees, and academic records.
-
-- Learning Management System (LMS) for coursework and feedback.
-
-- University Database for student and staff data.
-
-**Message Content and Format**: API requests and responses are formatted in **JSON**, using standard REST methods:
-
-- GET for retrieving data (e.g., academic calendar).
-- POST for actions like submitting coursework or feedback.
-
-- PUT for updating profiles.
-
-- DELETE for course withdrawal.
-
-Headers include Authorization (bearer tokens), Content-Type: application/json, and optional pagination/filtering parameters.
-
-####
 
 ####
 
@@ -949,6 +625,352 @@ _Table 1.1: EduAxis Functions_
 | Lecturer | Login Upload Student Grades Manage Coursework Submissions Export Grades & Attendance Reports Manage Attendance View Academic Calendar & Class Schedules Post Class Announcements Submit Helpdesk Tickets                                                                                                                                                                                                       |
 |  Admin   | Login Manage User Accounts Configure & Manage SMS/Email Notification Services Integrate & Sync with CMS, LMS Automate Workflows Post Global Announcements Maintain Data Privacy & Access Permissions Respond to Helpdesk Tickets or System Issues                                                                                                                                                              |
 
+
+<!-- Changes from 3.1 to 1.3.2.1 -->
+## **3.1 Apportioning of Requirements** {#3.1-apportioning-of-requirements}
+
+This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
+
+### **3.1.1 Student Module** {#3.1.1-student-module}
+
+| Requirement ID | Description                                  | Related Functions                                             |
+| -------------- | -------------------------------------------- | ------------------------------------------------------------- |
+| S-1            | User authentication and authorization        | Login                                                         |
+| S-2            | View academic performance and grades         | View Academic Grades, Monitor Student Academic Performance    |
+| S-3            | Manage course registration                   | Register/Drop Courses                                         |
+| S-4            | View and pay tuition and fees                | Pay Tuition & Other Fees, View Payment History & Dues Summary |
+| S-5            | Access and view class schedules              | Access/View Course Schedule                                   |
+| S-6            | Submit feedback and support tickets          | Submit Feedback/Support Tickets                               |
+| S-7            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
+| S-8            | Customize notification preferences           | Customize Notification Preferences                            |
+
+### **3.1.2 Parent Module** {#3.1.2-parent-module}
+
+| Requirement ID | Description                                     | Related Functions                                            |
+| -------------- | ----------------------------------------------- | ------------------------------------------------------------ |
+| P-1            | Monitor child's academic and attendance summary | View Child's Grade & Attendance, Access Child’s Schedule     |
+| P-2            | View payment and dues summary                   | View Payment History & Dues Summary                          |
+| P-3            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
+
+### **3.1.3 Lecturer Module** {#3.1.3-lecturer-module}
+
+| Requirement ID | Description                                     | Related Functions                                    |
+| -------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| L-1            | Post class announcements                        | Post Class Announcements                             |
+| L-2            | Upload grades and manage coursework submissions | Upload Student Grades, Manage Coursework Submissions |
+| L-3            | View academic calendar and manage attendance    | View Academic Calendar, Manage Attendance            |
+| L-4            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
+| L-5            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
+
+### **3.1.4 Admin Module** {#3.1.4-admin-module}
+
+| Requirement ID | Description                                   | Related Functions                                  |
+| -------------- | --------------------------------------------- | -------------------------------------------------- |
+| A-1            | User authentication and authorization         | Login                                              |
+| A-2            | Manage user accounts and permissions          | Manage User Accounts, Maintain Access Permissions  |
+| A-3            | Respond to system issues and helpdesk tickets | Respond to Helpdesk Tickets/System Issues          |
+| A-4            | Manage data privacy                           | Maintain Data Privacy                              |
+| A-5            | Post and manage global announcements          | Post Global Announcements                          |
+| A-6            | Configure and manage SMS/email services       | Configure & Manage SMS/Email Notification Services |
+| A-7            | Automate system workflows                     | Automate Workflows                                 |
+| A-8            | Integrate with CMS and LMS                    | Integrate & Sync with CMS, LMS                     |
+
+##
+
+
+### **1.3.3 User Characteristics** {#1.3.3-user-characteristics}
+
+#### **1.3.3.1 Student** {#1.3.3.1-student}
+
+**Educational Level**: Undergraduate or postgraduate students enrolled at the university.
+
+**Experience**: Varies; may include first-year students unfamiliar with university systems to final-year students with moderate experience using institutional systems.
+
+**Technical Expertise**: Basic to moderate. Familiar with smartphones, web platforms, and learning tools but may require intuitive interfaces for administrative tasks.
+
+**Disabilities**: Some users may have visual, motor, or cognitive impairments.
+
+**Usability Influence**: Interfaces must be mobile-responsive, easy to navigate, and include accessibility features such as screen reader support, color contrast, and simple forms. Timely feedback and automation are critical for reducing user frustration.
+
+#### **1.3.3.2 Parent or Guardian** {#1.3.3.2-parent-or-guardian}
+
+**Educational Level**: Varies significantly; may include non-university-educated users.
+
+**Experience**: Limited or no experience with academic systems; typically unfamiliar with institutional systems or digital academic tools.
+
+**Technical Expertise**: Low to moderate. May only access the system occasionally via mobile devices.
+
+**Disabilities**: May include older users with visual impairments or limited digital literacy.
+
+**Usability Influence**: Requires a simple, mobile-friendly interface with clear language, SMS alerts, and minimal navigation layers. SMS notification design is critical due to likely preference for mobile communication over in-system browsing.
+
+#### **1.3.3.3 Lecturer** {#1.3.3.3-lecturer}
+
+**Educational Level**: Postgraduate degree holders with academic or research backgrounds.
+
+**Experience**: Extensive experience in higher education and academic administration.
+
+**Technical Expertise**: Moderate to high. Familiar with digital learning tools, spreadsheets, and content management systems.
+
+**Disabilities**: May include individuals with visual fatigue or repetitive stress injuries.
+
+**Usability Influence**: system features (e.g., attendance marking, grade uploads, announcements) must be efficient, logically structured, and integrate seamlessly with existing tools like the LMS. Time-saving automation and bulk-processing features are essential.
+
+#### **1.3.3.4 Administrator** {#1.3.3.4-administrator}
+
+**Educational Level**: Professional or technical staff with tertiary education.
+
+**Experience**: High level of familiarity with institutional systems and administrative protocols.
+
+**Technical Expertise**: High. Skilled in managing data, user permissions, system configurations, and troubleshooting.
+
+**Disabilities**: May vary; considerations for ergonomic design and interface responsiveness apply.
+
+**Usability Influence**: Requires robust tools for platform configuration, user management, and report generation. Interfaces must support multitasking, advanced filtering/search, and error-handling mechanisms for administrative operations.
+
+###
+
+### **1.3.4 Limitations** {#1.3.4-limitations}
+
+1. **Digital Literacy Gaps**  
+   Parents or guardians with limited access to technical expertise may struggle to navigate the system, especially if its not fully optimized for mobile devices like smartphones, with simple and user-friendly design. This can lead to difficulties in accessing important academic information, receiving notifications and engaging with students' records actively.  
+
+2. **High Concurrent User Loads**  
+   During peak usage periods such as subject registration or exam results announcements, the platform might experience slowdowns or even crashes if it is not properly optimized for scalability. High traffic volumes can overload servers, causing delays in data retrieval and frustrating users who rely on real-time updates.  
+
+3. **Data Synchronization issues**  
+   The system relies on real-time integration with the Campus Managements System (CMS) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
+
+4. **Security and Privacy Risk**  
+   Given the sensitive nature of the data managed by the system, such as student grades, attendance records, and financial information, robust security measures are crucial. Insufficient protection can lead to unauthorized access, data breaches, and privacy violations, compromising student confidentiality and institutional trust.  
+
+5. **Manual Data Entry**  
+   The process of lecturers manually entering grades or marking attendance in the database can introduce human errors, such as typos or incorrect records. These inaccuracies can affect student academic records, leading to disputes and requiring time-consuming corrections to maintain data integrity.
+
+##
+
+#
+
+# **2\. References** {#2.-references}
+
+This document is prepared in reference to the following documents:
+
+1. ISO/IEC/IEEE 29148:2018(E) \- International Standard
+2. Software Requirement Engineering Lecture Slide
+
+   #
+
+   # **3\. Requirements** {#3.-requirements}
+## **3.1 Function  ** {#3.1-functions}##
+
+<!-- From 3.4 change to 3.1 -->
+## **3.4 Functional Requirements** {#3.4-functional-requirements}
+
+### **3.4.1 Dissatisfier Requirements** {#3.4.1-dissatisfier-requirements}
+
+#### **3.4.1.1 Requirement 1** {#3.4.1.1-requirement-1}
+
+| Requirements:               | User Authentication and Authorization                                                                                                                                                         |
+| :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Description:**            | The system shall provide a secure login mechanism for students, lecturers, parents, and admins                                                                                                |
+| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents and students                                                                                                                       |
+| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                                                                                                                |
+| **Supporting Documents:**   | Question 1 ([Interview 1](#4.1.1-interview-1)), Question1 ([Interview 2](#4.1.2-interview-2)), Question 9 ([Parents survey](#4.2.2-parents)), Question 13 ([Student survey](#4.2.1-students)) |
+| **Related Function:**       | Login                                                                                                                                                                                         |
+
+#### **3.4.1.2 Requirement 2** {#3.4.1.2-requirement-2}
+
+| Requirements:               | View Academic Grades                                                                                                                     |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| **Description:**            | The system shall allow users (students,lecturers, parents) to view academic grades securely                                              |
+| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents and student                                                                   |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                                                                                 |
+| **Supporting Documents:**   | Question 2 and 10 ([Interview 1](#4.1.1-interview-1)), ([Interview 2](#4.1.2-interview-2)), Question 1 ([Parent Survey](#4.2.2-parents)) |
+| **Related Function:**       | View academic grades                                                                                                                     |
+
+#### **3.4.1.3 Requirement 3** {#3.4.1.3-requirement-3}
+
+| Requirements:               | Access Attendance Records                                                                                                            |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| **Description:**            | The system shall allow students, parents, and lecturers to access and monitor attendance records.                                    |
+| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents                                                                           |
+| **Responsible Member:**     | Suzannah Pancer                                                                                                                      |
+| **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question 2&3 ([Parent Survey](#4.2.2-parents)) |
+| **Related Function:**       | Check class attendance records                                                                                                       |
+
+#### **3.4.1.4 Requirement 4** {#3.4.1.4-requirement-4}
+
+| Requirements:               | Access Academic Timetable                                                                                                       |
+| :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| **Description:**            | The system shall display each user’s course schedule or timetable.                                                              |
+| **Elicitation Activities:** | Interview with lecturers, Questionnaire with parents                                                                            |
+| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                                                               |
+| **Supporting Documents:**   | Question 8 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question7 ([Parent Survey](#4.2.2-parents)) |
+| **Related Function:**       | Access and view course schedule/timetable                                                                                       |
+
+#### **3.4.1.5 Requirement 5** {#3.4.1.5-requirement-5}
+
+| Requirements:               | Manage User Accounts and Roles                                                     |
+| :-------------------------- | :--------------------------------------------------------------------------------- |
+| **Description:**            | The system shall enable admin to assign roles and manage user account permissions. |
+| **Elicitation Activities:** | Interview with Admin                                                               |
+| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                     |
+| **Supporting Documents:**   | Question 1&8 ([interview 3](#4.1.3-interview-3))                                   |
+| **Related Function:**       | Manage user accounts and system configurations                                     |
+
+#### **3.4.1.6 Requirement 6** {#3.4.1.6-requirement-6}
+
+| Requirements:               | Integration with Campus Systems                                              |
+| :-------------------------- | :--------------------------------------------------------------------------- |
+| **Description:**            | The system shall integrate with CMS, LMS, and calendar systems to sync data. |
+| **Elicitation Activities:** | Interview with Admin                                                         |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                     |
+| **Supporting Documents:**   | Question 2 ([interview 3](#4.1.3-interview-3))                               |
+| **Related Function:**       | Integrate and Sync with CMS, LMS, and calendar systems                       |
+
+#### **3.4.1.7 Requirement 7** {#3.4.1.7-requirement-7}
+
+| Requirements:               | Maintain Data Privacy and Access Permissions                         |
+| :-------------------------- | :------------------------------------------------------------------- |
+| **Description:**            | The system must enforce data security and appropriate access levels. |
+| **Elicitation Activities:** | Interview with Admin                                                 |
+| **Responsible Member:**     | Suzannah Pancer                                                      |
+| **Supporting Documents:**   | Question 8 ([interview 3](#4.1.3-interview-3))                       |
+| **Related Function:**       | Maintain data privacy and access permissions                         |
+
+#### **3.4.1.8 Requirement 8** {#3.4.1.8-requirement-8}
+
+| Requirements:               | Pay Tuition and Other Fees                      |
+| :-------------------------- | :---------------------------------------------- |
+| **Description:**            | Ability to make fee payments through the system |
+| **Elicitation Activities:** | Observation                                     |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                        |
+| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3))  |
+| **Related Function:**       | Pay tuition and other fees                      |
+
+#### **3.4.1.9 Requirement 9** {#3.4.1.9-requirement-9}
+
+| Requirements:               | View Payment History and Invoices              |
+| :-------------------------- | :--------------------------------------------- |
+| **Description:**            | View historical tuition and fee records        |
+| **Elicitation Activities:** | Observation                                    |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                       |
+| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)) |
+| **Related Function:**       | View Payment History and Invoices              |
+
+###
+
+###
+
+### **3.4.2 Satisfier Requirements** {#3.4.2-satisfier-requirements}
+
+#### **3.4.2.1 Requirement 10** {#3.4.2.1-requirement-10}
+
+| Requirements:               | Upload and Manage Grades                                                            |
+| :-------------------------- | :---------------------------------------------------------------------------------- |
+| **Description:**            | Lecturers shall be able to upload, confirm, and manage student grades.              |
+| **Elicitation Activities:** | Interview with Lecturers                                                            |
+| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                   |
+| **Supporting Documents:**   | Question 2&3([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
+| **Related Function:**       | Upload student grades                                                               |
+
+#### **3.4.2.2 Requirement 11** {#3.4.2.2-requirement-11}
+
+| Requirements:               | Digital Attendance Tracking                                                          |
+| :-------------------------- | :----------------------------------------------------------------------------------- |
+| **Description:**            | The system shall support digital attendance marking and tracking over time.          |
+| **Elicitation Activities:** | Interview with Lecturers                                                             |
+| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                       |
+| **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
+| **Related Function:**       | Mark and manage attendance records                                                   |
+
+#### **3.4.2.3 Requirement 12** {#3.4.2.3-requirement-12}
+
+| Requirements:               | Post Announcements and Updates                                                       |
+| :-------------------------- | :----------------------------------------------------------------------------------- |
+| **Description:**            | Lecturers and admins shall post class and global announcements                       |
+| **Elicitation Activities:** | Interview with Lecturers                                                             |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                             |
+| **Supporting Documents:**   | Question 6&7 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
+| **Related Function:**       | Post class announcements and updates                                                 |
+
+####
+
+#### **3.4.2.4 Requirement 13** {#3.4.2.4-requirement-13}
+
+| Requirements:               | Dashboard with Performance Overview                                                |
+| :-------------------------- | :--------------------------------------------------------------------------------- |
+| **Description:**            | The system shall provide academic dashboard with grade and attendance insights.    |
+| **Elicitation Activities:** | Interview with Lecturers                                                           |
+| **Responsible Member:**     | Suzannah Pancer                                                                    |
+| **Supporting Documents:**   | Question 10([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
+| **Related Function:**       | Monitor student academic performance                                               |
+
+#### **3.4.2.5 Requirement 14** {#3.4.2.5-requirement-14}
+
+| Requirements:               | Submit Feedback and Support Requests                                                            |
+| :-------------------------- | :---------------------------------------------------------------------------------------------- |
+| **Description:**            | The system shall allow users to submit feedback and helpdesk tickets.                           |
+| **Elicitation Activities:** | Interview with Admin and survey conducted towards students                                      |
+| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                               |
+| **Supporting Documents:**   | Question 6 ([interview 3](#4.1.3-interview-3)), Question 18 ([Student survey](#4.2.1-students)) |
+| **Related Function:**       | Submit Feedback/Support Tickets, Submit Helpdesk Tickets                                        |
+
+#### **3.4.2.6 Requirement 15** {#3.4.2.6-requirement-15}
+
+| Requirements:               | Alert and Reminder System                                                                                    |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| **Description:**            | The system shall send deadline reminders and important alerts to users.                                      |
+| **Elicitation Activities:** | Interview with Lecturer and survey towards students                                                          |
+| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                               |
+| **Supporting Documents:**   | Question 9([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Questionnaire Q3, Q4, Q12 |
+| **Related Function:**       | Receive SMS/Email alerts                                                                                     |
+
+###
+
+### **3.4.3 Delighter Requirements** {#3.4.3-delighter-requirements}
+
+#### **3.4.3.1 Requirement 16** {#3.4.3.1-requirement-16}
+
+| Requirements:               | Notification Read Tracking                                                                |
+| :-------------------------- | :---------------------------------------------------------------------------------------- |
+| **Description:**            | The system may notify lecturers or admins when users view or interact with announcements. |
+| **Elicitation Activities:** | Interview with lecturers                                                                  |
+| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                                  |
+| **Supporting Documents:**   | Question 7([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2))         |
+| **Related Function:**       | View announcements and academic notifications                                             |
+
+#### **3.4.3.2 Requirement 17** {#3.4.3.2-requirement-17}
+
+| Requirements:               | Custom Notification Preferences                                           |
+| :-------------------------- | :------------------------------------------------------------------------ |
+| **Description:**            | Parents may configure notification delivery method (SMS, email, or both). |
+| **Elicitation Activities:** | Survey towards parents                                                    |
+| **Responsible Member:**     | Suzannah Pancer                                                           |
+| **Supporting Documents:**   | Question 14 ([Parent Survey](#4.2.2-parents))                             |
+| **Related Function:**       | Receive SMS/Email alerts                                                  |
+
+#### **3.4.3.3 Requirement 18** {#3.4.3.3-requirement-18}
+
+| Requirements:               | Visual Performance Analytics                                                        |
+| :-------------------------- | :---------------------------------------------------------------------------------- |
+| **Description:**            | The system may display graphs and visual trends of student performance over time.   |
+| **Elicitation Activities:** | Interview with lecturer                                                             |
+| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                   |
+| **Supporting Documents:**   | Question 10 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
+| **Related Function:**       | Monitor student academic performance                                                |
+
+#### **3.4.3.4 Requirement 19** {#3.4.3.4-requirement-19}
+
+| Requirements:               | Mobile-Friendly Responsive Interface                                                             |
+| :-------------------------- | :----------------------------------------------------------------------------------------------- |
+| **Description:**            | The system may be optimized for mobile devices across Android and iPhone.                        |
+| **Elicitation Activities:** | Interview with admin and survey towards students                                                 |
+| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                   |
+| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)), Question 7&12([Student survey](#4.2.1-students)) |
+| **Related Function:**       | All access-related functions (Login, View Grades, etc.)                                          |
+
+<!-- From 1.3 chnage to 3.1 -->
 #### **1.3.2.1 Student function** {#1.3.2.1-student-function}
 
 ##### 1.3.2.1.1. Login
@@ -1762,139 +1784,445 @@ _Table 1.3.2.4.8. Use case Specification \- Respond to Helpdesk Tickets or Syste
 
 _Figure 1.3.2.4.8. Activity Diagram \- Respond to Helpdesk Tickets or System Issues_
 
-### **1.3.3 User Characteristics** {#1.3.3-user-characteristics}
+<!-- From 3.5 change to 3.2  -->
 
-#### **1.3.3.1 Student** {#1.3.3.1-student}
+## **3.2 Performance requirements** {#3.5-performance-requirements}
 
-**Educational Level**: Undergraduate or postgraduate students enrolled at the university.
+The performance requirements for the EduAxis are specified below. These requirements include both static and dynamic numerical requirements, ensuring the system meets necessary performance standards for usability and efficiency.
 
-**Experience**: Varies; may include first-year students unfamiliar with university systems to final-year students with moderate experience using institutional systems.
+### **3.5.1 Static Numerical Requirements** {#3.5.1-static-numerical-requirements}
 
-**Technical Expertise**: Basic to moderate. Familiar with smartphones, web platforms, and learning tools but may require intuitive interfaces for administrative tasks.
+1. **Storage Scalability**
 
-**Disabilities**: Some users may have visual, motor, or cognitive impairments.
+- The system shall support a minimum of 2 TB of storage 10TB maximum capacity for academic records, attendance logs, user data and media uploads. However data storage usage does not exceed the maximum during peak periods for load controls.
 
-**Usability Influence**: Interfaces must be mobile-responsive, easy to navigate, and include accessibility features such as screen reader support, color contrast, and simple forms. Timely feedback and automation are critical for reducing user frustration.
+- The system shall perform database backups every 12 hours to prevent data lost in the system. Back ups are stored securely and restorable within 30 mins of request.
 
-#### **1.3.3.2 Parent or Guardian** {#1.3.3.2-parent-or-guardian}
+- The system shall retrieve students records, attendance and schedules within ≤ 2 seconds of request submission
 
-**Educational Level**: Varies significantly; may include non-university-educated users.
+2. **Simultaneous user capacity**
 
-**Experience**: Limited or no experience with academic systems; typically unfamiliar with institutional systems or digital academic tools.
+- The system shall accommodate up to 5,000 current users during peak usage periods. The system shall remain stable without crashes or latency over 2 seconds for most of user actions.  
 
-**Technical Expertise**: Low to moderate. May only access the system occasionally via mobile devices.
-
-**Disabilities**: May include older users with visual impairments or limited digital literacy.
-
-**Usability Influence**: Requires a simple, mobile-friendly interface with clear language, SMS alerts, and minimal navigation layers. SMS notification design is critical due to likely preference for mobile communication over in-system browsing.
-
-#### **1.3.3.3 Lecturer** {#1.3.3.3-lecturer}
-
-**Educational Level**: Postgraduate degree holders with academic or research backgrounds.
-
-**Experience**: Extensive experience in higher education and academic administration.
-
-**Technical Expertise**: Moderate to high. Familiar with digital learning tools, spreadsheets, and content management systems.
-
-**Disabilities**: May include individuals with visual fatigue or repetitive stress injuries.
-
-**Usability Influence**: system features (e.g., attendance marking, grade uploads, announcements) must be efficient, logically structured, and integrate seamlessly with existing tools like the LMS. Time-saving automation and bulk-processing features are essential.
-
-#### **1.3.3.4 Administrator** {#1.3.3.4-administrator}
-
-**Educational Level**: Professional or technical staff with tertiary education.
-
-**Experience**: High level of familiarity with institutional systems and administrative protocols.
-
-**Technical Expertise**: High. Skilled in managing data, user permissions, system configurations, and troubleshooting.
-
-**Disabilities**: May vary; considerations for ergonomic design and interface responsiveness apply.
-
-**Usability Influence**: Requires robust tools for platform configuration, user management, and report generation. Interfaces must support multitasking, advanced filtering/search, and error-handling mechanisms for administrative operations.
+- The system shall automatically timeout a user session after 15 minutes of inactivity. Inactive sessions are logged out securely with session data cleared all the time.
 
 ###
 
-### **1.3.4 Limitations** {#1.3.4-limitations}
+### **3.5.2 Dynamic Numerical Requirements** {#3.5.2-dynamic-numerical-requirements}
 
-1. **Digital Literacy Gaps**  
-   Parents or guardians with limited access to technical expertise may struggle to navigate the system, especially if its not fully optimized for mobile devices like smartphones, with simple and user-friendly design. This can lead to difficulties in accessing important academic information, receiving notifications and engaging with students' records actively.  
+1. **Task handling**  
 
-2. **High Concurrent User Loads**  
-   During peak usage periods such as subject registration or exam results announcements, the platform might experience slowdowns or even crashes if it is not properly optimized for scalability. High traffic volumes can overload servers, causing delays in data retrieval and frustrating users who rely on real-time updates.  
 
-3. **Data Synchronization issues**  
-   The system relies on real-time integration with the Campus Managements System (CMS) and Learning Management System (LMS) to deliver up-to-date information. However, synchronisation delays or connection issues between these systems can results in outdated or incomplete data being displayed, potentially affecting decision making and user-trust.  
+- The system shall maintain a 99.5% task completion success rate for automated operations such as notifications handout, QR code generation, and schedule exports. With automated logs showing less than 0.5% failure rate in task processing.  
 
-4. **Security and Privacy Risk**  
-   Given the sensitive nature of the data managed by the system, such as student grades, attendance records, and financial information, robust security measures are crucial. Insufficient protection can lead to unauthorized access, data breaches, and privacy violations, compromising student confidentiality and institutional trust.  
+- The system shall maintain an uptime of 99.9% on a monthly basis, accounting for maintenance windows which is a critical criteria for every system  
 
-5. **Manual Data Entry**  
-   The process of lecturers manually entering grades or marking attendance in the database can introduce human errors, such as typos or incorrect records. These inaccuracies can affect student academic records, leading to disputes and requiring time-consuming corrections to maintain data integrity.
+- The system shall maintain a 95% responsiveness rate across all core features in the system such as in dashboard, notifications, and user profile update. User interaction logs will confirm the stable performance.  
+
+- During concurrent usage of more than 4,000 users, the system shall maintain a task success rate of above 95% across all modules.  
+
+
+2. **Data Processing**  
+
+
+- The system shall ensure that more than 98% of background data synchronization tasks with University Management System and Campus Management System are completed within 5 seconds of interaction. Audit logs will show timely and accurate data reflection.
+
+- The system shall ensure that more than 97% of submitted grade uploads are processed without manual intervention or error correction.
+
+- The system shall deliver more than 95% of generated reports on grades or attendance to the user within 10 seconds under normal load.
+
+3. **Peak Load Conditions**  
+
+
+- Under peak load conditions the system shall process at least 90% of user requests within 5 seconds. Stress testing results must be less than 10% for slow or failed requests.
+
+4. **Transaction handling**  
+
+
+- The system shall successfully process more than 95% of all transactions including login, course registration and grade submissions within 2 seconds under normal operating conditions. The transaction logs will show 95% of actions completed under 2 seconds.
+
+These performance requirements ensure that the system will be responsive and efficient, providing a seamless experience for students, parents, and lecturers even under heavy usage conditions. Each requirement is stated in measurable terms to facilitate testing and validation.
+
+<!-- From 3.6 change to 3.3 -->
+
+## **3.6 Usability Requirements** {#3.6-usability-requirements}
+
+The usability and quality in user requirements for the EduAxis aims to ensure that the software is efficient, satisfying and productive for the intended users. These requirements encompass measurable criteria for effectiveness, efficiency and satisfaction and the prevention of future issues that could arise from its user specific contexts.
+
+### **3.6.1 User Interface** {#3.6.1-user-interface}
+
+1. Consistent Layout and Design
+
+- The system shall provide a consistent and intuitive user interface across all modules to support users with varying levels of technical expertise, especially first year students and parents with limited digital literacy.
+
+2. Responsive Design
+
+- The system shall support responsive web design, ensuring usability across desktop, tablet and mobile devices without requiring separate systems.
+
+### **3.6.2 User Experience** {#3.6.2-user-experience}
+
+1. Efficient Navigation
+
+- The system shall provide intuitive navigation pathways through the system, to enable quick and smooth allocation of information and functionalities navigation.
+- The system shall minimize the number of steps required to reach an intended function like viewing grades, checking attendance and registering courses.
+
+2. Personalized Recommendations
+
+- The system shall adhere to Web Content Accessibility Guidelines (WCAG 2.1 Level AA) to ensure usability for users with impaired disabilities, including screen reader compatibility, keyboard navigation and appropriate colour contrast.
+
+### **3.6.3 Communication** {#3.6.3-communication}
+
+1. Feedback Mechanism
+
+- The system shall offer real time feedback after user’s actions such as form submission, file uploads or registration to enhance user confidence and clarity.
+
+2. Language Standards
+
+- The system shall use clear, non-technical language in all on-screen instructions, alerts and error messages to accommodate users with diverse educational backgrounds.
+
+3. Notification Managements
+
+- The system shall allow users to customize notification preferences, including SMS alerts and email notifications, to improve communications effectiveness and user satisfaction.
+
+### **3.6.4 Data protection** {#3.6.4-data-protection}
+
+1. Data Encryption
+
+- The system shall automatically log out users after a period of inactivity to prevent unauthorized access to sensitive data and protect users sessions.
+
+2. Server controls
+
+- The system shall use encrypted channels (HTTPS) for all communication between clients and server, ensuring data transmission is secure from interception.
 
 ##
 
-#
-
-# **2\. References** {#2.-references}
-
-This document is prepared in reference to the following documents:
-
-1. ISO/IEC/IEEE 29148:2018(E) \- International Standard
-2. Software Requirement Engineering Lecture Slide
-
-   #
-
-   # **3\. Requirements** {#3.-requirements}
-
-## **3.1 Apportioning of Requirements** {#3.1-apportioning-of-requirements}
-
-This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
-
-### **3.1.1 Student Module** {#3.1.1-student-module}
-
-| Requirement ID | Description                                  | Related Functions                                             |
-| -------------- | -------------------------------------------- | ------------------------------------------------------------- |
-| S-1            | User authentication and authorization        | Login                                                         |
-| S-2            | View academic performance and grades         | View Academic Grades, Monitor Student Academic Performance    |
-| S-3            | Manage course registration                   | Register/Drop Courses                                         |
-| S-4            | View and pay tuition and fees                | Pay Tuition & Other Fees, View Payment History & Dues Summary |
-| S-5            | Access and view class schedules              | Access/View Course Schedule                                   |
-| S-6            | Submit feedback and support tickets          | Submit Feedback/Support Tickets                               |
-| S-7            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
-| S-8            | Customize notification preferences           | Customize Notification Preferences                            |
-
-### **3.1.2 Parent Module** {#3.1.2-parent-module}
-
-| Requirement ID | Description                                     | Related Functions                                            |
-| -------------- | ----------------------------------------------- | ------------------------------------------------------------ |
-| P-1            | Monitor child's academic and attendance summary | View Child's Grade & Attendance, Access Child’s Schedule     |
-| P-2            | View payment and dues summary                   | View Payment History & Dues Summary                          |
-| P-3            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
-
-### **3.1.3 Lecturer Module** {#3.1.3-lecturer-module}
-
-| Requirement ID | Description                                     | Related Functions                                    |
-| -------------- | ----------------------------------------------- | ---------------------------------------------------- |
-| L-1            | Post class announcements                        | Post Class Announcements                             |
-| L-2            | Upload grades and manage coursework submissions | Upload Student Grades, Manage Coursework Submissions |
-| L-3            | View academic calendar and manage attendance    | View Academic Calendar, Manage Attendance            |
-| L-4            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
-| L-5            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
-
-### **3.1.4 Admin Module** {#3.1.4-admin-module}
-
-| Requirement ID | Description                                   | Related Functions                                  |
-| -------------- | --------------------------------------------- | -------------------------------------------------- |
-| A-1            | User authentication and authorization         | Login                                              |
-| A-2            | Manage user accounts and permissions          | Manage User Accounts, Maintain Access Permissions  |
-| A-3            | Respond to system issues and helpdesk tickets | Respond to Helpdesk Tickets/System Issues          |
-| A-4            | Manage data privacy                           | Maintain Data Privacy                              |
-| A-5            | Post and manage global announcements          | Post Global Announcements                          |
-| A-6            | Configure and manage SMS/email services       | Configure & Manage SMS/Email Notification Services |
-| A-7            | Automate system workflows                     | Automate Workflows                                 |
-| A-8            | Integrate with CMS and LMS                    | Integrate & Sync with CMS, LMS                     |
-
 ##
+
+<!-- From 1.3.1.2 change to 3.4 Interface Requirements -->
+## 3.4 Interface Requirements
+#### **1.3.1.2 User interfaces** {#1.3.1.2-user-interfaces}
+
+####
+
+1. **Student Dashboard**
+
+The student dashboard serves as the centralized interface to manage academic and administrative activities. This dashboard integrates with LMS and CMS for real-time updates on grades and coursework progress. Students of the university can securely log in and access the personalized information as listed below.
+
+- Class schedule, registered courses, and academic calendar
+
+- Academic performance such as grades and attendance records
+
+- Tuition payment status and history
+
+- Notification and alerts including for low attendance and unpaid fees
+
+- Coursework submission status and feedback from lecturers
+
+- Announcement and academic updates
+
+- Profile settings to update student’s personal details and notification preferences
+
+2. **Parent Dashboard**
+
+This dashboard is optimised for concise overviews and direct alerts to ensure parents stay informed without overwhelming detail. Parents and guardians can log in via a secure system to monitor their child’s academic progress. The key features are listed below.
+
+- Viewing the child’s grades and attendance status
+
+- Access to course schedule and academic summary
+
+- Notifications for critical issues such as low attendance and outstanding fees
+
+- Customizable SMS/email alert preferences
+
+3. **Lecturer Dashboard**
+
+Lecturers have access to a role-based dashboard to support teaching and communication tasks. This dashboard integrates with LMS to handle assignments and grade synchronization seamlessly. This dashboard allows lecturers to perform the tasks or actions as listed below.
+
+- Uploading and updating student grades
+
+- Marking and tracking student attendance
+
+- Posting class announcement and updates
+
+- Viewing academic calendar and teaching schedules
+
+- Monitoring overall student performance and participation
+
+4. **Administrative Control Panel**
+
+Administrators use a centralized control panel to manage the system’s operations and configurations. Key interface features for this control panel are listed below.
+
+- User account management for students, lecturers and parents
+
+- System integration tools for syncing with CMS, LMS and notification systems
+
+- Workflow automation configuration for fee reminders, grade processing, etc.
+
+- Moderation of global announcements and academic communications
+
+- Help Desk ticket management and issue response tracking
+
+- Notification services setup for SMS/email gateway settings
+
+- Access control and data privacy configurations
+
+- Display logs and dashboards for tracking system usage and engagement
+
+5. **Notification and Alerts Console (Admin-side and System-triggered)**
+
+This module manages and monitors all automated notifications sent by the system. In this console Admins can perform the following actions.
+
+- Configure and test SMS/email templates
+
+- View history of alerts triggered by attendance drops, unpaid fees, or grade releases
+
+- Set thresholds and conditions for alert generation
+
+- Monitor system queue via the notification scheduler module
+
+6. **Helpdesk Support Interface**
+
+Both users and admin will have access to helpdesk interfaces where they can perform the following tasks as listed below.
+
+- Students, parents, and lecturers can submit support tickets
+
+- Admins can respond, update, and close tickets via the dashboard
+
+- The interface includes status tracking, ticket history, and response logs
+
+#### **1.3.1.3 Hardware interfaces** {#1.3.1.3-hardware-interfaces}
+
+1. **Device Compatibility**  
+   The EduAxis is designed to be accessible across multiple device types of hardware requirements. Those devices include desktop and laptop computers running Windows, macOS or Linux operating systems with standard web browser such as Chrome, Microsoft, and Google. 
+
+   It also supports mobile devices, with fully responsive design optimized for Android and iOS smartphones and tablets, that enables student, parents and lecturers to access information conveniently at any circumstances.. Having multi-device compatibility ensures users can engage with the platform efficiently, enhancing user experience itself. 
+
+   Minimum server specifications for deployment are as follows:
+   - CPU: Quad-core (4-core) processor
+   - RAM: 8 GB
+   - Storage: 256 GB SSD 
+
+2. **Internet Connectivity**  
+   Reliable internet connectivity is pivotal for components in the EduAxis, it facilitates real-time updates on communication and data synchronization with the university’s backend systems. 
+   
+   To secure a seamless experience:
+   - Basic access: at least 1 Mbps bandwidth 
+   - Peak performance (heavy traffic): 5 Mbps or more
+    
+    The system supports both ethernet and Wi-Fi networks, with integration into university-managed wifi to provide stable access for users within campus. Additionally, the system also supports cloud based access to enable off-campus usage with real-time data availability and synchronization in all locations. This potent structure will ensure fast, engaging communication between the system and users.  
+
+3. **Data Storage**  
+   To accommodate large numbers of academic and administrative data, the EduAxis relies on robust storage solutions that include both cloud storage and the university’s local storage framework:
+
+   - **Primary cloud storage:**  scalable and secure, used for student records, grades, attendance, and course materials.
+   - **Local backup servers at the university data center:** mirror critical data to provide quick recovery if the cloud is unavailable.
+   
+   The dual-layered approach of cloud and local storage ensures that the system remains secured, and capable of handling high data loads while maintaining real time synchronization with all users.
+
+####
+
+#### **1.3.1.4 Software interfaces** {#1.3.1.4-software-interfaces}
+
+####
+
+1. **Database Management System (DBMS)**
+
+- Name: PostgreSQL
+
+- Mnemonic: DBMS
+
+- Specification Number: N/A
+
+- Version Number: Latest stable release (PostgreSQL 15+)
+
+- Source: PostgreSQL Global Development Group (Open Source)
+
+- Interface Purpose: The DBMS stores all user data, including student profiles, grades, attendance, notification preferences, payment records, helpdesk tickets, and system logs. It supports relational queries for internal modules and secure transactions during academic workflows.
+
+2. **Web Server**
+
+- Name: NGINX
+
+- Mnemonic: Web Server
+
+- Specification Number: N/A
+
+- Version Number: Latest stable version
+
+- Source: F5 NGINX (Open Source)
+
+- Interface Purpose: The web server hosts the university web application. It serves the frontend content and routes HTTP(S) requests to the backend application. It also acts as a reverse proxy API handling and SSL termination.
+
+3. **Backend Framework**
+
+- Name: Django
+
+- Mnemonic: Backend
+
+- Specification Number: N/A
+
+- Version Number: Django 4.x (Latest LTS)
+
+- Source: Django Software Foundation (Open Source)
+
+- Interface Purpose: The backend framework implements core business logic of the system, including user authentication, data processing, internal workflows such as grading and registration, and integration points to external systems such as LMS, CMS and SMS gateway.
+
+4. **Messaging Protocol**
+
+- Name: RESTful API (Representational State Transfer)
+- Mnemonic: REST API
+- Specification Number: RFC 7231
+- Version Number: N/A
+- Source: Internet Engineering Task Force (IETF)
+- Interface Purpose: This protocol defines the HTTP-based protocol used to exchange data between the system and the external systems like the CMS, LMS, SMS Gateway, and Payment Gateway. This follows REST conventions for GET, POST, PUT, DELETE operations.
+
+5. **External Authentication Service**
+
+- Name: OAuth 2.0 / SSO via Central Auth
+
+- Mnemonic: Auth Service
+
+- Specification Number: RFC 6749
+
+- Version Number: Depends on university infrastructure
+
+- Source: University IT Dept / External Identity Provider
+
+- Interface Purpose: The service is used during login to verify user identity via centralized authentication, typically integrated with campus-wide Single Sign-On systems. Ensures secure and role-based access to the system.
+
+6. **SMS/Email Notification Gateway**
+
+- Name: Twilio / SMTP
+
+- Mnemonic: Notification Service
+
+- Specification Number: N/A
+
+- Version Number: Latest supported API
+
+- Source: Twilio Cloud API / Mail Server
+
+- Interface Purpose: This gateway sends real-time alerts and reminders via SMS and email to students, parents, and lecturers. Triggered by internal events such as low attendance, fee due which is configured through the admin dashboard.
+
+7. **Learning Management System (LMS) Integration**
+
+- Name: eBwise (Moodle LMS)
+
+- Mnemonic: LMS
+
+- Specification Number: N/A
+
+- Version Number: As per campus deployment
+
+- Source: University e-learning platform
+
+- Interface Purpose: This integration allows seamless interaction with learning materials and assignment submissions. Students and lecturers can access coursework links, grade sync, and feedback exchange via API-based integration.
+
+8. **Campus Management System (CMS) Integration**
+
+- Name: Campus Lifecycle Management System (CLiC)
+
+- Mnemonic: CMS
+
+- Specification Number: Internal
+
+- Version Number: Depends on campus deployment
+
+- Source: University Academic System
+
+- Interface Purpose: This integration supplies academic data such as grades, attendance records, and billing info. This allows the system to fetch verified academic records for display to students, parents, and lecturers.
+
+9. **Payment Gateway**
+
+- Name: iPay88 / Stripe / FPX Gateway
+
+- Mnemonic: Payment API
+
+- Specification Number: Depends on payment provider
+
+- Version Number: Latest available API
+
+- Source: Third-party payment processor
+
+- Interface Purpose: This gateway handles secure payment processing for tuition and fees. This is integrated with the system for checkout, receipt generation, and payment history syncing.
+
+#### **1.3.1.5 Communication Interfaces** {#1.3.1.5-communication-interfaces}
+
+The EduAxis relies on multiple communication protocols to enable secure, efficient, and real-time data exchange between clients, servers, and integrated third-party systems.
+
+To support real-time alerts, live data synchronization, and a smooth user experience, the following network performance requirements must be met:
+
+- Client-side bandwidth: Minimum 5 Mbps internet connection
+- Server-side bandwidth: Minimum 100 Mbps uplink capacity
+- Latency: Maximum 100 milliseconds round-trip time for time-sensitive operations such as attendance alerts and notification updates
+- The messaging system must handle the 160-character limit for SMS
+- It shall support international phone number formats (e.g., +60, +1) and implement delivery confirmation tracking to ensure message reliability
+
+**1\. HTTP/HTTPS Protocol**
+
+**Purpose**: HTTP/HTTPS is used as the foundational communication protocol between clients (students, parents, lecturers, admins) and the university system’s web server. It enables secure transmission of data during login, course registration, fee payment, and other user-initiated activities.
+
+**Message Content and Format**:
+
+**Request:** HTTP headers include request methods such as GET, POST, PUT, and DELETE, along with URLs and optionally a JSON-formatted body for POST/PUT operations (e.g., submitting feedback or updating profile).  
+**Response:** Includes status codes (e.g., 200 OK, 403 Forbidden), Content-Type headers (e.g., application/json, text/html), and payloads (HTML for page rendering, JSON for data APIs).
+
+**2\. WebSocket Protocol**
+
+**Purpose**: WebSocket enables real-time, two-way communication between the system server and clients for features such as:
+
+- Instant SMS/email alert updates.
+
+- Live helpdesk chat (if implemented).
+
+- Real-time coursework submission statuses or attendance updates.
+
+- 160-character limit with message splitting for longer content.
+
+- Support international phone formats (+60, +1, etc.).
+
+**Message Content and Format:** Messages use lightweight JSON structures for real-time updates (e.g., { "type": "notification", "message": "Your payment is due." }). Binary format may be used for file or attachment transmissions in coursework or helpdesk uploads.
+
+**3\. SMTP Protocol**
+
+**Purpose**: SMTP is used to send automated email messages to users for:
+
+- Account registration and password recovery.
+
+- Course registration confirmations.
+
+- Tuition invoice alerts.
+
+- Announcements and deadlines.
+
+**Message Content and Format**: SMTP messages conform to \[RFC 5321\] standards and include fields such as:
+
+- From, To, Subject, and Body.
+
+- MIME headers for HTML formatting or file attachments (e.g., application/pdf for fee receipts).
+
+**4\. API Integration Protocols**
+
+**Purpose**: REST APIs are employed to interface with external systems:
+
+- Authentication Service for login and session management.
+
+- Campus Management System for accessing grades, fees, and academic records.
+
+- Learning Management System (LMS) for coursework and feedback.
+
+- University Database for student and staff data.
+
+**Message Content and Format**: API requests and responses are formatted in **JSON**, using standard REST methods:
+
+- GET for retrieving data (e.g., academic calendar).
+- POST for actions like submitting coursework or feedback.
+
+- PUT for updating profiles.
+
+- DELETE for course withdrawal.
+
+Headers include Authorization (bearer tokens), Content-Type: application/json, and optional pagination/filtering parameters.
 
 ## **3.2 External interfaces** {#3.2-external-interfaces}
 
@@ -1988,348 +2316,15 @@ This section outlines the allocation of system requirements to specific modules 
 | **Data Items Included**                     | Payment ID, invoice ID, status, timestamp, amount                                |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                        |
 
-## **3.3 Elicitation Techniques Based on Kano Model** {#3.3-elicitation-techniques-based-on-kano-model}
 
-The requirements for the EduAxis were gathered and prioritized using the Kano Model, which helps in understanding and categorizing customer needs. The Kano Model categorizes requirements into five categories:
 
-1. **Dissatisfier (Must-Be Requirements)**: Basic features that users expect. If these are not fulfilled, users will be dissatisfied.
-2. **Satisfier (One-Dimensional Requirements):** Features that result in satisfaction when fulfilled and dissatisfaction when not fulfilled.
-3. **Delighter (Attractive Requirements):** Features that delight users when fulfilled but do not cause dissatisfaction when not fulfilled.
 
-_Table 3.3.1 Prioritization Categories of Functional Requirements_
 
-| Prioritization Categories | Requirements                                                                                                                                                                                                                                                                                              |
-| :-----------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       Dissatisfier        | User authentication and Authorization View academic Grades Access Attendance Records Access Academic Timetable Manage User Accounts and Roles Integration with Campus System (CMS,LMS,Calendar) Maintain Data Privacy and Access Permissions Pay Tuition and Other Fees View Payment History and Invoices |
-|         Satisfier         | Upload and Manage Grades Digital Attendance Tracking Post Announcement and Updates Dashboard with Performance Overview Submit Feedback and Support Requests Alert and Reminder System                                                                                                                     |
-|         Delighter         | Notification Read Tracking Custom Notification Preferences Visual Performance Analytics Mobile-Friendly Responsive Interface                                                                                                                                                                              |
-
-_Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platform_
-
-|    Weeks    |       |                      |       |       |                       |       |       |                |        |        |        |
-| :---------: | :---: | :------------------: | :---: | :---: | :-------------------: | :---: | :---: | :------------: | :----: | :----: | :----: |
-|    **1**    | **2** |        **3**         | **4** | **5** |         **6**         | **7** | **8** |     **9**      | **10** | **11** | **12** |
-| Preliminary |       |                      |       |       |                       |       |       |                |        |        |        |
-|             |       | Elicitation Planning |       |       |                       |       |       |                |        |        |        |
-|             |       |                      |       |       | Elicitation Execution |       |       |                |        |        |        |
-|             |       |                      |       |       |                       |       |       | Implementation |        |        |        |
-
-## **3.4 Functional Requirements** {#3.4-functional-requirements}
-
-### **3.4.1 Dissatisfier Requirements** {#3.4.1-dissatisfier-requirements}
-
-#### **3.4.1.1 Requirement 1** {#3.4.1.1-requirement-1}
-
-| Requirements:               | User Authentication and Authorization                                                                                                                                                         |
-| :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Description:**            | The system shall provide a secure login mechanism for students, lecturers, parents, and admins                                                                                                |
-| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents and students                                                                                                                       |
-| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                                                                                                                |
-| **Supporting Documents:**   | Question 1 ([Interview 1](#4.1.1-interview-1)), Question1 ([Interview 2](#4.1.2-interview-2)), Question 9 ([Parents survey](#4.2.2-parents)), Question 13 ([Student survey](#4.2.1-students)) |
-| **Related Function:**       | Login                                                                                                                                                                                         |
-
-#### **3.4.1.2 Requirement 2** {#3.4.1.2-requirement-2}
-
-| Requirements:               | View Academic Grades                                                                                                                     |
-| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| **Description:**            | The system shall allow users (students,lecturers, parents) to view academic grades securely                                              |
-| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents and student                                                                   |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                                                                                 |
-| **Supporting Documents:**   | Question 2 and 10 ([Interview 1](#4.1.1-interview-1)), ([Interview 2](#4.1.2-interview-2)), Question 1 ([Parent Survey](#4.2.2-parents)) |
-| **Related Function:**       | View academic grades                                                                                                                     |
-
-#### **3.4.1.3 Requirement 3** {#3.4.1.3-requirement-3}
-
-| Requirements:               | Access Attendance Records                                                                                                            |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| **Description:**            | The system shall allow students, parents, and lecturers to access and monitor attendance records.                                    |
-| **Elicitation Activities:** | Interview with lecturers, survey conducted towards parents                                                                           |
-| **Responsible Member:**     | Suzannah Pancer                                                                                                                      |
-| **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question 2&3 ([Parent Survey](#4.2.2-parents)) |
-| **Related Function:**       | Check class attendance records                                                                                                       |
-
-#### **3.4.1.4 Requirement 4** {#3.4.1.4-requirement-4}
-
-| Requirements:               | Access Academic Timetable                                                                                                       |
-| :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| **Description:**            | The system shall display each user’s course schedule or timetable.                                                              |
-| **Elicitation Activities:** | Interview with lecturers, Questionnaire with parents                                                                            |
-| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                                                               |
-| **Supporting Documents:**   | Question 8 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question7 ([Parent Survey](#4.2.2-parents)) |
-| **Related Function:**       | Access and view course schedule/timetable                                                                                       |
-
-#### **3.4.1.5 Requirement 5** {#3.4.1.5-requirement-5}
-
-| Requirements:               | Manage User Accounts and Roles                                                     |
-| :-------------------------- | :--------------------------------------------------------------------------------- |
-| **Description:**            | The system shall enable admin to assign roles and manage user account permissions. |
-| **Elicitation Activities:** | Interview with Admin                                                               |
-| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                     |
-| **Supporting Documents:**   | Question 1&8 ([interview 3](#4.1.3-interview-3))                                   |
-| **Related Function:**       | Manage user accounts and system configurations                                     |
-
-#### **3.4.1.6 Requirement 6** {#3.4.1.6-requirement-6}
-
-| Requirements:               | Integration with Campus Systems                                              |
-| :-------------------------- | :--------------------------------------------------------------------------- |
-| **Description:**            | The system shall integrate with CMS, LMS, and calendar systems to sync data. |
-| **Elicitation Activities:** | Interview with Admin                                                         |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                     |
-| **Supporting Documents:**   | Question 2 ([interview 3](#4.1.3-interview-3))                               |
-| **Related Function:**       | Integrate and Sync with CMS, LMS, and calendar systems                       |
-
-#### **3.4.1.7 Requirement 7** {#3.4.1.7-requirement-7}
-
-| Requirements:               | Maintain Data Privacy and Access Permissions                         |
-| :-------------------------- | :------------------------------------------------------------------- |
-| **Description:**            | The system must enforce data security and appropriate access levels. |
-| **Elicitation Activities:** | Interview with Admin                                                 |
-| **Responsible Member:**     | Suzannah Pancer                                                      |
-| **Supporting Documents:**   | Question 8 ([interview 3](#4.1.3-interview-3))                       |
-| **Related Function:**       | Maintain data privacy and access permissions                         |
-
-#### **3.4.1.8 Requirement 8** {#3.4.1.8-requirement-8}
-
-| Requirements:               | Pay Tuition and Other Fees                      |
-| :-------------------------- | :---------------------------------------------- |
-| **Description:**            | Ability to make fee payments through the system |
-| **Elicitation Activities:** | Observation                                     |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                        |
-| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3))  |
-| **Related Function:**       | Pay tuition and other fees                      |
-
-#### **3.4.1.9 Requirement 9** {#3.4.1.9-requirement-9}
-
-| Requirements:               | View Payment History and Invoices              |
-| :-------------------------- | :--------------------------------------------- |
-| **Description:**            | View historical tuition and fee records        |
-| **Elicitation Activities:** | Observation                                    |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                       |
-| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)) |
-| **Related Function:**       | View Payment History and Invoices              |
-
-###
-
-###
-
-### **3.4.2 Satisfier Requirements** {#3.4.2-satisfier-requirements}
-
-#### **3.4.2.1 Requirement 10** {#3.4.2.1-requirement-10}
-
-| Requirements:               | Upload and Manage Grades                                                            |
-| :-------------------------- | :---------------------------------------------------------------------------------- |
-| **Description:**            | Lecturers shall be able to upload, confirm, and manage student grades.              |
-| **Elicitation Activities:** | Interview with Lecturers                                                            |
-| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                   |
-| **Supporting Documents:**   | Question 2&3([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
-| **Related Function:**       | Upload student grades                                                               |
-
-#### **3.4.2.2 Requirement 11** {#3.4.2.2-requirement-11}
-
-| Requirements:               | Digital Attendance Tracking                                                          |
-| :-------------------------- | :----------------------------------------------------------------------------------- |
-| **Description:**            | The system shall support digital attendance marking and tracking over time.          |
-| **Elicitation Activities:** | Interview with Lecturers                                                             |
-| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                       |
-| **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
-| **Related Function:**       | Mark and manage attendance records                                                   |
-
-#### **3.4.2.3 Requirement 12** {#3.4.2.3-requirement-12}
-
-| Requirements:               | Post Announcements and Updates                                                       |
-| :-------------------------- | :----------------------------------------------------------------------------------- |
-| **Description:**            | Lecturers and admins shall post class and global announcements                       |
-| **Elicitation Activities:** | Interview with Lecturers                                                             |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                             |
-| **Supporting Documents:**   | Question 6&7 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
-| **Related Function:**       | Post class announcements and updates                                                 |
 
 ####
 
-#### **3.4.2.4 Requirement 13** {#3.4.2.4-requirement-13}
 
-| Requirements:               | Dashboard with Performance Overview                                                |
-| :-------------------------- | :--------------------------------------------------------------------------------- |
-| **Description:**            | The system shall provide academic dashboard with grade and attendance insights.    |
-| **Elicitation Activities:** | Interview with Lecturers                                                           |
-| **Responsible Member:**     | Suzannah Pancer                                                                    |
-| **Supporting Documents:**   | Question 10([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
-| **Related Function:**       | Monitor student academic performance                                               |
-
-#### **3.4.2.5 Requirement 14** {#3.4.2.5-requirement-14}
-
-| Requirements:               | Submit Feedback and Support Requests                                                            |
-| :-------------------------- | :---------------------------------------------------------------------------------------------- |
-| **Description:**            | The system shall allow users to submit feedback and helpdesk tickets.                           |
-| **Elicitation Activities:** | Interview with Admin and survey conducted towards students                                      |
-| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                               |
-| **Supporting Documents:**   | Question 6 ([interview 3](#4.1.3-interview-3)), Question 18 ([Student survey](#4.2.1-students)) |
-| **Related Function:**       | Submit Feedback/Support Tickets, Submit Helpdesk Tickets                                        |
-
-#### **3.4.2.6 Requirement 15** {#3.4.2.6-requirement-15}
-
-| Requirements:               | Alert and Reminder System                                                                                    |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| **Description:**            | The system shall send deadline reminders and important alerts to users.                                      |
-| **Elicitation Activities:** | Interview with Lecturer and survey towards students                                                          |
-| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                               |
-| **Supporting Documents:**   | Question 9([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Questionnaire Q3, Q4, Q12 |
-| **Related Function:**       | Receive SMS/Email alerts                                                                                     |
-
-###
-
-### **3.4.3 Delighter Requirements** {#3.4.3-delighter-requirements}
-
-#### **3.4.3.1 Requirement 16** {#3.4.3.1-requirement-16}
-
-| Requirements:               | Notification Read Tracking                                                                |
-| :-------------------------- | :---------------------------------------------------------------------------------------- |
-| **Description:**            | The system may notify lecturers or admins when users view or interact with announcements. |
-| **Elicitation Activities:** | Interview with lecturers                                                                  |
-| **Responsible Member:**     | Phartiban A/L Kumarhesan                                                                  |
-| **Supporting Documents:**   | Question 7([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2))         |
-| **Related Function:**       | View announcements and academic notifications                                             |
-
-#### **3.4.3.2 Requirement 17** {#3.4.3.2-requirement-17}
-
-| Requirements:               | Custom Notification Preferences                                           |
-| :-------------------------- | :------------------------------------------------------------------------ |
-| **Description:**            | Parents may configure notification delivery method (SMS, email, or both). |
-| **Elicitation Activities:** | Survey towards parents                                                    |
-| **Responsible Member:**     | Suzannah Pancer                                                           |
-| **Supporting Documents:**   | Question 14 ([Parent Survey](#4.2.2-parents))                             |
-| **Related Function:**       | Receive SMS/Email alerts                                                  |
-
-#### **3.4.3.3 Requirement 18** {#3.4.3.3-requirement-18}
-
-| Requirements:               | Visual Performance Analytics                                                        |
-| :-------------------------- | :---------------------------------------------------------------------------------- |
-| **Description:**            | The system may display graphs and visual trends of student performance over time.   |
-| **Elicitation Activities:** | Interview with lecturer                                                             |
-| **Responsible Member:**     | Nurul Natasha Adilyn Binti Fadzil                                                   |
-| **Supporting Documents:**   | Question 10 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
-| **Related Function:**       | Monitor student academic performance                                                |
-
-#### **3.4.3.4 Requirement 19** {#3.4.3.4-requirement-19}
-
-| Requirements:               | Mobile-Friendly Responsive Interface                                                             |
-| :-------------------------- | :----------------------------------------------------------------------------------------------- |
-| **Description:**            | The system may be optimized for mobile devices across Android and iPhone.                        |
-| **Elicitation Activities:** | Interview with admin and survey towards students                                                 |
-| **Responsible Member:**     | Iman Nadhirah Binti Mohd Hafiz                                                                   |
-| **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3)), Question 7&12([Student survey](#4.2.1-students)) |
-| **Related Function:**       | All access-related functions (Login, View Grades, etc.)                                          |
-
-## **3.5 Performance requirements** {#3.5-performance-requirements}
-
-The performance requirements for the EduAxis are specified below. These requirements include both static and dynamic numerical requirements, ensuring the system meets necessary performance standards for usability and efficiency.
-
-### **3.5.1 Static Numerical Requirements** {#3.5.1-static-numerical-requirements}
-
-1. **Storage Scalability**
-
-- The system shall support a minimum of 2 TB of storage 10TB maximum capacity for academic records, attendance logs, user data and media uploads. However data storage usage does not exceed the maximum during peak periods for load controls.
-
-- The system shall perform database backups every 12 hours to prevent data lost in the system. Back ups are stored securely and restorable within 30 mins of request.
-
-- The system shall retrieve students records, attendance and schedules within ≤ 2 seconds of request submission
-
-2. **Simultaneous user capacity**
-
-- The system shall accommodate up to 5,000 current users during peak usage periods. The system shall remain stable without crashes or latency over 2 seconds for most of user actions.  
-
-- The system shall automatically timeout a user session after 15 minutes of inactivity. Inactive sessions are logged out securely with session data cleared all the time.
-
-###
-
-### **3.5.2 Dynamic Numerical Requirements** {#3.5.2-dynamic-numerical-requirements}
-
-1. **Task handling**  
-
-
-- The system shall maintain a 99.5% task completion success rate for automated operations such as notifications handout, QR code generation, and schedule exports. With automated logs showing less than 0.5% failure rate in task processing.  
-
-- The system shall maintain an uptime of 99.9% on a monthly basis, accounting for maintenance windows which is a critical criteria for every system  
-
-- The system shall maintain a 95% responsiveness rate across all core features in the system such as in dashboard, notifications, and user profile update. User interaction logs will confirm the stable performance.  
-
-- During concurrent usage of more than 4,000 users, the system shall maintain a task success rate of above 95% across all modules.  
-
-
-2. **Data Processing**  
-
-
-- The system shall ensure that more than 98% of background data synchronization tasks with University Management System and Campus Management System are completed within 5 seconds of interaction. Audit logs will show timely and accurate data reflection.
-
-- The system shall ensure that more than 97% of submitted grade uploads are processed without manual intervention or error correction.
-
-- The system shall deliver more than 95% of generated reports on grades or attendance to the user within 10 seconds under normal load.
-
-3. **Peak Load Conditions**  
-
-
-- Under peak load conditions the system shall process at least 90% of user requests within 5 seconds. Stress testing results must be less than 10% for slow or failed requests.
-
-4. **Transaction handling**  
-
-
-- The system shall successfully process more than 95% of all transactions including login, course registration and grade submissions within 2 seconds under normal operating conditions. The transaction logs will show 95% of actions completed under 2 seconds.
-
-These performance requirements ensure that the system will be responsive and efficient, providing a seamless experience for students, parents, and lecturers even under heavy usage conditions. Each requirement is stated in measurable terms to facilitate testing and validation.
-
-## **3.6 Usability Requirements** {#3.6-usability-requirements}
-
-The usability and quality in user requirements for the EduAxis aims to ensure that the software is efficient, satisfying and productive for the intended users. These requirements encompass measurable criteria for effectiveness, efficiency and satisfaction and the prevention of future issues that could arise from its user specific contexts.
-
-### **3.6.1 User Interface** {#3.6.1-user-interface}
-
-1. Consistent Layout and Design
-
-- The system shall provide a consistent and intuitive user interface across all modules to support users with varying levels of technical expertise, especially first year students and parents with limited digital literacy.
-
-2. Responsive Design
-
-- The system shall support responsive web design, ensuring usability across desktop, tablet and mobile devices without requiring separate systems.
-
-### **3.6.2 User Experience** {#3.6.2-user-experience}
-
-1. Efficient Navigation
-
-- The system shall provide intuitive navigation pathways through the system, to enable quick and smooth allocation of information and functionalities navigation.
-- The system shall minimize the number of steps required to reach an intended function like viewing grades, checking attendance and registering courses.
-
-2. Personalized Recommendations
-
-- The system shall adhere to Web Content Accessibility Guidelines (WCAG 2.1 Level AA) to ensure usability for users with impaired disabilities, including screen reader compatibility, keyboard navigation and appropriate colour contrast.
-
-### **3.6.3 Communication** {#3.6.3-communication}
-
-1. Feedback Mechanism
-
-- The system shall offer real time feedback after user’s actions such as form submission, file uploads or registration to enhance user confidence and clarity.
-
-2. Language Standards
-
-- The system shall use clear, non-technical language in all on-screen instructions, alerts and error messages to accommodate users with diverse educational backgrounds.
-
-3. Notification Managements
-
-- The system shall allow users to customize notification preferences, including SMS alerts and email notifications, to improve communications effectiveness and user satisfaction.
-
-### **3.6.4 Data protection** {#3.6.4-data-protection}
-
-1. Data Encryption
-
-- The system shall automatically log out users after a period of inactivity to prevent unauthorized access to sensitive data and protect users sessions.
-
-2. Server controls
-
-- The system shall use encrypted channels (HTTPS) for all communication between clients and server, ensuring data transmission is secure from interception.
-
-##
-
-##
-
+<!-- From 3.7 change to 3.5 -->
 ## **3.7 Logical Database Requirements** {#3.7-logical-database-requirements}
 
 The logical requirements section defines the essential components and operations of an integrated platform designed to support academic communication and services for students, parents, lecturers, and administrators. It outlines the types of academic and administrative data accessed by each user group, the frequency of operations such as grade uploads, attendance monitoring, and course registration, and access privileges based on user roles. It also includes integrity constraints to maintain consistent academic records, security protocols such as authentication and role-based access control, and data retention requirements to preserve historical academic and financial data in compliance with institutional policies.
@@ -2469,6 +2464,7 @@ _Table 3.8.6 Users Roles and Accessing Capabilities in the System_
 
 ##
 
+<!-- From 3.9 change to 3.6 -->
 ## **3.9 Design Constraints** {#3.9-design-constraints}
 
 ### **3.9.1 Compliance with Data Privacy Regulations** {#3.9.1-compliance-with-data-privacy-regulations}
@@ -2589,6 +2585,8 @@ Requirements:
 
 **All standards and practices referenced are aligned with: PDPA (Malaysia), OWASP, WCAG 2.1 Level AA, RESTful API (RFC 7231), and internal academic IT policies.**
 
+
+<!-- From 3.10 change to 3.7 -->
 ## **3.10. Software system attributes** {#3.10.-software-system-attributes}
 
 ### **3.10.1 Reliability** {#3.10.1-reliability}
@@ -2678,6 +2676,36 @@ Dependencies on platform-specific tools shall be minimized. Cross-platform libra
 
 4. # **Supporting information** {#supporting-information}
 
+<!-- From 3.3 change to 3.8.1 -->
+<!-- 3.8.1 Elicitation Techniques and Results -->
+## **3.3 Elicitation Techniques Based on Kano Model** {#3.3-elicitation-techniques-based-on-kano-model}
+
+The requirements for the EduAxis were gathered and prioritized using the Kano Model, which helps in understanding and categorizing customer needs. The Kano Model categorizes requirements into five categories:
+
+1. **Dissatisfier (Must-Be Requirements)**: Basic features that users expect. If these are not fulfilled, users will be dissatisfied.
+2. **Satisfier (One-Dimensional Requirements):** Features that result in satisfaction when fulfilled and dissatisfaction when not fulfilled.
+3. **Delighter (Attractive Requirements):** Features that delight users when fulfilled but do not cause dissatisfaction when not fulfilled.
+
+_Table 3.3.1 Prioritization Categories of Functional Requirements_
+
+| Prioritization Categories | Requirements                                                                                                                                                                                                                                                                                              |
+| :-----------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|       Dissatisfier        | User authentication and Authorization View academic Grades Access Attendance Records Access Academic Timetable Manage User Accounts and Roles Integration with Campus System (CMS,LMS,Calendar) Maintain Data Privacy and Access Permissions Pay Tuition and Other Fees View Payment History and Invoices |
+|         Satisfier         | Upload and Manage Grades Digital Attendance Tracking Post Announcement and Updates Dashboard with Performance Overview Submit Feedback and Support Requests Alert and Reminder System                                                                                                                     |
+|         Delighter         | Notification Read Tracking Custom Notification Preferences Visual Performance Analytics Mobile-Friendly Responsive Interface                                                                                                                                                                              |
+
+_Table 3.3.2 Timeline for Software Requirements Specification of EduAxis platform_
+
+|    Weeks    |       |                      |       |       |                       |       |       |                |        |        |        |
+| :---------: | :---: | :------------------: | :---: | :---: | :-------------------: | :---: | :---: | :------------: | :----: | :----: | :----: |
+|    **1**    | **2** |        **3**         | **4** | **5** |         **6**         | **7** | **8** |     **9**      | **10** | **11** | **12** |
+| Preliminary |       |                      |       |       |                       |       |       |                |        |        |        |
+|             |       | Elicitation Planning |       |       |                       |       |       |                |        |        |        |
+|             |       |                      |       |       | Elicitation Execution |       |       |                |        |        |        |
+|             |       |                      |       |       |                       |       |       | Implementation |        |        |        |
+
+
+<!-- From 4.8 change to 3.8.1 -->
 ## **4.1 Interview** {#4.1-interview}
 
 The purpose of these interview sessions is to elicit requirements and insights for the EduAxis from students, parents, lecturers and administrators of the system itself. The focus of this interview is to obtain opinion on the system’s functions, features and design for improvements and developments.
