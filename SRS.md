@@ -544,11 +544,11 @@ _Table 1.3.2.1: EduAxis Functions_
 
 
 <!-- Changes from 3.1 to 1.3.2.1 -->
-## **1.3.2.2 Apportioning of Requirements** {#1.3.2.2-apportioning-of-requirements}
+#### **1.3.2.2 Apportioning of Requirements** {#1.3.2.2-apportioning-of-requirements}
 
 This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
 
-### **1.3.2.2.1 Student Module** {#1.3.2.2.1-student-module}
+##### **1.3.2.2.1 Student Module** {#1.3.2.2.1-student-module}
 Table 1.3.2.2.1 (Student Module table)
 | Requirement ID | Description                                  | Related Functions                                             |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------- |
@@ -561,7 +561,7 @@ Table 1.3.2.2.1 (Student Module table)
 | REQ-07            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
 | REQ-08            | Customize notification preferences           | Customize Notification Preferences                            |
 
-### **1.3.2.2.2 Parent Module** {#1.3.2.2.2-parent-module}
+##### **1.3.2.2.2 Parent Module** {#1.3.2.2.2-parent-module}
 Table 1.3.2.2.2 (Parent Module table)
 | Requirement ID | Description                                     | Related Functions                                            |
 | -------------- | ----------------------------------------------- | ------------------------------------------------------------ |
@@ -569,7 +569,7 @@ Table 1.3.2.2.2 (Parent Module table)
 | REQ-02            | View payment and dues summary                   | View Payment History & Dues Summary                          |
 | REQ-03            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
 
-### **1.3.2.2.3 Lecturer Module** {#1.3.2.2.3-lecturer-module}
+##### **1.3.2.2.3 Lecturer Module** {#1.3.2.2.3-lecturer-module}
 Table 1.3.2.2.3 (Lecturer Module table)
 | Requirement ID | Description                                     | Related Functions                                    |
 | -------------- | ----------------------------------------------- | ---------------------------------------------------- |
@@ -579,7 +579,7 @@ Table 1.3.2.2.3 (Lecturer Module table)
 | REQ-04            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
 | REQ-05            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
 
-### **1.3.2.2.4 Admin Module** {#1.3.2.2.4-admin-module}
+##### **1.3.2.2.4 Admin Module** {#1.3.2.2.4-admin-module}
 Table 1.3.2.2.4 (Admin Module table)
 | Requirement ID | Description                                   | Related Functions                                  |
 | -------------- | --------------------------------------------- | -------------------------------------------------- |
