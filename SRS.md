@@ -226,7 +226,7 @@ Release Date: 25th May 2025
 
 [4.1.2.1 Interview Preparation 129](#4.1.2.1-interview-preparation)
 
-[4.1.1.2 Interview Agenda 129](#4.1.1.2-interview-agenda-1)
+[4.1.2.2 Interview Agenda 129](#4.1.1.2-interview-agenda-1)
 
 [4.1.2.3 Proof 131](#4.1.2.3-proof)
 
