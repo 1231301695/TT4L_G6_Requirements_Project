@@ -361,7 +361,7 @@ This software aligns with the overall goal of improving communication flow, incr
 
 ### **1.3.1 Product perspective** {#1.3.1-product-perspective}
 
-The UEduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
+The EduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
 
 The system operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CMS, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
 
@@ -544,12 +544,12 @@ _Table 1.3.2.1: EduAxis Functions_
 
 
 <!-- Changes from 3.1 to 1.3.2.1 -->
-#### **1.3.2.2 Apportioning of Requirements** {#1.3.2.2-apportioning-of-requirements}
+#### **1.3.2.1 Apportioning of Requirements** {#1.3.2.2-apportioning-of-requirements}
 
 This section outlines the allocation of system requirements to specific modules within the EduAxis. Each module is structured to support user-specific functionality for students, parents, lecturers, and administrators, ensuring efficient and secure operations.
 
-##### **1.3.2.2.1 Student Module** {#1.3.2.2.1-student-module}
-Table 1.3.2.2.1 (Student Module table)
+##### **1.3.2.1 Student Module** {#1.3.2.1-student-module}
+Table 1.3.2.1.1 (Student Module table)
 | Requirement ID | Description                                  | Related Functions                                             |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------- |
 | REQ-01            | User authentication and authorization        | Login                                                         |
@@ -561,16 +561,16 @@ Table 1.3.2.2.1 (Student Module table)
 | REQ-07            | View announcements and receive notifications | View Announcements & Notifications, Receive SMS/Email Alerts  |
 | REQ-08            | Customize notification preferences           | Customize Notification Preferences                            |
 
-##### **1.3.2.2.2 Parent Module** {#1.3.2.2.2-parent-module}
-Table 1.3.2.2.2 (Parent Module table)
+##### **1.3.2.2 Parent Module** {#1.3.2.2-parent-module}
+Table 1.3.2.1.2 (Parent Module table)
 | Requirement ID | Description                                     | Related Functions                                            |
 | -------------- | ----------------------------------------------- | ------------------------------------------------------------ |
 | REQ-01            | Monitor child's academic and attendance summary | View Child's Grade & Attendance, Access Child’s Schedule     |
 | REQ-02            | View payment and dues summary                   | View Payment History & Dues Summary                          |
 | REQ-03            | View announcements and receive alerts           | View Announcements & Notifications, Receive SMS/Email Alerts |
 
-##### **1.3.2.2.3 Lecturer Module** {#1.3.2.2.3-lecturer-module}
-Table 1.3.2.2.3 (Lecturer Module table)
+##### **1.3.2.3 Lecturer Module** {#1.3.2.3-lecturer-module}
+Table 1.3.2.3.1 (Lecturer Module table)
 | Requirement ID | Description                                     | Related Functions                                    |
 | -------------- | ----------------------------------------------- | ---------------------------------------------------- |
 | REQ-01            | Post class announcements                        | Post Class Announcements                             |
@@ -579,8 +579,8 @@ Table 1.3.2.2.3 (Lecturer Module table)
 | REQ-04            | Export grades and attendance reports            | Export Grades & Attendance Reports                   |
 | REQ-05            | Submit helpdesk tickets                         | Submit Helpdesk Tickets                              |
 
-##### **1.3.2.2.4 Admin Module** {#1.3.2.2.4-admin-module}
-Table 1.3.2.2.4 (Admin Module table)
+##### **1.3.2.4 Admin Module** {#1.3.2.4-admin-module}
+Table 1.3.2.4.1 (Admin Module table)
 | Requirement ID | Description                                   | Related Functions                                  |
 | -------------- | --------------------------------------------- | -------------------------------------------------- |
 | REQ-01            | User authentication and authorization         | Login                                              |
@@ -672,8 +672,7 @@ Table 1.3.2.2.4 (Admin Module table)
 
 This document is prepared in reference to the following documents:
 
-1. ISO/IEC/IEEE 29148:2018(E) \- International Standard
-2. Software Requirement Engineering Lecture Slide
+1. IEEE. (2018). ISO/IEC/IEEE 29148:2018 Systems and software engineering—Life cycle processes— Requirements engineering. https://www.iso.org/standard/72089.html 
 
 
 
@@ -681,11 +680,11 @@ This document is prepared in reference to the following documents:
 ## **3.1 Function  ** {#3.1-functions}##
 
 <!-- From 3.4 change to 3.1 -->
-## **3.1 Functional Requirements** {#3.1-functional-requirements}
+### **3.1.1 Functional Requirements** {#3.1-functional-requirements}
 
 ### **3.1.1.1 Dissatisfier Requirements** {#3.1.1.1-dissatisfier-requirements}
 
-#### **3.1.1.1.1 Requirement 1** {#3.1.1.1.1-requirement-1}
+#### **1 Requirement 1**
 Table 3.1.1.1.1 - User Authentication and Authorization (Requirement 1)
 | Requirements:               | User Authentication and Authorization                                                                                                                                                         |
 | :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -695,7 +694,7 @@ Table 3.1.1.1.1 - User Authentication and Authorization (Requirement 1)
 | **Supporting Documents:**   | Question 1 ([Interview 1](#4.1.1-interview-1)), Question1 ([Interview 2](#4.1.2-interview-2)), Question 9 ([Parents survey](#4.2.2-parents)), Question 13 ([Student survey](#4.2.1-students)) |
 | **Related Function:**       | Login                                                                                                                                                                                         |
 
-#### **3.1.1.1.2 Requirement 2** {#3.1.1.1.2-requirement-2}
+#### **2 Requirement 2**
 Table 3.1.1.1.2 - View Academic Grades (Requirement 2)
 | Requirements:               | View Academic Grades                                                                                                                     |
 | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
@@ -705,7 +704,7 @@ Table 3.1.1.1.2 - View Academic Grades (Requirement 2)
 | **Supporting Documents:**   | Question 2 and 10 ([Interview 1](#4.1.1-interview-1)), ([Interview 2](#4.1.2-interview-2)), Question 1 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | View academic grades                                                                                                                     |
 
-#### **3.1.1.1.3 Requirement 3** {#3.1.1.1.3-requirement-3}
+#### **3 Requirement 3**
 Table 3.1.1.1.3 - Access Attendance Records (Requirement 3)
 | Requirements:               | Access Attendance Records                                                                                                            |
 | :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
@@ -715,7 +714,7 @@ Table 3.1.1.1.3 - Access Attendance Records (Requirement 3)
 | **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question 2&3 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | Check class attendance records                                                                                                       |
 
-#### **3.1.1.1.4 Requirement 4** {#3.1.1.1.4-requirement-4}
+#### **4 Requirement 4** 
 Table 3.1.1.1.4 - Access Academic Timetable (Requirement 4)
 | Requirements:               | Access Academic Timetable                                                                                                       |
 | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
@@ -725,7 +724,7 @@ Table 3.1.1.1.4 - Access Academic Timetable (Requirement 4)
 | **Supporting Documents:**   | Question 8 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)), Question7 ([Parent Survey](#4.2.2-parents)) |
 | **Related Function:**       | Access and view course schedule/timetable                                                                                       |
 
-#### **3.1.1.1.5 Requirement 5** {#3.1.1.1.5-requirement-5}
+#### **5 Requirement 5**
 Table 3.1.1.1.5 - Manage User Accounts and Roles (Requirement 5)
 | Requirements:               | Manage User Accounts and Roles                                                     |
 | :-------------------------- | :--------------------------------------------------------------------------------- |
@@ -735,7 +734,7 @@ Table 3.1.1.1.5 - Manage User Accounts and Roles (Requirement 5)
 | **Supporting Documents:**   | Question 1&8 ([interview 3](#4.1.3-interview-3))                                   |
 | **Related Function:**       | Manage user accounts and system configurations                                     |
 
-#### **3.1.1.1.6 Requirement 6** {#3.1.1.1.6-requirement-6}
+#### **6 Requirement 6**
 Table 3.1.1.1.6 - Integration with Campus Systems (Requirement 6)
 | Requirements:               | Integration with Campus Systems                                              |
 | :-------------------------- | :--------------------------------------------------------------------------- |
@@ -745,7 +744,7 @@ Table 3.1.1.1.6 - Integration with Campus Systems (Requirement 6)
 | **Supporting Documents:**   | Question 2 ([interview 3](#4.1.3-interview-3))                               |
 | **Related Function:**       | Integrate and Sync with CMS, LMS, and calendar systems                       |
 
-#### **3.1.1.1.7 Requirement 7** {#3.1.1.1.7-requirement-7}
+#### **7 Requirement 7**
 Table 3.1.1.1.7 - Maintain Data Privacy and Access Permissions (Requirement 7)
 | Requirements:               | Maintain Data Privacy and Access Permissions                         |
 | :-------------------------- | :------------------------------------------------------------------- |
@@ -755,7 +754,7 @@ Table 3.1.1.1.7 - Maintain Data Privacy and Access Permissions (Requirement 7)
 | **Supporting Documents:**   | Question 8 ([interview 3](#4.1.3-interview-3))                       |
 | **Related Function:**       | Maintain data privacy and access permissions                         |
 
-#### **3.1.1.1.8 Requirement 8** {#3.1.1.1.8-requirement-8}
+#### **8 Requirement 8**
 Table 3.1.1.1.8 - Pay Tuition and Other Fees (Requirement 8)
 | Requirements:               | Pay Tuition and Other Fees                      |
 | :-------------------------- | :---------------------------------------------- |
@@ -765,7 +764,7 @@ Table 3.1.1.1.8 - Pay Tuition and Other Fees (Requirement 8)
 | **Supporting Documents:**   | Question 5 ([interview 3](#4.1.3-interview-3))  |
 | **Related Function:**       | Pay tuition and other fees                      |
 
-#### **3.1.1.1.9 Requirement 9** {#3.1.1.1.9-requirement-9}
+#### **9 Requirement 9**
 Table 3.1.1.1.9 - View Payment History and Invoices (Requirement 9)
 | Requirements:               | View Payment History and Invoices              |
 | :-------------------------- | :--------------------------------------------- |
@@ -779,7 +778,7 @@ Table 3.1.1.1.9 - View Payment History and Invoices (Requirement 9)
 
 ### **3.1.1.2 Satisfier Requirements** {#3.1.1.2-satisfier-requirements}
 
-#### **3.1.1.2.1 Requirement 10** {#3.1.1.2.1-requirement-10}
+#### **1 Requirement 10**
 Table 3.1.1.2.1 - Upload and Manage Grades (Requirement 10)
 | Requirements:               | Upload and Manage Grades                                                            |
 | :-------------------------- | :---------------------------------------------------------------------------------- |
@@ -789,7 +788,7 @@ Table 3.1.1.2.1 - Upload and Manage Grades (Requirement 10)
 | **Supporting Documents:**   | Question 2&3([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Upload student grades                                                               |
 
-#### **3.1.1.2.2 Requirement 11** {#3.1.1.2.2-requirement-11}
+#### **2 Requirement 11**
 Table 3.1.1.2.2 - Digital Attendance Tracking (Requirement 11)
 | Requirements:               | Digital Attendance Tracking                                                          |
 | :-------------------------- | :----------------------------------------------------------------------------------- |
@@ -799,7 +798,7 @@ Table 3.1.1.2.2 - Digital Attendance Tracking (Requirement 11)
 | **Supporting Documents:**   | Question 4&5 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Mark and manage attendance records                                                   |
 
-#### **3.1.1.2.3 Requirement 12** {#3.1.1.2.3-requirement-12}
+#### **3 Requirement 12**
 Table 3.1.1.2.3 - Post Announcements and Updates (Requirement 12)
 | Requirements:               | Post Announcements and Updates                                                       |
 | :-------------------------- | :----------------------------------------------------------------------------------- |
@@ -809,7 +808,7 @@ Table 3.1.1.2.3 - Post Announcements and Updates (Requirement 12)
 | **Supporting Documents:**   | Question 6&7 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Post class announcements and updates                                                 |
 
-#### **3.1.1.2.4 Requirement 13** {#3.1.1.2.4-requirement-13}
+#### **4 Requirement 13**
 Table 3.1.1.2.4 - Dashboard with Performance Overview (Requirement 13)
 | Requirements:               | Dashboard with Performance Overview                                                |
 | :-------------------------- | :--------------------------------------------------------------------------------- |
@@ -819,7 +818,7 @@ Table 3.1.1.2.4 - Dashboard with Performance Overview (Requirement 13)
 | **Supporting Documents:**   | Question 10([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Monitor student academic performance                                               |
 
-#### **3.1.1.2.5 Requirement 14** {#3.1.1.2.5-requirement-14}
+#### **5 Requirement 14**
 Table 3.1.1.2.5 - Submit Feedback and Support Requests (Requirement 14)
 | Requirements:               | Submit Feedback and Support Requests                                                            |
 | :-------------------------- | :---------------------------------------------------------------------------------------------- |
@@ -829,7 +828,7 @@ Table 3.1.1.2.5 - Submit Feedback and Support Requests (Requirement 14)
 | **Supporting Documents:**   | Question 6 ([interview 3](#4.1.3-interview-3)), Question 18 ([Student survey](#4.2.1-students)) |
 | **Related Function:**       | Submit Feedback/Support Tickets, Submit Helpdesk Tickets                                        |
 
-#### **3.1.1.2.6 Requirement 15** {#3.1.1.2.6-requirement-15}
+#### **6 Requirement 15**
 Table 3.1.1.2.6 - Alert and Reminder System (Requirement 15)
 | Requirements:               | Alert and Reminder System                                                                                    |
 | :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
@@ -841,9 +840,9 @@ Table 3.1.1.2.6 - Alert and Reminder System (Requirement 15)
 
 ###
 
-### **3.1.1.3 Delighter Requirements** {#3.1.1.3-delighter-requirements}
+### **3 Delighter Requirements**
 
-#### **3.1.1.3.1 Requirement 16** {#3.1.1.3.1-requirement-16}
+#### **1 Requirement 16**
 Table 3.1.1.3.1 - Notification Read Tracking (Requirement 16)
 | Requirements:               | Notification Read Tracking                                                                |
 | :-------------------------- | :---------------------------------------------------------------------------------------- |
@@ -853,7 +852,7 @@ Table 3.1.1.3.1 - Notification Read Tracking (Requirement 16)
 | **Supporting Documents:**   | Question 7([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2))         |
 | **Related Function:**       | View announcements and academic notifications                                             |
 
-#### **3.1.1.3.2 Requirement 17** {#3.1.1.3.2-requirement-17}
+#### **2 Requirement 17**
 Table 3.1.1.3.2 - Custom Notification Preferences (Requirement 17)
 | Requirements:               | Custom Notification Preferences                                           |
 | :-------------------------- | :------------------------------------------------------------------------ |
@@ -863,7 +862,7 @@ Table 3.1.1.3.2 - Custom Notification Preferences (Requirement 17)
 | **Supporting Documents:**   | Question 14 ([Parent Survey](#4.2.2-parents))                             |
 | **Related Function:**       | Receive SMS/Email alerts                                                  |
 
-#### **3.1.1.3.3 Requirement 18** {#3.1.1.3.3-requirement-18}
+#### **3 Requirement 18**
 Table 3.1.1.3.3 - Visual Performance Analytics (Requirement 18)
 | Requirements:               | Visual Performance Analytics                                                        |
 | :-------------------------- | :---------------------------------------------------------------------------------- |
@@ -873,7 +872,7 @@ Table 3.1.1.3.3 - Visual Performance Analytics (Requirement 18)
 | **Supporting Documents:**   | Question 10 ([Interview 1](#4.1.1-interview-1)),([Interview 2](#4.1.2-interview-2)) |
 | **Related Function:**       | Monitor student academic performance                                                |
 
-#### **3.1.1.3.4 Requirement 19** {#3.1.1.3.4-requirement-19}
+#### **4 Requirement 19**
 Table 3.1.1.3.4 - Mobile-Friendly Responsive Interface (Requirement 19)
 | Requirements:               | Mobile-Friendly Responsive Interface                                                             |
 | :-------------------------- | :----------------------------------------------------------------------------------------------- |
@@ -884,11 +883,11 @@ Table 3.1.1.3.4 - Mobile-Friendly Responsive Interface (Requirement 19)
 | **Related Function:**       | All access-related functions (Login, View Grades, etc.)                                          |
 
 ### 
-
+### 3.1.2 Use Case
 Figure 3.1.2.1 below shows the generic use case diagram for the EduAxis with Campus Management System and SMS Gateway Integration.
 
 ![][image4]  
-_Figure 3.2.1: Generic Use Case Diagram_
+_Figure 3.1.2.1: Generic Use Case Diagram_
 
 <!-- From 1.3 chnage to 3.1.1 -->
 #### **3.1.2.1 Student function** {#3.1.2.1-student-function}
@@ -981,7 +980,7 @@ _Figure 3.1.2.1.4. Activity Diagram \- Access and View Course Schedule/Timetable
 
 ##### 3.1.2.1.5 Register or Drop Courses
 
-_Table 3.1.2.1.5. Use case Specification \- Register or Drop Courses_
+_Table 3.1.2.1.5.1 Use case Specification \- Register or Drop Courses_
 
 | No.                     |     | Section               | Content                                                                                                                                                                     |
 | :---------------------- | :-- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1072,7 +1071,7 @@ _Table 3.1.2.1.9. Use case Specification \- Receive SMS/Email Alerts_
 | :---------------------- | :-- | :-------------------- | :------------------------------------------------------------------------------------------- |
 | **ID**                  | 1.1 | Name                  | Receive alerts                                                                               |
 | **Management**          | 2.1 | Author                | Iman Nadhirah                                                                                |
-| **Context**             | 3.1 | Source                |                                                                                              |
+| **Context**             | 3.1 | Source                |     eBwise                                                                                         |
 | **Use Case Definition** | 4.1 | Short Description     | Student receives automated alerts vias SMS/email                                             |
 |                         | 4.2 | Goal                  | Notify students of critical academic and financial updates                                   |
 |                         | 4.3 | Actor                 | student                                                                                      |
@@ -2327,13 +2326,13 @@ The logical requirements section defines the essential components and operations
 
 The following figure shows the class diagram of EduAxis.  
 ![][image42]  
-_Figure 3.8.1 Class Diagram_
+_Figure 3.5.1 Class Diagram_
 
 ### **3.5.2 Data Entities**
 
 The following table describes the key data entities and their functionalities in the EduAxis.
 
-_Table 3.8.2.1 Data Entities and Descriptions_
+_Table 3.5.2.1 Data Entities and Descriptions_
 
 | Data Entity    | Description                                                                                                                                       |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2390,7 +2389,7 @@ _Table 3.5.4.1 Types of Information, Classes Involved, and Functions_
 
 ### **3.5.5 Frequency of Use** {#3.5.5-frequency-of-use}
 
-_Table 3.5.5 Frequency of Operation Usage and Description_
+_Table 3.5.5.1 Frequency of Operation Usage and Description_
 
 | Operation                       | Frequency | Description                                                                                                                       |
 | :------------------------------ | :-------- | :-------------------------------------------------------------------------------------------------------------------------------- |
@@ -2407,7 +2406,7 @@ _Table 3.5.5 Frequency of Operation Usage and Description_
 
 ### **3.5.6 Accessing Capabilities** {#3.5.6-accessing-capabilities}
 
-_Table 3.5.6 Users Roles and Accessing Capabilities in the System_
+_Table 3.5.6.1 Users Roles and Accessing Capabilities in the System_
 
 | Role           | Capabilities                                                                                                                                       |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2480,70 +2479,70 @@ _Table 3.5.6 Users Roles and Accessing Capabilities in the System_
 ## **3.6 Design Constraints** {#3.6-design-constraints}
 
 ### **3.6.1 Compliance with Data Privacy Regulations** {#3.6.1-compliance-with-data-privacy-regulations}
-
+Table 3.6.1 Compliance with Data Privacy Regulations
 | Constraint Description | The system must comply with relevant Malaysian data protection laws such as the Personal Data Protection Act (PDPA), ensuring the security and confidentiality of all student, parent, and staff data.          |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External regulatory requirements.                                                                                                                                                                               |
 | **Impact**             | All data collection, storage, and processing activities must enforce consent policies, encrypted data transmission, anonymization practices (where applicable), and role-based access to sensitive information. |
 
 ### **3.6.2 Integration with Existing University Systems** {#3.6.2-integration-with-existing-university-systems}
-
+Table 3.6.2 Integration with Existing University Systems
 | Constraint Description | The platform must seamlessly integrate with the university’s existing systems, including the Campus Management System (CMS), Learning Management System (LMS), authentication systems, and SMS/email gateways, using REST APIs over HTTPS and exchanging data in JSON format. |
 | :--------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                                                                               |
 | **Impact**             | The system must support RESTful APIs and conform to the schemas and endpoints defined by current university IT systems, ensuring backward compatibility and minimal disruption.                                    |
 
 ### **3.6.3 Security Standards** {#3.6.3-security-standards}
-
+Table 3.6.3 Security Standards
 | Constraint Description | The system must follow best-practice security protocols and adhere to OWASP guidelines by implementing password encryption, secure login mechanisms, activity logging, secure data transmission, robust access control, and comprehensive input validation.                              |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External standards.                                                                                                                                                                             |
 | **Impact**             | All modules must include secure authentication, password hashing, input sanitization, session timeout, and audit logging. Penetration testing and security reviews must be conducted regularly. |
 
 ### **3.6.4 Accessibility Requirements** {#3.6.4-accessibility-requirements}
-
+Table 3.6.4 Accessibility Requirements
 | Constraint Description | The platform must comply with WCAG 2.1 Level AA(Web Content Accessibility Guidelines) to ensure equal access to all user groups, including users with disabilities.                     |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External accessibility standards.                                                                                                                                                       |
 | **Impact**             | Support for screen readers, keyboard-only navigation, and high contrast themes must be integrated. Form fields and interactive content must be labeled clearly for accessibility tools. |
 
 ### **3.6.5 API Usage Limitations** {#3.6.5-api-usage-limitations}
-
+Table 3.6.5 API Usage Limitations
 | Constraint Description | The system must respect usage limitations for third-party APIs (e.g., Twilio SMS Gateway, LMS/CMS APIs), adhering to defined rate limits and authentication policies. To manage throttling effectively, the system shall implement exponential backoff strategies (e.g., 1s, 2s, 4s, 8s delays), queue non-critical requests for deferred processing, and return HTTP 429 responses with appropriate Retry-After headers. User notifications must be provided in cases of degraded service availability. Additionally, critical operations—such as attendance marking and emergency alerts—shall be handled via dedicated priority queues to ensure timely execution even during rate-limited conditions. |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External API standards.                                                                                                                                     |
 | **Impact**             | The system must implement throttling, retry mechanisms, and error handling routines to avoid service disruptions when API limits are exceeded.              |
 
 ### **3.6.6 Performance and Scalability** {#3.6.6-performance-and-scalability}
-
+Table 3.6.6 Performance and Scalability
 | Constraint Description | The system must scale to support large user loads, particularly during critical periods such as registration, grade release, or announcement events. |
 | :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                 |
 | **Impact**             | Use of load balancing, caching strategies, database indexing, and asynchronous operations is required to maintain system responsiveness.             |
 
 ### **3.6.7 User Experience Consistency** {#3.6.7-user-experience-consistency}
-
+Table 3.6.7 User Experience Consistency
 | Constraint Description | The system must provide a consistent and intuitive experience across mobile and desktop devices.                                                                            |
 | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | Project limitations.                                                                                                                                                        |
 | **Impact**             | Interfaces must be responsive and user-friendly, minimizing clicks and displaying contextually relevant information based on user roles (student, parent, lecturer, admin). |
 
 ### **3.6.8 Data Interoperability** {#3.6.8-data-interoperability}
-
+Table 3.6.8 Data Interoperability
 | Constraint Description | The system must support data exchange between different systems via standard formats such as JSON.                                        |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External standards.                                                                                                                       |
 | **Impact**             | All integrations must use RESTful APIs with defined input/output schemas to ensure smooth data flow with minimal transformation overhead. |
 
 ### **3.6.9 Legal and Ethical Considerations** {#3.6.9-legal-and-ethical-considerations}
-
+Table 3.6.9 Legal and Ethical Considerations
 | Constraint Description | The system must protect user rights concerning the use, access, and visibility of their data, especially in educational and financial contexts.             |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External legal requirements and ethical principles.                                                                                                         |
 | **Impact**             | Consent mechanisms must be enforced. Users should be able to view what data is stored about them and request updates or removals in accordance with policy. |
 
 ### **3.6.10 Project Budget and Timeline** {#3.6.10-project-budget-and-timeline}
-
+Table 3.6.10 Project Budget and Timeline
 | Constraint Description | The project must remain within the allocated budget and development timeline set by the university or academic committee.                         |
 | :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Source**             | Project limitations.                                                                                                                              |
@@ -2551,9 +2550,8 @@ _Table 3.5.6 Users Roles and Accessing Capabilities in the System_
 
 ### **3.6.11 Standards Compliance** {#3.6.11-standards-compliance}
 
-#### **3.6.11.1 Report Format** {#3.6.11.1-report-format}
+#### **1 Report Format** 
 
-Requirements:
 
 - Reports involving personal or academic data must be exported in PDF format.
 
@@ -2561,9 +2559,7 @@ Requirements:
 
 - Exported documents must maintain secure formatting, showing access dates, editors, and audit trails.
 
-#### **3.6.11.2 Data Naming** {#3.6.11.2-data-naming}
-
-Requirements:
+#### **2 Data Naming**
 
 - Personal data fields must follow clear naming conventions (e.g., student_id, first_name, phone_number).
 
@@ -2571,9 +2567,7 @@ Requirements:
 
 - API endpoints must be REST-compliant and named semantically (e.g., /api/v1/students/:id/courses, /api/v1/payments/:id).
 
-#### **3.6.11.3 Accounting Procedures** {#3.6.11.3-accounting-procedures}
-
-Requirements:
+#### **3 Accounting Procedures**
 
 - Data access logs must capture who accessed what, when, and what action was performed.
 
@@ -2583,9 +2577,7 @@ Requirements:
 
 - Financial records and invoice statuses must be traceable to user ID and timestamp.
 
-#### **3.6.11.4 Audit Tracing** {#3.6.11.4-audit-tracing}
-
-Requirements:
+#### **4 Audit Tracing**
 
 - All sensitive changes (profile updates, password resets, permission changes) must be logged.
 
@@ -2604,29 +2596,29 @@ Requirements:
 
 ### **3.7.1 Reliability** {#3.7.1-reliability}
 
-**3.7.1.1. System Uptime**
+**1. System Uptime**
 
 The EduAxis shall maintain an uptime of 99.9%, ensuring continuous availability for students, lecturers, parents, and administrators.
 
-**3.7.1.2. Data Integrity**
+**2. Data Integrity**
 
 The system shall maintain data integrity by enforcing **transactional controls** and validation checks. All data updates shall follow **ACID** principles to prevent data corruption.
 
-**3.7.1.3. Backup and Recovery**
+**3. Backup and Recovery**
 
 The system shall perform automated daily backups of essential data, including user profiles, academic records, and payment transactions. Backup data shall be stored securely, with automated recovery procedures in place for system failures.
 
 ### **3.7.2 Availability** {#3.7.2-availability}
 
-**3.7.2.1 Redundancy**
+**1 Redundancy**
 
 The system shall utilize redundant servers and failover mechanisms to maintain service availability during hardware failures or maintenance periods.
 
-**3.7.2.2. Maintenance Windows**
+**2. Maintenance Windows**
 
 Scheduled maintenance windows shall be communicated to users at least 48 hours in advance, and maintenance activities shall be planned during off-peak hours to minimize disruption.
 
-**3.7.2.3. Real Time monitoring**
+**3. Real Time monitoring**
 
 The system shall implement real-time monitoring tools to track system performance and availability, allowing for immediate detection and response to any issues that arise.
 
@@ -2634,27 +2626,27 @@ The system shall implement real-time monitoring tools to track system performanc
 
 ### **3.7.3 Security** {#3.7.3-security}
 
-**3.7.3.1. Cryptographic Techniques**
+**1. Cryptographic Techniques**
 
 The system shall utilize industry-standard cryptographic techniques to protect sensitive data. All user passwords shall be hashed using a strong hashing algorithm, and all sensitive data transmissions shall be encrypted using TLS (Transport Layer Security).
 
-**3.7.3.2. Logging and Monitoring**
+**2. Logging and Monitoring**
 
 The system shall maintain detailed logs of all user activities and system events. These logs shall be stored securely and monitored regularly to detect and respond to suspicious activities.
 
-**3.7.3.3. Module Separation**
+**3. Module Separation**
 
 Authentication, academic processing, and financial modules shall be **logically separated** to reduce the risk of unauthorized access or data leakage.
 
-**3.7.3.4. Communication Restrictions**
+**4. Communication Restrictions**
 
 Access between modules shall be restricted based on the principle of least privilege, ensuring only authorized components interact with sensitive services.
 
-**3.7.3.5. Data Integrity Checks**
+**5. Data Integrity Checks**
 
 Automated integrity checks shall verify the consistency of critical records (e.g., grade reports, fee balances), with alerts for unauthorized or inconsistent changes.
 
-**3.7.3.6. Data Privacy Assurance**
+**6. Data Privacy Assurance**
 
 The system shall implement privacy controls, allowing users to manage their data and preferences, and ensuring compliance with data protection regulations.
 
@@ -2662,27 +2654,27 @@ The system shall implement privacy controls, allowing users to manage their data
 
 ### **3.7.4. Maintainability** {#3.7.4.-maintainability}
 
-**3.7.4.1. Modular Design**
+**1. Modular Design**
 
 The platform shall be developed using a modular architecture, allowing components (e.g., grade module, attendance module) to be independently updated or maintained.
 
-**3.7.4.2. Documentation**
+**2. Documentation**
 
 Comprehensive system documentation shall include code-level comments, API references, user manuals, and deployment guides to support future development and maintenance.
 
-**3.7.4.3. Bug Tracking and Resolution**
+**3. Bug Tracking and Resolution**
 
 A comprehensive bug tracking system shall be implemented to log, prioritize, and resolve issues efficiently. Bugs will be classified by severity with the following response time commitments: Critical (system down – response within 2 hours), High (major feature broken – response within 8 hours), Medium (minor feature issue – response within 48 hours), and Low (cosmetic issues – response within 1 week). A priority matrix combining user impact and business criticality will guide prioritization. Clear escalation procedures will be established for unresolved issues beyond response time thresholds, including automated alerts to higher-level support or management. Regular communication with stakeholders is required throughout the resolution process, including initial acknowledgment, status updates, and resolution confirmation.
 
 ### **3.7.5. Portability** {#3.7.5.-portability}
 
-**3.7.5.1. Platform Independence**  
+**1. Platform Independence**  
 The system shall be designed to be platform-independent, supporting deployment on Windows, Linux, or macOS environments without major rework.
 
-**3.7.5.2. Containerization**  
+**2. Containerization**  
 The system shall support Docker-based containerization, ensuring consistent deployment across development, staging, and production environments.
 
-**3.7.5.3. External Libraries and Dependencies**  
+**3. External Libraries and Dependencies**  
 Dependencies on platform-specific tools shall be minimized. Cross-platform libraries shall be prioritized to improve portability and long-term support.
 
 ##
@@ -2719,13 +2711,13 @@ _Table 3.8.1.1.2 Timeline for Software Requirements Specification of EduAxis pla
 
 
 <!-- From 4.8 change to 3.8.1 -->
-## **3.8.1.2.1 Interview** {#4.1-interview}
+## **3.8.1.1 Interview**
 
 The purpose of these interview sessions is to elicit requirements and insights for the EduAxis from students, parents, lecturers and administrators of the system itself. The focus of this interview is to obtain opinion on the system’s functions, features and design for improvements and developments.
 
-### **3.8.1.2.1.1 Interview 1**
+### **1. Interview 1**
 
-#### **3.8.1.2.1.1.1 Interview Preparation**
+#### **Table 3.8.1.1.1 Interview Preparation**
 
 | Stakeholder Details: | Mr. Deepak Kumar Lecturers of Multimedia University |
 | :------------------- | :-------------------------------------------------- |
@@ -2733,7 +2725,7 @@ The purpose of these interview sessions is to elicit requirements and insights f
 | **Interviewers:**    | Suzannah Pancer                                     |
 |                      | Iman Nadhirah Binti Modh Hafiz                      |
 
-#### **3.8.1.2.1.1.2 Interview Agenda** {#3.8.1.2.1.2-interview-agenda}
+#### ***Table  3.8.1.1.2 Interview Agenda** 
 
 | No.  | Question                                                                                                                     | Response                                                                                                                                                                                                                                                                    |
 | :--- | :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2818,9 +2810,9 @@ Figure 3.8.1.2.3.3.1- Interview with Mr. Zaki Syahmi Bin Zulkifli, Officer of Mu
 
 The system Administrator provided critical insights into the technical backbone and operational expectations of the system. Their input will shape the infrastructure design, security measures and integration strategies to ensure system reliability and compliance.
 
-## **3.8.1.3 Survey**
+## **3.8.1.2 Survey**
 
-### **3.8.1.3.1 Students**
+### **1 Students**
 
 Question 1: How do you currently access the following information?  
 \-Grades and Academic Performance  
@@ -2884,7 +2876,7 @@ Question 18:If you could add one feature to the EduAxis, what would it be and wh
 ![][image63]
 Figure 3.8.1.3.1.18 - Suggested Additional Features for EduAxis System
 
-### **3.8.1.3.2 Parents** {#3.8.1.3.2-parents}
+### **2 Parents** {#3.8.1.3.2-parents}
 
 Question 1: How important is it for you to be able to view your child’s academic grades through the system?  
 ![][image64]  
