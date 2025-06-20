@@ -399,7 +399,7 @@ Role: By handling temporary data in the system for quick read and write during o
 
 Limitations: The system's real-time notification alerts updates require memory for queueing messages and updating user status. Having high concurrency during peak periods like course registration and deadlines, the system will require more RAM for better efficiency in processing high volume data calls.
 
-Requirement: The system must support at least 1,000 concurrent users with a maximum RAM consumption of 4 GB.
+Requirement: The system must support at least 5,000 concurrent users with a maximum RAM consumption of 16 GB.
 
 2\. **Secondary Memory (Disk Storage)**
 
@@ -407,7 +407,7 @@ Role: Secondary memory in the EduAxis serves as long-term storage for persistent
 
 Limitations: The limitations of secondary memory in the EduAnix include slower read and write speeds compared to primary memory, which can lead to delays in report generation and registration processes, especially during peak usage. Its fixed physical capacity can restrict the amount of historical data that can be stored, making it challenging to maintain long-term academic records and system logs without regular cleanup or archiving.
 
-Requirement: The system should be deployable on a server with at least 256 GB SSD storage, supporting data retention for a minimum of 7 years.
+Requirement: The system should be deployable on a server with at least 2 TB SSD storage, supporting data retention for a minimum of 7 years.
 
 3\. **Caching Mechanism**
 
@@ -415,7 +415,7 @@ Role: The caching mechanism plays a crucial role in improving system performance
 
 Limitations: Caching stores data in RAM, which is limited and expensive. If the cache size grows too large, it can consume critical memory needed for real-time processes. Furthermore, If the cache is not properly invalidated or refreshed, users may see outdated information, such as old grades or attendance records, leading to inconsistencies.
 
-Requirement: The system should be deployable on a server with at least 256 GB SSD storage, supporting data retention for a minimum of 7 years.
+
 
 4\. **Session Management**
 
@@ -423,7 +423,7 @@ Role: session management is responsible for maintaining user authentication and 
 
 Limitations: Scalability challenges in managing large numbers of simultaneous users can consume huge server memory and processing power. Short session timeouts can also disrupt user experience, while long timeouts can increase memory consumption and security risk if not actively managed by any users.
 
-Requirement: The system shall support up to 2,000 active sessions simultaneously with a configurable session timeout of 15 minutes of inactivity.
+Requirement: The system shall support up to 5,000 active sessions simultaneously, each with a fixed timeout of 15 minutes of inactivity.
 
 #### **1.3.1.2 Operations** {#1.3.1.2-operations}
 
