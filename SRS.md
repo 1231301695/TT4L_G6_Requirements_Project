@@ -338,7 +338,7 @@ Release Date: 25th May 2025
 
 ## **1.1 Purpose** {#1.1-purpose}
 
-    The purpose of the software to be developed, known as EduAxis is mainly to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CMS) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the system will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The EduAxis will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
+    The purpose of the software to be developed, known as EduAxis, is to provide a centralized platform for students, parents, lecturers, and administrators to access academic and administrative information in a transparent and timely manner.  This system aims to integrate seamlessly with the university’s existing Campus Management System (CMS) to deliver real-time access to essential data, including academic performance, attendance records, billing, and fee information. Ultimately, the system will ensure effective and timely communication by integrating an SMS Gateway, allowing automated alerts and notifications to be sent directly to students and parents. The EduAxis will also provide access to various online tools and services such as student records, course registration, library resources, and IT support such as streamlining processes, improving efficiency, and saving time for all users.
 
 ## **1.2 Scope** {#1.2-scope}
 
@@ -361,7 +361,7 @@ This software aligns with the overall goal of improving communication flow, incr
 
 ### **1.3.1 Product perspective** {#1.3.1-product-perspective}
 
-The EduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
+EduAxis, an integrated academic management and communication system, plays a central role within the university’s digital ecosystem. It connects multiple internal systems such as the Campus Management System (CMS), Learning Management System (LMS), academic calendar, and university database, serving as a unified access point for students, parents, lecturers, and administrative staff. Through its integration with services like SMS gateways and email servers, the system ensures seamless delivery of notifications, reminders, and academic information across all user groups.
 
 The system operates within a broader institutional infrastructure that includes tools for grading, attendance tracking, course registration, and financial management. Its functionality overlaps with these systems by enabling automated data exchange and reducing reliance on manual processes. For instance, it retrieves student records and schedules from the CMS, syncs course data with the LMS, and pulls academic deadlines from the academic calendar system. It also allows parents to access academic information about their children and receive SMS alerts for issues like low attendance or unpaid tuition fees.
 
@@ -405,9 +405,9 @@ Requirement: The system must support at least 5,000 concurrent users with a maxi
 
 Role: Secondary memory in the EduAxis serves as long-term storage for persistent data, including student records, academic performance logs, attendance data, and financial transactions. Unlike volatile primary memory (RAM), it retains data even after system shutdown, ensuring the availability of historical information and backups.
 
-Limitations: The limitations of secondary memory in the EduAnix include slower read and write speeds compared to primary memory, which can lead to delays in report generation and registration processes, especially during peak usage. Its fixed physical capacity can restrict the amount of historical data that can be stored, making it challenging to maintain long-term academic records and system logs without regular cleanup or archiving.
+Limitations: The limitations of secondary memory in the EduAxis include slower read and write speeds compared to primary memory, which can lead to delays in report generation and registration processes, especially during peak usage. Its fixed physical capacity can restrict the amount of historical data that can be stored, making it challenging to maintain long-term academic records and system logs without regular cleanup or archiving.
 
-Requirement: The system should be deployable on a server with at least 2 TB SSD storage, supporting data retention for a minimum of 7 years.
+Requirement: The system should be deployable on a server with at least 2 TB SSD storage and 10TB maximum capacity, supporting data retention for a minimum of 7 years.
 
 3\. **Caching Mechanism**
 
@@ -1711,7 +1711,7 @@ The performance requirements for the EduAxis are specified below. These requirem
 
 1. **Storage Scalability**
 
-- The system shall support a minimum of 2 TB of storage 10TB maximum capacity for academic records, attendance logs, user data and media uploads. However data storage usage does not exceed the maximum during peak periods for load controls.
+- The system shall support a minimum of 2 TB of storage 10TB maximum capacity for academic records, attendance logs, user data and media uploads. However, data storage usage does not exceed the maximum during peak periods for load controls.
 
 - The system shall perform database backups every 12 hours to prevent data lost in the system. Back ups are stored securely and restorable within 30 mins of request.
 
@@ -1751,7 +1751,7 @@ The performance requirements for the EduAxis are specified below. These requirem
 3. **Peak Load Conditions**  
 
 
-- Under peak load conditions the system shall process at least 90% of user requests within 5 seconds. Stress testing results must be less than 10% for slow or failed requests.
+- Under peak load conditions (defined as 3,000+ concurrent users during registration periods and grade release), the system shall process at least 90% of user requests within 5 seconds. Stress testing results must be less than 10% for slow or failed requests.
 
 4. **Transaction handling**  
 
@@ -1805,7 +1805,7 @@ The usability and quality in user requirements for the EduAxis aims to ensure th
 
 1. Data Encryption
 
-- The system shall automatically log out users after a period of inactivity to prevent unauthorized access to sensitive data and protect users sessions.
+- The system shall automatically log out users after 15 minutes of inactivity to prevent unauthorized access to sensitive data and protect user sessions.
 
 2. Server controls
 
@@ -2294,7 +2294,9 @@ Table 3.4.6.5 - Authentication Service Interface
 | **Timing**                                  | On every login session                                                                     |
 | **Relationships to Other Inputs/Outputs**   | Connects to system login form and session manager                                          |
 | **Data Formats**                            | JSON                                                                                       |
-| **Command Formats**                         | OAuth 2.0 (POST, Token Exchange), SAML, or JWT                                             |
+| **Command Formats**                         | - Primary: OAuth 2.0 (POST, Token Exchange) 
+- SSO Integration: SAML for institutional authentication
+- Session Management: JWT for maintaining authenticated sessions                                             |
 | **Data Items Included**                     | User ID, access token, session info                                                        |
 | **Author**                                  | Pharthiban A/L Kumarhesan                                                                  |
 
@@ -2994,15 +2996,36 @@ Description: The systems update submission status to the database and notify lec
 _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up page interface_
 
 
-## **3.8.2.4**Sample Input/Output Formats**
- 3.8.2.4.1 API Request/Response Examples
-        - Login API: POST /api/auth/login
-          Request: {"username": "student123", "password": "****"}
-          Response: {"token": "jwt...", "role": "student"}
-    3.8.2.4.2 SMS Notification Templates
-        - Low Attendance: "Alert: Your attendance for [Course] is [X]%. Minimum 80% required."
-    3.8.2.4.3 Report Export Formats
-        - Grade Report CSV: "StudentID,Name,Course,Grade,Semester"
+## **3.8.2.1**Sample Input/Output Formats**
+1. Authentication API Examples
+Login API: POST /api/auth/login
+Headers: Content-Type: application/json
+Request: {"username": "student123", "password": "[REDACTED]"}
+  
+Success Response (200 OK):
+{"token": "jwt...", "role": "student", "expires_in": 3600}
+Error Response (401 Unauthorized):
+{"error": "Invalid credentials", "message": "Username or password incorrect"}
+2. SMS Notification Templates
+- Low Attendance: "MMU Alert: Your attendance for [Course] is [X]%. Minimum 80% required. Contact academic office if needed. Reply STOP to opt-out."
+- Fee Reminder: "MMU Notice: Tuition payment of RM[Amount] due on [Date]. Pay via EduAxis portal. Reply STOP to opt-out."
+3. Report Export Formats
+- Grade Report CSV Headers: "StudentID,StudentName,CourseCode,CourseName,Grade,CreditHours,Semester,AcademicYear"
+- Attendance Report JSON:
+{
+    "student_id": "1211111073",
+    "course_code": "CSE6224",
+    "attendance_percentage": 85.5,
+    "total_classes": 14,
+    "attended_classes": 12,
+    "semester": "2510"
+  }
+
+4. Error Response Standards
+- HTTP 400: {"error": "Bad Request", "details": "Invalid input format"}
+- HTTP 403: {"error": "Forbidden", "details": "Insufficient permissions"}
+- HTTP 500: {"error": "Internal Server Error", "details": "Please try again later"}
+
 
 #
 
@@ -3014,7 +3037,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 | Methods               | Execute API calls to the PostgreSQL university database and compare the response with expected student, academic, and fee records. Scripts will be used to test CRUD operations and role-based data retrieval (such as student vs admin access). |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Responsibility**    | QA team and database administrators.                                                                                                                                                                                                             |
+| **Responsibility**    | Database administrators with QA team oversight and validation.                                                                                                                                                                                                             |
 | **Verification time** | During integration testing and prior to each deployment cycle.                                                                                                                                                                                   |
 | **Environment**       | Development, staging, and production environments.                                                                                                                                                                                               |
 
@@ -3362,7 +3385,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.4.1.4 Simultaneous User Capacity**
 
-| Methods:           | Simulate 4,000 users performing key actions. Monitor system load, latency, and crash reports. |
+| Methods:           | Simulate 5,000 users performing key actions. Monitor system load, latency, and crash reports. |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
 | Responsibility:    | Performance and QA teams.                                                                     |
 | Verification Time: | During stress testing and scalability evaluation.                                             |
@@ -3372,7 +3395,7 @@ _Figure 3.8.1.4.2.5 screenshot of eBwise Student Submitted Assignment follow up 
 
 **4.4.1.5 Session Timeout**
 
-| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout and session data clearance. |
+| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout occurs, all session tokens are invalidated, and temporary cached user data is cleared from memory. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and security team                                                                      |
 | Verification Time: | During security and usability testing.                                                    |
