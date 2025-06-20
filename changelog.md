@@ -24,7 +24,7 @@ The original section described memory behavior at an implementation level (e.g.,
 
 
 ### CHG-02 – Added Minimum Server Specs  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: REQ-02  
 Session ID: VS-01  
@@ -46,7 +46,7 @@ Sections Affected: 1.3.1.3 Hardware Interfaces
 
 
 ### CHG-03 – Added Bandwidth and Latency Requirements  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: REQ-04  
 Session ID: VS-01  
@@ -72,7 +72,7 @@ Sections Affected: 1.3.1.5 Communication Interfaces
 
 
 ### CHG-04 – Standardized Product Name to “EduAxis”  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: REQ-05  
 Session ID: VS-01  
@@ -95,7 +95,7 @@ Sections Affected: 1.1 Purpose, General References
 
 
 ### CHG-05 – Standardized Accessibility Requirement Terminology  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian, Soukmaed Ong Yu Kang, Loqman  
 Req ID: REQ-06  
 Session ID: VS-02  
@@ -117,7 +117,7 @@ Sections Affected: 1.3.1, 3.6.2, 3.9.4, 3.9.11.4, 5.3.2.2
 
 
 ### CHG-06 – Added Storage Capacity Limit and Scaling Strategy  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-07  
 Session ID: VS-02  
@@ -138,7 +138,7 @@ Sections Affected: 3.5.1
 
 
 ### CHG-07 – Listed Specific Security Measures  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-08  
 Session ID: VS-03  
@@ -161,7 +161,7 @@ Sections Affected: 3.9.3, 3.10.3.1
 
 
 ### CHG-08 – Defined Connection Interface Requirements  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-09  
 Session ID: VS-03  
@@ -184,7 +184,7 @@ Sections Affected: 3.9.2
 
 
 ### CHG-09 – Resolved Incomplete Budget Constraint  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-10  
 Session ID: VS-03  
@@ -204,7 +204,7 @@ Sections Affected: 3.9.1, 3.9.10
 
 
 ### CHG-10 – Added Failure Test Cases for Edge Scenarios  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Loqman  
 Req ID: REQ-11  
 Session ID: VS-04  
@@ -227,7 +227,7 @@ Sections Affected: 5.2.1, 5.2.8
 
 
 ### CHG-11 – Clarified Legal Compliance Test for Data Deletion  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Loqman  
 Req ID: REQ-12  
 Session ID: VS-05  
@@ -248,7 +248,7 @@ Sections Affected: 5.6.9 Legal & Ethical
 
 
 ### CHG-12 – Added Explanation of Assumptions and Their Impact  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Lai Joon Li  
 Req ID: REQ-13  
 Session ID: VS-05  
@@ -269,7 +269,7 @@ Sections Affected: 6.1 Assumptions
 
 
 ### CHG-13 – Added Explanation of RESTful API Reference  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Lai Joon Li  
 Req ID: REQ-14  
 Session ID: VS-05  
@@ -289,7 +289,7 @@ Sections Affected: 6.3 Future Work
 
 
 ### CHG-14 – Added Technical Configuration for University Academic Data  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-15  
 Session ID: VS-06  
@@ -313,7 +313,7 @@ Sections Affected: 1.3.1.8 Configuration
 
 
 ### CHG-15 – Defined Foreign Key Constraints and Behavior  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Loqman  
 Req ID: REQ-16  
 Session ID: VS-06  
@@ -340,7 +340,7 @@ Sections Affected: 3.7.7 Database Constraints
 
 
 ### CHG-16 – Defined Severity Levels and Escalation Flow  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Tan Jun Xian  
 Req ID: REQ-17  
 Session ID: VS-06  
@@ -368,7 +368,7 @@ Sections Affected: 3.10.4.3 Incident Management
 
 
 ### CHG-17 – Added Fallback Actions for Throttling  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Lai Joon Li  
 Req ID: REQ-18  
 Session ID: VS-06  
@@ -393,7 +393,7 @@ Sections Affected: 3.9.5 Performance Constraints
 
 
 ### CHG-18 – Added SMS Length Limit Handling  
-Date: 2025-06-20  
+Date: 2025-06-19  
 Proposed By: Loqman  
 Req ID: REQ-19  
 Session ID: VS-06  
