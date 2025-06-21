@@ -3395,7 +3395,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.5 Session Timeout**
 
-| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout occurs, all session tokens are invalidated, and temporary cached user data is cleared from memory. |
+| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout, token invalidation, cached data clearing, and re-authentication requirement. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and security team                                                                      |
 | Verification Time: | During security and usability testing.                                                    |
