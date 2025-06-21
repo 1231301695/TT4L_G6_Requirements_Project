@@ -476,7 +476,7 @@ Requirement: The system shall support up to 5,000 active sessions simultaneously
 1. **Data and Initialization Sequences**
 
    **University-Specific Academic Data:**  
-   The system must be adapted to reflect the specific academic structure of each university. This includes configuring academic calendars, semester start/end dates, registration periods, grading policies, course codes, and departmental hierarchies.
+   This also includes specific configuration parameters such as academic calendar formats (e.g., semester, trimester, quarter systems), grading scale options (such as 4.0 GPA, percentage-based, or letter grades), and course code structures (e.g., department-number formats or alphanumeric codes) to align with the university’s academic framework.
 
    **Attendance and Assessment Policies:**  
    The platform should support the initialization of site-specific attendance thresholds, warning levels, and performance criteria used to trigger alerts or academic risk notifications.
@@ -485,7 +485,7 @@ Requirement: The system shall support up to 5,000 active sessions simultaneously
    Initialization sequences must allow customization of tuition structures, billing cycles, discount schemes, and payment gateways according to the university’s financial operations.
 
    **Authentication and Access Control:**  
-   Adaptation is required for integration with the university's identity management system, such as Single Sign-On (SSO), LDAP directories, or institutional login systems, to ensure seamless and secure user authentication.
+   The system should also support pre-defined authentication integration templates for common identity providers such as LDAP, Active Directory, and OAuth-based services, allowing streamlined and secure onboarding with existing institutional systems.
 
    **Notification Triggers and Rules:**  
    The system should allow configuration of SMS/email alert rules (e.g., when attendance drops below X%) based on the institution’s academic and administrative guidelines.
@@ -3027,6 +3027,262 @@ Error Response (401 Unauthorized):
 - HTTP 400: {"error": "Bad Request", "details": "Invalid input format"}
 - HTTP 403: {"error": "Forbidden", "details": "Insufficient permissions"}
 - HTTP 500: {"error": "Internal Server Error", "details": "Please try again later"}
+
+### 3.8.3 Validation Session
+
+Table 3.8.3.1 Validation Session
+
+| Session ID | Date and Time | Technique | Section Reviewed | Participant & Role | No. of Defect |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| VS-01 | 11/6/2025; 3pm-5pm |  Inspection | 1.1,1.2,1.3,2.0 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Reviewers), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 14 |
+| VS-02 | 13/6/2025 1pm-4pm |  Inspection | 3.1, 3.2, 3.3, 3.4, 3.6 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian( Reviewers) | 8 |
+| VS-03  | 14/6/2025 3pm \- 5pm |  Inspection | 3.7, 3.9, 3.10 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian (Reviewers) | 5 |
+| VS-04 | 15/6/2025 3pm \- 7pm | Inspection | 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 5.4, 5.5 | Lai Joon Li (Reviewers), Tan Jun Xian(Reviewers), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 3 |
+| VS-05 | 16/6/2025 1pm \- 3pm | Inspection | 5.6, 5.7, 6.1, 6.2, 6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Reviewers), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 3 |
+| VS-06 | 17/6/2025 1pm \- 3pm | Technical Review | 1.1 \- 6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Review Leader), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 5 |
+| VS-07 | 20/6/2025 2pm- 4pm | Final Inspection | 1.1-6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian (Moderator), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 6 |
+
+### 
+
+### 3.8.4 Defect Summary
+
+A. Content Defect  
+Table 3.8.4.1 Content Defect
+
+| Req ID | Validation and Defect Description | Detected By | Comment/Suggested Fix | Session ID | Severity (1–5) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| REQ-01 | Section 1.3.1.6 gives implementation‑level RAM/cache limitations but no requirement (no numeric maxima or KPIs) | Soukmaed Ong Yu Kang | Move details to a design appendix; keep only measurable memory requirements (e.g. “≤ 16 GB RAM per concurrent 5 000 users”). | VS-01 | 2 |
+| REQ-02 | Section 1.3.1.3, no mention of server specifications (RAM, storage, CPU) for deployment hardware | Soukmaed Ong Yu Kang | Specify minimum and recommended server specs (e.g., “8-core CPU, 16 GB RAM, SSD 256 GB”) | VS-01 | 3 |
+| REQ-03 | In Section 1.3.2 use cases, “Portal User” actor composite actor overlaps with Student, Parent, Lecturer, Admin | Soukmaed Ong Yu Kang | Remove "Portal User" or clarify its meaning in the diagram notes | VS-01 | 2 |
+| REQ-04 | Section 1.3.1.5, bandwidth or network connectivity requirements are missing, which are crucial for real-time notifications & sync | Soukmaed Ong Yu Kang | Add expected bandwidth range and latency (e.g., “minimum 5 Mbps for client-side, max latency 100 ms for alert delivery”) | VS-01 | 2 |
+| REQ-05 | Stakeholder insists portal name must match marketing brand **“**EduAxis**”**, not “University Communication & Services Portal (UCSP)” | Soukmaed Ong Yu Kang | Stick to one name like EduAxis throughout the SRS | VS-01 |  4 |
+| REQ-06 | Section 3.6.2  says 'WCAG 2.1 Level AA' but Section 1.3.1, 3.9.4, 3.9.11.4, 5.3.2.2 only mentions 'accessibility' without being specific | Tan Jun Xian,  Soukmaed Ong Yu Kang, Loqman | Standardize on WCAG 2.1 Level AA throughout document to ensure consistent accessibility requirements | VS-02 | 2 |
+| REQ-07 | Section 3.51 says "2 TB minimum" but doesn't specify maximum capacity or growth planning | Tan Jun Xian | Add maximum storage limits and growth strategy \- specify maximum capacity (e.g., "2TB minimum, 10TB maximum") and include scaling plan for when storage reaches capacity thresholds | VS-02 | 3 |
+|  REQ-08 | Sections 3.9.3 says "OWASP guidelines"  but doesn't explain what security measures to use. Then in section 3.10.3.1 have mentioned again using cryptographic techniques. | Tan Jun Xian | List specific security measures: password encryption, secure login, activity logging | VS-03 |  2 |
+|  REQ-09 | Section 3.9.2 talks about system connections but doesn't say what the limits are. | Tan Jun Xian | List specific connection requirements: must use REST APIs, JSON format, HTTPS | VS-03 | 2  |
+| REQ-10 | Section 3.9.1. Vs 3.9.10 mentions "budget constraints" but provides no actual budget figures | Tan Jun Xian | Either provide budget details or remove this constraint | VS-03 | 2 |
+| REQ-11 | Missing edge case testing (e.g., login failure, payment timeout) | Loqman | Add failure scenario test cases for 5.2.1, 5.2.8, etc. | VS-04 | 3 |
+| REQ-12 | Legal & Ethical section (5.6.9) does not clarify test for “right to be forgotten” compliance | Loqman | Clarify validation method for user data deletion and audit coverage | VS-05 | 3 |
+| REQ-13 | Section 6.1 Does not explain how these assumptions affect system design or risk. | Lai Joon Li | For each listed assumption, briefly describe its impact on system functionality or reliability | VS-05 | 2 |
+| REQ-14 | Section 6.3 (E.g. RESTful API, ACID and etc) is mentioned in the report but not explain in section 6.3 | Lai Joon Li | Need to mention about what is (E.g. RESTful API, ACID and etc) | VS-05 | 2 |
+| REQ-15 | Section 1.3.1.8 states 'university-specific academic data' but no technical specs for configuration | Tan Jun Xian | Add specific configuration parameters: academic calendar formats (semester/trimester/quarter), grading scale options (4.0 GPA, percentage, letter grades), course code structures (dept-number vs alphanumeric), and authentication integration templates (LDAP, Active Directory, OAuth providers). | VS-06 | 2 |
+| REQ-16 | Section 3.7.7 mentions 'Foreign key constraints' but no CASCADE/RESTRICT behaviors | Loqman | Foreign keys use CASCADE for grade deletions when course is removed, RESTRICT for student deletions when grades exist, SET NULL for lecturer changes. Add check constraints for grade ranges (0-100 or A-F), unique constraints for student-course-semester combinations, and referential integrity rules for parent-student relationships. | VS-06 | 3 |
+| REQ-17 | Section 3.10.4.3 mentions severity classification' but no definition of levels | Tan Jun Xian | Critical (system down, \<2 hours response), High (major feature broken, \<8 hours), Medium (minor feature issue, \<48 hours), Low (cosmetic issues, \<1 week). Include priority matrix based on user impact and business criticality. Specify escalation procedures and communication requirements. | VS-06 | 2 |
+| REQ-18 | Section 3.9.5 mentions 'throttling' but no specific fallback actions | Lai Joon Li | Implement exponential backoff (1s, 2s, 4s, 8s delays), queue non-critical requests for delayed processing, return HTTP 429 with Retry-After headers, provide user notifications for degraded service, and maintain priority queues for critical operations (attendance marking, emergency alerts). | VS-06 | 2 |
+| REQ-19 | Section 1.3.1.5 mentions SMS functionality but no 160-character limit handling | Loqman | Handle 160-character limit with message splitting for longer content, support international phone formats (+60, \+1, etc.) | VS-06 | 3 |
+| REQ-20 | Section 3.5.1 has mentioned the performance requirement but the state "≤ 2 seconds" without baseline comparison or context for this requirement. | Lai Joon Li | Add baseline comparisons such as: "The system shall retrieve student records, attendance and schedules within ≤ 2 seconds of request submission, representing a 50% improvement over the current CLiC system average of 4 seconds and meeting industry standard of sub-3-second response times." | VS-07 | 3 |
+| REQ-21 | Section 3.5.2 has mentioned performance requirements but uses undefined terms "peak load," "normal load," and "concurrent usage" without specific values or conditions. | Lai joon Li | Define loads: "Normal load: 500-1,500 users. Peak load: 3,000+ users during registration/grade release. Maximum: 5,000 users." | VS-07 | 2 |
+| REQ-22 | Section 3.2.5 has mentioned authentication interface but lists "OAuth 2.0, SAML, or JWT" as alternatives without specifying primary method or integration hierarchy. | Tan Jun Xian | Restructure as: "Primary: OAuth 2.0. University Integration: SAML. Session Management: JWT." | VS-07 | 3 |
+| REQ-23 | Section 3.6.4 has mentioned security requirements but states "after a period of inactivity" without specifying timeout duration while other sections specify 15 minutes. | Loqman | Change to: "after 15 minutes of inactivity" for consistency. | VS-07 | 2 |
+| REQ-24 | Section 5.4.1.4 has mentioned verification procedures but mentions "session data clearance" without defining what data gets cleared or how to verify clearance.  | Soukmaed Ong Yu Kang | Specify: "verify auto logout, token invalidation, cached data clearing, and re-authentication requirement." | VS-07 | 3 |
+| REQ-25 | Supporting has missing Sample Input/Output Formats Analysis | Soukmaed Ong Yu Kang | Add sample Input/Output Formats Analyses under the Supporting Information section. | VS-07 | 4 |
+
+B. Documentation Defect  
+Table 3.8.2.2 Documentation Defect
+
+| Page No. | Validation and Defect Description | Detected By | Comment/Suggested Fix | Session ID | Severity (1–5) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Pg 6, 7 | Do not clearly mention stakeholder expectations | Soukmaed Ong Yu Kang | Add a short summary of key stakeholder needs (e.g., students want centralized info, parents want performance alerts, etc.). | VS-01 | 3 |
+| Pg 8, 9, 10, 13 | Contain complex wording and long paragraphs that reduce readability | Soukmaed Ong Yu Kang | Break into shorter paragraphs; simplify technical jargon and sentence structure. | VS-01 | 3 |
+| Pg 26 | Use case tables have inconsistent formatting like some have “Management” others don’t | Soukmaed Ong Yu Kang | Standardize all use case table formats | VS-01 | 2 |
+| Throughout Document | LMS terminology inconsistency: "eBwise", "LMS", and "Learning Management System" used for same system | Soukmaed Ong Yu Kang, Tan Jun Xian | Use "eBwise (LMS)" for first mention, the eBwise" consistently | VS-01 | 3 |
+| Pg 9 \- 18 | Use Case diagram, system interface, hardware interface, software interface and communications interfaces   is placed in Section 1.3.2; this content belongs in Section 3.1 according to SRS guideline | Soukmaed Ong Yu Kang, Tan Jun Xian | Move Use Case diagram and related descriptions system interface, hardware interface, software interface and communications interfaces to Section 3.1 | VS-01 | 3 |
+| Pg 6, 7, 8, 9, 10, 28, 63, 128, 129, 132, 129, 131, 149, 160, 165 | Incorrect spelling and grammar (e.g. “LinkdIn” instead of “LinkedIn”, etc.). | Soukmaed Ong Yu Kang, Lai Joon Li, Loqman | Correct spelling and grammar | VS-01 | 1 |
+| Pg 94 | Missing reference and references exist but not in proper APA format | Tan Jun Xian | Reformat references to proper APA 7th edition style. | VS-01 | 2 |
+| Throughout Document | Text format lacks proper alignment | Lai Joon Li, Tan Jun Xian, Soukmaed Ong Yu Kang | Alignment the text into Justify |  VS-01 | 2 |
+| Pg 66, 112, 113, 114, 115, 116, 117, 157, 159, 160, 161, 167, 168 | Tables are numbered inconsistently throughout document | Tan Jun Xian, Soukmaed Ong Yu Kang, Loqman | Renumber all tables consistently (Table 3.1, 3.2, etc.) | VS-01 | 3 |
+| Pg 95, 96 | Requirements allocation section uses unclear requirement IDs | Tan Jun Xian | Use consistent ID format (REQ-001,  REQ-002) throughout |  VS-02 |  2 |
+| Pg 95 \- 99, 101 \- 107, 120, 121, 122,  127 \- 133 149 \- 168 | Missing table numbered throughout document | Tan Jun Xian | Write the table number (Table 3.1, 3.2, etc.) | VS-02 | 2 |
+| Pg 134 \- 142 | Missing figure numbered throughout document | Tan Jun Xian | Write the figure number (Table 4.1, 4.2, etc.) | VS-02 | 2 |
+| Pg 111 | Figures mentioned but not properly numbered or referenced | Tan Jun Xian | Add proper figure numbers and references in text | VS-02 | 3 |
+| Pg 158,  | Method description in 5.3.4.2 lacks specific validation approach | Loqman | Add HTTPS enforcement verification using browser DevTools and SSL scanner | VS-04 | 3 |
+| Pg 161 | Capitalisation error in 5.4.1.4, 5.4.1.5, 5.4.1.6, 5.4.1.7 and double spacing in method 5.4.1.5, 5.4.1.7 | Loqman | Start sentence with a capital letter, remove double spacing | VS-04 | 1 |
+
+C. Agreement Defect  
+Table 3.8.2.3 Agreement Defect
+
+| Req ID | Validation Description/Stakeholder Concern | Mismatch | Detected By | Session ID | Severity (1–5) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| REQ-20 | There is a conflict between stakeholders, with students preferring simple "University ID and Password" authentication for ease of access, while security/admin requirements mandate Multi-Factor Authentication (MFA) and OAuth 2.0/SSO, and the system design specifies centralized SSO integration with university systems. | Students want simple login process vs Security team requires complex authentication vs Technical team implements SSO-only solution | Tan Jun Xian | VS-02 | 4 |
+
+### 
+
+### 
+
+### 3.8.5 Conflict Analysis
+
+Table 3.8.5.1 Conflict Analysis
+
+| Conflict ID | Conflict Description | Conflict Analysis | Stakeholders Involved | Session ID |
+| :---- | :---- | :---- | :---- | :---- |
+| CF-01 | Two sections give different backup schedules | Section 3.5.1 says backup "every 12  hours" but Section 3.10.1.3 says "daily backups" \- this confuses developers | Tan Jun Xian | VS-03 |
+| CF-02 | Data retention rules conflict with privacy laws | Section 3.7.9 has different data  keeping rules than Section 3.9.1 privacy requirements | Tan Jun Xian | VS-03 |
+| CF-03 | Inconsistent concurrent user capacity specifications between performance requirements and system design | Section 3.5.1 says "up to 5,000 users" but Section 3.5.2 mentions "more than 4,000 users" \- this creates confusion about actual system capacity limits. | Tan Jun Xian | VS-02 |
+
+### 
+
+### 
+
+### 3.8.6 Conflict Analysis and Resolution
+
+Table 3.8.6.1 Content Defect
+
+| Conflict ID | Conflict Resolution Strategy | Resolved (Y/N) | Outcome (If Resolved) | Justification |
+| :---- | :---- | :---- | :---- | :---- |
+| CF-01 | Adopt daily backup schedule as specified in Section 3.10.1.3 while maintaining 30-minute recovery time objective | Y | Unified backup policy established with daily frequency and maintained recovery time requirements | Daily backup intervals provide sufficient data protection while optimizing system resource utilization. This approach aligns with industry best practices for academic information systems and ensures consistency across all technical specifications |
+| CF-02 | Follow PDPA privacy law requirements as stated in Section 1.3.2.1.1, 1.3.2.3,   3.7.9 | Y | User data: keep 2 years after account closes. Academic records are kept forever. Payment records keep 7 years | Privacy law must be followed. Academic records need to be kept forever for university accreditation.Payment records follow tax law requirements |
+| CF-03 | Change Section 3.5.2 to use "5,000 users" consistently throughout all performance requirements and testing specifications. | Y | Change Section 3.5.2 to read "During concurrent usage of more than 5,000 users" or clarify that "4,000+ users represents normal load conditions while the system can handle up to 5,000 users during peak periods. | Using consistent user capacity numbers (5,000) across all sections eliminates ambiguity for developers and testers. This ensures the system is designed, built, and tested for the same capacity target, preventing under-specification during development or testing phases. |
+
+### 
+
+### 3.8.7 Change Log
+
+Table 3.8.7.1 Change Log
+
+| Change ID | Req ID(s) | Summary of Change | Proposed By | Date | Session ID |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| CH-01 | REQ-01 | Clarified memory requirement and removed design-level implementation details | Soukmaed Ong Yu Kang | 2025-06-19 | VS-01 |
+| CH-02 | REQ-02 | Added minimum and recommended server specs | Soukmaed Ong Yu Kang | 2025-06-19 | VS-01 |
+| CH-03 | REQ-04 | Added bandwidth and latency requirements | Soukmaed Ong Yu Kang | 2025-06-19 | VS-01 |
+| CH-04 | REQ-05 | Standardized system name as "EduAxis" across the document | Soukmaed Ong Yu Kang | 2025-06-19 | VS-01 |
+| CH-05 | REQ-06 | Standardized accessibility terminology to WCAG 2.1 Level AA | Tan Jun Xian, Soukmaed Ong Yu Kang, Loqman | 2025-06-19 | VS-02 |
+| CH-06 | REQ-07 | Added storage capacity limit and scaling strategy | Tan Jun Xian | 2025-06-19 | VS-02 |
+| CH-07 | REQ-08 | Listed specific security measures instead of general OWASP reference | Tan Jun Xian | 2025-06-19 | VS-03 |
+| CH-08 | REQ-09 | Defined system connection interfaces (REST, JSON, HTTPS) | Tan Jun Xian | 2025-06-19 | VS-03 |
+| CH-09 | REQ-10 | Removed vague budget constraint references | Tan Jun Xian | 2025-06-19 | VS-03 |
+| CH-10 | REQ-11 | Added failure test cases for edge scenarios | Loqman | 2025-06-19 | VS-04 |
+| CH-11 | REQ-12 | Clarified legal compliance test for data deletion | Loqman | 2025-06-19 | VS-05 |
+| CH-12 | REQ-13 | Added impact descriptions to assumptions | Lai Joon Li | 2025-06-19 | VS-05 |
+| CH-13 | REQ-14 | Added explanation of (E.g. RESTful API, ACID and etc) in future work section | Lai Joon Li | 2025-06-19 | VS-05 |
+| CH-14 | REQ-15 | Added technical configuration for academic settings | Tan Jun Xian | 2025-06-19 | VS-06 |
+| CH-15 | REQ-16 | Defined foreign key behaviors and constraints | Loqman | 2025-06-19 | VS-06 |
+| CH-16 | REQ-17 | Added severity classification and escalation flow | Tan Jun Xian | 2025-06-19 | VS-06 |
+| CH-17 | REQ-18 | Added fallback strategy for throttling scenarios | Lai Joon Li | 2025-06-19 | VS-06 |
+| CH-18 | REQ-19 | Added SMS character limit handling and international format support | Loqman | 2025-06-19 | VS-06 |
+| CH-19 | REQ-20 | Added baseline comparison to 2-second performance requirement in §3.5.1 | Lai Joon Li | 2025-06-20 | VS-07 |
+| CH-20 | REQ-21 | Defined “normal load”, “peak load” and “concurrent usage” in §3.5.2 | Lai Joon Li | 2025-06-20 | VS-07 |
+| CH-21 | REQ-22 | Specified hierarchy of authentication methods (OAuth, SAML, JWT) | Tan Jun Xian | 2025-06-20 | VS-07 |
+| CH-22 | REQ-23 | Standardized session timeout to 15 minutes for consistency | Loqman | 2025-06-20 | VS-07 |
+| CH-23 | REQ-24 | Clarified session data clearance (logout, tokens, cache) | Soukmaed Ong Yu Kang | 2025-06-20 | VS-07 |
+| CH-24 | REQ-25 | Added missing Input/Output Format Analysis in Supporting Information section | Soukmaed Ong Yu Kang | 2025-06-20 | VS-07 |
+| CH-25 | \- | Added stakeholder expectations in Purpose and Scope | Soukmaed Ong Yu Kang | 2025-06-20 | VS-01 |
+| CH-26 | \- | Rewrote long paragraphs for readability | Soukmaed Ong Yu Kang | 2025-06-20 | VS-01 |
+| CH-27 | \- | Standardized use case table formatting | Soukmaed Ong Yu Kang | 2025-06-20 | VS-01 |
+| CH-28 | \- | Unified LMS terminology to "eBwise" | Soukmaed Ong Yu Kang, Tan Jun Xian | 2025-06-20 | VS-01 |
+| CH-29 | \- | Moved interface and use case sections to correct location | Soukmaed Ong Yu Kang, Tan Jun Xian | 2025-06-20 | VS-01 |
+| CH-30 | \- | Corrected spelling and grammar issues | Soukmaed Ong Yu Kang, Lai Joon Li, Loqman | 2025-06-20 | VS-01 |
+| CH-31 | \- | Reformatted references to APA 7th edition | Tan Jun Xian | 2025-06-20 | VS-01 |
+| CH-32 | \- | Justified text alignment throughout document | Lai Joon Li, Tan Jun Xian, Soukmaed Ong Yu Kang | 2025-06-20 | VS-01 |
+| CH-33 | \- | Renumbered tables consistently | Tan Jun Xian, Soukmaed Ong Yu Kang, Loqman | 2025-06-20 | VS-01 |
+| CH-34 | \- | Standardized requirement IDs in allocation section | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-35 | \- | Added missing table numbers across document | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-36 | \- | Added missing figure numbers in Section 4 | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-37 | \- | Added missing figure references in text | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-38 | \- | Added HTTPS validation method using DevTools and SSL scanner | Loqman | 2025-06-20 | VS-04 |
+| CH-39 | \- | Fixed capitalization and double spacing in method descriptions | Loqman | 2025-06-20 | VS-04 |
+| CH-40 | REQ-20 | Resolved conflict between students, admin, and security over authentication | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-41 | CF-01 | Finalized daily backup strategy with 30-minute recovery objective | Soukmaed Ong Yu Kang | 2025-06-20 | VS-02 |
+| CH-42 | CF-02 | Finalized PDPA-compliant data retention policy | Tan Jun Xian | 2025-06-20 | VS-02 |
+| CH-43 | CF-03 | Standardized system capacity to 5,000 concurrent users | Tan Jun Xian | 2025-06-20 | VS-02 |
+
+### 
+
+### 3.8.8 Requirements Traceability Matrix
+
+Table 3.8.8.1 Requirements Traceability Matrix
+
+| Req ID | Requirement Description | Linked Goal(s) | Feature(s) | Use Case(s) | Traceability Score (1-4) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| REQ-01 | RAM/cache limits must be measurable, e.g., ≤ 4GB per 1,000 users | G-01 Performance | F-01 Resource Optimization | UC-01 Login | 3 |
+| REQ-02 | Define server specs: 8-core CPU, 16GB RAM, SSD 256GB | G-01 Performance | F-02 Deployment requirement | UC-02 System Deployment | 3 |
+| REQ-03 | Clarify or remove "Portal User" actor to avoid role overlap | G-06 Clarity in Roles | F-03 User Roles Management | UC-03 User Access | 2 |
+| REQ-04 | Add bandwidth requirements: min 5 Mbps, latency ≤ 100 ms | G-01 Performance | F-01 Resource Optimization | UC-04 Real-Time Notification | 3 |
+| REQ-05 | Use WCAG 2.1 Level AA for accessibility throughout | G-03 Accessibility | F-05 Accessibility Compliance | UC-05 Accessibility Settings | 4 |
+| REQ-06 | Resolve conflict between simple login and MFA/SSO | G-04 Security | F-06 Authentication | UC-06 Login | 4 |
+| REQ-07 | Add max storage limit (e.g., 10TB) and scaling plan | G-01 Performance | F-07 Storage Management | UC-07 File Upload | 3 |
+| REQ-08 | List specific OWASP security measures and encryption | G-04 Security | F-08 Security Protocols | UC-08 Secure Login | 4 |
+| REQ-09 | Define system connection limits (e.g., REST APIs, HTTPS) | G-04 Security | F-09 API Connectivity | UC-09 External System Integration | 3 |
+| REQ-10 | Provide budget figures or remove vague constraint | G-07 Cost Transparency | F-10 Budget Planning | UC-10 Resource Allocation | 2 |
+| REQ-11 | Include failure case testing (e.g., login failure, timeout) | G-05 Reliability | F-11 Error Handling | UC-11 Payment, UC-01 Login | 3 |
+| REQ-12 | Clarify "right to be forgotten" validation | G-05 Reliability | F-12 Data Deletion Compliance | UC-12 Accont Deletion | 4 |
+| REQ-13 | Explain impact of assumptions on system design | G-08 Risk Management | F-13 Assumption Documentation | UC-13 Risk Assessment | 2 |
+| REQ-14 | Define and explain (E.g. RESTful API, ACID and etc) | G-09 Developer Clarity | F-14 API Documentationa | UC-14 Developer Tools | 3 |
+| REQ-15 | Provide technical specs for academic data configuration | G-01 Performance | F-15 Academic Data Settings | UC-15 High Load Scenario | 3 |
+| REQ-16 | Specify FK behaviors: CASCADE, RESTRICT, SET NULL | G-05 Reliability | F-16 Database Integrity Rules | UC-16 Grade Management | 3 |
+| REQ-17 | Define severity levels: Critical, High, Medium, Low | G-08 Risk Management | F-17 Issue Classification | UC-17 Incident Management | 3 |
+| REQ-18 | Add throttling fallback actions (e.g., exponential backoff, queues) | G-01 Performance | F-18 Request Handling | UC-18 High Load Scenario | 3 |
+| REQ-19 | Handle SMS 160-character limit and international formats | G-01 Performance | F-19 Messaging | UC-20 SMS Notification 3 | 3 |
+
+### 
+
+### 3.8.9 Role in Requirements Validation, Negotiation & Management
+
+Table 3.8.9.1 Role in Requirements Validation, Negotiation & Management
+
+| Student Name | Primary Responsibility | No. of Session Participated |
+| :---- | :---- | :---- |
+| Sokmaed Ong Yu Kang | Documentation Review, Change log | 4 |
+| Tan Jun Xian | Documentation Review, Github version control, Conflict analysis  | 5 |
+| Lai Joon Li | Documentation Review, | 4 |
+| Muhammad Loqman Bin Ahmad Fariz | Documentation Review,  | 3 |
+
+### 
+
+### 3.8.10 Version Control & Configuration Summary
+
+Repository Branch: project-part-2  
+Key Files:  
+Table 3.8.10.1 Key files
+
+| File Name | Changes | Date | Modified by |
+| :---- | :---- | :---- | :---- |
+| SRS.md | Change indentation of section 1.1 Purpose  | 9/6/25 | Tan Jun Xian |
+|  | Added team members name | 17/6/25 | Tan Jun Xian |
+|  | Change section 3 content defect | 17/6/25 | Tan Jun Xian |
+|  | Change section 1 content defect | 18/6/25 | Sokmaed Ong Yu Kang |
+|  | Update all CLiC and eBwise to LMS and CMS | 18/6/25 | Tan Jun Xian |
+|  | Move section to correspond section (e.g 3.6 change to 3.3) | 18/6/25 | Tan Jun Xian |
+|  | Update section 3 except 3.4 and 3.8 | 18/6/25 | Tan Jun Xian |
+|  | Update SRS.md | 18/6/25 | Tan Jun Xian |
+|  | Update conflict and change section | 18/6/25 | Tan Jun Xian |
+|  | Update content defect section 3 and 5 | 19/6/25 | Lai Joon Li |
+|  | Corrected some section numbers of section 4 | 19/6/25 | Lai Joon Li |
+|  | Update section 1 | 19/6/25 | Sokmaed Ong Yu Kang |
+|  | Change section 4 content defect | 19/6/25 | Loqman |
+|  | Update section number, added table number in section 3 | 19/6/25 | Tan Jun Xian |
+|  | Update section 1 conflict defect | 20/6/25 | Sokmaed Ong Yu Kang |
+|  | Update method content defect in 4.4.1.5 | 21/6/25 | Sokmaed Ong Yu Kang |
+|  | Update reference | 21/6/25 | Tan Jun Xian |
+|  | Added table numbers for section 4 | 21/6/25 | Loqman |
+|  | Update supporting information section  3.8.3 \- 3.8.10 and last update final version. | 21/6/2025 | Tan Jun Xian |
+| changelog.md | Added contents (CHG-01 \- CHG-37) | 20/6/25 | Sokmaed Ong Yu Kang |
+|  | Update change log dates | 20/6/25  | Sokmaed Ong Yu Kang |
+|  | Add new contents (CHG-38 \- CHG-42) | 21/6/25 | Sokmaed Ong Yu Kang |
+|  | Last update check, clarify conflict and defect | 21/6/2025 | Tan Jun Xian |
+| SRS.docx | From .md covert to docx | 19/6/2025 | Tan Jun Xian |
+|  | Update docx final version | 21/6/2025 | Tan Jun Xian |
+
+Commits Made by:   
+Table 3.8.10.2 Commits made by
+
+| Name | Total Commits |
+| :---- | :---- |
+| Sokmaed Ong Yu Kang | 8 |
+| Tan Jun Xian | 12 |
+| Lai Joon Li | 2 |
+| Muhammad Loqman | 2 |
+
+Pull Requests Merged by: Sokmaed Ong Yu Kang  
+Change Log Entries Made by:  
+Table 3.8.10.3 Change Log entries made by
+
+| Name | Total Changes |
+| :---- | :---- |
+| Sokmaed Ong Yu Kang | 16 |
+| Tan Jun Xian | 20 |
+| Lai Joon Li | 7 |
+| Muhammad Loqman | 10 |
+
 
 
 #

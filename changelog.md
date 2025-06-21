@@ -268,7 +268,7 @@ Sections Affected: 6.1 Assumptions
 
 
 
-### CHG-13 – Added Explanation of RESTful API Reference  
+### CHG-13 – Added Explanation of (e.g. RESTful API, ACID and etc) API Reference  
 Date: 2025-06-19  
 Proposed By: Lai Joon Li  
 Req ID: REQ-14  
@@ -276,7 +276,7 @@ Session ID: VS-05
 Sections Affected: 6.3 Future Work
 
 **What Changed/Added**:  
-- Briefly explained what RESTful APIs are and how they relate to future system integration plans.
+- Briefly explained what (e.g. RESTful API, ACID and etc) APIs are and how they relate to future system integration plans.
 
 **Why It Was Changed/Added**:  
 - REST API was mentioned without any explanation, which could confuse non-technical readers or new developers.
