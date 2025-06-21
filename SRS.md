@@ -3036,7 +3036,7 @@ Error Response (401 Unauthorized):
 ## **4.1. Verification of External Interfaces ([3.2](#3.2-external-interfaces))** {#4.1.-verification-of-external-interfaces-(3.2)}
 
 ### **4.1.1 University Database Interface ([3.2.1](#3.2.1-university-database-interface))** {#4.1.1-university-database-interface-(3.2.1)}
-
+Table 4.1.1.1 Verification of University Database Interface
 | Methods               | Execute API calls to the PostgreSQL university database and compare the response with expected student, academic, and fee records. Scripts will be used to test CRUD operations and role-based data retrieval (such as student vs admin access). |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | Database administrators with QA team oversight and validation.                                                                                                                                                                                                             |
@@ -3044,7 +3044,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Development, staging, and production environments.                                                                                                                                                                                               |
 
 ### **4.1.2 Campus Management System (CMS) Interface ([3.2.2](<#3.2.2-campus-management-system-(CMS)-interface>))** {#4.1.2-campus-management-system-(CMS)-interface-(3.2.2)}
-
+Table 4.1.2.1 Verification of Campus Management System (CMS)
 | Methods               | Perform API testing to verify grade, course registration, and attendance data pulled from CMS matches internal student profiles. Use real enrollment data and validate mapped fields. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | QA team and project integration lead.                                                                                                                                                  |
@@ -3052,7 +3052,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and production with controlled test users.                                                                                                                                     |
 
 ### **4.1.3 Learning Management System (LMS) Interface ([3.2.3](<#3.2.3-learning-management-system-(lms)-interface>))** {#4.1.3-learning-management-system-(LMS)-interface-(3.2.3)}
-
+Table 4.1.3.1 Verification of Learning Management System (LMS)
 | Methods               | Verify grade upload and assignment sync via LMS API. Compare LMS-side student submissions and scores against system display. Test API failures and timeouts. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | QA team and LMS admin.                                                                                                                                       |
@@ -3062,7 +3062,7 @@ Error Response (401 Unauthorized):
 ###
 
 ### **4.1.4 SMS/Email Notification Gateway ([3.2.4](#3.2.4-sms-&-email-gateway-interface))** {#4.1.4-sms/email-notification-gateway-(3.2.4)}
-
+Table 4.1.4.1 Verification of SMS/Email Notification Gateway
 | Methods               | Trigger real alerts (test accounts) for various actions (such as low attendance, fee due). Confirm delivery status, content accuracy, and user preference configurations. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Responsibility**    | QA team and notification service lead.                                                                                                                                    |
@@ -3070,7 +3070,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and production with sandbox API keys.                                                                                                                             |
 
 ### **4.1.5 Authentication Service (SSO/OAuth) Interface ([3.2.5](#3.2.5-authentication-service-interface))** {#4.1.5-authentication-service-(sso/oauth)-interface-(3.2.5)}
-
+Table 4.1.5.1 Verification of Authentication Service (SSO/OAuth)
 | Methods               | Test login with valid and invalid credentials through the SSO gateway. Validate token generation, session handling, and role-based dashboard redirection. |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Responsibility**    | QA team and university IT security team.                                                                                                                  |
@@ -3078,7 +3078,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and production SSO sandbox environments.                                                                                                          |
 
 ### **4.1.6 Payment Gateway Interface ([3.2.6](#3.2.6-payment-gateway-interface))** {#4.1.6-payment-gateway-interface-(3.2.6)}
-
+Table 4.1.6.1 Verification of Payment Gateway Interface
 | Methods               | Simulate payment flow using test invoice and validate payment status updates. Test payment failure handling, timeout recovery, and transaction logging. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Responsibility**    | QA team and finance IT representative.                                                                                                                  |
@@ -3095,6 +3095,7 @@ Error Response (401 Unauthorized):
 
 **4.2.1 User Authentication and Authorization([3.4.1.1](#3.4.1.1-requirement-1))**
 
+Table 4.2.1.1 Verification of User Authentication and Authorization
 | Methods:           | Functional testing, penetration testing, MFA validation, and code review for secure login. Test cases will include successful login, failed login (wrong credentials), expired session handling, brute-force protection, and failed MFA attempts. Token expiration, login retry logic, and lockout thresholds will also be validated. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
 | Responsibility:    | Development team and external security consultant.                                         |
@@ -3105,6 +3106,7 @@ Error Response (401 Unauthorized):
 
 **4.2.2 View Academic Grades([3.4.1.2](#3.4.1.2-requirement-2))**
 
+Table 4.2.2.1 Verification of Viewing Academic Grades
 | Methods:           | Functional testing, data validation checks, and role-based access testing. Validate large-scale grade retrieval (e.g., for students enrolled in 30+ subjects). Test pagination, sorting, and filtering of grade records to handle edge cases. |
 | :----------------- | :------------------------------------------------------------------------- |
 | Responsibility:    | QA team.                                                                   |
@@ -3115,6 +3117,7 @@ Error Response (401 Unauthorized):
 
 **4.2.3 Access Attendance Records([3.4.1.3](#3.4.1.3-requirement-3))**
 
+Table 4.2.3.1 Verification of Access Attendance Records
 | Methods:           | Functional testing of attendance logs, filters, and export options. |
 | :----------------- | :------------------------------------------------------------------ |
 | Responsibility:    | QA team.                                                            |
@@ -3125,6 +3128,7 @@ Error Response (401 Unauthorized):
 
 **4.2.4 Access Academic Timetable ([3.4.1.4](#3.4.1.4-requirement-4))**
 
+Table 4.2.4.1 Verification of Access Academic Table
 | Methods:           | Usability and functional testing with real-time calendar integration validation. |
 | :----------------- | :------------------------------------------------------------------------------- |
 | Responsibility:    | Product and QA team.                                                             |
@@ -3133,6 +3137,7 @@ Error Response (401 Unauthorized):
 
 **4.2.5 Manage User Accounts and Roles([3.4.1.5](#3.4.1.5-requirement-5))**
 
+Table 4.2.5.1 Verification of Managing User Accounts and Roles
 | Methods:           | Functional testing for role creation, permissions handling, and user lifecycle management. Include audit log verification to track role changes, permission modifications, and user deactivation/reactivation actions. |
 | :----------------- | :----------------------------------------------------------------------------------------- |
 | Responsibility:    | Admin module team.                                                                         |
@@ -3141,6 +3146,7 @@ Error Response (401 Unauthorized):
 
 **4.2.6 Integration with Campus Systems([3.4.1.6](#3.4.1.6-requirement-6))**
 
+Table 4.2.6.1 Verification of Integration with Campus System
 | Methods:           | API integration testing, mock service simulation, and data sync validation. |
 | :----------------- | :-------------------------------------------------------------------------- |
 | Responsibility:    | Integration team.                                                           |
@@ -3149,6 +3155,7 @@ Error Response (401 Unauthorized):
 
 **4.2.7 Maintain Data Privacy and Permissions([3.4.1.7](#3.4.1.7-requirement-7))**
 
+Table 4.2.7.1 Verification of Maintain Data Privacy and Permissions
 | Methods:           | Role-based access control (RBAC) testing, audit logs, and compliance checks (PDPA, GDPR). |
 | :----------------- | :---------------------------------------------------------------------------------------- |
 | Responsibility:    | Security compliance team.                                                                 |
@@ -3157,6 +3164,7 @@ Error Response (401 Unauthorized):
 
 **4.2.8 Pay Tuition and Other Fees([3.4.1.8](#3.4.1.8-requirement-8))**
 
+Table 4.2.8.1 Verification of Payments within the System
 | Methods:           | Integration testing with payment gateway and transaction validation. Simulate both successful and failed payment scenarios, including payment timeouts, invalid inputs, transaction reattempts, and system unavailability. Validate rollback behavior, error messages, and log entries for failed transactions. |
 | :----------------- | :------------------------------------------------------------------- |
 | Responsibility:    | Backend development and finance integration teams.                   |
@@ -3165,6 +3173,7 @@ Error Response (401 Unauthorized):
 
 **4.2.9 View Payment History and Invoices ([3.4.1.9](#3.4.1.9-requirement-9))**
 
+Table 4.2.9.1 Verification of Viewing Payment History and Invoices
 | Methods:           | Functional testing, data accuracy checks, and user accessibility validation. |
 | :----------------- | :--------------------------------------------------------------------------- |
 | Responsibility:    | QA and finance module team.                                                  |
@@ -3173,6 +3182,7 @@ Error Response (401 Unauthorized):
 
 **4.2.10 Upload and Manage Grades([3.4.2.1](#3.4.2.1-requirement-10))**
 
+Table 4.2.10.1 Verification of Upload and Manage Grades
 | Methods:           | Functional testing, input validation, bulk upload checks. |
 | :----------------- | :-------------------------------------------------------- |
 | Responsibility:    | Lecturer-side QA and dev team.                            |
@@ -3181,6 +3191,7 @@ Error Response (401 Unauthorized):
 
 **4.2.11 Digital Attendance Tracking ([3.4.2.2](#3.4.2.2-requirement-11))**
 
+Table 4.2.11.1 Verification of Attendance Tracking
 | Methods:           | QR code scanning simulation, manual input testing, record validation. |
 | :----------------- | :-------------------------------------------------------------------- |
 | Responsibility:    | QA Team                                                               |
@@ -3189,6 +3200,7 @@ Error Response (401 Unauthorized):
 
 **4.2.12 Post Announcement and Updates([3.4.2.3](#3.4.2.3-requirement-12))**
 
+Table 4.2.12.1 Verification of Posting Announcement and Updates
 | Methods:           | Functional testing for announcement creation, user delivery tracking, and UI feedback. |
 | :----------------- | :------------------------------------------------------------------------------------- |
 | Responsibility:    | Content and dev team.                                                                  |
@@ -3197,6 +3209,7 @@ Error Response (401 Unauthorized):
 
 **4.2.13 Dashboard with Performance Overview([3.4.2.4](#3.4.2.4-requirement-13))**
 
+Table 4.2.13.1 Verification of Dashboard with Performance Overview
 | Methods:           | Visualization rendering test, data aggregation validation, UI responsiveness testing. |
 | :----------------- | :------------------------------------------------------------------------------------ |
 | Responsibility:    | Frontend and analytics team.                                                          |
@@ -3205,6 +3218,7 @@ Error Response (401 Unauthorized):
 
 **4.2.14 Submit Feedback and Support Requests([3.4.2.5](#3.4.2.5-requirement-14))**
 
+Table 4.2.14.1 Verification of Feedback and Support Requests
 | Methods:           | Form validation, ticket creation flow, and routing logic testing. |
 | :----------------- | :---------------------------------------------------------------- |
 | Responsibility:    | Support system team.                                              |
@@ -3213,6 +3227,7 @@ Error Response (401 Unauthorized):
 
 **4.2.15 Alert and Reminder System([3.4.2.6](#3.4.2.6-requirement-15))**
 
+Table 4.2.15.1 Verification of Alerts and Reminder System
 | Methods:           | Notification trigger simulation, queue monitoring, delivery validation. Test user preference handling such as opt-in/opt-out and confirm mandatory alerts such as payment deadlines override suppression preferences as per policy. |
 | :----------------- | :---------------------------------------------------------------------- |
 | Responsibility:    | Backend notification service team.                                      |
@@ -3221,6 +3236,7 @@ Error Response (401 Unauthorized):
 
 **4.2.16 Notification Read Tracking([3.4.3.1](#3.4.3.1-requirement-16))**
 
+Table 4.2.16.1 Verification of Notification Read Tracking
 | Methods:           | User interaction logging test, status flag tracking, read/unread state toggling. |
 | :----------------- | :------------------------------------------------------------------------------- |
 | Responsibility:    | UI/UX telemetry team.                                                            |
@@ -3229,6 +3245,7 @@ Error Response (401 Unauthorized):
 
 **4.2.17 Custom Notification Preferences([3.4.3.2](#3.4.3.2-requirement-17))**
 
+Table 4.2.17.1 Verification of Custom Notification Preferences
 | Methods:           | Preference update test, delivery filter checks, setting persistence validation. |
 | :----------------- | :------------------------------------------------------------------------------ |
 | Responsibility:    | User settings module team.                                                      |
@@ -3237,6 +3254,7 @@ Error Response (401 Unauthorized):
 
 **4.2.18 Visual Performance Analytics([3.4.3.3](#3.4.3.3-requirement-18))**
 
+Table 4.2.18.1 Verification of Visual Performance Analytics
 | Methods:           | Graph rendering checks, accuracy tests with mock data, and responsiveness testing. |
 | :----------------- | :--------------------------------------------------------------------------------- |
 | Responsibility:    | Data visualization and frontend teams.                                             |
@@ -3245,6 +3263,7 @@ Error Response (401 Unauthorized):
 
 **4.2.19 Mobile-Friendly Responsive Interface([3.4.3.4](#3.4.3.4-requirement-19))**
 
+Table 4.2.19.1 Verification of Mobile-friendly Responsive Interface
 | Methods:           | Cross-device UI tests, responsive CSS checks, and accessibility validation (WCAG). Test across Chrome, Firefox, Safari, and mobile resolutions (320px, 768px, 1280px) using tools like BrowserStack. |
 | :----------------- | :--------------------------------------------------------------------------------- |
 | Responsibility:    | UI/UX team.                                                                        |
@@ -3259,6 +3278,7 @@ Error Response (401 Unauthorized):
 
 **4.3.1.1 Consistent Layout and Design**
 
+Table 4.3.1.1.1 Testing for Consistent Layout and Design
 | Methods:           | Conduct evaluation and consistency checks across modules to ensure uniform layout. |
 | :----------------- | :--------------------------------------------------------------------------------- |
 | Responsibility:    | UI/UX team.                                                                        |
@@ -3269,6 +3289,7 @@ Error Response (401 Unauthorized):
 
 **4.3.1.2 Responsive Design**
 
+Table 4.3.1.2.1 Testing for Responsive Design
 | Methods:           | Test system on desktop, tablet and mobile for layout sync and functionality |
 | :----------------- | :-------------------------------------------------------------------------- |
 | Responsibility:    | Front-end and QA team                                                       |
@@ -3281,6 +3302,7 @@ Error Response (401 Unauthorized):
 
 **4.3.2.1 Efficient Navigation**
 
+Table 4.3.2.1.1 Testing on Efficient Navigation
 | Methods:           | Test the quickness of the user to reach key features like grades and registration. Measure number of clicks and task time |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------ |
 | Responsibility:    | UX and QA teams                                                                                                           |
@@ -3291,6 +3313,7 @@ Error Response (401 Unauthorized):
 
 **4.3.2.2 Accessibility and Personalized Experience**
 
+Table 4.3.2.2.1 Accessibility and Personalized Experience
 | Methods:           | Use screen readers and accessibility tools to test WCAG 2.1 Level AA compliance. Check course suggestions and contrast. |
 | :----------------- | :---------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and accessibility team                                                                                               |
@@ -3303,6 +3326,7 @@ Error Response (401 Unauthorized):
 
 **4.3.3.1 Feedback Mechanism**
 
+Table 4.3.3.1.1 Verification of Feedback Mechanism
 | Methods:           | Check if confirmation or error messages appear after actions like form submission or uploads. |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and UX teams                                                                               |
@@ -3313,6 +3337,7 @@ Error Response (401 Unauthorized):
 
 **4.3.3.2 Language Standards**
 
+Table 4.3.3.2.1 Verification of Language Standards
 | Methods:           | Review system text for clear, non-technical language in instructions and alerts. |
 | :----------------- | :------------------------------------------------------------------------------- |
 | Responsibility:    | Content reviewer and QA team                                                     |
@@ -3323,6 +3348,7 @@ Error Response (401 Unauthorized):
 
 **4.3.3.3 Notification Management**
 
+Table 4.3.3.3.1 Verification of Notification Management
 | Methods:           | Test SMS/email settings to ensure users can change notification preferences. |
 | :----------------- | :--------------------------------------------------------------------------- |
 | Responsibility:    | QA and communication integration team.                                       |
@@ -3333,6 +3359,7 @@ Error Response (401 Unauthorized):
 
 **4.3.4.1 Data Encryption**
 
+Table 4.3.4.1.1 Verification of Data Encryption
 | Methods:           | Leave session idle and verify if the user is logged out automatically after the timeout period. |
 | :----------------- | :---------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and security teams.                                                                          |
@@ -3343,6 +3370,7 @@ Error Response (401 Unauthorized):
 
 **4.3.4.2 Server Controls**
 
+Table 4.3.4.2.1 Verification of Server Controls
 | Methods:           | Use browser Developer Tools (Chrome/Firefox) to confirm HTTPS is enforced on all pages by checking certificate validity, protocol (TLS 1.2/1.3), and absence of mixed content warnings. Run SSL scanning tools such as Qualys SSL Labs to validate proper redirection from HTTP to HTTPS and confirm absence of SSL vulnerabilities. |
 | :----------------- | :--------------------------------------------------------------------------------------- |
 | Responsibility:    | DevOps and security teams.                                                               |
@@ -3357,6 +3385,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.1 Storage Scalability**
 
+Table 4.4.1.1.1 Testing Storage Scalability
 | Methods:           | Test storage handling with mock academic and media data to reach 2TB. Check backup interval and recovery time. |
 | :----------------- | :------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and DevOps teams.                                                                                           |
@@ -3367,6 +3396,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.2 Database Backups**
 
+Table 4.4.1.2.1 Testing Database Backups
 | Methods:           | Check data backup storage allocation every 24 hours for data tracking and retrieval |
 | :----------------- | :---------------------------------------------------------------------------------- |
 | Responsibility:    | DevOps and security teams                                                           |
@@ -3377,6 +3407,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.3 Data Retrieval Speed**
 
+Table 4.4.1.3.1 Testing Data Retrieval Speed
 | Methods:           | Send multiple queries for student records, schedules, and attendance, and measure response time. |
 | :----------------- | :----------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA teams.                                                                                        |
@@ -3387,6 +3418,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.4 Simultaneous User Capacity**
 
+Table 4.4.1.4.1 Testing Simultaneous User Capacity
 | Methods:           | Simulate 5,000 users performing key actions. Monitor system load, latency, and crash reports. |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
 | Responsibility:    | Performance and QA teams.                                                                     |
@@ -3397,6 +3429,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.5 Session Timeout**
 
+Table 4.4.1.5.1 Testing Session Timeout
 | Methods:           | Leave sessions inactive for 15 minutes and verify auto logout occurs, all session tokens are invalidated, and temporary cached user data is cleared from memory. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and security team                                                                      |
@@ -3409,6 +3442,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.1 Task Handling**
 
+Table 4.4.2.1.1 Testing Task Handling
 | Methods:           | Task completion analysis on automated logs and error rate reports     |
 | :----------------- | :-------------------------------------------------------------------- |
 | Responsibility:    | Performance and QA teams                                              |
@@ -3417,6 +3451,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.2 System Uptime**
 
+Table 4.4.2.2.1 Testing System Uptime
 | Methods:           | Deploy system monitoring using uptime tracking tools. Simulate failure and recovery scenarios. |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
 | Responsibility:    | DevOps team                                                                                    |
@@ -3425,6 +3460,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.3 Feature Responsiveness**
 
+Table 4.4.2.3.1 Testing Feature Responsiveness
 | Methods:           | Perform response time tests on core modules with simulated user actions. |
 | :----------------- | :----------------------------------------------------------------------- |
 | Responsibility:    | QA Team                                                                  |
@@ -3435,6 +3471,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.4 Background Data Synchronization**
 
+Table 4.4.2.4.1 Testing Background Data Synchronization
 | Methods:           | Mock synchronization events between systems using simulated updates. |
 | :----------------- | :------------------------------------------------------------------- |
 | Responsibility:    | Integration QA Team                                                  |
@@ -3445,6 +3482,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.5 Grade Upload Processing**
 
+Table 4.4.2.5.1 Testing Grade Upload Processing
 | Methods:           | Test grade files with varied data types and formats. Monitor system logs and error handling reports to confirm error-free processing |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA Team                                                                                                                              |
@@ -3455,6 +3493,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.6 Report Generation**
 
+Table 4.4.2.6.1 Testing Report Generation
 | Methods:           | Generate reports with test data under standard usage. Log and analyze response time per report |
 | :----------------- | :--------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA Team                                                                                        |
@@ -3465,6 +3504,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.7 Peak load Response Time**
 
+Table 4.4.2.7.1 Testing Peak load Response Time
 | Methods:           | Load testing tools to simulate concurrent users executing various tasks. Measure response times and confirm less than 10% of total requests are delayed or failed. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Performance Team                                                                                                                                                   |
@@ -3475,6 +3515,7 @@ Error Response (401 Unauthorized):
 
 **4.4.2.8 Transaction Processing**
 
+Table 4.4.2.8.1 Testing Transaction Processing
 | Methods:           | Simulate transactions for login, course enrollment, and grade input. Track completion times and validate |
 | :----------------- | :------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and BAck-end Team                                                                                     |
@@ -3487,6 +3528,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.1 Data Integrity Enforcement** {#4.5.1-data-integrity-enforcement}
 
+Table 4.5.1.1 Verification of Data Integrity Enforcement
 | Methods:           | Test insertion, update, and deletion of records to confirm enforcement of constraints (e.g., NOT NULL, UNIQUE, CHECK). Validate business rules through automated test cases. |
 | :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Database developers and QA team.                                                                                                                                             |
@@ -3497,6 +3539,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.2 Referential Integrity Checks** {#4.5.2-referential-integrity-checks}
 
+Table 4.5.2.1 Verification of Referential Integrity Checks
 | Methods:           | Execute queries that involve foreign key relationships to ensure cascading updates/deletes behave correctly. Attempt violations to test constraint enforcement. |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and database administration teams.                                                                                                                           |
@@ -3507,6 +3550,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.3 Normalization Compliance** {#4.5.3-normalization-compliance}
 
+Table 4.5.3.1 Verification of Normalization Compliance
 | Methods:           | Review schema design for adherence to at least 3NF. Conduct manual and automated checks for redundancy and anomalies in table structures. |
 | :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Database architects and QA reviewers.                                                                                                     |
@@ -3517,6 +3561,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.4 Query Accuracy and Performance** {#4.5.4-query-accuracy-and-performance}
 
+Table 4.5.4.1 Verification of Query Accuracy and Performance
 | Methods:           | Execute frequently used queries (e.g., fetch student records, schedules, attendance) to validate data correctness and acceptable execution time (\< 2 seconds for most queries). |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and performance teams.                                                                                                                                                        |
@@ -3527,6 +3572,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.5 Data Redundancy Detection** {#4.5.5-data-redundancy-detection}
 
+Table 4.5.5.1 Verification of Data Redundancy Detection
 | Methods:           | Use SQL scripts to identify duplicate entries in key tables (e.g., student profiles, course lists). Monitor ETL processes to avoid redundant data insertion. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Data engineering and QA team.                                                                                                                                |
@@ -3535,6 +3581,7 @@ Error Response (401 Unauthorized):
 
 ### **4.5.6 Transactional Consistency (ACID Properties)** {#4.5.6-transactional-consistency-(acid-properties)}
 
+Table 4.5.6.1 Verification of Transactional Consistency (ACID Properties)
 | Methods:           | Simulate multi-step transactions (e.g., student enrollment and payment) to ensure atomicity, consistency, isolation, and durability. |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | Responsibility:    | Backend development and QA teams.                                                                                                    |
@@ -3542,6 +3589,7 @@ Error Response (401 Unauthorized):
 | Environment:       | Staging environment with transactional logs enabled.                                                                                 |
 
 ### **4.5.7 Backup and Recovery Validation** {#4.5.7-backup-and-recovery-validation}
+Table 4.5.7.1 Verification of Backup and Recovery Validation
 
 | Methods:           | Trigger backup creation and simulate failure scenarios to ensure database restoration maintains logical integrity (e.g., no orphaned records or corruption). |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3554,6 +3602,7 @@ Error Response (401 Unauthorized):
 ## **4.6. Verification of Design Constraints ([3.9](#3.9-design-constraints))** {#4.6.-verification-of-design-constraints-(3.9)}
 
 ### **4.6.1 Compliance with Data Privacy Regulations ([3.9.1](#3.9.1-compliance-with-data-privacy-regulations))** {#4.6.1-compliance-with-data-privacy-regulations-(3.9.1)}
+Table 4.6.1.1 Testing on Compliance with Data Privacy Regulations
 
 | Methods               | Conduct documentation reviews and technical tests to ensure compliance with data retention policies: retain user data for 2 years after account closure, keep academic records indefinitely, and store payment records for 7 years. Simulate scenarios for personal data access and validate encryption and consent enforcement mechanisms. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3562,6 +3611,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Development, staging, and remote documentation environments.                                                                                                                  |
 
 ### **4.6.2 Integration with Existing University Systems ** {#4.6.2-integration-with-existing-university-systems-(3.9.2)}
+Table 4.6.2.1 Testing on Integration with Existing University Systems
 
 | Methods               | Perform API contract testing with CMS and LMS. Conduct data mapping verification and simulate student data sync flows to ensure field compatibility. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3570,6 +3620,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and production sandbox environments.                                                                                                          |
 
 ### **4.6.3 Security Standards ([3.9.3](#3.9.3-security-standards))** {#4.6.3-security-standards-(3.9.3)}
+Table 4.6.3.1 Testing on Security Standards
 
 | Methods               | Run OWASP-based security scans, static code analysis, and penetration tests. Validate token expiry, password encryption, and XSS/SQL injection protection. |
 | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3578,6 +3629,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and vulnerability assessment environments.                                                                                                         |
 
 ### **4.6.4 Accessibility Requirements ([3.9.4](#3.9.4-accessibility-requirements))** {#4.6.4-accessibility-requirements-(3.9.4)}
+Table 4.6.4.1 Testing on Accessibility Requirements
 
 | Methods               | Use tools such as WAVE, aXe, and manual tab testing to validate keyboard navigation, alt text, ARIA labels, and color contrast as per WCAG 2.1 Level AA standards. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3586,6 +3638,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Cross-browser test environments and accessibility tools.                                                                                                           |
 
 ### **4.6.5 API Usage Limitations ([3.9.5](#3.9.5-api-usage-limitations))** {#4.6.5-api-usage-limitations-(3.9.5)}
+Table 4.6.5.1 Testing on API Usage Limitations
 
 | Methods               | Simulate multiple API calls using Postman and Locust to verify API rate limits and retry mechanisms. Confirm request throttling for SMS gateway and payment APIs. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3594,6 +3647,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging and pre-production integration environments.                                                                                                              |
 
 ### **4.6.6 Performance and Scalability ([3.9.6](#3.9.6-performance-and-scalability))** {#4.6.6-performance-and-scalability-(3.9.6)}
+Table 4.6.6.1 Testing on Performance and Scalability
 
 | Methods               | Use JMeter and k6 to simulate 500+ concurrent logins, grade queries, and SMS triggers. Measure response time and memory consumption under stress. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -3602,6 +3656,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Performance test server environment.                                                                                                              |
 
 ### **4.6.7 User Experience Consistency ** {#4.6.7-user-experience-consistency-(3.9.7)}
+Table 4.6.7.1 Testing on User Experience Consistency 
 
 | Methods               | Conduct usability testing with real users on phones, tablets, and desktops. Use BrowserStack to test consistency across Chrome, Firefox, Safari. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3610,6 +3665,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Responsive browser/device test lab.                                                                                                              |
 
 ### **4.6.8 Data Interoperability ** {#4.6.8-data-interoperability-(3.9.8)}
+Table 4.6.8.1 Testing on Data Interoperability
 
 | Methods               | Check that all integrated systems send/receive JSON objects according to API documentation. Validate encoding, timestamp formats, and key consistency. |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3618,6 +3674,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Staging systems and integration endpoints.                                                                                                             |
 
 ### **4.6.9 Legal and Ethical Considerations** {#5.6.9-legal-and-ethical-considerations-(3.9.9)}
+Table 4.6.9.1 Method on Legal and Ethical Considerations
 
 | Methods               | Verify audit trail coverage, data consent logs, and compliance features for student rights to data access and deletion. |
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------- |
@@ -3626,6 +3683,7 @@ Error Response (401 Unauthorized):
 | **Environment**       | Documentation review and simulated compliance environment.                                                              |
 
 ### **4.6.10 Project Budget and Timeline** {#4.6.10-project-budget-and-timeline-(3.9.10)}
+Table 4.6.10 Method on Project Budget and Timeline
 
 | Methods               | Use Gantt charts and financial logs to track project milestones and budget variance. Perform monthly reviews with the PMO. |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------- |
@@ -3637,6 +3695,7 @@ Error Response (401 Unauthorized):
 
 **4.7.1 Reliability ([3.10.1](#3.10.1-reliability))**
 
+Table 4.7.1.1 Reliability Testing
 | Methods:           | Stress testing, reliability testing, data integrity validation, backup and recovery drills |
 | :----------------- | :----------------------------------------------------------------------------------------- |
 | Responsibility:    | QA team                                                                                    |
@@ -3645,6 +3704,7 @@ Error Response (401 Unauthorized):
 
 **4.7.2 Availability ([3.10.2](#3.10.2-availability))**
 
+Table 4.7.2.1 Availability Testing
 | Methods:           | Load testing, redundancy testing, monitoring validation |
 | :----------------- | :------------------------------------------------------ |
 | Responsibility:    | QA team                                                 |
@@ -3652,6 +3712,8 @@ Error Response (401 Unauthorized):
 | Environment:       | Staging environment                                     |
 
 **4.7.3 Security ([3.10.3](#3.10.3-security))**
+
+Table 4.7.3.1 Security Testing
 
 | Methods:           | Penetration testing, code review, cryptographic validation, logging audits |
 | :----------------- | :------------------------------------------------------------------------- |
@@ -3661,6 +3723,8 @@ Error Response (401 Unauthorized):
 
 **4.7.4 Maintainability ([3.10.4](#3.10.4.-maintainability))**
 
+Table 4.7.4.1 Maintainability Testing 
+
 | Methods:           | Code review, modularity analysis, bug tracking audit |
 | :----------------- | :--------------------------------------------------- |
 | Responsibility:    | Development and QA teams                             |
@@ -3669,6 +3733,7 @@ Error Response (401 Unauthorized):
 
 **4.7.5 Portability ([3.10.5](#3.10.5.-portability))**
 
+Table 4.7.5.1 Portability Testing
 | Methods:           | Cross-platform testing, Docker/containerization testing |
 | :----------------- | :------------------------------------------------------ |
 | Responsibility:    | Development and QA teams                                |
