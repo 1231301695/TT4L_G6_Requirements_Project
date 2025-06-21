@@ -412,10 +412,146 @@ Sections Affected: 1.3.1.5 Communication Interfaces
 - Ensures international compatibility and compliance.  
 - Improves reliability of communication with users.
 
+
+
+### CHG-19 – Added Context and Baseline for Performance Timing  
+Date: 2025-06-20  
+Proposed By: Lai Joon Li  
+Req ID: REQ-20  
+Session ID: VS-07  
+Sections Affected: Section 3.5.1
+
+**What Changed/Added**:  
+- Clarified the existing “≤ 2 seconds” response time by adding:
+  - Target applies to student records, attendance, and schedule data  
+  - Represents a 50% improvement over the current CLiC system’s average of 4 seconds  
+  - Aligns with industry expectation of <3 second page loads
+
+**Why It Was Changed/Added**:  
+- Original performance requirement had no reference point or justification.  
+- This gives the timing context and shows why it’s meaningful.
+
+**Impact**:  
+- Improves measurability and benchmarking of performance.  
+- Helps developers and testers understand why 2 seconds was chosen.
+
+
+
+### CHG-20 – Defined Load Types in Performance Requirements  
+Date: 2025-06-20  
+Proposed By: Lai Joon Li  
+Req ID: REQ-21  
+Session ID: VS-07  
+Sections Affected: Section 3.5.2
+
+**What Changed/Added**:  
+- Defined vague terms with specific numbers:
+  - Normal load: 500–1,500 concurrent users  
+  - Peak load: 3,000+ during registration/grade release  
+  - Maximum capacity: 5,000 concurrent users
+
+**Why It Was Changed/Added**:  
+- The previous use of “peak load” and “normal load” lacked detail.  
+- These new values give clarity for performance testing and planning.
+
+**Impact**:  
+- Helps QA teams simulate correct load conditions.  
+- Prevents ambiguity for capacity planners and developers.
+
+
+
+### CHG-21 – Defined Primary and Secondary Authentication Methods  
+Date: 2025-06-20  
+Proposed By: Tan Jun Xian  
+Req ID: REQ-22  
+Session ID: VS-07  
+Sections Affected: Section 3.2.5
+
+**What Changed/Added**:  
+- Rewrote the authentication stack to specify roles:
+  - Primary: OAuth 2.0  
+  - University Integration: SAML  
+  - Session Management: JWT
+
+**Why It Was Changed/Added**:  
+- The original list had multiple authentication methods but no clear priority or use-case scope.
+
+**Impact**:  
+- Avoids confusion during development and integration.  
+- Establishes a hierarchy that aligns with institutional tech stack and security policy.
+
+
+
+### CHG-22 – Standardized Inactivity Timeout to 15 Minutes  
+Date: 2025-06-20  
+Proposed By: Loqman  
+Req ID: REQ-23  
+Session ID: VS-07  
+Sections Affected: Section 3.6.4
+
+**What Changed/Added**:  
+- Replaced vague phrase “after a period of inactivity” with:  
+  - “after 15 minutes of inactivity”
+
+**Why It Was Changed/Added**:  
+- Other parts of the document already defined a timeout period. This makes the SRS consistent throughout.
+
+**Impact**:  
+- Reduces confusion for developers implementing session logic.  
+- Ensures consistency across security-related requirements.
+
+
+
+### CHG-23 – Clarified What Gets Cleared During Session Termination  
+Date: 2025-06-20  
+Proposed By: Soukmaed Ong Yu Kang  
+Req ID: REQ-24  
+Session ID: VS-07  
+Sections Affected: Section 5.4.1.4
+
+**What Changed/Added**:  
+- Defined “session data clearance” as:
+  - Auto logout  
+  - Token invalidation  
+  - Cached data removal  
+  - Re-authentication enforcement on next access
+
+**Why It Was Changed/Added**:  
+- “Session data clearance” was vague and untestable without details.
+
+**Impact**:  
+- Makes the logout behavior testable and verifiable.  
+- Clarifies how user data is handled during session end.
+
+
+
+### CHG-24 – Added Sample Input/Output Format Analysis  
+Date: 2025-06-20  
+Proposed By: Soukmaed Ong Yu Kang  
+Req ID: REQ-25  
+Session ID: VS-07  
+Sections Affected: Supporting Information (new subsection)
+
+**What Changed/Added**:  
+- Added a subsection under Supporting Information that includes:
+  - Sample input formats for login, registration, feedback  
+  - Expected output formats for profile data, confirmation messages, error responses
+
+**Why It Was Changed/Added**:  
+- This section was missing and had been noted in validation feedback.  
+- Including sample formats improves system clarity and interface planning.
+
+**Impact**:  
+- Helps developers and testers visualize expected system behavior.  
+- Serves as informal documentation for frontend and backend developers.
+
+
+
+
 ---
 
 ## Document Changes
-### CHG-19 – Added Stakeholder Expectations in Purpose and Scope  
+### CHG-25 – Added Stakeholder Expectations in Purpose and Scope  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: - 
@@ -439,7 +575,7 @@ Sections Affected: Pages 6–7
 
 
 
-### CHG-20 – Rewrote Long Paragraphs for Better Readability  
+### CHG-26 – Rewrote Long Paragraphs for Better Readability  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: -  
@@ -459,7 +595,7 @@ Sections Affected: Pages 8, 9, 10, 13
 
 
 
-### CHG-21 – Standardized Use Case Table Formatting  
+### CHG-27 – Standardized Use Case Table Formatting  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: -  
@@ -479,7 +615,7 @@ Sections Affected: Page 26
 
 
 
-### CHG-22 – Unified LMS Terminology to “eBwise”  
+### CHG-28 – Unified LMS Terminology to “eBwise”  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang, Tan Jun Xian  
 Req ID: -  
@@ -499,7 +635,7 @@ Sections Affected: Throughout Document
 
 
 
-### CHG-23 – Moved Use Case and Interface Sections to the Correct Location  
+### CHG-29 – Moved Use Case and Interface Sections to the Correct Location  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang, Tan Jun Xian  
 Req ID: -  
@@ -524,7 +660,7 @@ Sections Affected: Pages 9–18 (Section 1.3.2)
 
 
 
-### CHG-24 – Corrected Spelling and Grammar Errors  
+### CHG-30 – Corrected Spelling and Grammar Errors  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang, Lai Joon Li, Loqman  
 Req ID: -  
@@ -544,7 +680,7 @@ Sections Affected: Pages 6–10, 28, 63, 128–132, 160, 165
 
 
 
-### CHG-25 – Reformatted References to APA Style  
+### CHG-31 – Reformatted References to APA Style  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: -  
@@ -566,7 +702,7 @@ Sections Affected: Page 94
 
 
 
-### CHG-26 – Justified Text Formatting Throughout Document  
+### CHG-32 – Justified Text Formatting Throughout Document  
 Date: 2025-06-20  
 Proposed By: Lai Joon Li, Tan Jun Xian, Soukmaed Ong Yu Kang  
 Req ID: -  
@@ -585,7 +721,7 @@ Sections Affected: Entire Document
 
 
 
-### CHG-27 – Renumbered All Tables Consistently  
+### CHG-33 – Renumbered All Tables Consistently  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian, Soukmaed Ong Yu Kang, Loqman  
 Req ID: -  
@@ -605,7 +741,7 @@ Sections Affected: Pages 66, 112–117, 157, 159–161, 167–168
 
 
 
-### CHG-28 – Standardized Requirement ID Format in Allocation Section  
+### CHG-34 – Standardized Requirement ID Format in Allocation Section  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: -  
@@ -624,7 +760,7 @@ Sections Affected: Pages 95–96
 
 
 
-### CHG-29 – Added Missing Table Numbers  
+### CHG-35 – Added Missing Table Numbers  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: -  
@@ -643,7 +779,7 @@ Sections Affected: Pages 95–99, 101–107, 120–122, 127–133, 149–168
 
 
 
-### CHG-30 – Added Missing Figure Numbers  
+### CHG-36 – Added Missing Figure Numbers  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: -  
@@ -662,7 +798,7 @@ Sections Affected: Pages 134–142
 
 
 
-### CHG-31 – Added Missing Figure References in Text  
+### CHG-37 – Added Missing Figure References in Text  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: -  
@@ -681,7 +817,7 @@ Sections Affected: Page 111
 
 
 
-### CHG-32 – Added HTTPS Validation Method  
+### CHG-38 – Added HTTPS Validation Method  
 Date: 2025-06-20  
 Proposed By: Loqman  
 Req ID: -  
@@ -703,29 +839,7 @@ Sections Affected: Page 158 (Section 5.3.4.2)
 
 
 
-### CHG-32 – Added HTTPS Validation Method  
-Date: 2025-06-20  
-Proposed By: Loqman  
-Req ID: -  
-Session ID: VS-04  
-Sections Affected: Page 158 (Section 5.3.4.2)
-
-**What Changed/Added**:  
-- Updated the method description to include a clear validation approach for HTTPS:  
-  - Use browser DevTools to check SSL certificates  
-  - Use an online SSL scanner to verify certificate validity and HTTPS enforcement
-
-**Why It Was Changed/Added**:  
-- The original method section mentioned HTTPS as a requirement but didn’t explain how to test or confirm it.
-
-**Impact**:  
-- Makes the validation approach specific and testable  
-- Helps QA teams confirm security configurations during deployment  
-- Strengthens credibility of the security testing phase
-
-
-
-### CHG-33 – Fixed Capitalisation and Spacing in Method Descriptions  
+### CHG-39 – Fixed Capitalisation and Spacing in Method Descriptions  
 Date: 2025-06-20  
 Proposed By: Loqman  
 Req ID: -  
@@ -747,10 +861,10 @@ Sections Affected: Page 161 (Sections 5.4.1.4 – 5.4.1.7)
 ---
 
 ## Agreement Changes
-### CHG-34 – Resolved Conflict on Authentication Method  
+### CHG-40 – Resolved Conflict on Authentication Method  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
-Req ID: REQ-19  
+Req ID: REQ-20  
 Session ID: VS-02  
 Sections Affected: Authentication Design (Refer to 3.7.9, 3.9.6)
 
@@ -776,7 +890,7 @@ Sections Affected: Authentication Design (Refer to 3.7.9, 3.9.6)
 ---
 
 ## Conflict Changes
-### CHG-35 – Finalized Backup Strategy Based on Conflict Resolution  
+### CHG-41 – Finalized Backup Strategy Based on Conflict Resolution  
 Date: 2025-06-20  
 Proposed By: Soukmaed Ong Yu Kang  
 Req ID: CF-01  
@@ -797,7 +911,7 @@ Sections Affected: 3.10.1.3
 
 
 
-### CHG-36 – Finalized Data Retention Policy to Comply with PDPA  
+### CHG-42 – Finalized Data Retention Policy to Comply with PDPA  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: CF-02  
@@ -821,7 +935,7 @@ Sections Affected: 1.3.2.1.1, 1.3.2.3, 3.7.9
 
 
 
-### CHG-37 – Standardized System Capacity to 5,000 Users  
+### CHG-43 – Standardized System Capacity to 5,000 Users  
 Date: 2025-06-20  
 Proposed By: Tan Jun Xian  
 Req ID: CF-03  
