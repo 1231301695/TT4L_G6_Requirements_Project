@@ -672,8 +672,10 @@ Table 1.3.2.4.1 (Admin Module table)
 
 This document is prepared in reference to the following documents:
 
-1. IEEE. (2018). ISO/IEC/IEEE 29148:2018 Systems and software engineering—Life cycle processes— Requirements engineering. https://www.iso.org/standard/72089.html 
-
+1. IEEE. (2018). ISO/IEC/IEEE 29148:2018 Systems and software engineering—Life cycle processes— Requirements engineering. https://www.iso.org/standard/72089.html
+2. Multimedia University. (2024). Campus Lifecycle Management System (CLiC). Retrieved from https://clic.mmu.edu.my 
+3. Multimedia University. (2024). eBwise Learning Management System. Retrieved from https://ebwise.mmu.edu.my
+3. MyGOV - the government of Malaysia’s official portal. (n.d.). https://www.malaysia.gov.my/portal/content/654 
 
 
 # **3\. Requirements** {#3.-requirements}
@@ -3395,7 +3397,7 @@ Error Response (401 Unauthorized):
 
 **4.4.1.5 Session Timeout**
 
-| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout, token invalidation, cached data clearing, and re-authentication requirement. |
+| Methods:           | Leave sessions inactive for 15 minutes and verify auto logout occurs, all session tokens are invalidated, and temporary cached user data is cleared from memory. |
 | :----------------- | :---------------------------------------------------------------------------------------- |
 | Responsibility:    | QA and security team                                                                      |
 | Verification Time: | During security and usability testing.                                                    |
