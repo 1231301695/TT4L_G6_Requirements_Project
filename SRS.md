@@ -2498,7 +2498,7 @@ Table 3.6.2 Integration with Existing University Systems
 
 ### **3.6.3 Security Standards** {#3.6.3-security-standards}
 Table 3.6.3 Security Standards
-| Constraint Description | The system must follow best-practice security protocols and adhere to OWASP guidelines by implementing password encryption, secure login mechanisms, activity logging, secure data transmission, robust access control, and comprehensive input validation.                              |
+| Constraint Description | The system must follow best-practice security protocols and adhere to OWASP guidelines to ensure secure data transmission, access control, and input validation. Specifically, this includes TLS encryption (from Section 3.7.3.1), password hashing (from Section 3.7.3.1), and audit logging (from Section 3.5.8).                              |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Source**             | External standards.                                                                                                                                                                             |
 | **Impact**             | All modules must include secure authentication, password hashing, input sanitization, session timeout, and audit logging. Penetration testing and security reviews must be conducted regularly. |
