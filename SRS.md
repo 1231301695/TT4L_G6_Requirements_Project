@@ -3039,7 +3039,7 @@ Table 3.8.3.1 Validation Session
 | VS-03  | 14/6/2025 3pm \- 5pm |  Inspection | 3.7, 3.9, 3.10 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian (Reviewers) | 5 |
 | VS-04 | 15/6/2025 3pm \- 7pm | Inspection | 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 5.4, 5.5 | Lai Joon Li (Reviewers), Tan Jun Xian(Reviewers), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 3 |
 | VS-05 | 16/6/2025 1pm \- 3pm | Inspection | 5.6, 5.7, 6.1, 6.2, 6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Reviewers), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 3 |
-| VS-06 | 17/6/2025 1pm \- 3pm | Technical Review | 1.1 \- 6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Review Leader), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 5 |
+| VS-06 | 17/6/2025 1pm \- 3pm | Technical Review | 1.1 \- 6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian(Review Leader), Muhammad Loqman Bin Ahmad Fariz (Reviewers) Binti Mohd Hafiz (Author), Phartiban A/l Kumarhesan (Author), Suzannah Pancer (Author)| 5 |
 | VS-07 | 20/6/2025 2pm- 4pm | Final Inspection | 1.1-6.3 | Soukmaed Ong Yu Kang (Reviewers), Lai Joon Li (Reviewers), Tan Jun Xian (Moderator), Muhammad Loqman Bin Ahmad Fariz (Reviewers) | 6 |
 
 ### 
@@ -3283,7 +3283,10 @@ Table 3.8.10.3 Change Log entries made by
 | Lai Joon Li | 7 |
 | Muhammad Loqman | 10 |
 
+### 3.8.11 Prof Meeting
 
+VS-06
+https://mmuedumy-my.sharepoint.com/:v:/g/personal/soukmaed_ong_yu_student_mmu_edu_my/ESFA8BRLwYJCneT3q7Gl4yUBJDlzKGRks9lxh2PPbnsyUg 
 
 #
 
